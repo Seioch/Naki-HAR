@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <NeedDef>
+    <defName>NakiRaceDMNeed</defName>
+    <needClass>NakiRace.Needs.DMNeed</needClass>
+    <label>dark matter need</label>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <description>Naki need Dark Matter to use psycasts and heal. Lacking Dark Matter will prevent healing and casting.</description>
+    <listPriority>45</listPriority>
+    <fallPerDay>0.150</fallPerDay>
+    <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+    <colonistsOnly>false</colonistsOnly>
+    <showForCaravanMembers>false</showForCaravanMembers>
+    <baseLevel>1.0</baseLevel>
+    <freezeWhileSleeping>true</freezeWhileSleeping>
+    <minIntelligence>Humanlike</minIntelligence>
+  </NeedDef>
+</Defs>

@@ -2,9 +2,9 @@
 <Defs>
 
 <ThingDef ParentName="BenchBase">
-	<defName>Kurin_Electric_Tailoring_Bench</defName>
-	<label>kurin electric tailor bench</label>
-	<description>A workbench with a sewing machine for rapid tailoring of clothes. Can work without electricity at 50% of normal speed.</description>
+	<defName>Naki_Fabricator</defName>
+	<label>Naki fabricator</label>
+	<description>A workstation to transmute Dark Matter into normal matter.</description>
 	<thingClass>Building_WorkTable</thingClass>
 	<graphicData>
 		<texPath>Kurin/Building/Electric_Tailoring_Bench/Texture</texPath>
@@ -21,7 +21,6 @@
 	</costList>
 	<stuffCategories>
 		<li>Metallic</li>
-		<li>Woody</li>
 	</stuffCategories>
 	<altitudeLayer>Building</altitudeLayer>
 	<fillPercent>0.5</fillPercent>
@@ -31,7 +30,7 @@
 		<MaxHitPoints>180</MaxHitPoints>
 		<Flammability>1.0</Flammability>
 	</statBases>
-	<size>(2,1)</size>
+	<size>(5,2)</size>
 	<designationCategory>Production</designationCategory>
 	<passability>PassThroughOnly</passability>
 	<pathCost>70</pathCost>
@@ -44,7 +43,8 @@
 	</inspectorTabs>
 	<building>
 		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-		<unpoweredWorkTableWorkSpeedFactor>0.5</unpoweredWorkTableWorkSpeedFactor>
+		<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      	<ai_chillDestination>false</ai_chillDestination>
 	</building>
 	<comps>
 		<li Class="CompProperties_Power">
@@ -65,7 +65,7 @@
 		<li>PlaceWorker_PreventInteractionSpotOverlap</li>
 	</placeWorkers>
 	<researchPrerequisites>
-		<li>ComplexClothing</li>
+		<li>Gunsmithing</li>
 		<li>Electricity</li>
 	</researchPrerequisites>
 </ThingDef>
