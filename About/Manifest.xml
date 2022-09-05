@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+	<identifier>Naki Race HAR Edition</identifier>
+	<version>0.0.1</version>
+	<dependencies>
+		<li>erdelf.HumanoidAlienRaces</li>
+	</dependencies>
+	<incompatibleWith />
+	<loadAfter>
+		<li>erdelf.HumanoidAlienRaces</li>
+	</loadAfter>
+	<suggests>
+	</suggests>
+</Manifest>

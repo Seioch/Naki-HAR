@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AlienRace.RaceSettings>
+<defName>Kurin_RaceSettings</defName>
+<pawnKindSettings>
+	<alienslavekinds>
+		<li>
+			<kindDefs>
+				<li>Naki_Citizen</li>
+			</kindDefs>
+			<chance>5.0</chance>
+		</li>
+	</alienslavekinds>
+	
+	<alienrefugeekinds>
+		<li>
+			<kindDefs>
+				<li>Naki_Citizen</li>
+			</kindDefs>
+			<chance>5.0</chance>
+		</li>
+	</alienrefugeekinds>
+			
+    <startingColonists>
+        <li>
+            <pawnKindEntries>
+                <li>
+                    <kindDefs>
+                        <li>Naki_Citizen</li>
+                    </kindDefs>
+                    <chance>0.0</chance>
+                </li>
+            </pawnKindEntries>
+            <factionDefs>
+                <li>Naki_PlayerFaction</li> 
+            </factionDefs>
+        </li>
+    </startingColonists>
+			
+    <alienwandererkinds>
+        <li>
+            <pawnKindEntries>
+                <li>
+                    <kindDefs>
+                        <li>Naki_Citizen</li>
+                    </kindDefs>
+                    <chance>5.0</chance>
+                </li>
+            </pawnKindEntries>
+            <factionDefs>
+                <li>Naki_PlayerFaction</li> 
+            </factionDefs>
+        </li>
+    </alienwandererkinds>			
+</pawnKindSettings>
+</AlienRace.RaceSettings>
+</Defs>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- <FactionDef> -->
+<FactionDef ParentName="PlayerFactionBase">
+	<defName>Naki_PlayerFaction</defName>
+	<label>Naki player faction</label>
+	<description>A new base for the Naki race.</description>
+	<settlementTexturePath>Naki/Faction/Texture</settlementTexturePath>
+	<categoryTag>Naki_Citizen</categoryTag>
+	<colorSpectrum>
+		<li>(1, 1, 1)</li>
+	</colorSpectrum>
+	<isPlayer>true</isPlayer>
+	<basicMemberKind>Naki_Colonist</basicMemberKind>
+	<pawnSingular>Naki colonist</pawnSingular>
+	<pawnsPlural>Naki colonists</pawnsPlural>
+	<techLevel>Industrial</techLevel>
+	<allowedCultures><li MayRequire="Ludeon.RimWorld.Ideology">Aolarian</li></allowedCultures>
+	<backstoryFilters>
+		<li>
+			<categories>
+				<li>Naki_Citizen</li>
+			</categories>
+			<commonality>1</commonality>
+		</li>
+	</backstoryFilters>
+	<factionIconPath>Naki/Faction/TextureNew</factionIconPath>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+	<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+	<geneticVariance>1</geneticVariance>
+	<startingResearchTags>
+		<li>ClassicStart</li>
+	</startingResearchTags>
+	<startingTechprintsResearchTags>
+		<li>ClassicStart</li>
+		<li>ClassicStartTechprints</li>
+	</startingTechprintsResearchTags>
+	<!-- <styleTags> 
+		<li>Naki</li>
+	</styleTags> -->
+	<apparelStuffFilter>
+		<thingDefs>
+			<li>DevilstrandCloth</li>
+			<li>Synthread</li>
+			<li>Hyperweave</li>
+		</thingDefs>
+	</apparelStuffFilter>
+</FactionDef>
+
+<FactionDef ParentName="FactionBase">
+	<defName>Naki_HiddenFaction</defName>
+	<label>Naki Explorers</label>
+	<description>Naki who have been sent by Omega Eden to explore the universe.</description>
+	<colorSpectrum>
+		<li>(1.0, 0.72, 0.27)</li>
+	</colorSpectrum>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+	<pawnSingular>Naki</pawnSingular>
+	<pawnsPlural>Naki</pawnsPlural>
+	<listOrderPriority>248</listOrderPriority>
+	<settlementGenerationWeight>0.0</settlementGenerationWeight>
+	<canMakeRandomly>false</canMakeRandomly>
+	<canSiege>false</canSiege>
+	<canStageAttacks>true</canStageAttacks>
+	<leaderTitle>Explorer</leaderTitle>
+	<factionIconPath>Naki/Faction/TextureNew</factionIconPath>
+	<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+	<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+	<techLevel>Industrial</techLevel>
+	<naturalEnemy>false</naturalEnemy>
+	<permanentEnemy>false</permanentEnemy>
+	<allowedCultures><li MayRequire="Ludeon.RimWorld.Ideology">Aolarian</li></allowedCultures>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+    </requiredMemes>
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_Prohibited</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_Horrible</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_SpouseOnly_Strict</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_SpouseOnly_Moderate</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_SpouseOnly_Mild</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinChestHairOrFaceDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinChestOrHairDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinOrChestDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinDisapproved</li>
+    </disallowedPrecepts>
+	<backstoryFilters>
+		<li>
+			<categories>
+				<li>Naki_Citizen</li>
+			</categories>
+			<commonality>1</commonality>
+		</li>
+	</backstoryFilters>
+	<geneticVariance>0</geneticVariance>
+	<!-- <styleTags>
+		<li>Naki</li>
+	</styleTags> -->
+	<caravanTraderKinds>
+		<li>Caravan_Outlander_BulkGoods</li>
+		<li>Caravan_Outlander_CombatSupplier</li>
+		<li>Caravan_Outlander_Exotic</li>
+		<li>Caravan_Outlander_PirateMerchant</li>
+	</caravanTraderKinds>
+	<visitorTraderKinds>
+		<li>Visitor_Outlander_Standard</li>
+	</visitorTraderKinds>
+	<baseTraderKinds>
+		<li>Base_Outlander_Standard</li>
+	</baseTraderKinds>
+	<allowedArrivalTemperatureRange>-30~45</allowedArrivalTemperatureRange>
+	<maxPawnCostPerTotalPointsCurve>
+		<points>
+			<li>(0,35)</li>
+			<li>(70, 50)</li>
+			<li>(700, 100)</li>
+			<li>(700, 120)</li>
+			<li>(1000, 10000)</li>
+		</points>
+	</maxPawnCostPerTotalPointsCurve>
+	<pawnGroupMakers>
+		<li>
+			<!-- Low quality combat group -->
+			<kindDef>Combat</kindDef>
+			<commonality>100</commonality>
+			<options>
+				<Naki_Scout>1</Naki_Scout>
+				<Naki_Savage>3</Naki_Savage>
+				<Naki_Initiate>2</Naki_Initiate>
+				<Naki_Recruit>1</Naki_Recruit>
+				<Naki_Ninja>0.8</Naki_Ninja>
+				<Naki_Slasher>1</Naki_Slasher>
+			</options>
+		</li>
+		<!-- Ranged combat group with minor melee -->
+		<li>
+			<kindDef>Combat</kindDef>
+			<commonality>100</commonality>
+			<options>
+				<Naki_Scout>2</Naki_Scout>
+				<Naki_Initiate>2</Naki_Initiate>
+				<Naki_ELite_Scout>1</Naki_ELite_Scout>
+				<Naki_Trooper>1</Naki_Trooper>
+				<Naki_Slasher>1</Naki_Slasher>
+				<Naki_Sniper_H>1</Naki_Sniper_H>
+			</options>
+		</li>
+		<!-- Mixed combat group -->
+		<li>
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<options>
+				<Naki_Scout>1</Naki_Scout>
+				<Naki_Ninja>0.8</Naki_Ninja>
+				<Naki_Trooper>1</Naki_Trooper>
+				<Naki_Slasher>1</Naki_Slasher>
+				<Naki_Sniper_H>1</Naki_Sniper_H>
+			</options>
+		</li>
+		<!-- Elite melee group -->
+		<li>
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<options>
+				<Naki_Ninja>2</Naki_Ninja>
+				<Naki_Trooper>1</Naki_Trooper>
+				<Naki_Slasher>2</Naki_Slasher>
+				<Naki_EliteSlasher>2</Naki_EliteSlasher>
+				<Naki_Elite>1</Naki_Elite>
+			</options>
+		</li>
+		<!-- Elite ranged group -->
+		<li>
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<options>
+				<Naki_ELite_Scout>1</Naki_ELite_Scout>
+				<Naki_Ninja>0.8</Naki_Ninja>
+				<Naki_Trooper>2</Naki_Trooper>
+				<Naki_EliteTrooper>2</Naki_EliteTrooper>
+				<Naki_EliteSlasher>1</Naki_EliteSlasher>
+				<Naki_EliteSniper_H>2</Naki_EliteSniper_H>
+				<Naki_Elite>1</Naki_Elite>
+			</options>
+		</li>
+		<li>
+			<kindDef>Peaceful</kindDef>
+			<options>
+				<Naki_Citizen>10</Naki_Citizen>
+				<Naki_Trader>4</Naki_Trader>
+				<Naki_Elite>6</Naki_Elite>
+				<Naki_Ninja>1</Naki_Ninja>
+				<Naki_Soldier>2</Naki_Soldier>
+				<Naki_EliteSoldier>1</Naki_EliteSoldier>
+			</options>
+		</li>
+		<li>
+			<kindDef>Trader</kindDef>
+			<traders>
+				<Naki_Trader>1</Naki_Trader>
+			</traders>
+			<carriers>
+				<Muffalo>6</Muffalo>
+				<Dromedary>5</Dromedary>
+				<Alpaca>2</Alpaca>
+				<Elephant>2</Elephant>
+			</carriers>
+			<guards>
+				<Naki_Vigilante>8</Naki_Vigilante>
+				<Naki_Soldier>6</Naki_Soldier>
+				<Naki_EliteSoldier>2</Naki_EliteSoldier>
+				<Naki_EliteSniper_H>1</Naki_EliteSniper_H>
+				<!--<Naki_Nymph>1</Naki_Nymph> -->
+			</guards>
+		</li>
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>
+				<Naki_Vigilante>8</Naki_Vigilante>
+				<Naki_Soldier>12</Naki_Soldier>
+				<Naki_EliteSoldier>8</Naki_EliteSoldier>
+				<Naki_Sniper>4</Naki_Sniper>
+				<Naki_EliteSniper_H>2</Naki_EliteSniper_H>
+				<!--<Naki_Nymph>1</Naki_Nymph> -->
+			</options>
+		</li>
+	</pawnGroupMakers>
+	<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+</FactionDef>
+
+</Defs>

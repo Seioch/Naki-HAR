@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <defName>Naki_Race</defName>
+    <label>Naki</label>
+    <description>A race of raccoon-themed spacers sent to the rimworlds by their archotech god.</description>
+<!--=============================================================================================================================-->
+    <alienRace>
+		<generalSettings>
+			<immuneToXenophobia>true</immuneToXenophobia>
+			<maleGenderProbability>0.25</maleGenderProbability>
+			<immuneToAge>true</immuneToAge>
+      <humanRecipeImport>true</humanRecipeImport>           
+			<forcedRaceTraitEntries>
+                <li>
+                    <defName>Beauty</defName>
+                    <degree>2</degree>
+                    <chance>25</chance>
+                </li>
+                <li>
+                    <defName>Beauty</defName>
+                    <degree>1</degree>
+                    <chance>50</chance>
+                </li>
+                <li>
+                    <defName>Bisexual</defName>
+                    <chance>15</chance>
+                </li>
+                <li>
+                    <defName>FastLearner</defName>
+                    <chance>15</chance>
+                </li>
+            </forcedRaceTraitEntries>
+			<disallowedTraits>
+        <li>
+          <defName>Beauty</defName>
+          <degree>-1</degree>
+        </li>
+        <li>
+          <defName>Beauty</defName>
+          <degree>-2</degree>
+        </li>
+        <li>
+          <defName>SlowLearner</defName>
+        </li>
+			</disallowedTraits>
+			<factionRelations>
+          <li MayRequire="Ludeon.RimWorld.Royalty">
+              <factions>
+                <li>Empire</li>
+              </factions>
+              <goodwill>
+                <min>-100</min>
+                <max>5</max>
+              </goodwill>
+          </li> 
+      </factionRelations>
+	<maxDamageForSocialfight>4</maxDamageForSocialfight>
+	
+
+		<alienPartGenerator>
+        <alienbodytypes>
+          <li>Female</li>
+          <li>Male</li>
+        </alienbodytypes>
+        <aliencrowntypes>
+          <li>Average_Normal</li>
+          <li>Average_Pointy</li>
+          <li>Average_Wild</li>
+        </aliencrowntypes>
+			<headOffset>(0 ,-0.07)</headOffset>
+            <useGenderedHeads>true</useGenderedHeads>
+			<useGenderedBodies>true</useGenderedBodies>
+			<atlasScale>4</atlasScale>
+      <bodyAddons>
+			<li>
+        <path>Kurin/Tail/Single tails/Texture1</path>
+        <bodyPart>tail</bodyPart>				  
+        <inFrontOfBody>false</inFrontOfBody>
+				<colorChannel>hair</colorChannel>
+				<drawSize>0.9</drawSize>
+        <defaultOffset>Tail</defaultOffset>
+        <offsets>
+            <south>
+              <layerOffset>-0.19</layerOffset>
+                <bodyTypes>
+                    <Female>(-0.3729904,0.2315113)</Female>
+                </bodyTypes>
+                <crownTypes>
+                    <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+            </south>
+            <north>
+                <layerOffset>-0.19</layerOffset>
+                <bodyTypes>
+                    <Female>(0,0.5401928)</Female>
+                </bodyTypes>
+                <crownTypes>
+                    <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+            </north>
+            <east>
+                <layerOffset>-0.19</layerOffset>
+                <bodyTypes>
+                    <Female>(-0.4972991,0.2958201)</Female>
+                </bodyTypes>
+                <crownTypes>
+                    <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+            </east>
+        </offsets>
+				<drawnInBed>false</drawnInBed>
+        </li>
+				
+        <li>
+          <!-- <path>Kurin/Face/Faces/Texture</path> -->
+          <path>Kurin/Null/Texture</path>
+          <bodyPart>Head</bodyPart>				
+          <inFrontOfBody>true</inFrontOfBody>
+          <colorChannel>skin</colorChannel>
+          <drawSize>0.9</drawSize>
+          <angle>0</angle>
+          <!-- <layerOffset>-0.274</layerOffset> -->
+          <defaultOffset>Head</defaultOffset>
+          <offsets>
+            <west>
+              <layerOffset>-0.2758</layerOffset>
+              <bodyTypes>
+                  <Female>(0.009646305,-0.4951769)</Female>
+              </bodyTypes>
+              <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+              </crownTypes>
+            </west>
+            <south>
+              <layerOffset>-0.2758</layerOffset>
+              <bodyTypes>
+                  <Female>(0.003215437,-0.4694535)</Female>
+              </bodyTypes>
+              <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+              </crownTypes>
+            </south>
+            <north>
+              <layerOffset>-0.2758</layerOffset>
+              <bodyTypes>
+                  <Female>(0,0.7877813)</Female>
+              </bodyTypes>
+              <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+              </crownTypes>
+            </north>
+            <east>
+              <layerOffset>-0.2758</layerOffset>
+              <bodyTypes>
+                  <Female>(0.009646305,-0.4951769)</Female>
+              </bodyTypes>
+              <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+              </crownTypes>
+            </east>
+          </offsets>
+				</li>
+				
+        <li>
+        <path>Kurin/Ear/Left/DRNTFEarLA</path>
+        <bodyPart>left ear</bodyPart>				
+        <inFrontOfBody>true</inFrontOfBody>
+        <colorChannel>hair</colorChannel>
+				<drawSize>0.9</drawSize>
+        <angle>0</angle>
+        <defaultOffset>Head</defaultOffset>
+        <offsets>
+          <west>
+            <bodyTypes>
+                <Female>(0,-0.5)</Female>
+            </bodyTypes>
+            <crownTypes>
+                <Normal_Average>(0,0)</Normal_Average>
+            </crownTypes>
+          </west>
+          <south>
+            <bodyTypes>
+                <Female>(0,-0.49)</Female>
+            </bodyTypes>
+            <crownTypes>
+                <Normal_Average>(0,0)</Normal_Average>
+            </crownTypes>
+          </south>
+          <north>
+            <bodyTypes>
+                <Female>(0,-0.3)</Female>
+            </bodyTypes>
+            <crownTypes>
+                <Normal_Average>(0,0)</Normal_Average>
+            </crownTypes>
+          </north>
+          <east>
+            <bodyTypes>
+                <Female>(0,-0.5)</Female>
+            </bodyTypes>
+            <crownTypes>
+                <Normal_Average>(0,0)</Normal_Average>
+            </crownTypes>
+          </east>
+        </offsets>
+        </li>
+			<!--왼쪽귀B-->
+        <li>
+          <path>Kurin/Ear/Left/DRNTFEarLB</path>
+          <bodyPart>left ear</bodyPart>				
+          <inFrontOfBody>false</inFrontOfBody>
+          <colorChannel>hair</colorChannel>  
+          <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
+          <drawSize>0.9</drawSize>
+          <angle>0</angle>
+          <defaultOffset>Head</defaultOffset>
+          <offsets>
+            <west>
+              <bodyTypes>
+                  <Female>(0.13,-0.5)</Female>
+              </bodyTypes>
+              <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+              </crownTypes>
+            </west>
+            <south>
+              <bodyTypes>
+                  <Female>(-0.4212219,0.289389)</Female>
+              </bodyTypes>
+              <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+              </crownTypes>
+            </south>
+            <north>
+                <bodyTypes>
+                    <Female>(0,0.5819935)</Female>
+                </bodyTypes>
+                <crownTypes>
+                    <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+            </north>
+            <east>
+              <bodyTypes>
+                  <Female>(0.13,-0.5)</Female>
+              </bodyTypes>
+              <crownTypes>
+                  <Normal_Average>(0,0)</Normal_Average>
+              </crownTypes>
+            </east>
+          </offsets>
+        </li>
+			<!--오른쪽귀A-->
+        <li>
+          <path>Kurin/Ear/Right/DRNTFEarRA</path>
+          <bodyPart>right ear</bodyPart>				
+          <inFrontOfBody>true</inFrontOfBody>
+          <colorChannel>hair</colorChannel> 
+          <drawSize>0.9</drawSize>
+          <angle>0</angle>
+          <defaultOffset>Head</defaultOffset>
+          <offsets>
+            <west>
+                <bodyTypes>
+                    <Female>(0,-0.5)</Female>
+                </bodyTypes>
+                <crownTypes>
+                    <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+              </west>
+              <south>
+                <bodyTypes>
+                    <Female>(0,-0.49)</Female>
+                </bodyTypes>
+                <crownTypes>
+                    <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+              </south>
+              <north>
+                <bodyTypes>
+                    <Female>(0,-0.3)</Female>
+                </bodyTypes>
+                <crownTypes>
+                    <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+              </north>
+              <east>
+                <bodyTypes>
+                    <Female>(0,-0.5)</Female>
+                </bodyTypes>
+                <crownTypes>
+                    <Normal_Average>(0,0)</Normal_Average>
+                </crownTypes>
+              </east>
+          </offsets>
+        </li>
+			<!--오른쪽귀B-->
+        <li>
+          <path>Kurin/Ear/Right/DRNTFEarRB</path>
+          <bodyPart>right ear</bodyPart>				
+          <inFrontOfBody>false</inFrontOfBody>
+          <colorChannel>hair</colorChannel>
+          <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
+          <drawSize>0.9</drawSize>
+          <angle>0</angle>
+          <defaultOffset>Head</defaultOffset>
+          <offsets>
+              <west>
+                  <bodyTypes>
+                      <Female>(0.13,-0.5)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                      <Normal_Average>(0,0)</Normal_Average>
+                  </crownTypes>
+              </west>
+              <south>
+                  <bodyTypes>
+                      <Female>(-0.4212219,0.289389)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                      <Normal_Average>(0,0)</Normal_Average>
+                  </crownTypes>
+              </south>
+              <north>
+                  <bodyTypes>
+                      <Female>(0,0.5819935)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                      <Normal_Average>(0,0)</Normal_Average>
+                  </crownTypes>
+              </north>
+              <east>
+                  <bodyTypes>
+                      <Female>(0.13,-0.5)</Female>
+                  </bodyTypes>
+                  <crownTypes>
+                      <Normal_Average>(0,0)</Normal_Average>
+                  </crownTypes>
+              </east>
+          </offsets>
+          </li>
+    </bodyAddons>
+			
+		 <customDrawSize>(0.9, 0.9)</customDrawSize>
+         <customPortraitDrawSize>(.9, .9)</customPortraitDrawSize>
+		
+		<colorChannels>
+				<li>
+              <name>skin</name>
+              <first Class="ColorGenerator_Options">
+                <options>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(255,224,196,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(255,220,177,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(253,228,200,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(238,207,180,255)</only>
+                  </li>
+                </options>
+              </first>
+              <second Class="ColorGenerator_Options">
+                <options>
+				<!--brown-->
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(94,72,30,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(84,42,14,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(99,57,15,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(151,78,25,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(166,123,64,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(96,49,1,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(69,24,0,255)</only>
+                  </li>
+				  <!-- Blue -->
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(81,123,132,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(30,193,171,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(75,0,130,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(46,131,144,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(90,51,220,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(15,48,91,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(27,86,117,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(53,115,136,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(51,89,220,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(82,140,158,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(229,248,242,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(127,180,190,255)</only>
+                  </li>
+				  <!--Green-->
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(164,200,185,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(240,255,240,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(86,206,60,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(195,240,26,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(127,255,212,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(56,144,88,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(65,144,56,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(47,199,31,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(217,229,182,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(216,229,201,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(195,240,26,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(181,210,158,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(56,144,117,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(160,191,148,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(141,184,137,255)</only>
+                  </li>
+				  
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(237,98,122,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(195,25,90,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(200,186,239,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(135,124,193,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(210,45,38,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(240,96,26,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(240,153,26,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(240,202,26,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(139,0,139,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(255, 20, 147,255)</only>
+                  </li>
+				  
+				  
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(139,137,160,255)</only>
+                  </li>
+				  
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(240,255,255,255)</only>
+                  </li>
+                </options>
+              </second>
+            </li>
+			<li>
+			<name>hair</name>
+					<first Class="ColorGenerator_Options">
+						<options> 
+							<!--<li>
+								<weight>100</weight>  Name=() 
+								<only>RGBA(,,,1)</only>  RGB=(,,) # 
+							</li> -->
+						<!--Common-->
+						<!--Blacks-->
+							<li>
+								<weight>5</weight> <!-- Name=(Charcoal) -->
+								<only>RGBA(0.29,0.29,0.29,1)</only> <!-- RGB=(73,73,73) #494949 -->
+							</li>
+							<li>
+								<weight>5</weight> <!-- Name=(Nero) -->
+								<only>RGBA(0.18,0.18,0.18,1)</only> <!-- RGB=(45,45,45) # -->
+							</li>
+						<!--Greys-->
+							<li>
+								<weight>5</weight> <!-- Name=(Shady Lady) -->
+								<only>RGBA(0.59,0.59,0.59,1)</only> <!-- RGB=(150,150,150) #969696 -->
+							</li>
+							<li>
+								<weight>5</weight> <!-- Name=(Light Grey) -->
+								<only>RGBA(0.83,0.83,0.83,1)</only> <!-- RGB=(211,211,211) #D3D3D3 -->
+							</li>
+							<li>
+								<weight>5</weight> <!-- Name=(Mortar) -->
+								<only>RGBA(0.34,0.34,0.34,1)</only> <!-- RGB=(86,86,86) #565656 -->
+							</li>
+						<!--Exotic-->
+						</options>
+					</first>
+				</li>
+			</colorChannels>
+		
+		
+		</alienPartGenerator>
+        </generalSettings>
+
+<!--=============================================================================================================================-->
+      <graphicPaths>
+          <li>
+              <head>Kurin/Head/A/</head>
+              <body>Kurin/Body/B/</body>
+          </li>
+      </graphicPaths>
+			<styleSettings>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>true</hasStyle>
+						<styleTagsOverride>
+                            <li>Kurin</li>
+                        </styleTagsOverride>
+					</value>
+				</li>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>true</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+<!--=============================================================================================================================-->
+        <!-- <hairSettings>
+            <hasHair>true</hasHair>
+			<getsGreyAt>85</getsGreyAt>
+            <styleTags>
+                <li>Kurin</li>
+            </styleTags>
+        </hairSettings> -->
+<!--=============================================================================================================================-->
+		<raceRestriction>
+      <apparelList>
+				<li>Kurin_OnSkin_Shirt</li>
+				<li>Kurin_OnSkin_T_Shirt</li>
+				<li>Kurin_OnSkin_Hot_Pants</li>
+				<li>Kurin_OnSkin_PajamasA</li>
+				<li>Kurin_OnSkin_PajamasB</li>
+				<li>Kurin_OnSkin_PajamasC</li>
+				<li>Kurin_OnSkin_One_Piece_Dress</li>
+				<li>Kurin_OnSkin_Open_Back_Knit</li>
+				<li>Kurin_OnSkin_Open_Shoulder_Knit</li>
+				<li>Kurin_OnSkin_Hoodie</li>
+				<li>Kurin_OnSkin_Casual_Wear</li>
+				<li>Kurin_OnSkin_Armored_Gothic_Dress</li>
+				<li>Kurin_OnSkin_Gothic_Dress</li>
+				<li>Kurin_OnSkin_Bikini_Armor</li>
+				<li>Kurin_OnSkin_Military_Uniform</li>
+				<li>Kurin_OnSkin_Nun_Dress</li>
+				<li>Kurin_OnSkin_Work_Jumpsuit</li>
+				<li>Kurin_OnSkin_Traditional_Simple_Dress</li>
+				<li>Kurin_OnSkin_Traditional_Fancy_Dress</li>
+				<li>Kurin_OnSkin_Traditional_Luxury_Dress</li>
+				<li>Kurin_OnSkin_Cute_Dress</li>
+				<li>Kurin_OnSkin_Seductive_White_Dress</li>
+				<li>Kurin_OnSkin_Seductive_Black_Dress</li>
+				<li>Kurin_Underwear</li> 
+				<li>Kurin_Underwear_Stuffed</li> 
+				<li>Kurin_Underwear_Black</li> 
+				<li>Kurin_Underwear_Red</li> 
+				<li>Kurin_Underwear_Striped</li> 
+				<li>Kurin_Underwear_Striped_Stuffed</li> 
+				<li>Kurin_Underwear_Slim</li>
+				<li>Kurin_Underwear_Prude</li>
+				<li>Kurin_Middle_Body_Armor</li>
+				<li>Kurin_Overhead_Winter_Hat</li>
+				<li>Kurin_Overhead_Summer_Hat</li>
+				<li>Kurin_Overhead_Casual_Hair_Pin</li>
+				<li>Kurin_Overhead_Goggles</li>
+				<li>Kurin_Overhead_Gothic_Hair_Pin</li>
+				<li>Kurin_Overhead_Bikini_Armor_Headgear</li>
+				<li>Kurin_Overhead_Military_Helmet</li>
+				<li>Kurin_Overhead_Traditional_Hair_Pin</li>
+				<li>Kurin_Overhead_Cute_Hair_Pin</li>
+				<li>Kurin_Shell_Cardigan</li>
+				<li>Kurin_Shell_Duster</li>
+				<li>Kurin_Shell_Winter_Padding</li>
+				<li>Kurin_OnSkin_Traditional_Coat</li>
+        <li>Kurin_Redfox_Armor</li>
+        <li>Kurin_Redfox_Helmet</li>
+        <li>Kurin_Waterfox_Armor</li>
+				<!--<li>Kurin_Belt_Scarf</li> -->
+      </apparelList>
+			<whiteApparelList>
+				<li MayRequire="Nemonian.MY">Moyo_Tribal</li>
+				<li MayRequire="Nemonian.MY">Moyo_Parka</li>
+				<li MayRequire="Nemonian.MY">Moyo_Jacket</li>
+				<li MayRequire="Nemonian.MY">Moyo_Duster</li>
+				<li MayRequire="Nemonian.MY">Moyo_SnB</li>
+				<li MayRequire="Nemonian.MY">Moyo_RoyalRobeA</li>
+				<li MayRequire="Nemonian.MY">Moyo_RoyalRobeB</li>
+				<li MayRequire="Nemonian.MY">Moyo_RoyalRobeC</li>
+				<li MayRequire="Nemonian.MY">Moyo_RoyalBlackDress</li>
+				<li MayRequire="Nemonian.MY">Moyo_Tuque</li>
+				<li MayRequire="Nemonian.MY">Moyo_BowlerHat</li>
+				<li MayRequire="Nemonian.MY">Moyo_CowboyHat</li>
+				<li MayRequire="Nemonian.MY">Moyo_RoyalHologramA</li>
+				<li MayRequire="Nemonian.MY">Moyo_RoyalHologramB</li>
+				<li MayRequire="Nemonian.MY">Moyo_RoyalHologramC</li>
+				<li MayRequire="Nemonian.MY">Moyo_EGsuit</li>
+				<li MayRequire="Nemonian.MY">Moyo_EGmask</li>
+				<li MayRequire="Nemonian.MY">Moyo_LDgear</li>
+				<li MayRequire="Nemonian.MY">Moyo_LDhelmet</li>
+				<li MayRequire="Nemonian.MY">Moyo_DDgear</li>
+				<li MayRequire="Nemonian.MY">Moyo_DDhelmet</li>
+				<li MayRequire="Nemonian.MY">Moyo_GSsuit</li>
+				<li MayRequire="Nemonian.MY">Moyo_GShelmet</li>
+				<li MayRequire="Nemonian.MY">Moyo_GDsuit</li>
+				<li MayRequire="Nemonian.MY">Moyo_GDhelmet</li>
+				<li MayRequire="Nemonian.MY">Moyo_Evasuit</li>
+				<li MayRequire="Nemonian.MY">Moyo_Bodysuit</li>
+				<li MayRequire="Nemonian.MY">Moyo_Royalsuit</li>
+				<li>Apparel_ShieldBelt</li>
+				<li>Apparel_SmokepopBelt</li>
+			</whiteApparelList>
+            <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+            <buildingList>
+            <!-- Add Pylon and Assembler here once it is coded. -->
+                <li>DRNTF_NooseTrap</li>
+            </buildingList>
+        </raceRestriction>
+	</alienRace>
+<!--=============================================================================================================================-->
+    <statBases>
+	<!--기본-->
+      <MarketValue>2700</MarketValue>
+      <Flammability>0.3</Flammability>
+      <MoveSpeed>5</MoveSpeed>
+	  <MentalBreakThreshold>0.4</MentalBreakThreshold>
+      <ComfyTemperatureMax>35</ComfyTemperatureMax>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+	  <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+	  <CarryingCapacity>100</CarryingCapacity>
+	  <MeatAmount>55</MeatAmount>
+      <LeatherAmount>55</LeatherAmount>
+      <Mass>50</Mass>
+	  <PainShockThreshold>0.80</PainShockThreshold>
+	<!--사교-->
+	  <NegotiationAbility>1.1</NegotiationAbility> <!--외교 영향력-->
+	  <SocialImpact>1.2</SocialImpact> <!--사회적 영향력-->
+	<!--제작-->
+	  <ButcheryMechanoidEfficiency>0.8</ButcheryMechanoidEfficiency> <!--메카노이드 분해 효율-->
+	  <ButcheryMechanoidSpeed>0.8</ButcheryMechanoidSpeed> <!--메카노이드 분해 속도-->
+	  <SmeltingSpeed>0.8</SmeltingSpeed> <!--금속 제련 속도-->
+	  <ResearchSpeed>1.2</ResearchSpeed>
+    <CraftingSpeed>0.8</CraftingSpeed>
+	  <MiningSpeed>0.8</MiningSpeed>
+	<!--수면-->
+	  <RestRateMultiplier>1.3</RestRateMultiplier>
+	<!--재배-->
+	  <PlantWorkSpeed>0.8</PlantWorkSpeed>
+    </statBases>
+<!--=============================================================================================================================-->
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>16</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>16</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.4</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.1</chanceFactor>
+      </li>
+    </tools>
+<!--=============================================================================================================================-->
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>120</lifeExpectancy>
+      <leatherDef>Leather_Human</leatherDef>
+      <nameCategory>HumanStandard</nameCategory>
+	  <body>Naki_Body</body>
+      <baseBodySize>0.9</baseBodySize>
+      <baseHealthScale>0.9</baseHealthScale>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <meatMarketValue>0.8</meatMarketValue>
+      <manhunterOnDamageChance>0.60</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.04</manhunterOnTameFailChance>
+	  <nameGenerator>NamerPerson_Kurin</nameGenerator>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(20,100)</li>
+          <li>(30,100)</li>
+          <li>(40,10)</li>
+		  <li>(60,5)</li>
+		  <li>(80,1)</li>
+          <li>(120,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+        <li>Human</li>
+      </hediffGiverSets>
+    </race>
+<!--=============================================================================================================================-->
+    <recipes>
+      <!-- Special bodypart add-ons go here -->
+    </recipes>
+</AlienRace.ThingDef_AlienRace>
+</Defs>
