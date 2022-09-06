@@ -2,11 +2,11 @@
 <Defs>
 
 <ThingDef ParentName="BaseMakeableGun">
-	<defName>Kurin_Gun_Charge_Rifle</defName>
-	<label>kurin charge rifle</label>
-	<description>A unique anti-mechanoid rifle of Aolarian design. The charged shots are designed to penetrate thick Mechanoid armor.</description>
+	<defName>Naki_Gun_Charge_Rifle</defName>
+	<label>naki charge rifle</label>
+	<description>A charge rifle that fires anti-matter rounds. An unstable miniature black hole core provides the ammo. When depleted, the black hole core annihilates the gun.</description>
 	<graphicData>
-		<texPath>Kurin/Weapon/Charge_Rifle/Texture</texPath>
+		<texPath>Naki/Weapon/Charge_Rifle/Texture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
 	<soundInteract>Interact_ChargeRifle</soundInteract>
@@ -20,31 +20,38 @@
 		<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
 	</statBases>
 	<weaponTags>
-		<li>SpacerGun</li>
+<!-- Should not have a standard tag because it should not spawn naturally -->
+		<li>NakiGun</li>
 	</weaponTags>
 	<costList>
 		<Plasteel>75</Plasteel>
 		<ComponentSpacer>5</ComponentSpacer>
 	</costList>
+
+	<li Class="compNakiWeapons">
+        <maximumShots>100</maximumShots>
+	</li>
+
 	<recipeMaker>
-		<researchPrerequisite>ChargedShot</researchPrerequisite>
+		<researchPrerequisite>Naki_DM_station</researchPrerequisite>
 		<skillRequirements>
 			<Crafting>8</Crafting>
 		</skillRequirements>
         <recipeUsers Inherit="False">
-            <li>FabricationBench</li>
+            <li>Naki_MeditationArea</li>
         </recipeUsers>
 	</recipeMaker>
+
 	<verbs>
 		<li>
-			<verbClass>Verb_Shoot</verbClass>
+			<verbClass>Verb_NumberedShoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>Kurin_Bullet_Charge_Rifle</defaultProjectile>
+			<defaultProjectile>Naki_Bullet_Charge_Rifle</defaultProjectile>
 			<warmupTime>1.0</warmupTime>
 			<range>30.9</range>
 			<burstShotCount>2</burstShotCount>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-			<soundCast>Kurin_Shot_Charge_Rifle</soundCast>
+			<soundCast>Naki_Shot_Charge_Rifle</soundCast>
 			<soundCastTail>GunTail_Medium</soundCastTail>
 			<muzzleFlashScale>9</muzzleFlashScale>
 		</li>
@@ -71,8 +78,8 @@
 </ThingDef>
 
 <ThingDef ParentName="BaseBullet">
-	<defName>Kurin_Bullet_Charge_Rifle</defName>
-	<label>kurin charge rifle bullet</label>
+	<defName>Naki_Bullet_Charge_Rifle</defName>
+	<label>Naki charge rifle bullet</label>
 	<projectile>
 		<damageDef>Bullet</damageDef>
 		<damageAmountBase>18</damageAmountBase>
@@ -87,14 +94,14 @@
 </ThingDef>
 
 <SoundDef>
-	<defName>Kurin_Shot_Charge_Rifle</defName>  
+	<defName>Naki_Shot_Charge_Rifle</defName>  
 	<context>MapOnly</context>  
 	<maxSimultaneous>1</maxSimultaneous>  
 	<subSounds>
 		<li>
 			<grains>
 				<li Class="AudioGrain_Clip">
-					<clipPath>Kurin/KurinChargeRifle</clipPath>
+					<clipPath>Naki/NakiChargeRifle</clipPath>
 				</li>
 			</grains>      
 			<volumeRange>35~45</volumeRange>

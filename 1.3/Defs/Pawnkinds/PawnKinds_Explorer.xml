@@ -52,10 +52,6 @@
       <min>1000</min>
       <max>1200</max>
     </apparelMoney>
-    <weaponTags>
-      <li>Naki_Rifle</li>
-      <li>Naki_Carbine</li>
-    </weaponTags>
     <weaponMoney>
       <min>600</min>
       <max>700</max>
