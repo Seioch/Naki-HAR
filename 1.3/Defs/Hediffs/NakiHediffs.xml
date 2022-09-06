@@ -1,0 +1,10 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <DMBurn.label>dark burn</DMBurn.label>
+  <DMBurn.labelNoun>a burn from dark matter</DMBurn.labelNoun>
+  <DMBurn.description>a burn where flesh was disintegrated.</DMBurn.description>
+
+  <NakiRaceDarkMatterNeed.label>Dark Matter need</NakiRaceDarkMatterNeed.label>
+  <NakiRaceDarkMatterNeed.description>Naki need to ingest Dark Matter to prevent bodily degredation and to power their psycasts.</NakiRaceDarkMatterNeed.description>
+</LanguageData>

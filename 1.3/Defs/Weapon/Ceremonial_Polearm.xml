@@ -4,18 +4,18 @@
   <!--=============== Kurin Ceremonial Polearm ====================-->
 
 <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-	<defName>Kurin_MeleeWeapon_Ceremonial_Polearm</defName>
-	<label>kurin ceremonial polearm</label>
-	<description>A large staff with sharp blades at each end. Designed for fast slashes and stabs, this is a fearsome weapon of Kurin guards. However, this weapons is now simply a replica: the original, deadlier design was lost in the fall of the Kurin Republic.</description>
+	<defName>Naki_MeleeWeapon_DarkTanto</defName>
+	<label>naki darkmetal tanto</label>
+	<description>A shortsword infused with dark matter. It can cut through armor like a hot knife through butter.</description>
 	<graphicData>
-		<texPath>Kurin/Weapon/Ceremonial_Polearm/Texture</texPath>
+		<texPath>Naki/Weapon/Ceremonial_Polearm/Texture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
   <uiIconScale>1.0</uiIconScale>
   <equippedAngleOffset>-20</equippedAngleOffset>
 	<techLevel>Industrial</techLevel>
 	<weaponTags>
-		<li>Kurin_Ceremonial_Polearm</li>
+		<li>Naki_Marine</li>
 	</weaponTags>
 	<costStuffCount>225</costStuffCount>
 	<statBases>
