@@ -38,9 +38,10 @@
 		<li>Violent</li>
 	</workDisables>
 	<spawnCategories>
-		<li>Naki_Nymph</li>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Trader</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--어린 시녀-->
@@ -61,9 +62,10 @@
 		</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Nymph</li>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Trader</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--여우무리 일원-->
@@ -88,11 +90,10 @@
 		</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Nymph</li>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Army</li>
-		<li>Naki_Trader</li>
-		<li>Naki_Warmonger</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--따돌려진 아이-->
@@ -117,9 +118,10 @@
 		</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Nymph</li>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Elite</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--비행청소년-->
@@ -139,9 +141,10 @@
 		</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Army</li>
-		<li>Naki_Warmonger</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--빈민가 고아-->
@@ -174,11 +177,10 @@
 		</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Nymph</li>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Army</li>
-		<li>Naki_Warmonger</li>
-		<li>Naki_Trader</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--공잡이-->
@@ -203,9 +205,10 @@
 		</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Army</li>
-		<li>Naki_Warmonger</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--동물원 아르바이터-->
@@ -230,10 +233,10 @@
 		</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Nymph</li>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Trader</li>
-		<li>Naki_Elite</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--게으른 아이-->
@@ -250,9 +253,10 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Army</li>
-		<li>Naki_Warmonger</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--평범한 아이-->
@@ -277,12 +281,10 @@
 		</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Nymph</li>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Army</li>
-		<li>Naki_Warmonger</li>
-		<li>Naki_Trader</li>
-		<li>Naki_Elite</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 
@@ -305,7 +307,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--고용된 메이드-->
@@ -326,7 +331,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--레스토랑 종업원-->
@@ -351,7 +359,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--사냥감-->
@@ -373,7 +384,10 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--테러리스트-->
@@ -402,7 +416,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--관경병 생존자-->
@@ -428,7 +445,10 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--마사지샵 점원-->
@@ -453,7 +473,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--자연의 여우-->
@@ -486,7 +509,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--시민-->
@@ -511,7 +537,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--은행 접수원-->
@@ -536,7 +565,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--포도밭의 파수꾼-->
@@ -561,7 +593,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--경비행기 파일럿-->
@@ -619,8 +654,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Elite</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--붉은여우 병기창 계원-->
@@ -651,7 +688,10 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--선교사-->
@@ -693,7 +733,10 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--무역회사 사원-->
@@ -714,8 +757,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Trader</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--활주로 신호수-->
@@ -732,7 +777,10 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--캐러밴 무역상-->
@@ -757,7 +805,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Trader</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--편의점 아르바이터-->
@@ -778,7 +829,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--관광지 호객꾼-->
@@ -795,7 +849,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Trader</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--전통시장 점주-->
@@ -816,7 +873,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Trader</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--전직 쉐프-->
@@ -837,7 +897,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--동물 사육사-->
@@ -862,7 +925,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--수경재배 농부-->
@@ -891,7 +957,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--도예가-->
@@ -916,7 +985,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--모자제작자-->
@@ -946,7 +1018,10 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--시계장인-->
@@ -963,7 +1038,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--생선요리 쉐프-->
@@ -988,8 +1066,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Elite</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--의상 디자이너-->
@@ -1014,7 +1094,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--재단사-->
@@ -1035,8 +1118,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Trader</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--생산라인 작업자-->
@@ -1053,7 +1138,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--벌목공-->
@@ -1078,7 +1166,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--가난한 로봇 연구자-->
@@ -1099,8 +1190,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
-		<li>Naki_Elite</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--우주비행사-->
@@ -1137,7 +1230,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--정비창 보조공-->
@@ -1162,7 +1258,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--전기공-->
@@ -1183,7 +1282,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--배관공-->
@@ -1206,7 +1308,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--은여우 중공업 기술자-->
@@ -1231,7 +1336,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--레스토랑 웨이터-->
@@ -1252,7 +1360,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef> -->
 <!--간호사-->
@@ -1277,7 +1388,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--천문학자-->
@@ -1310,7 +1424,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Elite</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--생명공학자-->
@@ -1335,7 +1452,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Elite</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--인공지능 공학자-->
@@ -1356,7 +1476,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Elite</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--지질학자-->
@@ -1381,7 +1504,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Elite</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--고등학교 교사-->
@@ -1410,7 +1536,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Elite</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--외과 의사-->
@@ -1435,7 +1564,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Elite</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--의료보건부 공무원-->
@@ -1460,7 +1592,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Elite</li>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--아이돌-->
@@ -1468,7 +1603,7 @@
 	<defName>Naki_BackstoryAdult_48</defName>
 	<title>Naki Pop Idol</title>
 	<titleShort>Pop Idol</titleShort>
-	<baseDescription>[PAWN_nameDef] was a rare non-scientist Naki who found fame in singing. [PAWN_pronoun] had great dancing skills, outstanding singing skills and an exotic, beautiful appearance that stunned Naki and non-Naki alike.</baseDescription>
+	<baseDescription>[PAWN_nameDef] was a rare non-scientist Naki who found fame in singing. [PAWN_pronoun] had great dancing skills, outstanding singing skills, and an exotic, beautiful appearance that stunned Naki and non-Naki alike.</baseDescription>
 	<slot>Adulthood</slot>
 	<skillGains>
 	<li>
@@ -1496,11 +1631,13 @@
 		<li>
 			<defName>Beauty</defName>
 			<degree>2</degree>
-
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--떠오르는 가수-->
@@ -1521,7 +1658,10 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--드라마 배우-->
@@ -1557,11 +1697,13 @@
 		<li>
 			<defName>Beauty</defName>
 			<degree>1</degree>
-
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--가극단 단원-->
@@ -1589,7 +1731,10 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
+		<li>Naki_Colonist</li>
 		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef> -->
 <!--소총수-->
@@ -1614,7 +1759,8 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Soldier</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--지정사수-->
@@ -1637,7 +1783,8 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
-		<li>Naki_Sniper</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--레인저-->
@@ -1673,9 +1820,8 @@
 		<li>Social</li>
 	</workDisables>
 	<spawnCategories>
-		<li>Naki_Soldier</li>
-		<li>Naki_EliteSoldier</li>
-		<li>Naki_Sniper</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--정찰병-->
@@ -1704,7 +1850,8 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Soldier</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--의무관-->
@@ -1729,7 +1876,8 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_EliteSoldier</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--분대장-->
@@ -1754,7 +1902,8 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_EliteSoldier</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--붉은여우-->
@@ -1784,8 +1933,8 @@
 		<li>Artistic</li>
 	</workDisables>
 	<spawnCategories>
-		<li>Naki_EliteSoldier</li>
-		<li>Naki_Sniper</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--여우장교-->
@@ -1814,7 +1963,8 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Elite</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 <!--강하폭격기 파일럿-->
@@ -1839,8 +1989,8 @@
 	</li>
 	</skillGains>
 	<spawnCategories>
-		<li>Naki_Soldier</li>
-		<li>Naki_EliteSoldier</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 
@@ -1867,7 +2017,8 @@
 		</li>
 	</forcedTraits>
 	<spawnCategories>
-		<li>Naki_Warmonger</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 

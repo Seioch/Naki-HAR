@@ -94,8 +94,7 @@
     </apparelRequired> -->
     <apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
     <weaponTags>
-      <li>Naki_Rifle</li>
-      <li>Naki_Carbine</li>
+      <li>Naki_Gun_Charge_Rifle</li>
     </weaponTags>
     <weaponMoney>
       <min>600</min>
@@ -131,8 +130,7 @@
     </apparelTags>
     <apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
     <weaponTags>
-      <li>Naki_Rifle</li>
-      <li>Naki_Carbine</li>
+      <li>Naki_Gun_Charge_Rifle</li>
     </weaponTags>
     <weaponMoney>
       <min>600</min>

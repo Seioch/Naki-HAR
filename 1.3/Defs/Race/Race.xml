@@ -69,7 +69,7 @@
           <li>Average_Wild</li>
         </aliencrowntypes>
 			<headOffset>(0 ,-0.07)</headOffset>
-            <useGenderedHeads>true</useGenderedHeads>
+      <useGenderedHeads>false</useGenderedHeads>
 			<useGenderedBodies>true</useGenderedBodies>
 			<atlasScale>4</atlasScale>
       <bodyAddons>
@@ -85,6 +85,7 @@
               <layerOffset>-0.19</layerOffset>
                 <bodyTypes>
                     <Female>(-0.3729904,0.2315113)</Female>
+                    <Male>(-0.3729904,0.2315113)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -94,6 +95,7 @@
                 <layerOffset>-0.19</layerOffset>
                 <bodyTypes>
                     <Female>(0,0.5401928)</Female>
+                    <Male>(0,0.5401928)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -103,6 +105,7 @@
                 <layerOffset>-0.19</layerOffset>
                 <bodyTypes>
                     <Female>(-0.4972991,0.2958201)</Female>
+                    <Male>(-0.4972991,0.2958201)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -127,6 +130,7 @@
               <layerOffset>-0.2758</layerOffset>
               <bodyTypes>
                   <Female>(0.009646305,-0.4951769)</Female>
+                  <Male>(0.009646305,-0.4951769)</Male>
               </bodyTypes>
               <crownTypes>
                   <Normal_Average>(0,0)</Normal_Average>
@@ -136,6 +140,7 @@
               <layerOffset>-0.2758</layerOffset>
               <bodyTypes>
                   <Female>(0.003215437,-0.4694535)</Female>
+                  <Male>(0.003215437,-0.4694535)</Male>
               </bodyTypes>
               <crownTypes>
                   <Normal_Average>(0,0)</Normal_Average>
@@ -145,6 +150,7 @@
               <layerOffset>-0.2758</layerOffset>
               <bodyTypes>
                   <Female>(0,0.7877813)</Female>
+                  <Male>(0,0.7877813)</Male>
               </bodyTypes>
               <crownTypes>
                   <Normal_Average>(0,0)</Normal_Average>
@@ -154,6 +160,7 @@
               <layerOffset>-0.2758</layerOffset>
               <bodyTypes>
                   <Female>(0.009646305,-0.4951769)</Female>
+                  <Male>(0.009646305,-0.4951769)</Male>
               </bodyTypes>
               <crownTypes>
                   <Normal_Average>(0,0)</Normal_Average>
@@ -174,6 +181,7 @@
           <west>
             <bodyTypes>
                 <Female>(0,-0.5)</Female>
+                <Male>(0,-0.5)</Male>
             </bodyTypes>
             <crownTypes>
                 <Normal_Average>(0,0)</Normal_Average>
@@ -182,6 +190,7 @@
           <south>
             <bodyTypes>
                 <Female>(0,-0.49)</Female>
+                <Male>(0,-0.49)</Male>
             </bodyTypes>
             <crownTypes>
                 <Normal_Average>(0,0)</Normal_Average>
@@ -190,6 +199,7 @@
           <north>
             <bodyTypes>
                 <Female>(0,-0.3)</Female>
+                <Male>(0,-0.3)</Male>
             </bodyTypes>
             <crownTypes>
                 <Normal_Average>(0,0)</Normal_Average>
@@ -198,6 +208,7 @@
           <east>
             <bodyTypes>
                 <Female>(0,-0.5)</Female>
+                <Male>(0,-0.5)</Male>
             </bodyTypes>
             <crownTypes>
                 <Normal_Average>(0,0)</Normal_Average>
@@ -219,6 +230,7 @@
             <west>
               <bodyTypes>
                   <Female>(0.13,-0.5)</Female>
+                  <Male>(0.13,-0.5)</Male>
               </bodyTypes>
               <crownTypes>
                   <Normal_Average>(0,0)</Normal_Average>
@@ -227,6 +239,7 @@
             <south>
               <bodyTypes>
                   <Female>(-0.4212219,0.289389)</Female>
+                  <Male>(-0.4212219,0.289389)</Male>
               </bodyTypes>
               <crownTypes>
                   <Normal_Average>(0,0)</Normal_Average>
@@ -235,6 +248,7 @@
             <north>
                 <bodyTypes>
                     <Female>(0,0.5819935)</Female>
+                    <Male>(0,0.5819935)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -243,6 +257,7 @@
             <east>
               <bodyTypes>
                   <Female>(0.13,-0.5)</Female>
+                  <Male>(0.13,-0.5)</Male>
               </bodyTypes>
               <crownTypes>
                   <Normal_Average>(0,0)</Normal_Average>
@@ -263,6 +278,7 @@
             <west>
                 <bodyTypes>
                     <Female>(0,-0.5)</Female>
+                    <Male>(0,-0.5)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -271,6 +287,7 @@
               <south>
                 <bodyTypes>
                     <Female>(0,-0.49)</Female>
+                    <Male>(0,-0.49)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -279,6 +296,7 @@
               <north>
                 <bodyTypes>
                     <Female>(0,-0.3)</Female>
+                    <Male>(0,-0.3)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -287,6 +305,7 @@
               <east>
                 <bodyTypes>
                     <Female>(0,-0.5)</Female>
+                    <Male>(0,-0.5)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -308,6 +327,7 @@
               <west>
                   <bodyTypes>
                       <Female>(0.13,-0.5)</Female>
+                      <Male>(0.13,-0.5)</Male>
                   </bodyTypes>
                   <crownTypes>
                       <Normal_Average>(0,0)</Normal_Average>
@@ -316,6 +336,7 @@
               <south>
                   <bodyTypes>
                       <Female>(-0.4212219,0.289389)</Female>
+                      <Male>(-0.4212219,0.289389)</Male>
                   </bodyTypes>
                   <crownTypes>
                       <Normal_Average>(0,0)</Normal_Average>
@@ -324,6 +345,7 @@
               <north>
                   <bodyTypes>
                       <Female>(0,0.5819935)</Female>
+                      <Male>(0,0.5819935)</Male>
                   </bodyTypes>
                   <crownTypes>
                       <Normal_Average>(0,0)</Normal_Average>
@@ -332,6 +354,7 @@
               <east>
                   <bodyTypes>
                       <Female>(0.13,-0.5)</Female>
+                      <Male>(0.13,-0.5)</Male>
                   </bodyTypes>
                   <crownTypes>
                       <Normal_Average>(0,0)</Normal_Average>
@@ -341,8 +364,8 @@
           </li>
     </bodyAddons>
 			
-		 <customDrawSize>(0.9, 0.9)</customDrawSize>
-         <customPortraitDrawSize>(.9, .9)</customPortraitDrawSize>
+    <customDrawSize>(0.9, 0.9)</customDrawSize>
+        <customPortraitDrawSize>(.9, .9)</customPortraitDrawSize>
 		
 		<colorChannels>
 				<li>
@@ -602,7 +625,7 @@
 		
 		
 		</alienPartGenerator>
-        </generalSettings>
+    </generalSettings>
 
 <!--=============================================================================================================================-->
       <graphicPaths>
@@ -617,8 +640,8 @@
 					<value>
 						<hasStyle>true</hasStyle>
 						<styleTagsOverride>
-                            <li>Naki</li>
-                        </styleTagsOverride>
+              <li>Naki</li>
+            </styleTagsOverride>
 					</value>
 				</li>
 				<li>
@@ -696,46 +719,18 @@
 				<!--<li>Naki_Belt_Scarf</li> -->
       </apparelList>
 			<whiteApparelList>
-				<li MayRequire="Nemonian.MY">Moyo_Tribal</li>
-				<li MayRequire="Nemonian.MY">Moyo_Parka</li>
-				<li MayRequire="Nemonian.MY">Moyo_Jacket</li>
-				<li MayRequire="Nemonian.MY">Moyo_Duster</li>
-				<li MayRequire="Nemonian.MY">Moyo_SnB</li>
-				<li MayRequire="Nemonian.MY">Moyo_RoyalRobeA</li>
-				<li MayRequire="Nemonian.MY">Moyo_RoyalRobeB</li>
-				<li MayRequire="Nemonian.MY">Moyo_RoyalRobeC</li>
-				<li MayRequire="Nemonian.MY">Moyo_RoyalBlackDress</li>
-				<li MayRequire="Nemonian.MY">Moyo_Tuque</li>
-				<li MayRequire="Nemonian.MY">Moyo_BowlerHat</li>
-				<li MayRequire="Nemonian.MY">Moyo_CowboyHat</li>
-				<li MayRequire="Nemonian.MY">Moyo_RoyalHologramA</li>
-				<li MayRequire="Nemonian.MY">Moyo_RoyalHologramB</li>
-				<li MayRequire="Nemonian.MY">Moyo_RoyalHologramC</li>
-				<li MayRequire="Nemonian.MY">Moyo_EGsuit</li>
-				<li MayRequire="Nemonian.MY">Moyo_EGmask</li>
-				<li MayRequire="Nemonian.MY">Moyo_LDgear</li>
-				<li MayRequire="Nemonian.MY">Moyo_LDhelmet</li>
-				<li MayRequire="Nemonian.MY">Moyo_DDgear</li>
-				<li MayRequire="Nemonian.MY">Moyo_DDhelmet</li>
-				<li MayRequire="Nemonian.MY">Moyo_GSsuit</li>
-				<li MayRequire="Nemonian.MY">Moyo_GShelmet</li>
-				<li MayRequire="Nemonian.MY">Moyo_GDsuit</li>
-				<li MayRequire="Nemonian.MY">Moyo_GDhelmet</li>
-				<li MayRequire="Nemonian.MY">Moyo_Evasuit</li>
-				<li MayRequire="Nemonian.MY">Moyo_Bodysuit</li>
-				<li MayRequire="Nemonian.MY">Moyo_Royalsuit</li>
 				<li>Apparel_ShieldBelt</li>
 				<li>Apparel_SmokepopBelt</li>
 			</whiteApparelList>
             <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
             <buildingList>
             <!-- Add Pylon and Assembler here once it is coded. -->
-                <li>DRNTF_NooseTrap</li>
+                
             </buildingList>
-        </raceRestriction>
+    </raceRestriction>
 	</alienRace>
 <!--=============================================================================================================================-->
-    <statBases>
+  <statBases>
 	<!--기본-->
       <MarketValue>2700</MarketValue>
       <Flammability>0.3</Flammability>
@@ -763,7 +758,7 @@
 	  <RestRateMultiplier>1.3</RestRateMultiplier>
 	<!--재배-->
 	  <PlantWorkSpeed>0.8</PlantWorkSpeed>
-    </statBases>
+  </statBases>
 <!--=============================================================================================================================-->
     <tools>
       <li>

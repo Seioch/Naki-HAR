@@ -15,7 +15,7 @@
 	<basicMemberKind>Naki_Colonist</basicMemberKind>
 	<pawnSingular>Naki colonist</pawnSingular>
 	<pawnsPlural>Naki colonists</pawnsPlural>
-	<techLevel>Industrial</techLevel>
+	<techLevel>Spacer</techLevel>
 	<allowedCultures><li MayRequire="Ludeon.RimWorld.Ideology">Aolarian</li></allowedCultures>
 	<backstoryFilters>
 		<li>

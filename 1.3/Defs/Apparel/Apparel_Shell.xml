@@ -25,6 +25,7 @@
 	<apparel>
 		<tags>
 			<li>Naki_Colonist</li>
+			<li>Naki_Citizen</li>
 		</tags>
 	</apparel>
 </ThingDef>
@@ -129,7 +130,6 @@
 	</recipeMaker>
 	<apparel>
 		<tags>
-			<li>Naki_Trader</li>
 			<li>Royal</li>
 			<li>RoyalTier1</li>
         	<li>RoyalTier2</li>
@@ -160,7 +160,7 @@
 		<tags>
 			<li>Royal</li>
 			<li>RoyalTier5</li>
-			<li>Naki_Trader</li>
+			
 		</tags>
 	</apparel>
 	<costList>
@@ -194,7 +194,6 @@
 			<li>Middle</li>
 		</layers>
 		<tags>
-			<li>Naki_Glitterworld</li>
 			<li>Royal</li>
 			<li>RoyalTier1</li>
         	<li>RoyalTier2</li>
