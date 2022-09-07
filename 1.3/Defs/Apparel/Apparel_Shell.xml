@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<ThingDef Name="Kurin_ShellBase" ParentName="Kurin_ApparelBase" Abstract="True">
+<ThingDef Name="Naki_ShellBase" ParentName="Naki_ApparelBase" Abstract="True">
 	<statBases>
 		<Mass>1.0</Mass>
 		<EquipDelay>3.0</EquipDelay>
@@ -12,29 +12,29 @@
 		</layers>
 	</apparel>
 	<thingCategories>
-		<li>Kurin_Apparel_Shell</li>
+		<li>Naki_Apparel_Shell</li>
 	</thingCategories>
 </ThingDef>
 
 <!--================================================== Tear 1 ==================================================-->
 
-<ThingDef Name="Kurin_ShellBaseTear1" ParentName="Kurin_ShellBase" Abstract="True">
+<ThingDef Name="Naki_ShellBaseTear1" ParentName="Naki_ShellBase" Abstract="True">
 	<recipeMaker>
-		<researchPrerequisite>Kurin_ApparelT1</researchPrerequisite>
+		<researchPrerequisite>Naki_ApparelT1</researchPrerequisite>
 	</recipeMaker>
 	<apparel>
 		<tags>
-			<li>Kurin_Colonist</li>
+			<li>Naki_Colonist</li>
 		</tags>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_ShellBaseTear1">
-	<defName>Kurin_Shell_Cardigan</defName>
-	<label>kurin cardigan</label>
+<ThingDef ParentName="Naki_ShellBaseTear1">
+	<defName>Naki_Shell_Cardigan</defName>
+	<label>Naki cardigan</label>
 	<description>푹신푹신하고 따듯한 카디건입니다. 옷이 늘어나지 않게 조심하세요!</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Shell/Cardigan/Texture</texPath>
+		<texPath>Naki/Apparel/Shell/Cardigan/Texture</texPath>
 	</graphicData>
 	<costStuffCount>75</costStuffCount>
 	<stuffCategories>
@@ -54,16 +54,16 @@
 			<li>Torso</li>
 			<li>Shoulders</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Shell/Cardigan/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Shell/Cardigan/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_ShellBaseTear1">
-	<defName>Kurin_Shell_Duster</defName>
-	<label>kurin duster</label>
+<ThingDef ParentName="Naki_ShellBaseTear1">
+	<defName>Naki_Shell_Duster</defName>
+	<label>Naki duster</label>
 	<description>상당한 더위와 어느정도의 추위를 막아 줄 수 있는 세련된 외투입니다.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Shell/Duster/Texture</texPath>
+		<texPath>Naki/Apparel/Shell/Duster/Texture</texPath>
 	</graphicData>
 	<costStuffCount>75</costStuffCount>
 	<stuffCategories>
@@ -85,16 +85,16 @@
 			<li>Arms</li>
 			<li>Legs</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Shell/Duster/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Shell/Duster/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_ShellBaseTear1">
-	<defName>Kurin_Shell_Winter_Padding</defName>
-	<label>kurin winter padding</label>
+<ThingDef ParentName="Naki_ShellBaseTear1">
+	<defName>Naki_Shell_Winter_Padding</defName>
+	<label>Naki winter padding</label>
 	<description>두꺼운 겨울 패딩입니다. 추위를 잘 타는 쿠린들에게는 겨울 필수품입니다.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Shell/Winter_Padding/Texture</texPath>
+		<texPath>Naki/Apparel/Shell/Winter_Padding/Texture</texPath>
 	</graphicData>
 	<costStuffCount>75</costStuffCount>
 	<stuffCategories>
@@ -115,7 +115,7 @@
 			<li>Arms</li>
 			<li>Legs</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Shell/Winter_Padding/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Shell/Winter_Padding/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
 
@@ -123,13 +123,13 @@
 
 <!--================================================== Tear 3 ==================================================-->
 
-<ThingDef Name="Kurin_ShellBaseTear3" ParentName="Kurin_ShellBase" Abstract="True">
+<ThingDef Name="Naki_ShellBaseTear3" ParentName="Naki_ShellBase" Abstract="True">
 	<recipeMaker>
-		<researchPrerequisite>Kurin_ApparelT3</researchPrerequisite>
+		<researchPrerequisite>Naki_ApparelT3</researchPrerequisite>
 	</recipeMaker>
 	<apparel>
 		<tags>
-			<li>Kurin_Trader</li>
+			<li>Naki_Trader</li>
 			<li>Royal</li>
 			<li>RoyalTier1</li>
         	<li>RoyalTier2</li>
@@ -142,12 +142,12 @@
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_ShellBaseTear3">
-	<defName>Kurin_OnSkin_Traditional_Coat</defName>
-	<label>kurin traditional coat</label>
+<ThingDef ParentName="Naki_ShellBaseTear3">
+	<defName>Naki_OnSkin_Traditional_Coat</defName>
+	<label>Naki traditional coat</label>
 	<description>단조로운 남색 코트 위에 흰색 무늬가 인상적인 쿠린들의 전통의상입니다.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Shell/Traditional_Coat/Texture</texPath>
+		<texPath>Naki/Apparel/Shell/Traditional_Coat/Texture</texPath>
 	</graphicData>
 	<apparel>
 		<bodyPartGroups>
@@ -156,11 +156,11 @@
 			<li>Arms</li>
 			<li>Legs</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Shell/Traditional_Coat/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Shell/Traditional_Coat/Texture</wornGraphicPath>
 		<tags>
 			<li>Royal</li>
 			<li>RoyalTier5</li>
-			<li>Kurin_Trader</li>
+			<li>Naki_Trader</li>
 		</tags>
 	</apparel>
 	<costList>
@@ -185,16 +185,16 @@
 
 <!--================================================== Endgame Armor ==================================================-->
 
-<ThingDef Name="Kurin_ShellArmor" ParentName="Kurin_ShellBase" Abstract="True">
+<ThingDef Name="Naki_ShellArmor" ParentName="Naki_ShellBase" Abstract="True">
 	<recipeMaker>
-		<researchPrerequisite>Kurin_ApparelT4</researchPrerequisite>
+		<researchPrerequisite>Naki_ApparelT4</researchPrerequisite>
 	</recipeMaker>
 	<apparel>
 		<layers>
 			<li>Middle</li>
 		</layers>
 		<tags>
-			<li>Kurin_Glitterworld</li>
+			<li>Naki_Glitterworld</li>
 			<li>Royal</li>
 			<li>RoyalTier1</li>
         	<li>RoyalTier2</li>
@@ -208,12 +208,12 @@
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_ShellArmor">
-	<defName>Kurin_Redfox_Armor</defName>
-	<label>kurin redfox armor</label>
-	<description>Replica power armor from the old Kurin republic. The Redfox army would wear this armor for space and ground combat.</description>
+<ThingDef ParentName="Naki_ShellArmor">
+	<defName>Naki_Redfox_Armor</defName>
+	<label>Naki redfox armor</label>
+	<description>Replica power armor from the old Naki republic. The Redfox army would wear this armor for space and ground combat.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/OnSkin/Redfox_armor/Texture</texPath>
+		<texPath>Naki/Apparel/OnSkin/Redfox_armor/Texture</texPath>
 	</graphicData>
 	<tradeTags>
       <li>HiTechArmor</li>
@@ -250,21 +250,21 @@
 			<li>Feet</li>
 			<li>Hands</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/OnSkin/Redfox_armor/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/OnSkin/Redfox_armor/Texture</wornGraphicPath>
 		<tags>
-			<li>Kurin_Glitterworld</li>
+			<li>Naki_Glitterworld</li>
  			<li>RoyalCombatGear</li>
 		</tags>
 	</apparel>
 </ThingDef>
 
 <!-- Content merged with Redfox armor -->
-<!-- <ThingDef ParentName="Kurin_ShellArmor">
-	<defName>Kurin_Shadowfox_Armor</defName>
-	<label>kurin shadowfox armor</label>
-	<description>Replica power armor from the old Kurin republic. The Shadowfox special forces wore this advanced armor to enhance assassination capabilities. Hidden servos augment shooting stability and movement speed.</description>
+<!-- <ThingDef ParentName="Naki_ShellArmor">
+	<defName>Naki_Shadowfox_Armor</defName>
+	<label>Naki shadowfox armor</label>
+	<description>Replica power armor from the old Naki republic. The Shadowfox special forces wore this advanced armor to enhance assassination capabilities. Hidden servos augment shooting stability and movement speed.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/OnSkin/Shadowfox_armor/Texture</texPath>
+		<texPath>Naki/Apparel/OnSkin/Shadowfox_armor/Texture</texPath>
 	</graphicData>
 	<tradeTags>
       <li>HiTechArmor</li>
@@ -299,9 +299,9 @@
 			<li>Feet</li>
 			<li>Hands</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/OnSkin/Shadowfox_armor/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/OnSkin/Shadowfox_armor/Texture</wornGraphicPath>
 		<tags>
-			<li>Kurin_Glitterworld</li>
+			<li>Naki_Glitterworld</li>
  			<li>RoyalCombatGear</li>
 		</tags>
 	</apparel>

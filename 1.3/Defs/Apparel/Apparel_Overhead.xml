@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<ThingDef Name="Kurin_OverheadBase" ParentName="Kurin_ApparelBase" Abstract="True">
+<ThingDef Name="Naki_OverheadBase" ParentName="Naki_ApparelBase" Abstract="True">
 	<statBases>
 		<Mass>0.2</Mass>
 		<EquipDelay>1.0</EquipDelay>
@@ -12,34 +12,34 @@
 		</layers>
 	</apparel>
 	<thingCategories>
-		<li>Kurin_Apparel_Overhead</li>
+		<li>Naki_Apparel_Overhead</li>
 	</thingCategories>
 </ThingDef>
 
 <!--================================================== Tear 1 ==================================================-->
 
-<ThingDef Name="Kurin_OverheadBaseTear1" ParentName="Kurin_OverheadBase" Abstract="True">
+<ThingDef Name="Naki_OverheadBaseTear1" ParentName="Naki_OverheadBase" Abstract="True">
 	<recipeMaker>
-		<researchPrerequisite>Kurin_ApparelT1</researchPrerequisite>
+		<researchPrerequisite>Naki_ApparelT1</researchPrerequisite>
 	</recipeMaker>
 	<apparel>
 		<tags>
-			<li>Kurin_Colonist</li>
-			<li>Kurin_Citizen</li>
+			<li>Naki_Colonist</li>
+			<li>Naki_Citizen</li>
 		</tags>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBaseTear1">
-	<defName>Kurin_Overhead_Winter_Hat</defName>
-	<label>kurin winter hat</label>
+<ThingDef ParentName="Naki_OverheadBaseTear1">
+	<defName>Naki_Overhead_Winter_Hat</defName>
+	<label>Naki winter hat</label>
 	<description>간단한 겨울모자입니다. 추위에 약한 쿠린들도 겨울을 편하게 보내게 해줍니다.</description>
 	<costStuffCount>25</costStuffCount>
 	<stuffCategories>
 		<li>Fabric</li>
 	</stuffCategories>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Winter_Hat/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Winter_Hat/Texture</texPath>
 	</graphicData>
 	<statBases>
 		<MaxHitPoints>100</MaxHitPoints>
@@ -53,20 +53,20 @@
 		<bodyPartGroups>
 			<li>UpperHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Winter_Hat/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Winter_Hat/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBaseTear1">
-	<defName>Kurin_Overhead_Summer_Hat</defName>
-	<label>kurin summer hat</label>
+<ThingDef ParentName="Naki_OverheadBaseTear1">
+	<defName>Naki_Overhead_Summer_Hat</defName>
+	<label>Naki summer hat</label>
 	<description>간단한 여름모자입니다. 아주 더운 여름날이라도 이 모자와 함께라면 버틸 수 있습니다.</description>
 	<costStuffCount>25</costStuffCount>
 	<stuffCategories>
 		<li>Fabric</li>
 	</stuffCategories>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Summer_Hat/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Summer_Hat/Texture</texPath>
 	</graphicData>
 	<statBases>
 		<MaxHitPoints>100</MaxHitPoints>
@@ -80,30 +80,30 @@
 		<bodyPartGroups>
 			<li>UpperHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Summer_Hat/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Summer_Hat/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
 
 <!--================================================== Tear 2 ==================================================-->
 
-<ThingDef Name="Kurin_OverheadBaseTear2" ParentName="Kurin_OverheadBase" Abstract="True">
+<ThingDef Name="Naki_OverheadBaseTear2" ParentName="Naki_OverheadBase" Abstract="True">
 	<recipeMaker>
-		<researchPrerequisite>Kurin_ApparelT2</researchPrerequisite>
+		<researchPrerequisite>Naki_ApparelT2</researchPrerequisite>
 	</recipeMaker>
 	<apparel>
 		<tags>
-			<li>Kurin_Colonist</li>
-			<li>Kurin_Citizen</li>
+			<li>Naki_Colonist</li>
+			<li>Naki_Citizen</li>
 		</tags>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBaseTear2">
-	<defName>Kurin_Overhead_Casual_Hair_Pin</defName>
-	<label>kurin casual hair pin</label>
+<ThingDef ParentName="Naki_OverheadBaseTear2">
+	<defName>Naki_Overhead_Casual_Hair_Pin</defName>
+	<label>Naki casual hair pin</label>
 	<description>캐주얼한 느낌의 머리핀입니다. 단순히 착용만 해도 활기가 생기는 거 같습니다.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Casual_Hair_Pin/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Casual_Hair_Pin/Texture</texPath>
 	</graphicData>
 	<costList>
 		<Cloth>25</Cloth>
@@ -124,22 +124,22 @@
 		<bodyPartGroups>
 			<li>UpperHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Casual_Hair_Pin/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Casual_Hair_Pin/Texture</wornGraphicPath>
 	</apparel>
 	<equippedStatOffsets>
 		<MentalBreakThreshold>-0.06</MentalBreakThreshold>
 	</equippedStatOffsets>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBase">
-	<defName>Kurin_Overhead_Goggles</defName>
-	<label>kurin goggles</label>
+<ThingDef ParentName="Naki_OverheadBase">
+	<defName>Naki_Overhead_Goggles</defName>
+	<label>Naki goggles</label>
 	<description>전투용 고글입니다. 최소한의 방어력을 제공해줍니다.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Goggles/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Goggles/Texture</texPath>
 	</graphicData>
 	<recipeMaker>
-		<researchPrerequisite>Kurin_ApparelT2</researchPrerequisite>
+		<researchPrerequisite>Naki_ApparelT2</researchPrerequisite>
 	</recipeMaker>
     <costList>
       <Cloth>25</Cloth>
@@ -158,39 +158,39 @@
 	<apparel>
 		<useWornGraphicMask>false</useWornGraphicMask>
 		<tags>
-			<li>Kurin_Grunt</li>
-			<li>Kurin_Sniper</li>
-			<li>Kurin_Sniper_H</li>
+			<li>Naki_Grunt</li>
+			<li>Naki_Sniper</li>
+			<li>Naki_Sniper_H</li>
 		</tags>
 		<bodyPartGroups>
 			<li>UpperHead</li>
 			<li>Eyes</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Goggles/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Goggles/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
 
 <!--================================================== Tear 3 ==================================================-->
 
-<ThingDef Name="Kurin_OverheadBaseTear3" ParentName="Kurin_OverheadBase" Abstract="True">
+<ThingDef Name="Naki_OverheadBaseTear3" ParentName="Naki_OverheadBase" Abstract="True">
 	<recipeMaker>
-		<researchPrerequisite>Kurin_ApparelT3</researchPrerequisite>
+		<researchPrerequisite>Naki_ApparelT3</researchPrerequisite>
 	</recipeMaker>
 	<apparel>
 		<tags>
-			<li>Kurin_OverheadT3</li>
+			<li>Naki_OverheadT3</li>
 			<li>Royal</li>
         	<li>RoyalTier2</li>
 		</tags>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBaseTear3">
-	<defName>Kurin_Overhead_Gothic_Hair_Pin</defName>
-	<label>kurin gothic hair pin</label>
+<ThingDef ParentName="Naki_OverheadBaseTear3">
+	<defName>Naki_Overhead_Gothic_Hair_Pin</defName>
+	<label>Naki gothic hair pin</label>
 	<description>고딕 양식의 머리핀입니다.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Gothic_Hair_Pin/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Gothic_Hair_Pin/Texture</texPath>
 	</graphicData>
 	<costList>
 		<DevilstrandCloth>25</DevilstrandCloth>
@@ -211,30 +211,30 @@
 		<bodyPartGroups>
 			<li>UpperHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Gothic_Hair_Pin/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Gothic_Hair_Pin/Texture</wornGraphicPath>
 	</apparel>
 	<equippedStatOffsets>
 		<FoodPoisonChance>-0.2</FoodPoisonChance>
 	</equippedStatOffsets>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBaseTear3">
-	<defName>Kurin_Overhead_Bikini_Armor_Headgear</defName>
-	<label>kurin bikini armor headgear</label>
+<ThingDef ParentName="Naki_OverheadBaseTear3">
+	<defName>Naki_Overhead_Bikini_Armor_Headgear</defName>
+	<label>Naki bikini armor headgear</label>
 	<description>비키니 아머용 머리 방어구입니다. 보기보다 매우 튼튼합니다.</description>
 	<apparel>
 	<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
 		<bodyPartGroups>
 			<li>UpperHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Bikini_Armor_Headgear/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Bikini_Armor_Headgear/Texture</wornGraphicPath>
       <tags>
-		<li>Kurin_Melee</li>
+		<li>Naki_Melee</li>
  		<li>RoyalCombatGear</li>
       </tags>
 	</apparel>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Bikini_Armor_Headgear/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Bikini_Armor_Headgear/Texture</texPath>
 	</graphicData>
 	<costList>
 		<DevilstrandCloth>25</DevilstrandCloth>
@@ -259,12 +259,12 @@
 	</equippedStatOffsets>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBaseTear3">
-	<defName>Kurin_Overhead_Military_Helmet</defName>
-	<label>kurin Military Helmet</label>
+<ThingDef ParentName="Naki_OverheadBaseTear3">
+	<defName>Naki_Overhead_Military_Helmet</defName>
+	<label>Naki Military Helmet</label>
 	<description>플라스틸 방탄판이 장착된 전투용 방탄모입니다. 머리를 향해 날라오는 총알을 막을 수 있는 최후의 수단입니다.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Military_Helmet_A/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Military_Helmet_A/Texture</texPath>
 	</graphicData>
 	<costList>
 		<DevilstrandCloth>25</DevilstrandCloth>
@@ -290,9 +290,9 @@
 		<bodyPartGroups>
 			<li>FullHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Military_Helmet_A/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Military_Helmet_A/Texture</wornGraphicPath>
 		<tags>
-			<li>Kurin_Military</li>
+			<li>Naki_Military</li>
  			<li>RoyalCombatGear</li>
 			<li>Royal</li>
 			<li>RoyalTier4</li>
@@ -300,12 +300,12 @@
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBaseTear3">
-	<defName>Kurin_Overhead_Traditional_Hair_Pin</defName>
-	<label>kurin traditional hair pin</label>
+<ThingDef ParentName="Naki_OverheadBaseTear3">
+	<defName>Naki_Overhead_Traditional_Hair_Pin</defName>
+	<label>Naki traditional hair pin</label>
 	<description>귀여운 꽃 모양의 머리핀입니다.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Traditional_Hair_Pin/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Traditional_Hair_Pin/Texture</texPath>
 	</graphicData>
 	  <costList>
 		<DevilstrandCloth>25</DevilstrandCloth>
@@ -332,16 +332,16 @@
 		<tags>
 			<li>Royal</li>
 			<li>RoyalTier5</li>
-			<li>Kurin_Trader</li>
+			<li>Naki_Trader</li>
 		</tags>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Traditional_Hair_Pin/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Traditional_Hair_Pin/Texture</wornGraphicPath>
 		<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBaseTear3">
-	<defName>Kurin_Overhead_Cute_Hair_Pin</defName>
-	<label>kurin cute hair pin</label>
+<ThingDef ParentName="Naki_OverheadBaseTear3">
+	<defName>Naki_Overhead_Cute_Hair_Pin</defName>
+	<label>Naki cute hair pin</label>
 	<description>귀여운 여우 모양의 머리핀입니다.</description>
 	<apparel>
 		<bodyPartGroups>
@@ -350,13 +350,13 @@
 		<tags>
 			<li>Royal</li>
 			<li>RoyalTier5</li>
-			<li>Kurin_Trader</li>
+			<li>Naki_Trader</li>
 		</tags>
 	<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
-	<wornGraphicPath>Kurin/Apparel/Overhead/Cute_Hair_Pin/Texture</wornGraphicPath>
+	<wornGraphicPath>Naki/Apparel/Overhead/Cute_Hair_Pin/Texture</wornGraphicPath>
 	</apparel>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Cute_Hair_Pin/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Cute_Hair_Pin/Texture</texPath>
 	</graphicData>
 	<costList>
 		<DevilstrandCloth>25</DevilstrandCloth>
@@ -380,13 +380,13 @@
 
 <!--================================================== Tier 4 ==================================================-->
 
-<ThingDef Name="Kurin_OverheadBaseTear4" ParentName="Kurin_OverheadBase" Abstract="True">
+<ThingDef Name="Naki_OverheadBaseTear4" ParentName="Naki_OverheadBase" Abstract="True">
 	<recipeMaker>
-		<researchPrerequisite>Kurin_ApparelT4</researchPrerequisite>
+		<researchPrerequisite>Naki_ApparelT4</researchPrerequisite>
 	</recipeMaker>
 	<apparel>
 		<tags>
-			<li>Kurin_OverheadT4</li>
+			<li>Naki_OverheadT4</li>
 			<li>Royal</li>
 			<li>RoyalTier1</li>
         	<li>RoyalTier2</li>
@@ -400,12 +400,12 @@
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_OverheadBaseTear4">
-	<defName>Kurin_Redfox_Helmet</defName>
-	<label>Kurin Redfox Helmet</label>
-	<description>Highly protective military helmet for Kurin Redfox soldiers. Capable of absorbing incredible punishment due to interweaving layers of devilstrand and energy shielding.</description>
+<ThingDef ParentName="Naki_OverheadBaseTear4">
+	<defName>Naki_Redfox_Helmet</defName>
+	<label>Naki Redfox Helmet</label>
+	<description>Highly protective military helmet for Naki Redfox soldiers. Capable of absorbing incredible punishment due to interweaving layers of devilstrand and energy shielding.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Marine_Melee/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Marine_Melee/Texture</texPath>
 	</graphicData>
 	<tradeTags>
       <li>HiTechArmor</li>
@@ -436,21 +436,21 @@
 		<bodyPartGroups>
 			<li>FullHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Marine_Melee/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Marine_Melee/Texture</wornGraphicPath>
 		<tags>
-			<li>Kurin_GitterworldGear</li>
+			<li>Naki_GitterworldGear</li>
  			<li>RoyalCombatGear</li>
 		</tags>
 	</apparel>
 </ThingDef>
 
 <!-- Content merged with Redfox helmet -->
-<!-- <ThingDef ParentName="Kurin_OverheadBaseTear4">
-	<defName>Kurin_Shadowfox_Helmet</defName>
-	<label>Kurin Shadowfox Helmet</label>
-	<description>Highly protective military armor for Kurin Shadowfox soldiers. This helmet sacrifices some protection for a suite of rangefinders and target acquisition devices.</description>
+<!-- <ThingDef ParentName="Naki_OverheadBaseTear4">
+	<defName>Naki_Shadowfox_Helmet</defName>
+	<label>Naki Shadowfox Helmet</label>
+	<description>Highly protective military armor for Naki Shadowfox soldiers. This helmet sacrifices some protection for a suite of rangefinders and target acquisition devices.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Overhead/Marine_Ranged/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Marine_Ranged/Texture</texPath>
 	</graphicData>
 	<tradeTags>
       <li>HiTechArmor</li>
@@ -480,9 +480,9 @@
 		<bodyPartGroups>
 			<li>FullHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Kurin/Apparel/Overhead/Marine_Ranged/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Marine_Ranged/Texture</wornGraphicPath>
 		<tags>
-			<li>Kurin_GitterworldGear</li>
+			<li>Naki_GitterworldGear</li>
  			<li>RoyalCombatGear</li>
 			<li>Royal</li>
 			<li>RoyalTier4</li>

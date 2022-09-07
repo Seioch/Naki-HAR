@@ -29,26 +29,27 @@
       <ingestReportString>Consuming {0}</ingestReportString>
       <useEatingSpeedStat>false</useEatingSpeedStat>
       <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>ReviaRaceRedHazeFury</hediffDef>
+        <li Class="IngestionOutcomeDoer_GiveHediffCheckRace">
+          <hediffDef>Dark_Matter_Poisoning</hediffDef>
           <severity>1.00</severity>
           <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
-          <need>Rest</need>
-          <offset>1.0</offset>
+          <need>NakiRaceDMNeed</need>
+          <offset>0.2</offset>
         </li>
       </outcomeDoers>
     </ingestible>
     <comps>
       <li Class="CompProperties_Drug">
-        <chemical>ReviaRaceRedHaze</chemical>
+        <chemical>DarkMatter</chemical>
         <addictiveness>1.00</addictiveness>
-        <needLevelOffset>1.00</needLevelOffset>
+        <needLevelOffset>0.2</needLevelOffset>
         <listOrder>1009</listOrder>
       </li>
     </comps>
     <tradeTags>
+    <!-- TODO: Determine if it should be spawnable on traders -->
       <li>ExoticMisc</li>
     </tradeTags>
   </ThingDef>

@@ -74,7 +74,7 @@
 			<atlasScale>4</atlasScale>
       <bodyAddons>
 			<li>
-        <path>Kurin/Tail/Single tails/Texture1</path>
+        <path>Naki/Tail/Single tails/Texture1</path>
         <bodyPart>tail</bodyPart>				  
         <inFrontOfBody>false</inFrontOfBody>
 				<colorChannel>hair</colorChannel>
@@ -113,8 +113,8 @@
         </li>
 				
         <li>
-          <!-- <path>Kurin/Face/Faces/Texture</path> -->
-          <path>Kurin/Null/Texture</path>
+          <!-- <path>Naki/Face/Faces/Texture</path> -->
+          <path>Naki/Null/Texture</path>
           <bodyPart>Head</bodyPart>				
           <inFrontOfBody>true</inFrontOfBody>
           <colorChannel>skin</colorChannel>
@@ -163,7 +163,7 @@
 				</li>
 				
         <li>
-        <path>Kurin/Ear/Left/DRNTFEarLA</path>
+        <path>Naki/Ear/Left/DRNTFEarLA</path>
         <bodyPart>left ear</bodyPart>				
         <inFrontOfBody>true</inFrontOfBody>
         <colorChannel>hair</colorChannel>
@@ -207,7 +207,7 @@
         </li>
 			<!--왼쪽귀B-->
         <li>
-          <path>Kurin/Ear/Left/DRNTFEarLB</path>
+          <path>Naki/Ear/Left/DRNTFEarLB</path>
           <bodyPart>left ear</bodyPart>				
           <inFrontOfBody>false</inFrontOfBody>
           <colorChannel>hair</colorChannel>  
@@ -252,7 +252,7 @@
         </li>
 			<!--오른쪽귀A-->
         <li>
-          <path>Kurin/Ear/Right/DRNTFEarRA</path>
+          <path>Naki/Ear/Right/DRNTFEarRA</path>
           <bodyPart>right ear</bodyPart>				
           <inFrontOfBody>true</inFrontOfBody>
           <colorChannel>hair</colorChannel> 
@@ -296,7 +296,7 @@
         </li>
 			<!--오른쪽귀B-->
         <li>
-          <path>Kurin/Ear/Right/DRNTFEarRB</path>
+          <path>Naki/Ear/Right/DRNTFEarRB</path>
           <bodyPart>right ear</bodyPart>				
           <inFrontOfBody>false</inFrontOfBody>
           <colorChannel>hair</colorChannel>
@@ -607,8 +607,8 @@
 <!--=============================================================================================================================-->
       <graphicPaths>
           <li>
-              <head>Kurin/Head/A/</head>
-              <body>Kurin/Body/B/</body>
+              <head>Naki/Head/A/</head>
+              <body>Naki/Body/B/</body>
           </li>
       </graphicPaths>
 			<styleSettings>
@@ -617,7 +617,7 @@
 					<value>
 						<hasStyle>true</hasStyle>
 						<styleTagsOverride>
-                            <li>Kurin</li>
+                            <li>Naki</li>
                         </styleTagsOverride>
 					</value>
 				</li>
@@ -639,61 +639,61 @@
             <hasHair>true</hasHair>
 			<getsGreyAt>85</getsGreyAt>
             <styleTags>
-                <li>Kurin</li>
+                <li>Naki</li>
             </styleTags>
         </hairSettings> -->
 <!--=============================================================================================================================-->
 		<raceRestriction>
       <apparelList>
-				<li>Kurin_OnSkin_Shirt</li>
-				<li>Kurin_OnSkin_T_Shirt</li>
-				<li>Kurin_OnSkin_Hot_Pants</li>
-				<li>Kurin_OnSkin_PajamasA</li>
-				<li>Kurin_OnSkin_PajamasB</li>
-				<li>Kurin_OnSkin_PajamasC</li>
-				<li>Kurin_OnSkin_One_Piece_Dress</li>
-				<li>Kurin_OnSkin_Open_Back_Knit</li>
-				<li>Kurin_OnSkin_Open_Shoulder_Knit</li>
-				<li>Kurin_OnSkin_Hoodie</li>
-				<li>Kurin_OnSkin_Casual_Wear</li>
-				<li>Kurin_OnSkin_Armored_Gothic_Dress</li>
-				<li>Kurin_OnSkin_Gothic_Dress</li>
-				<li>Kurin_OnSkin_Bikini_Armor</li>
-				<li>Kurin_OnSkin_Military_Uniform</li>
-				<li>Kurin_OnSkin_Nun_Dress</li>
-				<li>Kurin_OnSkin_Work_Jumpsuit</li>
-				<li>Kurin_OnSkin_Traditional_Simple_Dress</li>
-				<li>Kurin_OnSkin_Traditional_Fancy_Dress</li>
-				<li>Kurin_OnSkin_Traditional_Luxury_Dress</li>
-				<li>Kurin_OnSkin_Cute_Dress</li>
-				<li>Kurin_OnSkin_Seductive_White_Dress</li>
-				<li>Kurin_OnSkin_Seductive_Black_Dress</li>
-				<li>Kurin_Underwear</li> 
-				<li>Kurin_Underwear_Stuffed</li> 
-				<li>Kurin_Underwear_Black</li> 
-				<li>Kurin_Underwear_Red</li> 
-				<li>Kurin_Underwear_Striped</li> 
-				<li>Kurin_Underwear_Striped_Stuffed</li> 
-				<li>Kurin_Underwear_Slim</li>
-				<li>Kurin_Underwear_Prude</li>
-				<li>Kurin_Middle_Body_Armor</li>
-				<li>Kurin_Overhead_Winter_Hat</li>
-				<li>Kurin_Overhead_Summer_Hat</li>
-				<li>Kurin_Overhead_Casual_Hair_Pin</li>
-				<li>Kurin_Overhead_Goggles</li>
-				<li>Kurin_Overhead_Gothic_Hair_Pin</li>
-				<li>Kurin_Overhead_Bikini_Armor_Headgear</li>
-				<li>Kurin_Overhead_Military_Helmet</li>
-				<li>Kurin_Overhead_Traditional_Hair_Pin</li>
-				<li>Kurin_Overhead_Cute_Hair_Pin</li>
-				<li>Kurin_Shell_Cardigan</li>
-				<li>Kurin_Shell_Duster</li>
-				<li>Kurin_Shell_Winter_Padding</li>
-				<li>Kurin_OnSkin_Traditional_Coat</li>
-        <li>Kurin_Redfox_Armor</li>
-        <li>Kurin_Redfox_Helmet</li>
-        <li>Kurin_Waterfox_Armor</li>
-				<!--<li>Kurin_Belt_Scarf</li> -->
+				<li>Naki_OnSkin_Shirt</li>
+				<li>Naki_OnSkin_T_Shirt</li>
+				<li>Naki_OnSkin_Hot_Pants</li>
+				<li>Naki_OnSkin_PajamasA</li>
+				<li>Naki_OnSkin_PajamasB</li>
+				<li>Naki_OnSkin_PajamasC</li>
+				<li>Naki_OnSkin_One_Piece_Dress</li>
+				<li>Naki_OnSkin_Open_Back_Knit</li>
+				<li>Naki_OnSkin_Open_Shoulder_Knit</li>
+				<li>Naki_OnSkin_Hoodie</li>
+				<li>Naki_OnSkin_Casual_Wear</li>
+				<li>Naki_OnSkin_Armored_Gothic_Dress</li>
+				<li>Naki_OnSkin_Gothic_Dress</li>
+				<li>Naki_OnSkin_Bikini_Armor</li>
+				<li>Naki_OnSkin_Military_Uniform</li>
+				<li>Naki_OnSkin_Nun_Dress</li>
+				<li>Naki_OnSkin_Work_Jumpsuit</li>
+				<li>Naki_OnSkin_Traditional_Simple_Dress</li>
+				<li>Naki_OnSkin_Traditional_Fancy_Dress</li>
+				<li>Naki_OnSkin_Traditional_Luxury_Dress</li>
+				<li>Naki_OnSkin_Cute_Dress</li>
+				<li>Naki_OnSkin_Seductive_White_Dress</li>
+				<li>Naki_OnSkin_Seductive_Black_Dress</li>
+				<li>Naki_Underwear</li> 
+				<li>Naki_Underwear_Stuffed</li> 
+				<li>Naki_Underwear_Black</li> 
+				<li>Naki_Underwear_Red</li> 
+				<li>Naki_Underwear_Striped</li> 
+				<li>Naki_Underwear_Striped_Stuffed</li> 
+				<li>Naki_Underwear_Slim</li>
+				<li>Naki_Underwear_Prude</li>
+				<li>Naki_Middle_Body_Armor</li>
+				<li>Naki_Overhead_Winter_Hat</li>
+				<li>Naki_Overhead_Summer_Hat</li>
+				<li>Naki_Overhead_Casual_Hair_Pin</li>
+				<li>Naki_Overhead_Goggles</li>
+				<li>Naki_Overhead_Gothic_Hair_Pin</li>
+				<li>Naki_Overhead_Bikini_Armor_Headgear</li>
+				<li>Naki_Overhead_Military_Helmet</li>
+				<li>Naki_Overhead_Traditional_Hair_Pin</li>
+				<li>Naki_Overhead_Cute_Hair_Pin</li>
+				<li>Naki_Shell_Cardigan</li>
+				<li>Naki_Shell_Duster</li>
+				<li>Naki_Shell_Winter_Padding</li>
+				<li>Naki_OnSkin_Traditional_Coat</li>
+        <li>Naki_Redfox_Armor</li>
+        <li>Naki_Redfox_Helmet</li>
+        <li>Naki_Waterfox_Armor</li>
+				<!--<li>Naki_Belt_Scarf</li> -->
       </apparelList>
 			<whiteApparelList>
 				<li MayRequire="Nemonian.MY">Moyo_Tribal</li>
@@ -805,7 +805,7 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>16</power>
+        <power>12</power>
         <cooldownTime>1.6</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         <chanceFactor>0.4</chanceFactor>
@@ -839,7 +839,7 @@
       <meatMarketValue>0.8</meatMarketValue>
       <manhunterOnDamageChance>0.60</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.04</manhunterOnTameFailChance>
-	  <nameGenerator>NamerPerson_Kurin</nameGenerator>
+	  <nameGenerator>NamerPerson_Naki</nameGenerator>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>

@@ -2,33 +2,33 @@
 <Defs>
 
 <ApparelLayerDef>
-	<defName>Kurin_Underwear</defName>
+	<defName>Naki_Underwear</defName>
 	<label>underwear</label>
 	<drawOrder>-4</drawOrder>
 </ApparelLayerDef>
 
 <!-- Keeping this layerdef for backwards compatability, although the sotcking item itself is gone.  -->
 <ApparelLayerDef>
-	<defName>Kurin_Stocking</defName>
+	<defName>Naki_Stocking</defName>
 	<label>stocking</label>
 	<drawOrder>-3</drawOrder>
 </ApparelLayerDef>
 
 <ApparelLayerDef>
-	<defName>Kurin_Apparel_Middle</defName>
-	<label>kurin middle apparel</label>
+	<defName>Naki_Apparel_Middle</defName>
+	<label>Naki middle apparel</label>
 	<drawOrder>1</drawOrder>
 </ApparelLayerDef>
 
 <ApparelLayerDef>
-	<defName>Kurin_Apparel_OnSkin</defName>
-	<label>kurin onskin apparel</label>
+	<defName>Naki_Apparel_OnSkin</defName>
+	<label>Naki onskin apparel</label>
 	<drawOrder>0</drawOrder>
 </ApparelLayerDef>
 
 <ApparelLayerDef>
-	<defName>Kurin_Apparel_Shell</defName>
-	<label>kurin shell apparel</label>
+	<defName>Naki_Apparel_Shell</defName>
+	<label>Naki shell apparel</label>
 	<drawOrder>2</drawOrder>
 </ApparelLayerDef>
 

@@ -1,10 +1,149 @@
-
 <?xml version="1.0" encoding="utf-8"?>
-<LanguageData>
-  <DMBurn.label>dark burn</DMBurn.label>
-  <DMBurn.labelNoun>a burn from dark matter</DMBurn.labelNoun>
-  <DMBurn.description>a burn where flesh was disintegrated.</DMBurn.description>
+<Defs>
+  <HediffDef ParentName="InjuryBase">
+    <defName>Dark_Matter_Burn</defName>
+    <label>dark matter burn</label>
+    <labelNoun>a burnt wound</labelNoun>
+    <description>A charred gash where flesh was burnt away</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>patched</labelTendedWellInner>
+        <labelSolidTendedWell>sutured</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.05</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>disintegration scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0425</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.045</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Disintegrated</destroyedLabel>
+      <destroyedOutLabel>Disintegrated</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
 
-  <NakiRaceDarkMatterNeed.label>Dark Matter need</NakiRaceDarkMatterNeed.label>
-  <NakiRaceDarkMatterNeed.description>Naki need to ingest Dark Matter to prevent bodily degredation and to power their psycasts.</NakiRaceDarkMatterNeed.description>
-</LanguageData>
+  <HediffDef>
+    <defName>Dark_Matter_Poisoning</defName>
+    <label>dark matter poisoning</label>
+    <description>Non-Naki who consume dark matter are poisoned by exotic particles. \n
+    Their body will disintegrate quickly until nothing is left but a pile of ash.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>-0.08</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>initial</label>
+        <minSeverity>0.04</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.2</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.40</minSeverity>
+        <vomitMtbDays>5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>146</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>Carcinoma</hediff>
+            <mtbDays>438</mtbDays>
+            <canAffectAnyLivePart>true</canAffectAnyLivePart>
+          </li>
+        </hediffGivers>
+      </li>
+      <li>
+        <label>serious</label>
+        <minSeverity>0.60</minSeverity>
+        <vomitMtbDays>1</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>37</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>Carcinoma</hediff>
+            <mtbDays>111</mtbDays>
+            <canAffectAnyLivePart>true</canAffectAnyLivePart>
+          </li>
+        </hediffGivers>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.80</minSeverity>
+        <vomitMtbDays>0.5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.10</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>13</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>Carcinoma</hediff>
+            <mtbDays>39</mtbDays>
+            <canAffectAnyLivePart>true</canAffectAnyLivePart>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

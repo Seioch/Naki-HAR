@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef Name="ApparelBase_Kurin" ParentName="ApparelBase" Abstract="True">
+  <ThingDef Name="ApparelBase_Naki" ParentName="ApparelBase" Abstract="True">
     <thingClass>Apparel</thingClass>
     <category>Item</category>
     <selectable>True</selectable>
@@ -31,7 +31,7 @@
     </comps>
   </ThingDef>
 
-<ThingDef Name="Kurin_ApparelBase" ParentName="ApparelBase_Kurin" Abstract="True">
+<ThingDef Name="Naki_ApparelBase" ParentName="ApparelBase_Naki" Abstract="True">
 	<graphicData>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
@@ -39,7 +39,7 @@
 		<useWornGraphicMask>true</useWornGraphicMask>
 	</apparel>
 	<tradeability>Sellable</tradeability>
-	<!-- Maybe this will let traders sell Kurin clothes? -->
+	<!-- Maybe this will let traders sell Naki clothes? -->
 	<tradeTags>
       <li>Apparel</li>
     </tradeTags>
@@ -55,7 +55,7 @@
 		<effectWorking>Tailor</effectWorking>
 		<soundWorking>Recipe_Tailor</soundWorking>
 		<recipeUsers>
-			<li>Kurin_Electric_Tailoring_Bench</li>
+			<li>Naki_Electric_Tailoring_Bench</li>
 		</recipeUsers>
 		<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
 		<defaultIngredientFilter>

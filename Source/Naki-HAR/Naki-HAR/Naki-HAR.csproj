@@ -47,8 +47,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comps\compNakiWeapons.cs" />
+    <Compile Include="Doers\IngestionOutcomeDoer_GiveHediffCheckRace.cs" />
+    <Compile Include="Helpers\NakiHelpers.cs" />
     <Compile Include="NakiRace.cs" />
+    <Compile Include="Needs\DarkMatterNeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Verbs\verbNumberedShoot.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

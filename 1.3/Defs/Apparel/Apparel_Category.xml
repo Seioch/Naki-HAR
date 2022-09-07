@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingCategoryDef>
-		<defName>Kurin_Apparel</defName>
-		<label>kurin apparel</label>
+		<defName>Naki_Apparel</defName>
+		<label>Naki apparel</label>
 		<parent>Apparel</parent>
 	</ThingCategoryDef>
 
 	<ThingCategoryDef>
-		<defName>Kurin_Apparel_Underwear</defName>
-		<label>kurin underwear apparel</label>
-		<parent>Kurin_Apparel</parent>
+		<defName>Naki_Apparel_Underwear</defName>
+		<label>Naki underwear apparel</label>
+		<parent>Naki_Apparel</parent>
 	</ThingCategoryDef>
 
 	<!-- <ThingCategoryDef>
-		<defName>Kurin_Apparel_Stocking</defName>
-		<label>kurin stocking apparel</label>
-		<parent>Kurin_Apparel</parent>
+		<defName>Naki_Apparel_Stocking</defName>
+		<label>Naki stocking apparel</label>
+		<parent>Naki_Apparel</parent>
 	</ThingCategoryDef> -->
 
 	<ThingCategoryDef>
-		<defName>Kurin_Apparel_OnSkin</defName>
-		<label>kurin onskin apparel</label>
-		<parent>Kurin_Apparel</parent>
+		<defName>Naki_Apparel_OnSkin</defName>
+		<label>Naki onskin apparel</label>
+		<parent>Naki_Apparel</parent>
 	</ThingCategoryDef>
 
 	<ThingCategoryDef>
-		<defName>Kurin_Apparel_Middle</defName>
-		<label>kurin middle apparel</label>
-		<parent>Kurin_Apparel</parent>
+		<defName>Naki_Apparel_Middle</defName>
+		<label>Naki middle apparel</label>
+		<parent>Naki_Apparel</parent>
 	</ThingCategoryDef>
 
 	<ThingCategoryDef>
-		<defName>Kurin_Apparel_Shell</defName>
-		<label>kurin shell apparel</label>
-		<parent>Kurin_Apparel</parent>
+		<defName>Naki_Apparel_Shell</defName>
+		<label>Naki shell apparel</label>
+		<parent>Naki_Apparel</parent>
 	</ThingCategoryDef>
 
 	<ThingCategoryDef>
-		<defName>Kurin_Apparel_Overhead</defName>
-		<label>kurin overhead apparel</label>
-		<parent>Kurin_Apparel</parent>
+		<defName>Naki_Apparel_Overhead</defName>
+		<label>Naki overhead apparel</label>
+		<parent>Naki_Apparel</parent>
 	</ThingCategoryDef>
 </Defs>

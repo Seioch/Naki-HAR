@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<ThingDef Name="Kurin_MiddleBase" ParentName="Kurin_ApparelBase" Abstract="True">
+<ThingDef Name="Naki_MiddleBase" ParentName="Naki_ApparelBase" Abstract="True">
 	<statBases>
 		<Mass>4.0</Mass>
 		<EquipDelay>4.0</EquipDelay>
@@ -17,29 +17,29 @@
 		</layers>
 	</apparel>
 	<thingCategories>
-		<li>Kurin_Apparel_OnSkin</li>
+		<li>Naki_Apparel_OnSkin</li>
 	</thingCategories>
 </ThingDef>
 
 <!--================================================== Tear 2 ==================================================-->
 
-<ThingDef Name="Kurin_MiddleBaseTear2" ParentName="Kurin_MiddleBase" Abstract="True">
+<ThingDef Name="Naki_MiddleBaseTear2" ParentName="Naki_MiddleBase" Abstract="True">
 	<recipeMaker>
-		<researchPrerequisite>Kurin_ApparelT2</researchPrerequisite>
+		<researchPrerequisite>Naki_ApparelT2</researchPrerequisite>
 	</recipeMaker>
 	<apparel>
 		<tags>
-			<li>Kurin_MiddleT2</li>
+			<li>Naki_MiddleT2</li>
 		</tags>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Kurin_MiddleBaseTear2">
-	<defName>Kurin_Middle_Body_Armor</defName>
-	<label>kurin body armor</label>
+<ThingDef ParentName="Naki_MiddleBaseTear2">
+	<defName>Naki_Middle_Body_Armor</defName>
+	<label>Naki body armor</label>
 	<description>경량 방탄복입니다. 언제 어디서나 무리 없이 착용할 수 있지만 방어력은 조금 부족합니다.</description>
 	<graphicData>
-		<texPath>Kurin/Apparel/Middle/Body_Armor/Texture</texPath>
+		<texPath>Naki/Apparel/Middle/Body_Armor/Texture</texPath>
 	</graphicData>
 	<costStuffCount>50</costStuffCount>
 	<stuffCategories>
@@ -51,14 +51,14 @@
     </costList>
 	<apparel>
 		<tags>
-			<li>Kurin_Grunt</li>
-			<li>Kurin_ELite_Scout</li>
-			<li>Kurin_Elite</li>
-			<li>Kurin_Trooper</li>
-			<li>Kurin_EliteTrooper</li>
-			<li>Kurin_EliteSniper_H</li>
+			<li>Naki_Grunt</li>
+			<li>Naki_ELite_Scout</li>
+			<li>Naki_Elite</li>
+			<li>Naki_Trooper</li>
+			<li>Naki_EliteTrooper</li>
+			<li>Naki_EliteSniper_H</li>
 		</tags>
-		<wornGraphicPath>Kurin/Apparel/Middle/Body_Armor/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Middle/Body_Armor/Texture</wornGraphicPath>
 	</apparel>
 	<statBases>
 		<MaxHitPoints>250</MaxHitPoints>
