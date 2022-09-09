@@ -7,9 +7,9 @@ using RimWorld;
 using Verse;
 using UnityEngine;
 
-namespace Naki_HAR.Comps
+namespace Naki_HAR
 {
-    public class compNakiWeapons : ThingComp
+    public class CompNakiWeapons : ThingComp
     {
         public int maximumShots = 100;
         public int currentShots = 0;

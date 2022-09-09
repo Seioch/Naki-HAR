@@ -47,8 +47,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comps\compNakiWeapons.cs" />
+    <Compile Include="Comps\CompDisintegrationImmunity.cs" />
+    <Compile Include="Comps\CompNakiWeapons.cs" />
+    <Compile Include="Comps\CompProperties_DisintegrationImmunity.cs" />
     <Compile Include="Doers\IngestionOutcomeDoer_GiveHediffCheckRace.cs" />
+    <Compile Include="Hediffs\Hediff_DMDisintegration.cs" />
     <Compile Include="Helpers\NakiHelpers.cs" />
     <Compile Include="NakiRace.cs" />
     <Compile Include="Needs\DarkMatterNeed.cs" />

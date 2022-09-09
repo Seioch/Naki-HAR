@@ -133,11 +133,12 @@
 	<slot>Childhood</slot>
 	<skillGains>
 		<li>
-		<defName>Intellectual</defName>
-		<amount>6</amount>
+			<defName>Intellectual</defName>
+			<amount>6</amount>
 		</li>
-		<defName>Social</defName>
-		<amount>6</amount>
+		<li>
+			<defName>Social</defName>
+			<amount>6</amount>
 		</li>
 	</skillGains>
 	<spawnCategories>

@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 using RimWorld;
 using Verse;
 using UnityEngine;
-using Naki_HAR.Comps;
 
-namespace Naki_HAR.Verbs
+namespace Naki_HAR
 {
     public class Verb_NumberedShoot : Verb_Shoot
     {
         protected override bool TryCastShot()
         {
-            compNakiWeapons nakiWeaponComp = base.EquipmentSource.GetComp<compNakiWeapons>();
+            CompNakiWeapons nakiWeaponComp = base.EquipmentSource.GetComp<CompNakiWeapons>();
             if (base.TryCastShot())
             {
                 if (this.burstShotsLeft <= 1)

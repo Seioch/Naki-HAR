@@ -10,19 +10,10 @@
       <xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
 
       <value>
-        <li>Kurin_PlayerFaction</li>
-        <li>Kurin_Faction</li>
+        <li>Naki_PlayerFaction</li>
+        <li>Naki_HiddenFaction</li>
       </value>
     </match>
   </Operation>
-
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Royalty</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-		<success>Normal</success>
-			<operations>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs</xpath>
-					<value>
+  
+</Patch>

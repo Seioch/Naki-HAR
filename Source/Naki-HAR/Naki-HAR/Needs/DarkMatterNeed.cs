@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using RimWorld;
 using Verse;
-using Naki_HAR.Helpers;
 
-namespace Naki_HAR.Needs
+namespace Naki_HAR
 {
     public class DMNeed : Need
     {

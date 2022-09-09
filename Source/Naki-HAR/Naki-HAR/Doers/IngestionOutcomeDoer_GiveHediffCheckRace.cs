@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 using RimWorld;
-using Naki_HAR.Helpers;
 
-namespace Naki_HAR.Doers
+namespace Naki_HAR
 {
     class IngestionOutcomeDoer_GiveHediffCheckRace : IngestionOutcomeDoer
     {

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Naki_HAR.Helpers
+namespace Naki_HAR
 {
     internal static class PawnHelpers
     {

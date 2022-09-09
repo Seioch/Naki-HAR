@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 using static Verse.Widgets;
-using Naki_HAR.Helpers;
 
 namespace Naki_HAR
 {
