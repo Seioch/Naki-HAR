@@ -11,9 +11,11 @@ namespace Naki_HAR
 {
     public class Verb_NumberedShoot : Verb_Shoot
     {
+
         protected override bool TryCastShot()
         {
             CompNakiWeapons nakiWeaponComp = base.EquipmentSource.GetComp<CompNakiWeapons>();
+            // CompNakiWeapons nakiWeaponComp = base.EquipmentSource;
             if (base.TryCastShot())
             {
                 if (this.burstShotsLeft <= 1)
@@ -21,7 +23,7 @@ namespace Naki_HAR
                     // Increase the number of shots taken by 1
                     nakiWeaponComp.currentShots += 1;
                     // If we have hit the maximum number of shots for the weapon
-                    if (nakiWeaponComp.currentShots == nakiWeaponComp.maximumShots)
+                    if (nakiWeaponComp.currentShots == nakiWeaponComp.Props.maximumShots)
                     {
                         this.SelfConsume();
                     }
@@ -33,7 +35,7 @@ namespace Naki_HAR
                 // Increase the number of shots taken by 1
                 nakiWeaponComp.currentShots += 1;
                 // If we have hit the maximum number of shots for the weapon
-                if (nakiWeaponComp.currentShots == nakiWeaponComp.maximumShots)
+                if (nakiWeaponComp.currentShots == nakiWeaponComp.Props.maximumShots)
                 {
                     this.SelfConsume();
                 }

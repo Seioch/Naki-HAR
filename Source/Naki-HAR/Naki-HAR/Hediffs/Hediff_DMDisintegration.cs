@@ -26,7 +26,7 @@ namespace Naki_HAR
                 }
                 else
                 {
-                    pawn.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed("VEF_SecondaryAcidBurn"), 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+                    pawn.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed("Dark_Matter_Burn"), 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
                     tickCounter = 0;
 
                 }

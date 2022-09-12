@@ -346,18 +346,18 @@
 	<baseDescription>[PAWN_nameDef] maintained the many starcraft that Naki stations needed to get supplies. [PAWN_pronoun] learned how to fix ships with nothing but a bit of scrap plasteel and simple tools.</baseDescription>
 	<slot>Adulthood</slot>
 	<skillGains>
-	<li>
-	<defName>Melee</defName>
-	<amount>2</amount>
-	</li>
-	<li>
-	<defName>Smithing</defName>
-	<amount>2</amount>
-	</li>
-	<li>
-	<defName>Tailor</defName>
-	<amount>2</amount>
-	</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Artistic</defName>
+			<amount>2</amount>
+		</li>
 	</skillGains>
 	<spawnCategories>
 		<li>Naki_Colonist</li>
@@ -442,7 +442,8 @@
 	</skillGains>
 	<forcedTraits>
 		<li>
-			<defName>Sickly</defName>
+			<defName>Immunity</defName>
+			<degree>-1</degree>
 		</li>
 	</forcedTraits>
 	<spawnCategories>

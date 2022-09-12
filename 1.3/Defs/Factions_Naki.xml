@@ -56,8 +56,8 @@
 	<colorSpectrum>
 		<li>(1.0, 0.72, 0.27)</li>
 	</colorSpectrum>
-    <requiredCountAtGameStart>0</requiredCountAtGameStart>
-    <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
 	<pawnSingular>Naki</pawnSingular>
 	<pawnsPlural>Naki</pawnsPlural>
 	<listOrderPriority>248</listOrderPriority>
@@ -128,74 +128,39 @@
 			<kindDef>Combat</kindDef>
 			<commonality>100</commonality>
 			<options>
-				<Naki_Scout>1</Naki_Scout>
-				<Naki_Savage>3</Naki_Savage>
-				<Naki_Initiate>2</Naki_Initiate>
-				<Naki_Recruit>1</Naki_Recruit>
-				<Naki_Ninja>0.8</Naki_Ninja>
-				<Naki_Slasher>1</Naki_Slasher>
+				<Naki_Marine>1</Naki_Marine>
 			</options>
 		</li>
-		<!-- Ranged combat group with minor melee -->
+		<!-- Ranged combat group -->
 		<li>
 			<kindDef>Combat</kindDef>
 			<commonality>100</commonality>
 			<options>
-				<Naki_Scout>2</Naki_Scout>
-				<Naki_Initiate>2</Naki_Initiate>
-				<Naki_ELite_Scout>1</Naki_ELite_Scout>
-				<Naki_Trooper>1</Naki_Trooper>
-				<Naki_Slasher>1</Naki_Slasher>
-				<Naki_Sniper_H>1</Naki_Sniper_H>
+				<Naki_Marine>2</Naki_Marine>
 			</options>
 		</li>
-		<!-- Mixed combat group -->
+		<!-- Elite Ranged group -->
 		<li>
 			<kindDef>Combat</kindDef>
-			<commonality>80</commonality>
+			<commonality>40</commonality>
 			<options>
-				<Naki_Scout>1</Naki_Scout>
-				<Naki_Ninja>0.8</Naki_Ninja>
-				<Naki_Trooper>1</Naki_Trooper>
-				<Naki_Slasher>1</Naki_Slasher>
-				<Naki_Sniper_H>1</Naki_Sniper_H>
+				<Naki_EliteMarine>1</Naki_EliteMarine>
+				<Naki_Marine>2</Naki_Marine>
 			</options>
 		</li>
-		<!-- Elite melee group -->
+		<!-- Large elite ranged group -->
 		<li>
 			<kindDef>Combat</kindDef>
-			<commonality>80</commonality>
+			<commonality>20</commonality>
 			<options>
-				<Naki_Ninja>2</Naki_Ninja>
-				<Naki_Trooper>1</Naki_Trooper>
-				<Naki_Slasher>2</Naki_Slasher>
-				<Naki_EliteSlasher>2</Naki_EliteSlasher>
-				<Naki_Elite>1</Naki_Elite>
+				<Naki_EliteMarine>2</Naki_EliteMarine>
+				<Naki_Marine>2</Naki_Marine>
 			</options>
 		</li>
-		<!-- Elite ranged group -->
-		<li>
-			<kindDef>Combat</kindDef>
-			<commonality>80</commonality>
-			<options>
-				<Naki_ELite_Scout>1</Naki_ELite_Scout>
-				<Naki_Ninja>0.8</Naki_Ninja>
-				<Naki_Trooper>2</Naki_Trooper>
-				<Naki_EliteTrooper>2</Naki_EliteTrooper>
-				<Naki_EliteSlasher>1</Naki_EliteSlasher>
-				<Naki_EliteSniper_H>2</Naki_EliteSniper_H>
-				<Naki_Elite>1</Naki_Elite>
-			</options>
-		</li>
-		<li>
+		<!-- <li>
 			<kindDef>Peaceful</kindDef>
 			<options>
-				<Naki_Citizen>10</Naki_Citizen>
-				<Naki_Trader>4</Naki_Trader>
-				<Naki_Elite>6</Naki_Elite>
-				<Naki_Ninja>1</Naki_Ninja>
-				<Naki_Soldier>2</Naki_Soldier>
-				<Naki_EliteSoldier>1</Naki_EliteSoldier>
+				<Naki_Citizen>4</Naki_Citizen>
 			</options>
 		</li>
 		<li>
@@ -214,7 +179,6 @@
 				<Naki_Soldier>6</Naki_Soldier>
 				<Naki_EliteSoldier>2</Naki_EliteSoldier>
 				<Naki_EliteSniper_H>1</Naki_EliteSniper_H>
-				<!--<Naki_Nymph>1</Naki_Nymph> -->
 			</guards>
 		</li>
 		<li>
@@ -225,9 +189,8 @@
 				<Naki_EliteSoldier>8</Naki_EliteSoldier>
 				<Naki_Sniper>4</Naki_Sniper>
 				<Naki_EliteSniper_H>2</Naki_EliteSniper_H>
-				<!--<Naki_Nymph>1</Naki_Nymph> -->
 			</options>
-		</li>
+		</li> -->
 	</pawnGroupMakers>
 	<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 </FactionDef>

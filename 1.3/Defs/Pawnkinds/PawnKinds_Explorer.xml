@@ -3,19 +3,20 @@
 <!--==============================================NPC기본==============================================-->
   <PawnKindDef Name="Naki_ExplorerBase" Abstract="True">
     <race>Naki_Race</race>
-    <defaultFactionType>Naki_Faction</defaultFactionType>
+    <defaultFactionType>Naki_HiddenFaction</defaultFactionType>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-	<baseRecruitDifficulty>0.9</baseRecruitDifficulty>
+	  <baseRecruitDifficulty>0.9</baseRecruitDifficulty>
     <invNutrition>3</invNutrition>
-    <apparelRequired>
-      
-    </apparelRequired>
-	<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
-  <initialWillRange>3~5</initialWillRange>
-  <initialResistanceRange>6~10</initialResistanceRange>
+    <!-- <apparelRequired>
+        <li>Naki_Underwear</li>
+    </apparelRequired> -->
+    <nameMaker>NamerPerson_Naki</nameMaker>
+    <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>6~10</initialResistanceRange>
   </PawnKindDef>
 <!--==============================================NPC세부==============================================-->
-<!--시민-->
+
   <PawnKindDef ParentName="Naki_ExplorerBase">
     <defName>Naki_Citizen</defName>
     <label>Naki Citizen</label>
@@ -36,45 +37,56 @@
     <inventoryOptions>
       <skipChance>0</skipChance>
       <subOptionsChooseOne>
-<!-- Add 1-3 dark matter here -->
+        <li>
+          <choiceChance>25</choiceChance>
+          <thingDef>DarkMatter</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>5</max>
+          </countRange>
+        </li>
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
   
-  <PawnKindDef ParentName="Naki_RepublicBase">
+  <!-- <PawnKindDef ParentName="Naki_ExplorerBase">
     <defName>Naki_StationCrew</defName>
     <label>Naki StationCrew</label>
     <combatPower>60</combatPower>
     <itemQuality>Normal</itemQuality>
     <isFighter>false</isFighter>
-	<factionLeader>true</factionLeader>
     <apparelMoney>
       <min>1000</min>
       <max>1200</max>
     </apparelMoney>
-    <weaponMoney>
-      <min>600</min>
-      <max>700</max>
-    </weaponMoney>
     <apparelTags>
       <li>Naki_Citizen</li>
     </apparelTags>
-    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <weaponMoney>
+      <min>600</min>
+      <max>1000</max>
+    </weaponMoney>
+    <apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>
     <backstoryCategories>
-      <li>Naki_Elite</li>
+      <li>Naki_Citizen</li>
     </backstoryCategories>
     <inventoryOptions>
       <skipChance>0</skipChance>
       <subOptionsChooseOne>
         <li>
-        <!-- Add 1-3 dark matter here -->
+          <choiceChance>25</choiceChance>
+          <thingDef>DarkMatter</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>5</max>
+          </countRange>
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
-  </PawnKindDef>
+  </PawnKindDef> -->
 
 <!--군인(분대원)-->
-  <PawnKindDef ParentName="Naki_RepublicBase">
+  <PawnKindDef ParentName="Naki_ExplorerBase">
     <defName>Naki_Marine</defName>
     <label>Naki Marine</label>
     <combatPower>70</combatPower>
@@ -107,13 +119,19 @@
       <skipChance>0</skipChance>
       <subOptionsChooseOne>
         <li>
-          <!-- Add 1-3 dark matter here -->
+          <choiceChance>25</choiceChance>
+          <thingDef>DarkMatter</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>5</max>
+          </countRange>
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
+
 <!--군인(분대장)-->
-  <PawnKindDef ParentName="Naki_RepublicBase">
+  <PawnKindDef ParentName="Naki_ExplorerBase">
     <defName>Naki_EliteMarine</defName>
     <label>Naki Elite Marine</label>
     <combatPower>100</combatPower>
@@ -143,8 +161,16 @@
     <inventoryOptions>
       <skipChance>0</skipChance>
       <subOptionsChooseOne>
-        <!-- Add 1-3 dark matter here -->
+        <li>
+          <choiceChance>25</choiceChance>
+          <thingDef>DarkMatter</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>5</max>
+          </countRange>
+        </li>
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
+
 </Defs>

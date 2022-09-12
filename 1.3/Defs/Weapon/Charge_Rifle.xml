@@ -20,18 +20,18 @@
 		<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
 	</statBases>
 	<weaponTags>
-<!-- Should not have a standard tag because it should not spawn naturally -->
+		<!-- Should not have a standard tag because it should not spawn naturally -->
 		<li>NakiGun</li>
 	</weaponTags>
 	<costList>
 		<Plasteel>75</Plasteel>
 		<ComponentSpacer>5</ComponentSpacer>
 	</costList>
-
-	<li Class="compNakiWeapons">
-        <maximumShots>100</maximumShots>
-	</li>
-
+	<comps>
+		<li Class="Naki_HAR.CompProperties_CompNakiWeapons">
+			<maximumShots>100</maximumShots>
+		</li>
+	</comps>
 	<recipeMaker>
 		<researchPrerequisite>Naki_DM_station</researchPrerequisite>
 		<skillRequirements>
@@ -44,7 +44,7 @@
 
 	<verbs>
 		<li>
-			<verbClass>Verb_NumberedShoot</verbClass>
+			<verbClass>Naki_HAR.Verb_NumberedShoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
 			<defaultProjectile>Naki_Bullet_Charge_Rifle</defaultProjectile>
 			<warmupTime>1.0</warmupTime>
@@ -56,6 +56,7 @@
 			<muzzleFlashScale>9</muzzleFlashScale>
 		</li>
 	</verbs>
+
 	<tools>
 		<li>
 			<label>stock</label>

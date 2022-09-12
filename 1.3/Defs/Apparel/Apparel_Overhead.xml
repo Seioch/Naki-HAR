@@ -380,7 +380,7 @@
 
 <!--================================================== Tier 4 ==================================================-->
 
-<ThingDef Name="Naki_OverheadBaseTear4" ParentName="Naki_OverheadBase" Abstract="True">
+<!-- <ThingDef Name="Naki_OverheadBaseTear4" ParentName="Naki_OverheadBase" Abstract="True">
 	<recipeMaker>
 		<researchPrerequisite>Naki_ApparelT4</researchPrerequisite>
 	</recipeMaker>
@@ -442,7 +442,7 @@
  			<li>RoyalCombatGear</li>
 		</tags>
 	</apparel>
-</ThingDef>
+</ThingDef> -->
 
 <!-- Content merged with Redfox helmet -->
 <!-- <ThingDef ParentName="Naki_OverheadBaseTear4">

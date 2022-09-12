@@ -713,9 +713,9 @@
 				<li>Naki_Shell_Duster</li>
 				<li>Naki_Shell_Winter_Padding</li>
 				<li>Naki_OnSkin_Traditional_Coat</li>
-        <li>Naki_Redfox_Armor</li>
+        <!-- <li>Naki_Redfox_Armor</li>
         <li>Naki_Redfox_Helmet</li>
-        <li>Naki_Waterfox_Armor</li>
+        <li>Naki_Waterfox_Armor</li> -->
 				<!--<li>Naki_Belt_Scarf</li> -->
       </apparelList>
 			<whiteApparelList>
@@ -731,32 +731,26 @@
 	</alienRace>
 <!--=============================================================================================================================-->
   <statBases>
-	<!--기본-->
-      <MarketValue>2700</MarketValue>
-      <Flammability>0.3</Flammability>
-      <MoveSpeed>5</MoveSpeed>
-	  <MentalBreakThreshold>0.4</MentalBreakThreshold>
-      <ComfyTemperatureMax>35</ComfyTemperatureMax>
-      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+    <MarketValue>2700</MarketValue>
+    <Flammability>0.3</Flammability>
+    <MoveSpeed>5</MoveSpeed>
+    <MentalBreakThreshold>0.4</MentalBreakThreshold>
+    <ComfyTemperatureMax>35</ComfyTemperatureMax>
+    <ComfyTemperatureMin>0</ComfyTemperatureMin>
 	  <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
 	  <CarryingCapacity>100</CarryingCapacity>
 	  <MeatAmount>55</MeatAmount>
       <LeatherAmount>55</LeatherAmount>
       <Mass>50</Mass>
-	  <PainShockThreshold>0.80</PainShockThreshold>
-	<!--사교-->
+	  <PainShockThreshold>0.85</PainShockThreshold>
 	  <NegotiationAbility>1.1</NegotiationAbility> <!--외교 영향력-->
-	  <SocialImpact>1.2</SocialImpact> <!--사회적 영향력-->
-	<!--제작-->
+	  <SocialImpact>1.1</SocialImpact> <!--사회적 영향력-->
 	  <ButcheryMechanoidEfficiency>0.8</ButcheryMechanoidEfficiency> <!--메카노이드 분해 효율-->
-	  <ButcheryMechanoidSpeed>0.8</ButcheryMechanoidSpeed> <!--메카노이드 분해 속도-->
-	  <SmeltingSpeed>0.8</SmeltingSpeed> <!--금속 제련 속도-->
+	  <ButcheryMechanoidSpeed>0.8</ButcheryMechanoidSpeed> 
+	  <SmeltingSpeed>0.8</SmeltingSpeed> 
 	  <ResearchSpeed>1.2</ResearchSpeed>
-    <CraftingSpeed>0.8</CraftingSpeed>
 	  <MiningSpeed>0.8</MiningSpeed>
-	<!--수면-->
 	  <RestRateMultiplier>1.3</RestRateMultiplier>
-	<!--재배-->
 	  <PlantWorkSpeed>0.8</PlantWorkSpeed>
   </statBases>
 <!--=============================================================================================================================-->
@@ -890,7 +884,9 @@
     </race>
 <!--=============================================================================================================================-->
     <recipes>
-      <!-- Special bodypart add-ons go here -->
+      <li>Naki_InstallFakeTail</li>
+      <li>Naki_InstallBionicEar</li>
+      <li>Naki_InstallBionicTail</li>
     </recipes>
 </AlienRace.ThingDef_AlienRace>
 </Defs>

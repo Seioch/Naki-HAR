@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <NeedDef>
+  <ChemicalDef>
+    <defName>DarkMatter</defName>
+    <label>dark matter</label>
+    <addictionHediff>DarkMatterAddiction</addictionHediff>
+    <canBinge>false</canBinge>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
     <defName>NakiRaceDMNeed</defName>
-    <needClass>NakiRace.Needs.DMNeed</needClass>
-    <label>dark matter need</label>
+    <needClass>Naki_HAR.DMNeed</needClass>
+    <label>dark_matter_need</label>
     <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
     <description>Naki need Dark Matter to use psycasts and heal. Lacking Dark Matter will prevent healing and casting.</description>
     <listPriority>45</listPriority>
@@ -15,4 +22,18 @@
     <freezeWhileSleeping>true</freezeWhileSleeping>
     <minIntelligence>Humanlike</minIntelligence>
   </NeedDef>
+
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>DarkMatterAddiction</defName>
+    <label>dark mattter addiction</label>
+    <description>Naki bodies contain high amounts of exotic heavy particles. Heavy atoms allow Naki to live outside of Omega Eden, but make them reliable on daily ingestion or meditation.
+\nWithout dark matter, Naki cannot heal and cast psycasts.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>NakiRaceDMNeed</causesNeed>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <!-- Fill out stages if you want to punish players for not filling DM need -->
+    </stages>
+  </HediffDef>
 </Defs>

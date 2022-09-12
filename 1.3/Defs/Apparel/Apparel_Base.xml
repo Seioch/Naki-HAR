@@ -55,7 +55,7 @@
 		<effectWorking>Tailor</effectWorking>
 		<soundWorking>Recipe_Tailor</soundWorking>
 		<recipeUsers>
-			<li>Naki_Electric_Tailoring_Bench</li>
+			<li>Naki_Fabricator</li>
 		</recipeUsers>
 		<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
 		<defaultIngredientFilter>

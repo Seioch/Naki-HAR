@@ -7,7 +7,7 @@
 	<description>A workstation to transmute Dark Matter into normal matter.</description>
 	<thingClass>Building_WorkTable</thingClass>
 	<graphicData>
-		<texPath>Kurin/Building/Electric_Tailoring_Bench/Texture</texPath>
+		<texPath>Naki/Building/Electric_Tailoring_Bench/Texture</texPath>
 		<graphicClass>Graphic_Multi</graphicClass>
 		<drawSize>(3, 1.5)</drawSize>
 		<shaderType>CutoutComplex</shaderType>

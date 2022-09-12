@@ -8,8 +8,9 @@ using RimWorld;
 
 namespace Naki_HAR
 {
-    class IngestionOutcomeDoer_GiveHediffCheckRace : IngestionOutcomeDoer
+    public class IngestionOutcomeDoer_GiveHediffCheckRace : IngestionOutcomeDoer
     {
+
         protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested)
         {
             if (!pawn.IsNaki()) // Only poison pawns if they are not Naki

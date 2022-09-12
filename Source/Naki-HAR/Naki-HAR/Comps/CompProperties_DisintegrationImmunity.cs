@@ -13,5 +13,7 @@ namespace Naki_HAR
         {
             this.compClass = typeof(CompDisintegrationImmunity);
         }
+
+
     }
 }
