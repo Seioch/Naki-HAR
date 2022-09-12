@@ -11,7 +11,6 @@ namespace Naki_HAR
     {
         //This is just an empty Comp. The new Hediff_AcidBuildup checks if the creature has it, and doesn't apply damage if so
 
-
         public CompProperties_DisintegrationImmunity Props
         {
             get

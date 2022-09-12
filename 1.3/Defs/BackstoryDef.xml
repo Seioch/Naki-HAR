@@ -1131,7 +1131,7 @@
 	<defName>Naki_BackstoryAdult_31</defName>
 	<title>Naki Factory Worker</title>
 	<titleShort>Worker</titleShort>
-	<baseDescription>[PAWN_nameDef] busied herself by assembling electronic parts and picking out defects in the production line of a factory. The income was not that good, but [PAWN_pronoun] worked hard, dreaming of a better life.</baseDescription>
+	<baseDescription>[PAWN_nameDef] assembled electronic parts and picked out defects in the production line of a starbase factory. The income was not that good, but [PAWN_pronoun] worked hard, dreaming of a better life.</baseDescription>
 	<slot>Adulthood</slot>
 	<skillGains>
 	<li>

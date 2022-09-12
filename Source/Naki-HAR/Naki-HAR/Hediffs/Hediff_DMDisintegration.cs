@@ -15,6 +15,11 @@ namespace Naki_HAR
         
         public override void Tick()
         {
+            // Naki cannot have DM Disintegration hediff
+            if (pawn.IsNaki())
+            {
+                return;
+            }
             base.Tick();
             tickCounter++;
             if (tickCounter > tickMax)
@@ -32,12 +37,8 @@ namespace Naki_HAR
                 }
 
             }
-
-
+            
         }
-
-
-
 
     }
 }

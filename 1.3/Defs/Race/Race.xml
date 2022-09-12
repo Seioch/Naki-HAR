@@ -610,10 +610,6 @@
 								<only>RGBA(0.59,0.59,0.59,1)</only> <!-- RGB=(150,150,150) #969696 -->
 							</li>
 							<li>
-								<weight>5</weight> <!-- Name=(Light Grey) -->
-								<only>RGBA(0.83,0.83,0.83,1)</only> <!-- RGB=(211,211,211) #D3D3D3 -->
-							</li>
-							<li>
 								<weight>5</weight> <!-- Name=(Mortar) -->
 								<only>RGBA(0.34,0.34,0.34,1)</only> <!-- RGB=(86,86,86) #565656 -->
 							</li>
