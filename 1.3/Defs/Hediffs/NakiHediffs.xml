@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <HediffDef ParentName="InjuryBase">
-    <defName>Dark_Matter_Burn</defName>
+  <DamageDef>
+    <defName>DMBurn</defName>
+    <label>burn</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} disintegrated away.</deathMessage>
+    <hediff>Disintegration Burn</hediff>
+    <hediffSolid>Disintegration Burn</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Tornado</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+  </DamageDef>
+
+  <!-- <HediffDef ParentName="InjuryBase">
+    <defName>DMBurn</defName>
     <label>dark matter burn</label>
     <labelNoun>a burnt wound</labelNoun>
     <description>A charred gash where flesh was burnt away</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
-        <labelTendedWell>bandaged</labelTendedWell>
-        <labelTendedWellInner>patched</labelTendedWellInner>
+        <labelTendedWell>patched</labelTendedWell>
+        <labelTendedWellInner>bandaged</labelTendedWellInner>
         <labelSolidTendedWell>sutured</labelSolidTendedWell>
       </li>
       <li Class="HediffCompProperties_Infecter">
@@ -26,12 +40,12 @@
       <destroyedLabel>Disintegrated</destroyedLabel>
       <destroyedOutLabel>Disintegrated</destroyedOutLabel>
     </injuryProps>
-  </HediffDef>
+  </HediffDef> -->
 
   <HediffDef>
-    <defName>Dark_Matter_Poisoning</defName>
-    <label>dark matter poisoning</label>
-    <description>Non-Naki who touch dark matter are poisoned by exotic particles.\n
+    <defName>DMDisintegration</defName>
+    <label>dark matter disintegration</label>
+    <description>Non-Naki exposed to dark matter are poisoned by exotic particles.\n
     Their body will disintegrate quickly until nothing is left but a pile of ash.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
@@ -40,8 +54,8 @@
     <scenarioCanAdd>false</scenarioCanAdd>
     <taleOnVisible>ToxicityRevealed</taleOnVisible>
     <comps>
-      <li Class="HediffCompProperties_Immunizable">
-        <severityPerDayNotImmune>-0.08</severityPerDayNotImmune>
+      <li Class="Naki_HAR.CompProperties_DMDisintegration">
+        <maxApplications>8</maxApplications>
       </li>
     </comps>
     <stages>

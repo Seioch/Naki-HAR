@@ -34,7 +34,7 @@
       <useEatingSpeedStat>false</useEatingSpeedStat>
       <outcomeDoers>
         <li Class="Naki_HAR.IngestionOutcomeDoer_GiveHediffCheckRace">
-          <hediffDef>Dark_Matter_Poisoning</hediffDef>
+          <hediffDef>DMDisintegration</hediffDef>
           <severity>1.00</severity>
           <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
         </li>

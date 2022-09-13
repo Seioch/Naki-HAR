@@ -12,6 +12,7 @@ namespace Naki_HAR
     {
         public int tickMax = 64; // How often to fire off the Damage
         public int tickCounter = 0; // Counter between ticks
+        public int applications = 0; // Number of times this thing has been applied
         
         public override void Tick()
         {
@@ -24,20 +25,23 @@ namespace Naki_HAR
             tickCounter++;
             if (tickCounter > tickMax)
             {
-                CompDisintegrationImmunity comp = pawn.TryGetComp<CompDisintegrationImmunity>();
-                if (comp != null)
+                Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(Naki_Defof.DMDisintegration);
+                if (hediff != null)
                 {
                     tickCounter = 0;
                 }
                 else
                 {
-                    pawn.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed("Dark_Matter_Burn"), 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+                    pawn.TakeDamage(new DamageInfo(Naki_Defof.DMBurn, 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
                     tickCounter = 0;
-
+                    applications = applications + 1;
+                    if (applications == hediff.TryGetComp<CompDisintegration>().Props.maxApplications)
+                    {
+                        // Remove the hediff
+                        pawn.health.RemoveHediff(this);
+                    }
                 }
-
             }
-            
         }
 
     }
