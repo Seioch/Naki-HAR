@@ -33,7 +33,7 @@ namespace Naki_HAR
             bool activation = tickCounter > this.Props.tickMax;
             if (activation)
             {
-                Log.Message("Adding DM burn");
+                // Log.Message("Adding DM burn");
                 this.parent.pawn.TakeDamage(new DamageInfo(Naki_Defof.DMBurn, 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
                 tickCounter = 0;
                 applications = applications + 1;
