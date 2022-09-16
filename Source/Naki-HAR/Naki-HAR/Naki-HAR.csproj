@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comps\CompDMDisintegration.cs" />
+    <Compile Include="Comps\CompNakiPostSpawn.cs" />
     <Compile Include="Comps\CompNakiWeapons.cs" />
     <Compile Include="Comps\CompProperties_CompNakiWeapons.cs" />
     <Compile Include="Comps\CompProperties_DMDisintegration.cs" />
@@ -58,7 +59,7 @@
     <Compile Include="Helpers\NakiHelpers.cs" />
     <Compile Include="Helpers\Naki_Defof.cs" />
     <Compile Include="NakiRace.cs" />
-    <Compile Include="Needs\DMNeed.cs" />
+    <Compile Include="Needs\Need_DMNeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verbs\Verb_NumberedShoot.cs" />
   </ItemGroup>

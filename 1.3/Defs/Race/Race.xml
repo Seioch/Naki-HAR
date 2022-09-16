@@ -74,12 +74,13 @@
 			<atlasScale>4</atlasScale>
       <bodyAddons>
 			<li>
-        <path>Naki/Tail/Single tails/Texture1</path>
-        <bodyPart>tail</bodyPart>				  
+        <path>Naki/Tail/Single/Texture</path>
+        <bodyPart>nakitail</bodyPart>				  
         <inFrontOfBody>false</inFrontOfBody>
 				<colorChannel>hair</colorChannel>
 				<drawSize>0.9</drawSize>
         <defaultOffset>Tail</defaultOffset>
+        <drawnDesiccated>false</drawnDesiccated>
         <offsets>
             <south>
               <layerOffset>-0.19</layerOffset>
@@ -94,8 +95,8 @@
             <north>
                 <layerOffset>-0.19</layerOffset>
                 <bodyTypes>
-                    <Female>(0,0.5401928)</Female>
-                    <Male>(0,0.5401928)</Male>
+                    <Female>(0,0.31)</Female>
+                    <Male>(0,0.31)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -170,7 +171,7 @@
 				</li>
 				
         <li>
-        <path>Naki/Ear/Left/DRNTFEarLA</path>
+        <path>Naki/Ear/Left/LTexture</path>
         <bodyPart>left ear</bodyPart>				
         <inFrontOfBody>true</inFrontOfBody>
         <colorChannel>hair</colorChannel>
@@ -207,8 +208,8 @@
           </north>
           <east>
             <bodyTypes>
-                <Female>(0,-0.5)</Female>
-                <Male>(0,-0.5)</Male>
+                <Female>(0.01,-0.51)</Female>
+                <Male>(0.07,-0.51)</Male>
             </bodyTypes>
             <crownTypes>
                 <Normal_Average>(0,0)</Normal_Average>
@@ -216,58 +217,9 @@
           </east>
         </offsets>
         </li>
-			<!--왼쪽귀B-->
+		
         <li>
-          <path>Naki/Ear/Left/DRNTFEarLB</path>
-          <bodyPart>left ear</bodyPart>				
-          <inFrontOfBody>false</inFrontOfBody>
-          <colorChannel>hair</colorChannel>  
-          <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
-          <drawSize>0.9</drawSize>
-          <angle>0</angle>
-          <defaultOffset>Head</defaultOffset>
-          <offsets>
-            <west>
-              <bodyTypes>
-                  <Female>(0.13,-0.5)</Female>
-                  <Male>(0.13,-0.5)</Male>
-              </bodyTypes>
-              <crownTypes>
-                  <Normal_Average>(0,0)</Normal_Average>
-              </crownTypes>
-            </west>
-            <south>
-              <bodyTypes>
-                  <Female>(-0.4212219,0.289389)</Female>
-                  <Male>(-0.4212219,0.289389)</Male>
-              </bodyTypes>
-              <crownTypes>
-                  <Normal_Average>(0,0)</Normal_Average>
-              </crownTypes>
-            </south>
-            <north>
-                <bodyTypes>
-                    <Female>(0,0.5819935)</Female>
-                    <Male>(0,0.5819935)</Male>
-                </bodyTypes>
-                <crownTypes>
-                    <Normal_Average>(0,0)</Normal_Average>
-                </crownTypes>
-            </north>
-            <east>
-              <bodyTypes>
-                  <Female>(0.13,-0.5)</Female>
-                  <Male>(0.13,-0.5)</Male>
-              </bodyTypes>
-              <crownTypes>
-                  <Normal_Average>(0,0)</Normal_Average>
-              </crownTypes>
-            </east>
-          </offsets>
-        </li>
-			<!--오른쪽귀A-->
-        <li>
-          <path>Naki/Ear/Right/DRNTFEarRA</path>
+          <path>Naki/Ear/Right/RTexture</path>
           <bodyPart>right ear</bodyPart>				
           <inFrontOfBody>true</inFrontOfBody>
           <colorChannel>hair</colorChannel> 
@@ -277,8 +229,8 @@
           <offsets>
             <west>
                 <bodyTypes>
-                    <Female>(0,-0.5)</Female>
-                    <Male>(0,-0.5)</Male>
+                    <Female>(0.01,-0.51)</Female>
+                    <Male>(0.065,-0.51)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -304,8 +256,8 @@
               </north>
               <east>
                 <bodyTypes>
-                    <Female>(0,-0.5)</Female>
-                    <Male>(0,-0.5)</Male>
+                    <Female>(0.01,-0.51)</Female>
+                    <Male>(0.01,-0.51)</Male>
                 </bodyTypes>
                 <crownTypes>
                     <Normal_Average>(0,0)</Normal_Average>
@@ -313,55 +265,7 @@
               </east>
           </offsets>
         </li>
-			<!--오른쪽귀B-->
-        <li>
-          <path>Naki/Ear/Right/DRNTFEarRB</path>
-          <bodyPart>right ear</bodyPart>				
-          <inFrontOfBody>false</inFrontOfBody>
-          <colorChannel>hair</colorChannel>
-          <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
-          <drawSize>0.9</drawSize>
-          <angle>0</angle>
-          <defaultOffset>Head</defaultOffset>
-          <offsets>
-              <west>
-                  <bodyTypes>
-                      <Female>(0.13,-0.5)</Female>
-                      <Male>(0.13,-0.5)</Male>
-                  </bodyTypes>
-                  <crownTypes>
-                      <Normal_Average>(0,0)</Normal_Average>
-                  </crownTypes>
-              </west>
-              <south>
-                  <bodyTypes>
-                      <Female>(-0.4212219,0.289389)</Female>
-                      <Male>(-0.4212219,0.289389)</Male>
-                  </bodyTypes>
-                  <crownTypes>
-                      <Normal_Average>(0,0)</Normal_Average>
-                  </crownTypes>
-              </south>
-              <north>
-                  <bodyTypes>
-                      <Female>(0,0.5819935)</Female>
-                      <Male>(0,0.5819935)</Male>
-                  </bodyTypes>
-                  <crownTypes>
-                      <Normal_Average>(0,0)</Normal_Average>
-                  </crownTypes>
-              </north>
-              <east>
-                  <bodyTypes>
-                      <Female>(0.13,-0.5)</Female>
-                      <Male>(0.13,-0.5)</Male>
-                  </bodyTypes>
-                  <crownTypes>
-                      <Normal_Average>(0,0)</Normal_Average>
-                  </crownTypes>
-              </east>
-          </offsets>
-          </li>
+			
     </bodyAddons>
 			
     <customDrawSize>(0.9, 0.9)</customDrawSize>

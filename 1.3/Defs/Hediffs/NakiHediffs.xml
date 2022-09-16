@@ -6,19 +6,19 @@
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} disintegrated away.</deathMessage>
-    <hediff>Disintegration Burn</hediff>
-    <hediffSolid>Disintegration Burn</hediffSolid>
+    <hediff>DMBurn</hediff>
+    <hediffSolid>DMBurn</hediffSolid>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Tornado</impactSoundType>
     <armorCategory>Sharp</armorCategory>
     <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
   </DamageDef>
 
-  <!-- <HediffDef ParentName="InjuryBase">
+  <HediffDef ParentName="InjuryBase">
     <defName>DMBurn</defName>
     <label>dark matter burn</label>
     <labelNoun>a burnt wound</labelNoun>
-    <description>A charred gash where flesh was burnt away</description>
+    <description>A charred gash where flesh was disintegrated</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>patched</labelTendedWell>
@@ -40,7 +40,7 @@
       <destroyedLabel>Disintegrated</destroyedLabel>
       <destroyedOutLabel>Disintegrated</destroyedOutLabel>
     </injuryProps>
-  </HediffDef> -->
+  </HediffDef>
 
   <HediffDef>
     <defName>DMDisintegration</defName>

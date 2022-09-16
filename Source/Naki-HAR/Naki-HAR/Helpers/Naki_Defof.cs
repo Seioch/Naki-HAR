@@ -13,6 +13,7 @@ namespace Naki_HAR
     {
         public static HediffDef DMDisintegration;
         public static DamageDef DMBurn;
+        public static NeedDef NakiRaceDMNeed;
 
         static Naki_Defof()
         {
