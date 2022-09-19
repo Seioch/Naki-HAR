@@ -9,6 +9,7 @@ namespace Naki_HAR
 {
     public class CompNakiPostSpawn : ThingComp
     {
+        // This code does nothing now, but if I want to give Naki something after they spawn in this is how we can do it. 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
@@ -19,12 +20,6 @@ namespace Naki_HAR
             {
                 // Only applies against pawns.
                 return;
-            }
-
-            // All Naki must have DMNeed.
-            // if (!pawn.story.traits.allTraits.Any(trait => trait.def == TraitDefOf.Bloodlust))
-            if (pawn.needs.TryGetNeed(Naki_Defof.NakiRaceDMNeed) == null)
-            {
             }
         }
     }

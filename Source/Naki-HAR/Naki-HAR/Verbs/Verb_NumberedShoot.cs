@@ -22,6 +22,7 @@ namespace Naki_HAR
                 {
                     // Increase the number of shots taken by 1
                     nakiWeaponComp.currentShots += 1;
+                    // Log.Message("Current Shots: " + nakiWeaponComp.currentShots.ToString());
                     // If we have hit the maximum number of shots for the weapon
                     if (nakiWeaponComp.currentShots == nakiWeaponComp.Props.maximumShots)
                     {

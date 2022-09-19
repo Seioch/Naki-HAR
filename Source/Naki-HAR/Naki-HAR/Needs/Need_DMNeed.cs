@@ -15,7 +15,14 @@ namespace Naki_HAR
             threshPercents = Thresholds;
         }
         public static bool Enabled { get; set; }
-
+        // Only disabled on those who are not Naki
+        private bool Disabled
+        {
+            get
+            {
+                return (!pawn.IsNaki());
+            }
+        }
         public static float DaysToEmpty
         {
             get => _daysToEmpty;
@@ -26,6 +33,7 @@ namespace Naki_HAR
             }
         }
         private static float _daysToEmpty;
+
 
         public static readonly List<float> Thresholds = new List<float>()
         {
