@@ -20,12 +20,14 @@ namespace Naki_HAR
             base.Initialize(props);
         }
 
+        // Exposes data
         public override void PostExposeData()
         {
             base.PostExposeData();
             Scribe_Values.Look(ref currentShots, "currentShots", 0);
         }
 
+        // Returns a new Command_NakiWeaponAmmoCounter, but doable as an IEnumberable
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             yield return new Command_NakiWeaponAmmoCounter()
@@ -34,6 +36,7 @@ namespace Naki_HAR
             };
         }
 
+        // Returns a new instanec of a Naki Weapon Command, and attaches this Comp to it so the Command can get this comp's live data
         public Command GetNakiWeaponCommand()
         {
             return new Command_NakiWeaponAmmoCounter(this);
