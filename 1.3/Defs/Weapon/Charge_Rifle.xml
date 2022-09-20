@@ -31,6 +31,9 @@
 		<li Class="Naki_HAR.CompProperties_CompNakiWeapons">
 			<maximumShots>100</maximumShots>
 		</li>
+		<!-- <li Class="CompProperties_Reloadable"> -->
+			<!-- Empty?? -->
+		<!-- </li> -->
 	</comps>
 	<recipeMaker>
 		<researchPrerequisite>Naki_DM_station</researchPrerequisite>

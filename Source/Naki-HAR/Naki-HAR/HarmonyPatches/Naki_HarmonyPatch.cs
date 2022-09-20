@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Linq;
 using HarmonyLib;
 using Verse;
 using RimWorld;
-using System.Linq;
 
 namespace Naki_HAR
 {
@@ -20,12 +20,15 @@ namespace Naki_HAR
         static Naki_HarmonyPatch()
         {
             Log.Message("[Naki HAR] Trying to patch Naki");
-            harm = new Harmony("Naki");
-            harm.Patch(AccessTools.Method(typeof(VerbTracker), "GetVerbsCommands"), postfix: new HarmonyMethod(typeof(Gizmo_NakiWeaponAmmoCounter), nameof(VerbTrackerAmmo_Postfix)));
+            harm = new Harmony("Seioch.Naki.HAR");
+            harm.Patch(AccessTools.Method(typeof(VerbTracker), "GetVerbsCommands"), 
+                postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(VerbTrackerAmmo_Postfix)));
+            //harm.Patch(AccessTools.Method(typeof(CompReloadable), "CompGetWornGizmosExtra"),
+            //      postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(VerbTrackerAmmo_Postfix)));
             // harm.PatchAll(Assembly.GetExecutingAssembly());
         }
 
-        public static void VerbTrackerAmmo_Postfix(ref VerbTracker __instance, ref IEnumerable<Gizmo_NakiWeaponAmmoCounter> __result)
+        public static void VerbTrackerAmmo_Postfix(ref VerbTracker __instance, ref IEnumerable<Command> __result)
         {
             CompEquippable equippable = __instance.directOwner as CompEquippable;
             if (equippable != null)
@@ -37,7 +40,7 @@ namespace Naki_HAR
                     Pawn owner = equippable.PrimaryVerb.CasterPawn as Pawn;
                     if (owner != null && owner.Faction == Faction.OfPlayer)
                     {
-                        __result = __result.Append(compNakiWeapons.GetANakiWeaponAmmoCounter());
+                        __result = __result.Append(compNakiWeapons.GetNakiWeaponCommand());
                     }
                 }
             }

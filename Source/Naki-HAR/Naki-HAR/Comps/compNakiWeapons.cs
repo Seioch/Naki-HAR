@@ -20,17 +20,23 @@ namespace Naki_HAR
             base.Initialize(props);
         }
 
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look(ref currentShots, "currentShots", 0);
+        }
+
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            yield return new Gizmo_NakiWeaponAmmoCounter
+            yield return new Command_NakiWeaponAmmoCounter()
             {
                 compNakiWeapons = this
             };
         }
 
-        public Gizmo_NakiWeaponAmmoCounter GetANakiWeaponAmmoCounter()
+        public Command GetNakiWeaponCommand()
         {
-            return new Gizmo_NakiWeaponAmmoCounter();
+            return new Command_NakiWeaponAmmoCounter(this);
         }
     }
 }

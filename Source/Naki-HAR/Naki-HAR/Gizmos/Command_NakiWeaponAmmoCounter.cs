@@ -11,7 +11,7 @@ using UnityEngine;
 namespace Naki_HAR
 {
     [StaticConstructorOnStartup]
-    public class Gizmo_NakiWeaponAmmoCounter : Gizmo
+    public class Command_NakiWeaponAmmoCounter : Command
     {
         //public static HarmonyMethod Use => new HarmonyMethod(typeof(Gizmo_NakiWeaponAmmoCounter), nameof(VerbTrackerAmmo_Postfix);
         public CompNakiWeapons compNakiWeapons;
@@ -19,8 +19,14 @@ namespace Naki_HAR
         private static readonly Texture2D FullBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.35f, 0.35f, 0.2f));
         private static readonly Texture2D EmptyBarTex = SolidColorMaterials.NewSolidColorTexture(Color.black);
 
-        public Gizmo_NakiWeaponAmmoCounter()
+        public Command_NakiWeaponAmmoCounter()
         {
+            this.order = -100f;
+        }
+
+        public Command_NakiWeaponAmmoCounter(CompNakiWeapons c)
+        {
+            this.compNakiWeapons = c;
             this.order = -100f;
         }
 
@@ -42,7 +48,7 @@ namespace Naki_HAR
                 Rect rect3 = rect;
                 rect3.yMin = overRect.height / 2f;
                 float fillPercent = this.compNakiWeapons.currentShots / this.compNakiWeapons.Props.maximumShots;
-                Widgets.FillableBar(rect3, fillPercent, Gizmo_NakiWeaponAmmoCounter.FullBarTex, Gizmo_NakiWeaponAmmoCounter.EmptyBarTex, false);
+                Widgets.FillableBar(rect3, fillPercent, Command_NakiWeaponAmmoCounter.FullBarTex, Command_NakiWeaponAmmoCounter.EmptyBarTex, false);
                 Text.Font = GameFont.Small;
                 Text.Anchor = TextAnchor.MiddleCenter;
                 Widgets.Label(rect3, this.compNakiWeapons.currentShots.ToString("F0") + " / " + this.compNakiWeapons.Props.maximumShots.ToString("F0"));
