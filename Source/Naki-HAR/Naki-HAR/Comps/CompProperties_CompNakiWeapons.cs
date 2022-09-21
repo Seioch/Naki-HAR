@@ -12,7 +12,7 @@ namespace Naki_HAR
     {
         public int maximumShots = 100;
         public bool destroyOnEmpty = true;
-        public string ammoGizmoLabel = "Naki Weapons ammo";
+        public string ammoGizmoLabel = "Shots Remaining";
 
 
         public CompProperties_CompNakiWeapons()
@@ -29,7 +29,7 @@ namespace Naki_HAR
             IEnumerator<StatDrawEntry> enumerator = null;
             if (((ThingDef)req.Def).GetType().Equals(this.compClass)) // Only draw for CompNakiWeapons
             {
-                yield return new StatDrawEntry(StatCategoryDefOf.Weapon, "Maximum shots", ((int)this.maximumShots).ToString(), "Shots Before Weapon Destroy", 3171, null, null, false);
+                yield return new StatDrawEntry(StatCategoryDefOf.Weapon_Ranged, "Maximum shots", ((int)this.maximumShots).ToString(), "Shots Before Weapon Loss", 3171, null, null, false);
             }
             yield break;
         }
