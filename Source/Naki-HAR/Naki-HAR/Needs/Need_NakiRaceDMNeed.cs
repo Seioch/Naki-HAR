@@ -14,7 +14,10 @@ namespace Naki_HAR
         {
             threshPercents = Thresholds;
         }
-        public static bool Enabled { get; set; }
+        // public static bool Enabled { get; set; }
+
+        public override bool ShowOnNeedList => !Disabled;
+
         // Only disabled on those who are not Naki
         private bool Disabled
         {
@@ -23,6 +26,7 @@ namespace Naki_HAR
                 return (!pawn.IsNaki());
             }
         }
+
         public static float DaysToEmpty
         {
             get => _daysToEmpty;
@@ -69,7 +73,7 @@ namespace Naki_HAR
         // Executes drop in DM need every 10 ticks
         public override void NeedInterval()
         {
-            if (!Enabled || pawn.Map == null)
+            if (Disabled || pawn.Map == null)
             {
                 return;
             }

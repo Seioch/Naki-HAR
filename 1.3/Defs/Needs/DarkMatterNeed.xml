@@ -9,12 +9,14 @@
 
   <NeedDef ParentName="DrugAddictionNeedBase">
     <defName>NakiRaceDMNeed</defName>
-    <needClass>Naki_HAR.Need_NakiRaceDMNeed</needClass>
-    <label>dark_matter_need</label>
-    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <!-- Do I need a custom needclass?  -->
+    <!-- <needClass>Naki_HAR.Need_NakiRaceDMNeed</needClass> -->
+    <needClass>Need_Chemical</needClass>
+    <label>dark matter need</label>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>     <!-- Set this to true only if the Hediff is spawning -->
     <description>Naki need Dark Matter to use psycasts and heal. Lacking Dark Matter will prevent healing and casting.</description>
     <listPriority>45</listPriority>
-    <fallPerDay>0.150</fallPerDay>
+    <fallPerDay>0.10</fallPerDay>
     <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
     <colonistsOnly>false</colonistsOnly>
     <showForCaravanMembers>false</showForCaravanMembers>
@@ -27,13 +29,30 @@
   <HediffDef ParentName="AddictionBase">
     <defName>DarkMatterAddiction</defName>
     <label>dark mattter addiction</label>
-    <description>Naki bodies contain high amounts of exotic heavy particles. Heavy atoms allow Naki to live outside of Omega Eden, but make them reliable on daily ingestion or meditation.
-\nWithout dark matter, Naki cannot heal and cast psycasts.</description>
+    <description>Naki bodies contain high amounts of exotic heavy particles. Heavy atoms allow Naki to live outside of Omega Eden, but make them reliant on daily ingestion or meditation.
+                \nWithout dark matter, Naki cannot heal nor cast psycasts.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
     <causesNeed>NakiRaceDMNeed</causesNeed>
     <everCurableByItem>false</everCurableByItem>
     <stages>
-      <!-- Fill out stages if you want to punish players for not filling DM need -->
+      <li></li>
+      <li>
+        <label>unmet</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
     </stages>
   </HediffDef>
 </Defs>

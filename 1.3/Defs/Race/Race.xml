@@ -826,11 +826,17 @@
         <li>Human</li>
       </hediffGiverSets>
     </race>
-<!--=============================================================================================================================-->
+<!--=========================================== Surgery Recipes ================================================-->
     <recipes>
       <li>Naki_InstallFakeTail</li>
       <li>Naki_InstallBionicEar</li>
       <li>Naki_InstallBionicTail</li>
     </recipes>
+<!--=========================================== Custom Components ================================================-->
+    <comps>
+      <li>
+        <compClass>Naki_HAR.CompNakiPostSpawn</compClass>
+      </li>
+    </comps>
 </AlienRace.ThingDef_AlienRace>
 </Defs>

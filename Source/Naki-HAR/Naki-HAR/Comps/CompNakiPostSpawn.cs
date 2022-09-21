@@ -21,6 +21,15 @@ namespace Naki_HAR
                 // Only applies against pawns.
                 return;
             }
+
+            // If the pawn is a Naki, start them with the DM Addiction
+            if (pawn.IsNaki())
+            {
+                Log.Message($"[Naki HAR] Adding DarkMatterAddiction to {pawn.Name}");
+                HediffDef dmAddiction = HediffDef.Named("DarkMatterAddiction");
+                dmAddiction.initialSeverity = 1.0f;
+                pawn.health.AddHediff(dmAddiction);
+            }
         }
     }
 }
