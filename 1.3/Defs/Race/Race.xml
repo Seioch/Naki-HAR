@@ -12,25 +12,29 @@
 			<immuneToAge>true</immuneToAge>
       <humanRecipeImport>true</humanRecipeImport>           
 			<forcedRaceTraitEntries>
-                <li>
-                    <defName>Beauty</defName>
-                    <degree>2</degree>
-                    <chance>25</chance>
-                </li>
-                <li>
-                    <defName>Beauty</defName>
-                    <degree>1</degree>
-                    <chance>50</chance>
-                </li>
-                <li>
-                    <defName>Bisexual</defName>
-                    <chance>15</chance>
-                </li>
-                <li>
-                    <defName>FastLearner</defName>
-                    <chance>15</chance>
-                </li>
-            </forcedRaceTraitEntries>
+          <li>
+              <defName>Beauty</defName>
+              <degree>2</degree>
+              <chance>25</chance>
+          </li>
+          <li>
+              <defName>Beauty</defName>
+              <degree>1</degree>
+              <chance>50</chance>
+          </li>
+          <li>
+              <defName>Bisexual</defName>
+              <chance>15</chance>
+          </li>
+          <li>
+              <defName>FastLearner</defName>
+              <chance>15</chance>
+          </li>
+          <li>
+              <defName>Voidborn</defName>
+              <chance>100</chance>
+          </li>
+      </forcedRaceTraitEntries>
 			<disallowedTraits>
         <li>
           <defName>Beauty</defName>
@@ -44,7 +48,8 @@
           <defName>SlowLearner</defName>
         </li>
 			</disallowedTraits>
-			<factionRelations>
+      <!-- Deprecated as of Rimworld 1.3 -->
+			<!-- <factionRelations>
           <li MayRequire="Ludeon.RimWorld.Royalty">
               <factions>
                 <li>Empire</li>
@@ -54,8 +59,8 @@
                 <max>5</max>
               </goodwill>
           </li> 
-      </factionRelations>
-	<maxDamageForSocialfight>4</maxDamageForSocialfight>
+      </factionRelations> -->
+	<maxDamageForSocialfight>8</maxDamageForSocialfight>
 	
 
 		<alienPartGenerator>

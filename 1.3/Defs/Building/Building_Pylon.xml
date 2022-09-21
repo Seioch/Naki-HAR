@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>NakiMeditationPylon</defName>
+    <label>Naki meditation pylon</label>
+    <description>A stabilized portal to the archotech in the center of Omega Eden. Naki can use this to commune with their patron archotech.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/CraftingSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>true</useHitPoints>
+    <size>(1,1)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Beauty>10</Beauty>
+      <MeditationFocusStrength>0.22</MeditationFocusStrength>
+      <Mass>25</Mass>
+      <SellPriceFactor>0</SellPriceFactor>
+    </statBases>
+    <costStuffCount>150</costStuffCount>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <!-- Don't need an interaction cell if we don't want to have pawns interact with it -->
+    <!-- <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs> -->
+    <comps>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>NakiFocus</li>
+        </focusTypes>
+        <offsets>
+          <!-- Add offsets here for number of Naki meditating -->
+        </offsets>
+      </li>
+    </comps>
+    <building>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>true</ai_chillDestination>
+    </building>
+  </ThingDef>
+</Defs>
