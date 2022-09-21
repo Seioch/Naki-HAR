@@ -10,7 +10,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>
-    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <useHitPoints>true</useHitPoints>
     <size>(1,1)</size>
@@ -24,6 +24,7 @@
       <li>Metallic</li>
       <li>Stony</li>
     </stuffCategories>
+    <designationCategory>Misc</designationCategory>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
       <WorkToBuild>1500</WorkToBuild>
@@ -37,10 +38,10 @@
     <!-- Don't need an interaction cell if we don't want to have pawns interact with it -->
     <!-- <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <surfaceType>Item</surfaceType>
+    <surfaceType>Item</surfaceType>-->
     <inspectorTabs>
       <li>ITab_Bills</li>
-    </inspectorTabs> -->
+    </inspectorTabs> 
     <comps>
       <li Class="CompProperties_MeditationFocus">
         <statDef>MeditationFocusStrength</statDef>
