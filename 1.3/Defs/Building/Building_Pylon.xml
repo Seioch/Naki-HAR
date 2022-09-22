@@ -52,6 +52,11 @@
           <!-- Add offsets here for number of Naki meditating -->
         </offsets>
       </li>
+      <!-- Glow -->
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.75</glowRadius>
+        <glowColor>(110,116,125,0)</glowColor>
+      </li>
     </comps>
     <building>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
