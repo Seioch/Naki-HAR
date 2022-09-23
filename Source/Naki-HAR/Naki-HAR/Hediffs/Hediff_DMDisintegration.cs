@@ -10,7 +10,6 @@ namespace Naki_HAR
 {
     public class Hediff_DMDisintegration : HediffWithComps
     {
-        public int tickMax = 64; // How often to fire off the Damage
         public int tickCounter = 0; // Counter between ticks
         public int applications = 0; // Number of times this thing has been applied
         
@@ -23,9 +22,9 @@ namespace Naki_HAR
             }
             base.Tick();
             tickCounter++;
-            if (tickCounter > tickMax)
+            Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(Naki_Defof.DMDisintegration);
+            if (tickCounter > hediff.TryGetComp<CompDisintegration>().Props.tickMax)
             {
-                Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(Naki_Defof.DMDisintegration);
                 if (hediff != null)
                 {
                     tickCounter = 0;

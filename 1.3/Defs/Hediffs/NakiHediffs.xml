@@ -9,7 +9,7 @@
     <hediff>DMBurn</hediff>
     <hediffSolid>DMBurn</hediffSolid>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-    <impactSoundType>Tornado</impactSoundType>
+    <impactSoundType>Electric</impactSoundType>
     <armorCategory>Sharp</armorCategory>
     <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
   </DamageDef>
@@ -23,7 +23,7 @@
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>patched</labelTendedWell>
         <labelTendedWellInner>bandaged</labelTendedWellInner>
-        <labelSolidTendedWell>sutured</labelSolidTendedWell>
+        <labelSolidTendedWell>tended</labelSolidTendedWell>
       </li>
       <li Class="HediffCompProperties_Infecter">
         <infectionChance>0.05</infectionChance>
@@ -33,7 +33,7 @@
       </li>
     </comps>
     <injuryProps>
-      <painPerSeverity>0.0425</painPerSeverity>
+      <painPerSeverity>0.0225</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
       <bleedRate>0.045</bleedRate>
       <canMerge>false</canMerge>
@@ -42,10 +42,11 @@
     </injuryProps>
   </HediffDef>
 
+  <!-- Standard disintegration at level 3 -->
   <HediffDef>
     <defName>DMDisintegration</defName>
     <label>dark matter disintegration</label>
-    <description>Non-Naki exposed to dark matter are poisoned by exotic particles.\n
+    <description>Non-Naki exposed to dark matter are destroyed by exotic particles.\n
     Their body will disintegrate quickly until nothing is left but a pile of ash.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
@@ -56,10 +57,47 @@
     <comps>
       <li Class="Naki_HAR.CompProperties_DMDisintegration">
         <maxApplications>8</maxApplications>
+        <tickMax>32</tickMax>
       </li>
     </comps>
-    <stages>
-      <!-- Add stages if necessary -->
-    </stages>
   </HediffDef>
+
+  <!-- Less powerful Decay available at level 1 -->
+  <HediffDef>
+    <defName>DMDecay</defName>
+    <label>dark matter decay</label>
+    <description>Non-Naki exposed to dark matter are destroyed by exotic particles.\n
+    Their body will disintegrate quickly until nothing is left but a pile of ash.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="Naki_HAR.CompProperties_DMDisintegration">
+        <maxApplications>4</maxApplications>
+        <tickMax>48</tickMax>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Powerful disintegration  at level 5-->
+  <HediffDef>
+    <defName>DMAnnihilation</defName>
+    <label>dark matter annihilation</label>
+    <description>Non-Naki exposed to dark matter are destroyed by exotic particles.\n
+    Their body will disintegrate quickly until nothing is left but a pile of ash.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="Naki_HAR.CompProperties_DMDisintegration">
+        <maxApplications>12</maxApplications>
+        <tickMax>16</tickMax>
+      </li>
+    </comps>
+  </HediffDef>
+
 </Defs>

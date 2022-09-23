@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef ParentName = "PsycastHediffBase">
+    <defName>Naki_Amplify</defName>
+    <label>dark matter amplification</label>
+    <description>Dark matter is amplifying this body's natural functions.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Breathing</capacity>
+            <postFactor>1.2</postFactor>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <postFactor>1.2</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

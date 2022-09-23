@@ -41,7 +41,7 @@ namespace Naki_HAR
                 {
                     FilthMaker.TryMakeFilth(c, map, ThingDefOf.Filth_Ash, 1, FilthSourceFlags.None);
                 }
-                this.parent.pawn.TakeDamage(new DamageInfo(Naki_Defof.DMBurn, 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+                this.parent.pawn.TakeDamage(new DamageInfo(Naki_Defof.DMBurn, 1f, 1f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
                 tickCounter = 0;
                 applications = applications + 1;
                 if (applications == this.Props.maxApplications) // Maximum number of applications inflicted has been reached
