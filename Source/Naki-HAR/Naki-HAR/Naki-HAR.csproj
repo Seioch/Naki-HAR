@@ -64,9 +64,11 @@
   <ItemGroup>
     <Compile Include="Comps\CompDMDisintegration.cs" />
     <Compile Include="Comps\CompNakiPostSpawn.cs" />
+    <Compile Include="Comps\CompNakiPsylinkable.cs" />
     <Compile Include="Comps\CompNakiWeapons.cs" />
     <Compile Include="Comps\CompProperties_CompNakiWeapons.cs" />
     <Compile Include="Comps\CompProperties_DMDisintegration.cs" />
+    <Compile Include="Comps\CompProperties_NakiPsylinkable.cs" />
     <Compile Include="Doers\IngestionOutcomeDoer_GiveHediffCheckRace.cs" />
     <Compile Include="Gizmos\Command_NakiWeaponAmmoCounter.cs" />
     <Compile Include="HarmonyPatches\Naki_HarmonyPatch.cs" />
@@ -74,7 +76,7 @@
     <Compile Include="Helpers\NakiHelpers.cs" />
     <Compile Include="Helpers\Naki_Defof.cs" />
     <Compile Include="NakiRace.cs" />
-    <Compile Include="Needs\Need_DMNeed.cs" />
+    <Compile Include="Needs\Need_NakiRaceDMNeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verbs\Verb_NumberedShoot.cs" />
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,12 @@ namespace Naki_HAR
             if (activation)
             {
                 // Log.Message("Adding DM burn");
+                // Make the ash spawn from disintegration
+                Map map = this.parent.pawn.Map;
+                foreach (IntVec3 c in this.parent.pawn.OccupiedRect())
+                {
+                    FilthMaker.TryMakeFilth(c, map, ThingDefOf.Filth_Ash, 1, FilthSourceFlags.None);
+                }
                 this.parent.pawn.TakeDamage(new DamageInfo(Naki_Defof.DMBurn, 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
                 tickCounter = 0;
                 applications = applications + 1;
