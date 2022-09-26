@@ -104,7 +104,7 @@
 		<li>
 			<grains>
 				<li Class="AudioGrain_Clip">
-					<clipPath>Naki/NakiChargeRifle</clipPath>
+					<clipPath>Naki/Naki_Rifle</clipPath>
 				</li>
 			</grains>      
 			<volumeRange>35~45</volumeRange>

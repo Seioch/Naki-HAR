@@ -9,6 +9,7 @@
 		<texPath>Naki/Weapon/Sniper_Rifle/Texture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
+	<equippedAngleOffset>45</equippedAngleOffset>
 	<soundInteract>Interact_ChargeRifle</soundInteract>
 	<statBases>
 		<WorkToMake>48000</WorkToMake>
