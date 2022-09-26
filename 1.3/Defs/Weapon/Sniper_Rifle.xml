@@ -2,42 +2,42 @@
 <Defs>
 
 <ThingDef ParentName="BaseMakeableGun">
-	<defName>Naki_Gun_Charge_Rifle</defName>
-	<label>naki charge rifle</label>
-	<description>A charge rifle that fires anti-matter rounds. An unstable miniature black hole core provides the ammo. When depleted, the black hole core annihilates the gun.</description>
+	<defName>Naki_Gun_Sniper_Rifle</defName>
+	<label>naki anti-warwalker rifle</label>
+	<description>A long-range anti-warwalker rifle that fires anti-matter rounds. Dual cores creates a large bolt of antimatter, which when fired can punch holes through reinforced armor.</description>
 	<graphicData>
-		<texPath>Naki/Weapon/Charge_Rifle/Texture</texPath>
+		<texPath>Naki/Weapon/Sniper_Rifle/Texture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
 	<soundInteract>Interact_ChargeRifle</soundInteract>
 	<statBases>
 		<WorkToMake>48000</WorkToMake>
-		<Mass>3.0</Mass>
-		<AccuracyTouch>0.55</AccuracyTouch>
-		<AccuracyShort>0.75</AccuracyShort>
+		<Mass>6.0</Mass>
+		<AccuracyTouch>0.15</AccuracyTouch>
+		<AccuracyShort>0.25</AccuracyShort>
 		<AccuracyMedium>0.75</AccuracyMedium>
-		<AccuracyLong>0.65</AccuracyLong>
-		<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+		<AccuracyLong>0.95</AccuracyLong>
+		<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
 	</statBases>
 	<weaponTags>
 		<!-- Should not have a standard tag because it should not spawn naturally -->
 		<li>NakiGun</li>
 	</weaponTags>
 	<costList>
-		<Plasteel>75</Plasteel>
-		<ComponentSpacer>5</ComponentSpacer>
+		<Plasteel>120</Plasteel>
+		<ComponentSpacer>9</ComponentSpacer>
 		<DarkMatter>27</DarkMatter>
 	</costList>
 	<comps>
 		<!-- Special comp to decrement remaining ammo, destroy on empty, and display ammo remaining -->
 		<li Class="Naki_HAR.CompProperties_CompNakiWeapons">
-			<maximumShots>60</maximumShots>
+			<maximumShots>10</maximumShots>
 		</li>
 	</comps>
 	<recipeMaker>
 		<researchPrerequisite>Naki_DM_station</researchPrerequisite>
 		<skillRequirements>
-			<Crafting>8</Crafting>
+			<Crafting>10</Crafting>
 		</skillRequirements>
         <recipeUsers Inherit="False">
             <li>Naki_Fabricator</li>
@@ -48,12 +48,12 @@
 		<li>
 			<verbClass>Naki_HAR.Verb_NumberedShoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>Naki_Bullet_Charge_Rifle</defaultProjectile>
-			<warmupTime>1.0</warmupTime>
-			<range>30.9</range>
-			<burstShotCount>2</burstShotCount>
+			<defaultProjectile>Naki_Bullet_Sniper_Rifle</defaultProjectile>
+			<warmupTime>2.5</warmupTime>
+			<range>44.9</range>
+			<burstShotCount>1</burstShotCount>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-			<soundCast>Naki_Shot_Charge_Rifle</soundCast>
+			<soundCast>Naki_Shot_Sniper_Rifle</soundCast>
 			<soundCastTail>GunTail_Medium</soundCastTail>
 			<muzzleFlashScale>9</muzzleFlashScale>
 		</li>
@@ -81,30 +81,30 @@
 </ThingDef>
 
 <ThingDef ParentName="BaseBullet">
-	<defName>Naki_Bullet_Charge_Rifle</defName>
-	<label>Naki charge rifle bullet</label>
+	<defName>Naki_Bullet_Sniper_Rifle</defName>
+	<label>naki anti-walker rifle bullet</label>
 	<projectile>
 		<damageDef>Bullet</damageDef>
-		<damageAmountBase>18</damageAmountBase>
-		<stoppingPower>1.8</stoppingPower>
-		<armorPenetrationBase>0.6</armorPenetrationBase>
+		<damageAmountBase>50</damageAmountBase>
+		<stoppingPower>2.9</stoppingPower>
+		<armorPenetrationBase>0.75</armorPenetrationBase>
 		<speed>100</speed>
 	</projectile>
 	<graphicData>
-		<texPath>Naki/Weapon/Rifle_Bullet/Texture</texPath>
+		<texPath>Naki/Weapon/Sniper_Bullet/Texture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
 </ThingDef>
 
 <SoundDef>
-	<defName>Naki_Shot_Charge_Rifle</defName>  
+	<defName>Naki_Shot_Sniper_Rifle</defName>  
 	<context>MapOnly</context>  
 	<maxSimultaneous>1</maxSimultaneous>  
 	<subSounds>
 		<li>
 			<grains>
 				<li Class="AudioGrain_Clip">
-					<clipPath>Naki/NakiChargeRifle</clipPath>
+					<clipPath>Naki/NakiSniperRifle</clipPath>
 				</li>
 			</grains>      
 			<volumeRange>35~45</volumeRange>

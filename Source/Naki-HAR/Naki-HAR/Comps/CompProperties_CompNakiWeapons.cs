@@ -26,7 +26,7 @@ namespace Naki_HAR
             {
                 yield return statDrawEntry;
             }
-            IEnumerator<StatDrawEntry> enumerator = null;
+            // IEnumerator<StatDrawEntry> enumerator = null;
             if (((ThingDef)req.Def).GetType().Equals(this.compClass)) // Only draw for CompNakiWeapons
             {
                 yield return new StatDrawEntry(StatCategoryDefOf.Weapon_Ranged, "Maximum shots", ((int)this.maximumShots).ToString(), "Shots Before Weapon Loss", 3171, null, null, false);
