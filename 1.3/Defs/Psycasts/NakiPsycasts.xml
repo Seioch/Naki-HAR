@@ -104,49 +104,13 @@
             </li>
         </comps>
     </AbilityDef>
-
-    <AbilityDef ParentName="PsycastBulletBase">
-        <defName>CP_MediumPsychicSlug</defName>
-        <label>medium psychic slug</label>
-        <description>Fire a medium sized slug of psychic energy at the target.</description>
-        <level>3</level>
-        <iconPath>Psycasts/CP_PsychicMediumSlug</iconPath>
-        <statBases>
-            <Ability_EntropyGain>13</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.035</Ability_PsyfocusCost>
-        </statBases>
-        <comps>
-            <li Class="CombatPsycasts.Comps.CompProperties_PsychicSustainedShoot">
-                <verbs>
-                    <li>
-                      <verbClass>CombatPsycasts.Verbs.Verb_PsychicShoot</verbClass>
-                      <hasStandardCommand>true</hasStandardCommand>
-                      <defaultProjectile>CP_Bullet_MediumPsychicSlug</defaultProjectile>
-                      <warmupTime>0.5</warmupTime>
-                      <range>24.9</range>
-                      <accuracyTouch>0.95</accuracyTouch>
-                      <accuracyShort>0.8</accuracyShort>
-                      <accuracyMedium>0.75</accuracyMedium>
-                      <accuracyLong>0.7</accuracyLong>
-                      <stopBurstWithoutLos>false</stopBurstWithoutLos>
-                      <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
-                      <soundCast>Shot_ChargeRifle</soundCast>
-                      <soundCastTail>GunTail_Medium</soundCastTail>
-                      <muzzleFlashScale>9</muzzleFlashScale>
-                    </li>
-                </verbs>
-                <sustainedJobDef>CP_CastMediumSlug</sustainedJobDef>
-                <maxSustainTicks>6000</maxSustainTicks>
-            </li>
-        </comps>
-    </AbilityDef>
 -->
     <AbilityDef ParentName="PsycastBase">
-        <defName>Naki_Restore</defName>
-        <label>restore</label>
-        <description>Transmute dark matter into flesh on a target, closing wounds.</description>
+        <defName>Naki_Confuse</defName>
+        <label>confuse</label>
+        <description>Creates a tiny gravity well in the ear canal of the target, causing acute confusion and disorientation.</description>
         <level>2</level>
-        <iconPath>Naki/Psycasts/Restore</iconPath>
+        <iconPath>Naki/Psycasts/Confuse</iconPath>
         <statBases>
             <Ability_EntropyGain>20</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.15</Ability_PsyfocusCost>
@@ -155,11 +119,42 @@
             <warmupTime>0.5</warmupTime>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityEffect">
-		        <compClass>Naki_HAR.CompProperties_CompDMHealing</compClass>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>DMConfusion</hediffDef>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+                <psychic>True</psychic>
+                <goodwillImpact>-15</goodwillImpact>
+                <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_Restore</defName>
+        <label>restore</label>
+        <description>Transmute dark matter into flesh on a target, closing wounds. The sudden regeneration of flesh fatigues the target greatly.</description>
+        <level>2</level>
+        <iconPath>Naki/Psycasts/Restore</iconPath>
+        <statBases>
+            <Ability_EntropyGain>20</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.15</Ability_PsyfocusCost>
+        </statBases>
+        <verbProperties>
+            <warmupTime>0.5</warmupTime>
+            <range>10.9</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "Naki_HAR.CompProperties_CompDMHealing">
+		        <compClass>Naki_HAR.CompDMHealing</compClass>
 		        <sound>PsycastPsychicEffect</sound>
                 <maxApplications>10</maxApplications>
-                <healingEffectiveness>0.1f</healingEffectiveness>
+                <healingEffectiveness>0.1</healingEffectiveness>
             </li>
             <li Class = "CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -168,9 +163,6 @@
                 <psychic>True</psychic>
                 <durationMultiplier>PsychicSensitivity</durationMultiplier>
             </li>
-	  <li Class="CompProperties_AbilityMoteOnTarget">
-        <moteDef>Mote_PsycastPsychicEffect</moteDef>
-      </li>
         </comps>
     </AbilityDef>
 

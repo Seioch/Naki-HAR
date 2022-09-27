@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <HediffDef ParentName = "PsycastHediffBase">
-    <defName>Naki_Amplify</defName>
-    <label>dark matter amplification</label>
-    <description>Dark matter is amplifying this body's natural functions.</description>
-    <isBad>false</isBad>
-    <stages>
-      <li>
-        <capMods>
-          <li>
-            <capacity>Breathing</capacity>
-            <postFactor>1.2</postFactor>
-          </li>
-          <li>
-            <capacity>BloodPumping</capacity>
-            <postFactor>1.2</postFactor>
-          </li>
-        </capMods>
-      </li>
-    </stages>
-  </HediffDef>
+        <defName>Naki_Amplify</defName>
+        <label>dark matter amplification</label>
+        <description>Dark matter is amplifying this body's natural functions.</description>
+        <isBad>false</isBad>
+        <stages>
+        <li>
+            <capMods>
+            <li>
+                <capacity>Breathing</capacity>
+                <postFactor>1.2</postFactor>
+            </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <postFactor>1.2</postFactor>
+            </li>
+            </capMods>
+        </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName = "PsycastHediffBase">
+        <defName>DMConfusion</defName>
+        <label>gravatational disorientation</label>
+        <description>A gravity well has destabilized the ear canal, causing disorientation.</description>
+        <isBad>true</isBad>
+        <stages>
+        </stages>
+        <comps>
+        <li Class="HediffCompProperties_Disorientation">
+            <wanderMtbHours>0.05</wanderMtbHours>
+            <singleWanderDurationTicks>240</singleWanderDurationTicks>
+            <wanderRadius>4</wanderRadius>
+        </li>
+        </comps>
+    </HediffDef>
 </Defs>

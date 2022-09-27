@@ -8,7 +8,7 @@ using Verse;
 
 namespace Naki_HAR
 {
-    public class CompAbilityEffect_Naki_restore : CompAbilityEffect
+    public class CompDMHealing : CompAbilityEffect
     {
         public new CompProperties_CompDMHealing Props => (CompProperties_CompDMHealing)props;
 
@@ -19,7 +19,7 @@ namespace Naki_HAR
 
             if (target.Pawn == null) { return; }
             // Up to a publicly set number of applications, heal that injury up to some %
-            for (int i = 0; i < Props.maxApplications; i++)
+            for (int i = 0; i < 10 *  Props.maxApplications; i++)
             {
                 Hediff_Injury hediff_Injury = FindInjury(target.Pawn);
                 if (hediff_Injury != null)

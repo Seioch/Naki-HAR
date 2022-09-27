@@ -53,10 +53,12 @@
           <degree>-1</degree>
         </li>
         <li>
+          <!-- Naki gotta be able to use space magic 'kay? -->
           <defName>PsychicSensitivity</defName>
           <degree>-1</degree>
         </li>
         <li>
+          <!-- Really RW? Two levels of your brain is bent outta shape? -->
           <defName>PsychicSensitivity</defName>
           <degree>-2</degree>
         </li>        

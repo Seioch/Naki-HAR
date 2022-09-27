@@ -63,11 +63,12 @@ namespace Naki_HAR
         // The idea of this prefix is to intercept the TryGiveAbility upon call before the original code executes.
         // This block will detect if the pawn is a Naki, and if so, executes almost the same Ability granting code
         // except it will only give Abilities that have "naki" inin the defname
-        public static void TryGiveAbilityOfLevel_Prefix(ref Hediff_Psylink __instance, int abilityLevel, bool sendLetter = true)
+        public static bool TryGiveAbilityOfLevel_Prefix(ref bool __result, ref Hediff_Psylink __instance, int abilityLevel, bool sendLetter = true)
         {
+            Log.Message($"[Naki HAR] {__instance.ToString()}");
             if (__instance.pawn.IsNaki())
             {
-                Log.Message($"[Naki HAR] Naki psylink giving detected, giving {__instance.pawn.Name} a Naki ability instead.");
+                // Log.Message($"[Naki HAR] Naki psylink giving detected, giving {__instance.pawn.Name} a Naki ability instead.");
                 string str = "LetterLabelPsylinkLevelGained".Translate() + ": " + __instance.pawn.LabelShortCap;
                 string str2;
                 if (!__instance.pawn.abilities.abilities.Any((Ability a) => a.def.level == abilityLevel))
@@ -79,10 +80,11 @@ namespace Naki_HAR
                     Log.Message($"[Naki HAR] EXISTING Naki psylink giving detected, giving {__instance.pawn.Name} Naki ability {abilityDef.defName} instead.");
                     __instance.pawn.abilities.GainAbility(abilityDef);
                     str2 = Hediff_Psylink.MakeLetterTextNewPsylinkLevel(__instance.pawn, abilityLevel, Gen.YieldSingle<AbilityDef>(abilityDef));
+                    return false;
                 }
                 else
                 {
-                    Log.Message($"[Naki HAR] {__instance.pawn.Name} did not have a psylink ability, granting a new one.");
+                    // Log.Message($"[Naki HAR] {__instance.pawn.Name} did not have a psylink ability, granting a new one.");
                     // Major change: When the abilityDef is searched out of DefDatabase, only Naki abilities will return with this search
                     AbilityDef abilityDef = (from a in DefDatabase<AbilityDef>.AllDefs
                                              where a.level == abilityLevel && a.defName.ToLower().Contains("naki")
@@ -90,14 +92,12 @@ namespace Naki_HAR
                     Log.Message($"[Naki HAR] NEW Naki psylink giving detected, giving {__instance.pawn.Name} Naki ability {abilityDef.defName} instead.");
                     __instance.pawn.abilities.GainAbility(abilityDef);
                     str2 = Hediff_Psylink.MakeLetterTextNewPsylinkLevel(__instance.pawn, abilityLevel, null);
+                    return false;
                 }
-                if (sendLetter && PawnUtility.ShouldSendNotificationAbout(__instance.pawn))
-                {
-                    Log.Message("[Naki HAR] Sending letter about gaining a psycast");
-                    Find.LetterStack.ReceiveLetter(str, str2, LetterDefOf.PositiveEvent, __instance.pawn, null, null, null, null);
-                }
-                // Skip normal psylink granting procedure, do not grant multiple psylinks!
-                return;
+            }
+            else
+            {
+                return true;
             }
         }
     }

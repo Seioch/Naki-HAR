@@ -33,7 +33,14 @@ namespace Naki_HAR
 
                 // Also add their first level of Psylink
                 Log.Message($"[Naki HAR] Adding Naki Psylink to {pawn.Name}");
-                pawn.ChangePsylinkLevel(1, true);
+                // Tried this but it called give ability twice
+                // pawn.ChangePsylinkLevel(1, true); 
+
+                //HediffDef psylink = HediffDef.Named("PsychicAmplifier");
+                Hediff_Psylink psylink = (Hediff_Psylink)HediffMaker.MakeHediff(HediffDefOf.PsychicAmplifier, pawn, null);
+                dmAddiction.initialSeverity = 1.0f;
+                psylink.suppressPostAddLetter = true;
+                pawn.health.AddHediff(psylink, pawn.health.hediffSet.GetBrain(), null, null);
             }
         }
     }
