@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
+using Verse.Sound;
 
 namespace Naki_HAR
 {
@@ -171,10 +172,78 @@ namespace Naki_HAR
         }
 
         // Taken from CompPsylinkable
+        // Finds a spot that the pawn AI will navigate the pawn to
         private bool CanUseSpot(Pawn pawn, LocalTargetInfo spot)
         {
             IntVec3 cell = spot.Cell;
             return cell.DistanceTo(this.parent.Position) <= 3.9f && cell.Standable(this.parent.Map) && GenSight.LineOfSight(cell, this.parent.Position, this.parent.Map, false, null, 0, 0) && pawn.CanReach(spot, PathEndMode.OnCell, Danger.Deadly, false, false, TraverseMode.ByPawn);
+        }
+
+        // Creates a new floating menu for Pawns to 
+        public override IEnumerable<FloatMenuOption> CompFloatMenuOptions(Pawn pawn)
+        {
+            if (pawn.Dead || pawn.Drafted)
+            {
+                yield break;
+            }
+            string text = "BeginLinkingRitualFloatMenu".Translate();
+            AcceptanceReport acceptanceReport = this.CanPsylink(pawn, null, true);
+            if (!acceptanceReport.Accepted && !string.IsNullOrWhiteSpace(acceptanceReport.Reason))
+            {
+                text = text + ": " + acceptanceReport.Reason;
+            }
+            yield return new FloatMenuOption(text, delegate ()
+            {
+                Precept_Ritual precept_Ritual = null;
+                for (int i = 0; i < pawn.Ideo.PreceptsListForReading.Count; i++)
+                {
+                    if (pawn.Ideo.PreceptsListForReading[i].def == PreceptDefOf.AnimaTreeLinking)
+                    {
+                        precept_Ritual = (Precept_Ritual)pawn.Ideo.PreceptsListForReading[i];
+                        break;
+                    }
+                }
+                if (precept_Ritual != null)
+                {
+                    Find.WindowStack.Add(precept_Ritual.GetRitualBeginWindow(this.parent, null, null, null, null, pawn));
+                }
+            }, MenuOptionPriority.Default, null, null, 0f, null, null, true, 0)
+            {
+                Disabled = !acceptanceReport.Accepted
+            };
+            yield break;
+        }
+
+        // Taken from CompPsylinkable
+        // Difference is that we are not going to despawn plants anymore, we are actually going to set the current
+        // attunement to 0. 
+        public void FinishLinkingRitual(Pawn pawn, int plantsToKeep)
+        {
+            if (!ModLister.CheckRoyalty("Psylinkable"))
+            {
+                return;
+            }
+            FleckMaker.Static(this.parent.Position, pawn.Map, FleckDefOf.PsycastAreaEffect, 10f);
+            SoundDefOf.PsycastPsychicPulse.PlayOneShot(new TargetInfo(this.parent));
+            CompSpawnSubplant compSpawnSubplant = this.parent.TryGetComp<CompSpawnSubplant>();
+
+            // Set current attunement to 0
+            this.currentAttunement = 0;
+
+            pawn.ChangePsylinkLevel(1, true);
+            Find.History.Notify_PsylinkAvailable();
+        }
+
+        // Taken from CompPsylinkable
+        // Exposes the list of pawns that can psylink (Naki psylinks only)
+        // Option to remove all pawns from the psylink list that are null as a cleaning measure
+        public override void PostExposeData()
+        {
+            Scribe_Collections.Look<Pawn>(ref this.pawnsThatCanPsylink, "pawnsThatCanPsylink", LookMode.Reference, Array.Empty<object>());
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                this.pawnsThatCanPsylink.RemoveAll((Pawn x) => x == null);
+            }
         }
     }
 }

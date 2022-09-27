@@ -64,6 +64,7 @@ namespace Naki_HAR
         {
             if (__instance.pawn.IsNaki())
             {
+                Log.Message($"[Naki HAR] Naki psylink giving detected, giving {__instance.pawn.Name} a Naki ability instead.");
                 string str = "LetterLabelPsylinkLevelGained".Translate() + ": " + __instance.pawn.LabelShortCap;
                 string str2;
                 if (!__instance.pawn.abilities.abilities.Any((Ability a) => a.def.level == abilityLevel))
