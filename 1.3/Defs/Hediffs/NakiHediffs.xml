@@ -42,6 +42,26 @@
     </injuryProps>
   </HediffDef>
 
+  <!-- Breathing and movement penalty for getting DM healed -->
+  <HediffDef>
+    <defName>DMHealingPenalty</defName>
+    <label>dark matter healing burden</label>
+    <description>Sudden transmutation of flesh has burdened the body with fatigue.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.4</setMax>
+          </li>
+        </capMods>
+        <painOffset>0.2</painOffset>
+        <capacityFactorEffectMultiplier>PsychicSensitivity</capacityFactorEffectMultiplier>
+      </li>
+    </stages>
+  </HediffDef>
+
   <!-- Standard disintegration at level 3 -->
   <HediffDef>
     <defName>DMDisintegration</defName>

@@ -140,46 +140,40 @@
             </li>
         </comps>
     </AbilityDef>
-
-    <AbilityDef ParentName="PsycastBulletBase">
-        <defName>CP_HeavyPsychicSlug</defName>
-        <label>heavy psychic slug</label>
-        <description>Fire a heavy slug of raw, concentrated psychic energy at the target.</description>
-        <level>6</level>
-        <iconPath>Psycasts/CP_PsychicHeavySlug</iconPath>
+-->
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_Restore</defName>
+        <label>restore</label>
+        <description>Transmute dark matter into flesh on a target, closing wounds.</description>
+        <level>2</level>
+        <iconPath>Naki/Psycasts/Restore</iconPath>
         <statBases>
-            <Ability_EntropyGain>100</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.07</Ability_PsyfocusCost>
+            <Ability_EntropyGain>20</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.15</Ability_PsyfocusCost>
         </statBases>
         <verbProperties>
-            <warmupTime>3</warmupTime>
+            <warmupTime>0.5</warmupTime>
         </verbProperties>
         <comps>
-            <li Class="CombatPsycasts.Comps.CompProperties_PsychicSustainedShoot">
-                <verbs>
-                    <li>
-                      <verbClass>CombatPsycasts.Verbs.Verb_PsychicShoot</verbClass>
-                      <hasStandardCommand>true</hasStandardCommand>
-                      <defaultProjectile>CP_Bullet_HeavyPsychicSlug</defaultProjectile>
-                      <warmupTime>0.5</warmupTime>
-                      <range>50</range>
-                      <accuracyTouch>1</accuracyTouch>
-                      <accuracyShort>1</accuracyShort>
-                      <accuracyMedium>0.99</accuracyMedium>
-                      <accuracyLong>0.99</accuracyLong>
-                      <stopBurstWithoutLos>false</stopBurstWithoutLos>
-                      <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
-                      <soundCast>ChargeLance_Fire</soundCast>
-                      <soundCastTail>GunTail_Heavy</soundCastTail>
-                      <muzzleFlashScale>9</muzzleFlashScale>
-                    </li>
-                </verbs>
-                <sustainedJobDef>CP_CastHeavySlug</sustainedJobDef>
-                <maxSustainTicks>6000</maxSustainTicks>
+            <li Class = "CompProperties_AbilityEffect">
+		        <compClass>Naki_HAR.CompProperties_CompDMHealing</compClass>
+		        <sound>PsycastPsychicEffect</sound>
+                <maxApplications>10</maxApplications>
+                <healingEffectiveness>0.1f</healingEffectiveness>
             </li>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>DMHealingPenalty</hediffDef>
+                <onlyBrain>True</onlyBrain>
+                <psychic>True</psychic>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+            </li>
+	  <li Class="CompProperties_AbilityMoteOnTarget">
+        <moteDef>Mote_PsycastPsychicEffect</moteDef>
+      </li>
         </comps>
     </AbilityDef>
--->
+
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Disintegrate_Lesser</defName>
         <label>decay</label>
