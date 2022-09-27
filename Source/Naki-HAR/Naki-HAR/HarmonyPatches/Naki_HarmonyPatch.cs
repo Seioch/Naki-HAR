@@ -25,8 +25,11 @@ namespace Naki_HAR
             harm.Patch(AccessTools.Method(typeof(VerbTracker), "GetVerbsCommands"), 
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(VerbTrackerAmmo_Postfix)));
             Log.Message("[Naki HAR] Patching Kill");
-            harm.Patch(AccessTools.Method(typeof(Pawn), "Kill"),
+            harm.Patch(AccessTools.Method(typeof(Pawn), "Kill"), 
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(Kill_Postfix)));
+            Log.Message("[Naki HAR] Patching TryGiveAbilityOfLevel");
+            harm.Patch(AccessTools.Method(typeof(Hediff_Psylink), "TryGiveAbilityOfLevel"), 
+                postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), "TryGiveAbilityOfLevel_Prefix"));
         }
 
         public static void VerbTrackerAmmo_Postfix(ref VerbTracker __instance, ref IEnumerable<Command> __result)
@@ -73,17 +76,28 @@ namespace Naki_HAR
                     AbilityDef abilityDef = (from a in DefDatabase<AbilityDef>.AllDefs
                                              where a.level == abilityLevel && a.defName.ToLower().Contains("naki")
                                              select a).RandomElement<AbilityDef>();
+                    Log.Message($"[Naki HAR] EXISTING Naki psylink giving detected, giving {__instance.pawn.Name} Naki ability {abilityDef.defName} instead.");
                     __instance.pawn.abilities.GainAbility(abilityDef);
                     str2 = Hediff_Psylink.MakeLetterTextNewPsylinkLevel(__instance.pawn, abilityLevel, Gen.YieldSingle<AbilityDef>(abilityDef));
                 }
                 else
                 {
+                    Log.Message($"[Naki HAR] {__instance.pawn.Name} did not have a psylink ability, granting a new one.");
+                    // Major change: When the abilityDef is searched out of DefDatabase, only Naki abilities will return with this search
+                    AbilityDef abilityDef = (from a in DefDatabase<AbilityDef>.AllDefs
+                                             where a.level == abilityLevel && a.defName.ToLower().Contains("naki")
+                                             select a).RandomElement<AbilityDef>();
+                    Log.Message($"[Naki HAR] NEW Naki psylink giving detected, giving {__instance.pawn.Name} Naki ability {abilityDef.defName} instead.");
+                    __instance.pawn.abilities.GainAbility(abilityDef);
                     str2 = Hediff_Psylink.MakeLetterTextNewPsylinkLevel(__instance.pawn, abilityLevel, null);
                 }
                 if (sendLetter && PawnUtility.ShouldSendNotificationAbout(__instance.pawn))
                 {
+                    Log.Message("[Naki HAR] Sending letter about gaining a psycast");
                     Find.LetterStack.ReceiveLetter(str, str2, LetterDefOf.PositiveEvent, __instance.pawn, null, null, null, null);
                 }
+                // Skip normal psylink granting procedure, do not grant multiple psylinks!
+                return;
             }
         }
     }
