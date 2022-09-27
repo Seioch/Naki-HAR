@@ -31,7 +31,7 @@
 	<comps>
 		<!-- Special comp to decrement remaining ammo, destroy on empty, and display ammo remaining -->
 		<li Class="Naki_HAR.CompProperties_CompNakiWeapons">
-			<maximumShots>80</maximumShots>
+			<maximumShots>90</maximumShots>
 		</li>
 	</comps>
 	<recipeMaker>

@@ -17,8 +17,8 @@ namespace Naki_HAR
             this.compClass = typeof(CompNakiPsylinkable);
         }
 
-        // Token: 0x04003D3F RID: 15679
-        public int requiredAttunementForPsylink;
+        // This should be a 6 item list where each level is an exponentially increasing amount of Attunement per Naki psylink level
+        public List<int> requiredAttunementPerPsylinkLevel;
 
         // Token: 0x04003D40 RID: 15680
         public MeditationFocusDef requiredFocus;
@@ -31,5 +31,8 @@ namespace Naki_HAR
 
         // Token: 0x04003D43 RID: 15683
         public string enoughAttunementLetterText;
+
+        // A string that describes attunement
+        public string attunementFlavorText;
     }
 }

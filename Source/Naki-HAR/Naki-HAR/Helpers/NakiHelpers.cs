@@ -18,6 +18,5 @@ namespace Naki_HAR
         internal static bool IsPsychopath(this Pawn pawn) => pawn.HasTraits() && pawn.HasTrait("Psychopath");
         internal static bool IsNaki(this Pawn pawn) => pawn.kindDef.race.defName.ToLower().Contains("naki");
         internal static bool IsHumanlike(this Pawn pawn) => pawn.RaceProps.Humanlike;
-        //internal static bool IsSkarnite(this Pawn pawn) => ModLister.IdeologyInstalled && (pawn?.ideo?.Ideo?.HasMeme(Defs.Skarnite) ?? false);
     }
 }

@@ -14,7 +14,7 @@ namespace Naki_HAR
     {
         public NakiRace(ModContentPack content) : base(content)
         {
-
+            
         }
     }
 }

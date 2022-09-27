@@ -47,7 +47,7 @@ namespace Naki_HAR
                 Widgets.Label(rect2, this.compNakiWeapons.Props.ammoGizmoLabel);
                 Rect rect3 = rect;
                 rect3.yMin = overRect.height / 2f;
-                float fillPercent = 1 - this.compNakiWeapons.currentShots / this.compNakiWeapons.Props.maximumShots; // How much shots used out of the maximumShots
+                float fillPercent = 1 - (this.compNakiWeapons.currentShots / this.compNakiWeapons.Props.maximumShots); // How much shots used out of the maximumShots
                 Widgets.FillableBar(rect3, fillPercent, Command_NakiWeaponAmmoCounter.FullBarTex, Command_NakiWeaponAmmoCounter.EmptyBarTex, false);
                 Text.Font = GameFont.Small;
                 Text.Anchor = TextAnchor.MiddleCenter;

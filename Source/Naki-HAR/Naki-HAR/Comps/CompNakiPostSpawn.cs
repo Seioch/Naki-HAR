@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,10 @@ namespace Naki_HAR
                 HediffDef dmAddiction = HediffDef.Named("DarkMatterAddiction");
                 dmAddiction.initialSeverity = 1.0f;
                 pawn.health.AddHediff(dmAddiction);
+
+                // Also add their first level of Psylink
+                Log.Message($"[Naki HAR] Adding Naki Psylink to {pawn.Name}");
+                pawn.ChangePsylinkLevel(1, true);
             }
         }
     }

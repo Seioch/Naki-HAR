@@ -47,26 +47,6 @@ namespace Naki_HAR
             }
         }
 
-        // Checks to see if the pawn is about to die from Dark Matter Disintegration, destroys the body instead, and drops 1 DM
-        public static void CheckForStateChange_Prefix(ref Pawn_HealthTracker __instance, ref Pawn ___pawn, DamageInfo? dinfo, Hediff hediff)
-        {
-            /*if (!__instance.Dead)
-            {
-                Log.Message("[Naki HAR]" + dinfo.ToString());
-                ref isGoingToDie = AccessTools.Method(typeof(Pawn_HealthTracker), ""));
-                if (__instance && dinfo.ToString().Contains("DMBurn"))
-                {
-                    if (!___pawn.Destroyed) // If the pawn hasn't been destroyed yet
-                    {
-                        ___pawn.Kill(dinfo, hediff);
-                        ___pawn.Destroy(); // Remove the body
-                    }
-                    return;
-                }
-            }*/
-            return;
-        }
-
         public static void Kill_Postfix(ref Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit = null)
         {
             if (__instance.health.hediffSet.GetFirstHediffOfDef(Naki_Defof.DMDisintegration) != null) // If the pawn that just died has DMDisintegration as a hediff
@@ -74,6 +54,35 @@ namespace Naki_HAR
             {
                 __instance.Corpse.Destroy(DestroyMode.Vanish); // Destroy the body
                 // Maybe spawn dark matter?
+            }
+        }
+
+        // The idea of this prefix is to intercept the TryGiveAbility upon call before the original code executes.
+        // This block will detect if the pawn is a Naki, and if so, executes almost the same Ability granting code
+        // except it will only give Abilities that have "naki" inin the defname
+        public static void TryGiveAbilityOfLevel_Prefix(ref Hediff_Psylink __instance, int abilityLevel, bool sendLetter = true)
+        {
+            if (__instance.pawn.IsNaki())
+            {
+                string str = "LetterLabelPsylinkLevelGained".Translate() + ": " + __instance.pawn.LabelShortCap;
+                string str2;
+                if (!__instance.pawn.abilities.abilities.Any((Ability a) => a.def.level == abilityLevel))
+                {
+                    // Major change: When the abilityDef is searched out of DefDatabase, only Naki abilities will return with this search
+                    AbilityDef abilityDef = (from a in DefDatabase<AbilityDef>.AllDefs
+                                             where a.level == abilityLevel && a.defName.ToLower().Contains("naki")
+                                             select a).RandomElement<AbilityDef>();
+                    __instance.pawn.abilities.GainAbility(abilityDef);
+                    str2 = Hediff_Psylink.MakeLetterTextNewPsylinkLevel(__instance.pawn, abilityLevel, Gen.YieldSingle<AbilityDef>(abilityDef));
+                }
+                else
+                {
+                    str2 = Hediff_Psylink.MakeLetterTextNewPsylinkLevel(__instance.pawn, abilityLevel, null);
+                }
+                if (sendLetter && PawnUtility.ShouldSendNotificationAbout(__instance.pawn))
+                {
+                    Find.LetterStack.ReceiveLetter(str, str2, LetterDefOf.PositiveEvent, __instance.pawn, null, null, null, null);
+                }
             }
         }
     }

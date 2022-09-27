@@ -32,7 +32,7 @@
 	<comps>
 		<!-- Special comp to decrement remaining ammo, destroy on empty, and display ammo remaining -->
 		<li Class="Naki_HAR.CompProperties_CompNakiWeapons">
-			<maximumShots>10</maximumShots>
+			<maximumShots>20</maximumShots>
 		</li>
 	</comps>
 	<recipeMaker>
@@ -86,7 +86,7 @@
 	<label>naki anti-walker rifle bullet</label>
 	<projectile>
 		<damageDef>Bullet</damageDef>
-		<damageAmountBase>50</damageAmountBase>
+		<damageAmountBase>65</damageAmountBase>
 		<stoppingPower>2.9</stoppingPower>
 		<armorPenetrationBase>0.75</armorPenetrationBase>
 		<speed>100</speed>
