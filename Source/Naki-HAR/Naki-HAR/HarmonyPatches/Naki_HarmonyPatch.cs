@@ -62,8 +62,8 @@ namespace Naki_HAR
 
         // The idea of this prefix is to intercept the TryGiveAbility upon call before the original code executes.
         // This block will detect if the pawn is a Naki, and if so, executes almost the same Ability granting code
-        // except it will only give Abilities that have "naki" inin the defname
-        public static bool TryGiveAbilityOfLevel_Prefix(ref bool __result, ref Hediff_Psylink __instance, int abilityLevel, bool sendLetter = true)
+        // except it will only give Abilities that have "naki" in the defname
+        public static bool TryGiveAbilityOfLevel_Prefix(ref bool __result, Hediff_Psylink __instance, int abilityLevel, bool sendLetter = true)
         {
             Log.Message($"[Naki HAR] {__instance.ToString()}");
             if (__instance.pawn.IsNaki())
