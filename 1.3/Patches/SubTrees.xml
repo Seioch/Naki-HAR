@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Patches SubTrees_misc.xml to have a JobGiver_Attune before standard meditation -->
+	<Operation Class="PatchOperationInsert">
+		<xpath>/Defs/ThinkTreeDef[defName="MainColonistBehaviorCore"]/thinkRoot/subNodes/li[@Class="ThinkNode_PrioritySorter"]/subNodes/li[@Class="JobGiver_Meditate"]</xpath>
+        <order>Prepend</order>
+		<value>
+        <!-- Hold up for now -->
+			<!-- <li Class="Naki_HAR.JobGiver_Attune"/> -->
+		</value>
+	</Operation>
+  
+</Patch>

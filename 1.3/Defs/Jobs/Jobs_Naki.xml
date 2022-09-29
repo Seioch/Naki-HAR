@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Naki Meditative -->
+
+  <JobDef>
+    <defName>Attune</defName>
+    <driverClass>Naki_HAR.JobDriver_Attune</driverClass>
+    <reportString>attuning.</reportString>
+    <joyDuration>5000</joyDuration>
+    <joyKind>Meditative</joyKind>
+    <taleOnCompletion>Attuned</taleOnCompletion>
+  </JobDef>
+  
+</Defs>

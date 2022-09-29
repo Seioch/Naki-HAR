@@ -6,6 +6,8 @@ using System.Linq;
 using HarmonyLib;
 using Verse;
 using RimWorld;
+using Verse.AI;
+
 
 namespace Naki_HAR
 {
@@ -30,6 +32,9 @@ namespace Naki_HAR
             Log.Message("[Naki HAR] Patching TryGiveAbilityOfLevel");
             harm.Patch(AccessTools.Method(typeof(Hediff_Psylink), "TryGiveAbilityOfLevel"), 
                 prefix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(TryGiveAbilityOfLevel_Prefix)));
+            Log.Message("[Naki HAR] Patching MeditationUtility");
+            harm.Patch(AccessTools.Method(typeof(MeditationUtility), "GetMeditationJob"),
+                postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(GetMeditationJob_Postfix)));
         }
 
         public static void VerbTrackerAmmo_Postfix(ref VerbTracker __instance, ref IEnumerable<Command> __result)
@@ -65,7 +70,7 @@ namespace Naki_HAR
         // except it will only give Abilities that have "naki" in the defname
         public static bool TryGiveAbilityOfLevel_Prefix(Hediff_Psylink __instance, int abilityLevel, bool sendLetter = true)
         {
-            Log.Message($"[Naki HAR] {__instance.ToString()}");
+            // Log.Message($"[Naki HAR] {__instance.ToString()}");
             if (__instance.pawn.IsNaki())
             {
                 // Log.Message($"[Naki HAR] Naki psylink giving detected, giving {__instance.pawn.Name} a Naki ability instead.");
@@ -98,6 +103,44 @@ namespace Naki_HAR
             else
             {
                 return true;
+            }
+        }
+
+        // This prefix intercepts the code path to getting a meditation job. If the pawn is a Naki, create an Attunement jobdef instead. 
+        public static void GetMeditationJob_Postfix(ref Job __result, Pawn pawn, bool forJoy = false)
+        {
+            if (pawn.IsNaki())
+            {
+                Log.Message("[Naki HAR] Creating a new Attunement job for Naki");
+                MeditationSpotAndFocus meditationSpotAndFocus = MeditationUtility.FindMeditationSpot(pawn);
+                if (meditationSpotAndFocus.IsValid)
+                {
+                    Building_Throne t;
+                    Job job = __result;
+                    if ((t = (meditationSpotAndFocus.focus.Thing as Building_Throne)) != null)
+                    {
+                        // Do not return a Reigning job. Naki cannot use Empire psycasts anyways.
+                        // The code path should never get here but if players somehow try to give a Naki a royal title then this will stop Naki from Reigning
+                        Log.Error("[Naki HAR] Naki tried to do a Reigning job when they're not allowed to");
+                        job = null;
+                    }
+                    else
+                    {
+                        JobDef def = Naki_Defof.Attune;
+                        IdeoFoundation_Deity ideoFoundation_Deity;
+                        if (forJoy && ModsConfig.IdeologyActive && pawn.Ideo != null && (ideoFoundation_Deity = (pawn.Ideo.foundation as IdeoFoundation_Deity)) != null && ideoFoundation_Deity.DeitiesListForReading.Any<IdeoFoundation_Deity.Deity>())
+                        {
+                            def = JobDefOf.MeditatePray;
+                        }
+                        job = JobMaker.MakeJob(def, meditationSpotAndFocus.spot, null, meditationSpotAndFocus.focus);
+                    }
+                    job.ignoreJoyTimeAssignment = !forJoy;
+                    __result = job;
+                }            }
+            else
+            {
+                // Not a Naki don't override the output of GetMeditationJob!
+
             }
         }
     }

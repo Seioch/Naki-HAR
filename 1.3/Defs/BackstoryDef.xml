@@ -2024,43 +2024,36 @@
 	</spawnCategories>
 </AlienRace.BackstoryDef>
 
-<!--Designermate Scenario Backstory-->
-
-
-
-<!--
- <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
 	<defName>Naki_BackstoryAdult_62</defName>
-	<title>Naki Nymph</title>
-	<titleShort>Nymph</titleShort>
-	<baseDescription>[PAWN_nameDef] is obsessed with sex and uses their appeal to their advantage.</baseDescription>
+	<title>Naki Null-Grav Engineer</title>
+	<titleShort>Engineer</titleShort>
+	<baseDescription>Work on the exterior of the many stations Naki call home is very dangerous, but essential for survival. [PAWN_nameDef] trained for years to fulfill this purpose, and brags to many about how work always gets done, with any tools at hand. The years spent outside a proper gravity source has taken a toll upon [PAWN_pronoun] muscles, though.</baseDescription>
 	<slot>Adulthood</slot>
 	<skillGains>
-	<li>
-	<defName>Social</defName>
-	<amount>8</amount>
-	</li>
+		<li>
+			<defName>Construction</defName>
+			<amount>6</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>-2</amount>
+		</li>
+		<li>
+			<defName>Mining</defName>
+			<amount>-2</amount>
+		</li>
 	</skillGains>
-	<workDisables>
-		<li>Violent</li>
-	</workDisables>
-	    <bioAgeRange>
-        <min>18</min>
-        <max>25</max>
-    </bioAgeRange>
-	<forcedTraits>
-		<li>
-			<defName>Nymphomaniac</defName>
-			<chance>100</chance>
-		</li>
-		<li>
-			<defName>Beauty</defName>
-			<degree>2</degree>
-			<chance>100</chance>
-		</li>
-	</forcedTraits>
 	<spawnCategories>
-		<li>Naki_Nymph</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Colonist</li>
 	</spawnCategories>
-</AlienRace.BackstoryDef> -->
+</AlienRace.BackstoryDef>
+
 </Defs>

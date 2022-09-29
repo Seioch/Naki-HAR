@@ -15,6 +15,15 @@ namespace Naki_HAR
         public static DamageDef DMBurn;
         public static NeedDef NakiRaceDMNeed;
 
+        [MayRequireRoyalty]
+        public static MeditationFocusDef NakiFocus;
+
+        [MayRequireRoyalty]
+        public static ThingDef NakiMeditationPylon;
+
+        [MayRequireRoyalty]
+        public static JobDef Attune;
+
         static Naki_Defof()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(Naki_Defof));

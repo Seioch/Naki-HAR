@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>NakiMeditationPylon</defName>
     <label>Naki meditation pylon</label>
-    <description>A stabilized portal to the archotech in the center of Omega Eden. Naki can use this to commune with their patron archotech.</description>
+    <description>A stabilized portal to the archotech in the center of Omega Eden. Naki can use this to commune with their patron archotech Omega Eden by meditating around the Pylon, strengthening their psychic bond with the archotech.\n\nIf a Naki meditates near this pylon, attument with the archotech will grow, and once it reaches a threshold the pylon will send a bit of dark matter from the heart of Omega Eden to this planet. These vials of dark matter can be used to craft Naki weapons and apparel, as well as fulfill the need for dark matter consumption all Naki have. Full attunement also allows Naki to upgrade their psylink, granting them unique psycasts only Naki can use.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/Production/CraftingSpot</texPath>
@@ -35,23 +35,44 @@
     </statBases>
     <costStuffCount>150</costStuffCount>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <!-- Don't need an interaction cell if we don't want to have pawns interact with it -->
-    <!-- <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <surfaceType>Item</surfaceType>-->
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs> 
     <comps>
-      <li Class="CompProperties_MeditationFocus">
-        <statDef>MeditationFocusStrength</statDef>
-        <focusTypes>
-          <li>NakiFocus</li>
-        </focusTypes>
-        <offsets>
-          <!-- Add offsets here for number of Naki meditating -->
-        </offsets>
-      </li>
+        <!-- Meditation Focus type setter -->
+        <li Class="CompProperties_MeditationFocus">
+            <statDef>MeditationFocusStrength</statDef>
+            <focusTypes>
+            <li>NakiFocus</li>
+            </focusTypes>
+            <offsets>
+            <!-- Trash cans as implemented in VFE core act as animus stones. Easter egg by Aeolys. -->
+            <li MayRequire="VanillaExpanded.VFECore" Class="FocusStrengthOffset_BuildingDefs">
+                <defs>
+                    <Bin_Small>0.01</Bin_Small>
+                    <Bin_Large>0.02</Bin_Large>
+                </defs>
+                <radius>9.9</radius>
+                <maxBuildings>4</maxBuildings>
+                <explanationKey>MeditationFocusPerAnimusStoneAndShrine</explanationKey>
+                <explanationKeyAbstract>MeditationFocusPerAnimusStoneAndShrineAbstract</explanationKeyAbstract>
+            </li>
+            </offsets>
+        </li>
+        <li Class="Naki_HAR.CompProperties_NakiPsylinkable">
+            <requiredAttunementPerPsylinkLevel>
+                <li>100</li>
+                <li>140</li>
+                <li>160</li>
+                <li>180</li>
+                <li>200</li>
+                <li>240</li>
+            </requiredAttunementPerPsylinkLevel>
+            <requiredFocus>NakiFocus</requiredFocus>
+            <linkSound>AnimaTreeLink</linkSound>
+            <enoughAttunementLetterLabel>About: Pylon Attunement Linking</enoughAttunementLetterLabel>
+            <enoughAttunementLetterText>This pylon has reached {0} attunement. This is enough for a Naki to upgrade their link to Omega Eden!\n\nThe linking ritual gives a level of psylink and the ability to use psychic powers. Upgrading to a higher level requires increasing amounts of Attunement.\n\nThe Attunement requirements for linking rituals to upgrade psycasters are:\n\n{1}\n\nNote: Only Naki can meditate to or link with anima trees. You can see a person's focus types by looking at their info card with the 'i' button.</enoughAttunementLetterText>
+        </li>
       <!-- Glow -->
       <li Class="CompProperties_Glower">
         <glowRadius>3.75</glowRadius>

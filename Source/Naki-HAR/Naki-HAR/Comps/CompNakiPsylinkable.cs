@@ -12,13 +12,32 @@ namespace Naki_HAR
 {
     class CompNakiPsylinkable : ThingComp
     {
+        // A List of pawns that can link to this building
         private List<Pawn> pawnsThatCanPsylink = new List<Pawn>();
 
+        // How far away Pawns can be to meditate
         public const float MaxDistance = 3.9f;
 
-        private const float attunementMultiplerPerGrantedLink = 0.0f;
+        // How many meditation ticks must be done before spawning a Dark Matter
+        public const int DarkMatterTicksRequired = 30000;
 
+        // A linearlly increasing multipler that increases the amount of attunement needed before the next Psylink upgrade can be given
+        private float attunementMultiplerPerGrantedLink = 0.0f;
+
+        // Current attunement created by meditating Naki
         public float currentAttunement = 0.0f;
+
+        // How many ticks of meditation has been done in 1 RW day. This is important so that meditation has a soft upper cap on what can be achieved in 1 day
+        private int meditationTicksToday;
+
+        // Private list of meditation penalties if you are spending X number of ticks mediating at this Pylon
+        private static readonly List<Pair<int, float>> TicksToProgressMultipliers = new List<Pair<int, float>>
+        {
+            new Pair<int, float>(30000, 1f),
+            new Pair<int, float>(60000, 0.5f),
+            new Pair<int, float>(120000, 0.25f),
+            new Pair<int, float>(240000, 0.15f)
+        };
 
         public CompProperties_NakiPsylinkable Props
         {
@@ -84,6 +103,15 @@ namespace Naki_HAR
             this.pawnsThatCanPsylink.AddRange(this.GetPawnsThatCanPsylink(-1));
         }
 
+        // Override to reset the number of meditations ticks done today to 0
+        public override void CompTickLong()
+        {
+            if (GenLocalDate.DayTick(this.parent.Map) < 2000)
+            {
+                this.meditationTicksToday = 0;
+            }
+        }
+
         // Private helper method to see how much attunement is needed for that pawn's current psylink level
         private float GetRequiredAttunement(Pawn p)
         {
@@ -96,6 +124,7 @@ namespace Naki_HAR
             }
             return this.Props.requiredAttunementPerPsylinkLevel[currentLevel - 1];
         }
+
 
         public AcceptanceReport CanPsylink(Pawn pawn, LocalTargetInfo? knownSpot = null, bool checkSpot = true)
         {
@@ -234,12 +263,81 @@ namespace Naki_HAR
             Find.History.Notify_PsylinkAvailable();
         }
 
+        // Taken from CompSpawnSubplant
+        // Adds 100 attunement for debugging purposes if debugCall is true
+        // Otherwise adds a small amount of attunement PER TICK. See JobDriver_Attune for how much is added per tick! It is not 1f!
+        public void AddProgress(float progress, bool debugCall)
+        {
+            if (!debugCall)
+            {
+                progress *= this.ProgressMultiplier;
+            }
+            //this.currentAttunement += progress * (1f + this.parent.GetStatValue(StatDefOf.MeditationPlantGrowthOffset, true));
+            this.currentAttunement += progress; // Just add the progress for now, no bonuses or detractors. Technically right now multiple pawns means a bonus to progress made because multiple delegates for adding progress are made. 
+            this.meditationTicksToday++;
+            this.TryAttunementComplete();
+        }
+
+        // Custom code to handle attunement fill procedure
+        private void TryAttunementComplete()
+        {
+            if (meditationTicksToday > DarkMatterTicksRequired)
+            {
+                // Spawn a Dark matter under the pylon
+                OnAttunementFill();
+            }
+        }
+
+        // Taken from CompSpawnSubplant
+        // in devmode this immediately sets the progress up to 100%. In our situation it adds 100 attunement
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        {
+            if (!Prefs.DevMode)
+            {
+                yield break;
+            }
+            yield return new Command_Action
+            {
+                defaultLabel = "DEV: Add 100 attunement",
+                action = delegate ()
+                {
+                    this.AddProgress(1f, true);
+                }
+            };
+            yield break;
+        }
+
+        public override string CompInspectStringExtra()
+        {
+            return "TotalMeditationToday".Translate((this.meditationTicksToday / 2500).ToString() + "LetterHour".Translate(), 
+                this.ProgressMultiplier.ToStringPercent()) + "\n" + "Current Attunement: " + this.currentAttunement.ToString();
+        }
+
+        // Taken from CompSpawnSubplant
+        // Checks the amount of ticks meditated today, and returns the attunement gain penalty (a multipler)
+        private float ProgressMultiplier
+        {
+            get
+            {
+                foreach (Pair<int, float> pair in TicksToProgressMultipliers)
+                {
+                    if (this.meditationTicksToday < pair.First)
+                    {
+                        return pair.Second;
+                    }
+                }
+                return TicksToProgressMultipliers.Last<Pair<int, float>>().Second;
+            }
+        }
+
         // Taken from CompPsylinkable
         // Exposes the list of pawns that can psylink (Naki psylinks only)
         // Option to remove all pawns from the psylink list that are null as a cleaning measure
         public override void PostExposeData()
         {
             Scribe_Collections.Look<Pawn>(ref this.pawnsThatCanPsylink, "pawnsThatCanPsylink", LookMode.Reference, Array.Empty<object>());
+            Scribe_Values.Look<float>(ref this.currentAttunement, "currentAttunement", 0f, false);
+            Scribe_Values.Look<int>(ref this.meditationTicksToday, "meditationTicksToday", 0, false);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 this.pawnsThatCanPsylink.RemoveAll((Pawn x) => x == null);
