@@ -10,7 +10,8 @@
     <hediffSolid>DMBurn</hediffSolid>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Electric</impactSoundType>
-    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>12</defaultDamage> <!-- Fire does 10 damage -->
     <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
   </DamageDef>
 

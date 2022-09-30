@@ -104,7 +104,7 @@ namespace Naki_HAR
             }
             else
             {
-                Log.Message("[Naki HAR] Making Naki Meditation Toil");
+                // Log.Message("[Naki HAR] Making Naki Meditation Toil");
                 // The pawn is a Naki, create the Toil
                 // Allow one to meditate from bed
                 if (this.FromBed)
@@ -230,16 +230,16 @@ namespace Naki_HAR
                     this.sustainer.Maintain();
                     this.pawn.psychicEntropy.GainPsyfocus(this.Focus.Thing);
                     // If the pawn is Naki, offset their Dark Matter need as well
-                    if(this.pawn.IsNaki())
-                    {
-                        Need_NakiRaceDMNeed dMNeed = this.pawn.needs.TryGetNeed<Need_NakiRaceDMNeed>();
-                        if (dMNeed != null)
-                        {
-                            // remove logspam once it is fixed
-                            Log.Message("[Naki HAR] incrementing DM Need levels");
-                            dMNeed.CurLevel += AttunementProgressPerTick;
-                        }
-                    }
+                    //if(this.pawn.IsNaki())
+                    //{
+                    //    Need_NakiRaceDMNeed dMNeed = this.pawn.needs.TryGetNeed<Need_NakiRaceDMNeed>();
+                    //    if (dMNeed != null)
+                    //    {
+                    //        remove logspam once it is fixed
+                    //        Log.Message("[Naki HAR] incrementing DM Need levels");
+                    //        dMNeed.CurLevel += AttunementProgressPerTick;
+                    //    }
+                    //}
                 }
             }
         }

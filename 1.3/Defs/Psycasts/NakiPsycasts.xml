@@ -183,7 +183,7 @@
             <li Class = "CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMDecay</hediffDef>
-                <psychic>True</psychic>
+                <psychic>False</psychic>
             </li>
         </comps>
     </AbilityDef> 

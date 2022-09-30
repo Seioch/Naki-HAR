@@ -60,8 +60,11 @@ namespace Naki_HAR
             if (__instance.health.hediffSet.GetFirstHediffOfDef(Naki_Defof.DMDisintegration) != null) // If the pawn that just died has DMDisintegration as a hediff
             //if (dinfo.ToString().Contains("DMBurn")) // If the pawn that just died has died from DMBurn
             {
+                // Spawn dark matter?
+                Thing darkMatter = ThingMaker.MakeThing(Naki_Defof.DarkMatter, null);
+                darkMatter.stackCount = 1; // Maybe later use GenMath to create a random amount of DM from 1-3
+                GenPlace.TryPlaceThing(darkMatter, __instance.Position, __instance.Map, ThingPlaceMode.Near, null, null, default(Rot4));
                 __instance.Corpse.Destroy(DestroyMode.Vanish); // Destroy the body
-                // Maybe spawn dark matter?
             }
         }
 
@@ -111,7 +114,7 @@ namespace Naki_HAR
         {
             if (pawn.IsNaki())
             {
-                Log.Message("[Naki HAR] Creating a new Attunement job for Naki");
+                // Log.Message("[Naki HAR] Creating a new Attunement job for Naki");
                 MeditationSpotAndFocus meditationSpotAndFocus = MeditationUtility.FindMeditationSpot(pawn);
                 if (meditationSpotAndFocus.IsValid)
                 {
@@ -136,7 +139,8 @@ namespace Naki_HAR
                     }
                     job.ignoreJoyTimeAssignment = !forJoy;
                     __result = job;
-                }            }
+                }
+            }
             else
             {
                 // Not a Naki don't override the output of GetMeditationJob!

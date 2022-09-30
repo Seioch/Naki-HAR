@@ -52,8 +52,10 @@ namespace Naki_HAR
         // Note that level is being passed in as a value from 1 to 6, but the array requiredAttunementPerPsylinkLevel in Props is zero indexed, so you have to decrement level by 1
         private IEnumerable<Pawn> GetPawnsThatCanPsylink(int level = -1)
         {
+            // Log.Message($"[Naki HAR] GetPawnsThatCanPsylink level: {level.ToString()}");
             return from p in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists
-                   where this.Props.requiredFocus.CanPawnUse(p) && p.IsNaki() && currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[level - 1] && (level == -1 || p.GetPsylinkLevel() == level)
+                   // where this.Props.requiredFocus.CanPawnUse(p) && p.IsNaki() && currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[level - 1] && (level == -1 || p.GetPsylinkLevel() == level)
+                   where this.Props.requiredFocus.CanPawnUse(p) && p.IsNaki() && (level == -1 || p.GetPsylinkLevel() == level)
                    select p;
         }
 
@@ -76,6 +78,7 @@ namespace Naki_HAR
                                                     select p.LabelShort;
                 // Find the pawns that can upgrade and get their levels
                 // IEnumerable < Pawn > psylinkablePawns = this.GetPawnsThatCanPsylink();
+                Log.Message($"[Naki HAR] Found {enumerable.Count()} pawns that can psylink here.");
 
                 // Iterate through all 6 possible Naki Psylink levels to generate text per pawn who can psylink
                 for (int i = 0; i < this.Props.requiredAttunementPerPsylinkLevel.Count; i++)
@@ -266,9 +269,9 @@ namespace Naki_HAR
         // Taken from CompSpawnSubplant
         // Adds 100 attunement for debugging purposes if debugCall is true
         // Otherwise adds a small amount of attunement PER TICK. See JobDriver_Attune for how much is added per tick! It is not 1f!
-        public void AddProgress(float progress, bool debugCall)
+        public void AddProgress(float progress, bool multiplier)
         {
-            if (!debugCall)
+            if (!multiplier)
             {
                 progress *= this.ProgressMultiplier;
             }

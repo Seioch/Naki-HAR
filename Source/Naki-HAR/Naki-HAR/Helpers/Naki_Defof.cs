@@ -14,6 +14,7 @@ namespace Naki_HAR
         public static HediffDef DMDisintegration;
         public static DamageDef DMBurn;
         public static NeedDef NakiRaceDMNeed;
+        public static ThingDef DarkMatter;
 
         [MayRequireRoyalty]
         public static MeditationFocusDef NakiFocus;

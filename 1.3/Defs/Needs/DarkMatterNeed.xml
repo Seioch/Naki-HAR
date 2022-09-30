@@ -10,8 +10,8 @@
   <NeedDef ParentName="DrugAddictionNeedBase">
     <defName>NakiRaceDMNeed</defName>
     <!-- Do I need a custom needclass?  -->
-    <needClass>Naki_HAR.Need_NakiRaceDMNeed</needClass>
-    <!-- <needClass>Need_Chemical</needClass> -->
+    <!-- <needClass>Naki_HAR.Need_NakiRaceDMNeed</needClass> -->
+    <needClass>Need_Chemical</needClass>
     <label>dark matter need</label>
     <onlyIfCausedByHediff>true</onlyIfCausedByHediff>     <!-- Set this to true only if the Hediff is spawning -->
     <description>Naki need Dark Matter to use psycasts and heal. Lacking Dark Matter will prevent healing and casting.</description>
