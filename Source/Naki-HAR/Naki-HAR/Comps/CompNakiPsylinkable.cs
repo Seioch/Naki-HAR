@@ -17,13 +17,16 @@ namespace Naki_HAR
          * Note: This is the required attunement per level from Building_Pylon.xml
             <requiredAttunementPerPsylinkLevel>
                 <li>100</li>
-                <li>140</li>
-                <li>160</li>
-                <li>180</li>
+                <li>150</li>
                 <li>200</li>
-                <li>240</li>
+                <li>250</li>
+                <li>300</li>
+                <li>350</li>
             </requiredAttunementPerPsylinkLevel>
          * */
+
+        // Random object to generate Dark Matter
+        Random rnd = new Random();
 
         // A List of pawns that can link to this building
         private List<Pawn> pawnsThatCanPsylink = new List<Pawn>();
@@ -35,7 +38,7 @@ namespace Naki_HAR
         public const float MaxDistance = 3.9f;
 
         // How many meditation ticks must be done before spawning a Dark Matter
-        private int DarkMatterTicksRequired = 60000;
+        private readonly int DarkMatterTicksRequired = 60000;
 
         // A linearlly increasing multipler that increases the amount of attunement needed before the next Psylink upgrade can be given
         private float attunementMultiplerPerGrantedLink = 0.0f;
@@ -45,6 +48,9 @@ namespace Naki_HAR
 
         // How many ticks of meditation has been done in 1 RW day. This is important so that meditation has a soft upper cap on what can be achieved in 1 day
         private int meditationTicksToday;
+
+        // If this pylon has spawned dark matter today
+        private bool hasSpawnedDM = false;
 
         // Private list of meditation penalties if you are spending X number of ticks mediating at this Pylon
         private static readonly List<Pair<int, float>> TicksToProgressMultipliers = new List<Pair<int, float>>
@@ -144,6 +150,7 @@ namespace Naki_HAR
             if (GenLocalDate.DayTick(this.parent.Map) < 2000)
             {
                 this.meditationTicksToday = 0;
+                hasSpawnedDM = false;
             }
         }
 
@@ -165,25 +172,30 @@ namespace Naki_HAR
         {
             if (pawn.Dead || pawn.Faction != Faction.OfPlayer)
             {
+                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn is dead or not player faction");
                 return false;
             }
 
             float requiredAttunement = this.GetRequiredAttunement(pawn);
             if (requiredAttunement == -1)
             {
+                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: required attunement insufficient. Required: {requiredAttunement} Has: {this.currentAttunement}");
                 return false;
             }
 
             if (!this.Props.requiredFocus.CanPawnUse(pawn))
             {
+                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn cannot use this Focus");
                 return new AcceptanceReport("BeginLinkingRitualNeedFocus".Translate(this.Props.requiredFocus.label));
             }
             if (pawn.GetPsylinkLevel() >= pawn.GetMaxPsylinkLevel())
             {
+                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn at max psyfocus");
                 return new AcceptanceReport("BeginLinkingRitualMaxPsylinkLevel".Translate());
             }
             if (!pawn.Map.reservationManager.CanReserve(pawn, this.parent, 1, -1, null, false))
             {
+                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn cannot reserve pylon on this map");
                 Pawn pawn2 = pawn.Map.reservationManager.FirstRespectedReserver(this.parent, pawn);
                 return new AcceptanceReport((pawn2 == null) ? "Reserved".Translate() : "ReservedBy".Translate(pawn.LabelShort, pawn2));
             }
@@ -191,6 +203,7 @@ namespace Naki_HAR
             if (this.currentAttunement < requiredAttunement)
             {
                 // Acceptance Report reports the required attunement for that Pawn, a bit of flavor text for it, and the current attunement on the Pylon itself
+                Log.Message($"[Naki HAR] Acceptance report for BeginNakiLinkingRitual accepted.");
                 return new AcceptanceReport("BeginNakiLinkingRitual".Translate(requiredAttunement.ToString(), this.Props.attunementFlavorText, this.currentAttunement.ToString()));
             }
             if (checkSpot)
@@ -251,7 +264,7 @@ namespace Naki_HAR
                 yield break;
             }
             string text = "BeginLinkingRitualFloatMenu".Translate();
-            AcceptanceReport acceptanceReport = this.CanPsylink(pawn, null, true);
+            AcceptanceReport acceptanceReport = this.CanPsylink(pawn, null, true); // See if the pawn that is selected and that I am rightclicking on the Pylon can psylink
             if (!acceptanceReport.Accepted && !string.IsNullOrWhiteSpace(acceptanceReport.Reason))
             {
                 text = text + ": " + acceptanceReport.Reason;
@@ -261,7 +274,8 @@ namespace Naki_HAR
                 Precept_Ritual precept_Ritual = null;
                 for (int i = 0; i < pawn.Ideo.PreceptsListForReading.Count; i++)
                 {
-                    if (pawn.Ideo.PreceptsListForReading[i].def == PreceptDefOf.AnimaTreeLinking)
+                    Log.Message(pawn.Ideo.PreceptsListForReading[i].def.defName);
+                    if (pawn.Ideo.PreceptsListForReading[i].def == Naki_Defof.NakiPylonLinking)
                     {
                         precept_Ritual = (Precept_Ritual)pawn.Ideo.PreceptsListForReading[i];
                         break;
@@ -270,6 +284,9 @@ namespace Naki_HAR
                 if (precept_Ritual != null)
                 {
                     Find.WindowStack.Add(precept_Ritual.GetRitualBeginWindow(this.parent, null, null, null, null, pawn));
+                } else
+                {
+                    Log.Error("[Naki HAR] Precept ritual is null!");
                 }
             }, MenuOptionPriority.Default, null, null, 0f, null, null, true, 0)
             {
@@ -317,7 +334,7 @@ namespace Naki_HAR
         private void TryAttuneOrSpawn()
         {
             // If the amount of meditation today has exceeded the minimum needed to spawn 3 dark matter
-            if (meditationTicksToday > DarkMatterTicksRequired)
+            if (meditationTicksToday > DarkMatterTicksRequired && !hasSpawnedDM)
             {
                 TrySpawnDarkMatter();
             }
@@ -331,7 +348,10 @@ namespace Naki_HAR
         // Private helper function 
         private void TrySpawnDarkMatter()
         {
-
+            Thing thing = ThingMaker.MakeThing(Naki_Defof.DarkMatter, null);
+            thing.stackCount = rnd.Next(1,3);
+            GenPlace.TryPlaceThing(thing, this.parent.InteractionCell, this.parent.Map, ThingPlaceMode.Near, null, (IntVec3 p) => p != this.parent.Position && p != this.parent.InteractionCell, default(Rot4));
+            this.hasSpawnedDM = true;
         }
 
         // Taken from CompSpawnSubplant
@@ -344,10 +364,10 @@ namespace Naki_HAR
             }
             yield return new Command_Action
             {
-                defaultLabel = "DEV: Add 100 attunement",
+                defaultLabel = "DEV: Add 50 attunement",
                 action = delegate ()
                 {
-                    this.AddProgress(1f, true);
+                    this.AddProgress(50f, true);
                 }
             };
             yield break;
@@ -356,10 +376,18 @@ namespace Naki_HAR
         public override string CompInspectStringExtra()
         {
             double percentToDM = (((double)this.meditationTicksToday / (double)DarkMatterTicksRequired))*100;
-            return "TotalMeditationToday".Translate((this.meditationTicksToday / 2500).ToString() + "LetterHour".Translate(), this.ProgressMultiplier.ToStringPercent()) + "\n" 
-                + "Current Attunement: " + this.currentAttunement.ToString("#.##") + "\n"
-                //+ "Progress to dark matter creation: " + this.meditationTicksToday.ToString() + "/" + this.DarkMatterTicksRequired;
+            if (!hasSpawnedDM)
+            {
+                return "TotalMeditationToday".Translate((this.meditationTicksToday / 2500).ToString() + "LetterHour".Translate(), this.ProgressMultiplier.ToStringPercent()) + "\n"
+                + "Current Attunement: " + this.currentAttunement.ToString("#.#") + "\n"
                 + "Progress to dark matter creation: " + percentToDM.ToString("##.#") + "%";
+            } else
+            {
+                return "TotalMeditationToday".Translate((this.meditationTicksToday / 2500).ToString() + "LetterHour".Translate(), this.ProgressMultiplier.ToStringPercent()) + "\n"
+                + "Current Attunement: " + this.currentAttunement.ToString("#.#") + "\n"
+                + "Progress to dark matter creation: Complete";
+            }
+            
         }
 
         // Taken from CompSpawnSubplant

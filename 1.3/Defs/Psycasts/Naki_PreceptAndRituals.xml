@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PreceptDef>
+    <defName>NakiPylonLinking</defName>
+    <label>naki pylon linking</label>
+    <description>One Naki will draw a large amount of Dark Matter from the pylon into their body. This infusion will upgrade the psychic link to Omega Eden. Others gather in a circle to watch and add psychic strength to the ritual.</description>
+    <issue>Ritual</issue>
+    <preceptClass>Precept_Ritual</preceptClass>
+    <visible>false</visible>
+    <classic>true</classic>
+    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+    <selectionWeight>1.0</selectionWeight>
+    <ritualPatternBase>AnimaTreeLinking</ritualPatternBase>
+    <iconPath>UI/Icons/Rituals/AnimaTreeLinking</iconPath>
+    <usesIdeoVisualEffects>false</usesIdeoVisualEffects>
+    <mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+    <useRepeatPenalty>false</useRepeatPenalty>
+    <showRitualFloatMenuOption>false</showRitualFloatMenuOption>
+  </PreceptDef>
+  
+  <!-- Outcome from a Naki linking ritual -->
+  <!-- The curve is rather high because Naki should be able to attune and use Pylons by themselves -->
+  <RitualOutcomeEffectDef>
+    <defName>NakiPylonLinking</defName>
+    <workerClass>RitualOutcomeEffectWorker_AnimaTreeLinking</workerClass>
+    <warnOnLowQuality>false</warnOnLowQuality>
+    <comps>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(1, 0.5)</li>
+            <li>(2, 0.8)</li>
+            <li>(4, 1)</li>
+            <li>(6, 1)</li>
+            <li>(8, 1)</li>
+          </points>
+        </curve>
+      </li>
+    </comps>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef>
+    <defName>NakiPylonLinking</defName>
+    <ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+    <ritualBehavior>AnimaTreeLinking</ritualBehavior>
+    <ritualTargetFilter>SelectedThing</ritualTargetFilter>
+    <ritualObligationTargetFilter>AnimaTree</ritualObligationTargetFilter>
+    <ritualOutcomeEffect>NakiPylonLinking</ritualOutcomeEffect>
+    <playsIdeoMusic>false</playsIdeoMusic>
+    <alwaysStartAnytime>true</alwaysStartAnytime>
+  </RitualPatternDef>
+
+  <!-- Note: All four of these comps need to be rewitten to not try to futz with the grass system! -->
+  <RitualBehaviorDef>
+    <defName>AnimaTreeLinking</defName>
+    <durationTicks>15000</durationTicks>
+    <workerClass>RitualBehaviorWorker_AnimaLinking</workerClass>
+    <roles>
+      <li Class="RitualRoleAnimaLinker">
+        <label>linker</label>
+        <id>organizer</id>
+        <required>true</required>
+        <maxCount>1</maxCount>
+        <defaultForSelectedColonist>true</defaultForSelectedColonist>
+        <noCandidatesGizmoDesc>Need a colonist with the natural meditation focus type who is below maximum psylink level and not psychically deaf.</noCandidatesGizmoDesc>
+      </li>
+    </roles>
+    <spectatorFilter Class="RitualSpectatorFilter_NatureFocus"> 
+      <description>Must have natural focus type.</description>
+    </spectatorFilter>
+    <spectatorsLabel>Participants</spectatorsLabel>
+    <spectatorGerund>participate</spectatorGerund>
+    <stages>
+      <li Class="RitualStage_AnimaTreeLinking">
+        <defaultDuty>LinkWithAnimaTreeSecondary</defaultDuty>
+        <endTriggers>
+          <li Class="StageEndTrigger_DurationPercentage">
+            <percentage>1</percentage>
+          </li>
+        </endTriggers>
+        <spectateDistanceOverride>3~4</spectateDistanceOverride>
+        <roleBehaviors>
+          <li>
+            <roleId>organizer</roleId>
+            <dutyDef>LinkWithAnimaTree</dutyDef>
+            <customPositions>
+              <li Class="RitualPosition_AnimaLinkingSpot" />
+            </customPositions>
+          </li>
+        </roleBehaviors>
+      </li>
+    </stages>
+  </RitualBehaviorDef>
+
+</Defs>

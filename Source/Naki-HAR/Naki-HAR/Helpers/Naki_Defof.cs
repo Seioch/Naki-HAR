@@ -18,6 +18,8 @@ namespace Naki_HAR
         public static ThingDef DarkMatter;
         public static SoundDef Naki_DM_Sizzle;
 
+        [MayRequireRoyalty]
+        public static PreceptDef NakiPylonLinking;
 
         [MayRequireRoyalty]
         public static MeditationFocusDef NakiFocus;

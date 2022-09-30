@@ -62,11 +62,11 @@
         <li Class="Naki_HAR.CompProperties_NakiPsylinkable">
             <requiredAttunementPerPsylinkLevel>
                 <li>100</li>
-                <li>140</li>
-                <li>160</li>
-                <li>180</li>
+                <li>150</li>
                 <li>200</li>
-                <li>240</li>
+                <li>250</li>
+                <li>300</li>
+                <li>350</li>
             </requiredAttunementPerPsylinkLevel>
             <requiredFocus>NakiFocus</requiredFocus>
             <linkSound>AnimaTreeLink</linkSound>
