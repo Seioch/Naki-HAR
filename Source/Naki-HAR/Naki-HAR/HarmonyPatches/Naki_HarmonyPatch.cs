@@ -55,15 +55,15 @@ namespace Naki_HAR
             }
         }
 
-        public static void Kill_Postfix(ref Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit = null)
+        public static void Kill_Postfix(Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit = null)
         {
-            if (__instance.health.hediffSet.GetFirstHediffOfDef(Naki_Defof.DMDisintegration) != null) // If the pawn that just died has DMDisintegration as a hediff
+            if (__instance.health.hediffSet.GetFirstHediffOfDef(Naki_Defof.Hediff_DMBurn) != null) // If the pawn that just died has Hediff_DMBurn damage
             //if (dinfo.ToString().Contains("DMBurn")) // If the pawn that just died has died from DMBurn
             {
                 // Spawn dark matter?
                 Thing darkMatter = ThingMaker.MakeThing(Naki_Defof.DarkMatter, null);
                 darkMatter.stackCount = 1; // Maybe later use GenMath to create a random amount of DM from 1-3
-                GenPlace.TryPlaceThing(darkMatter, __instance.Position, __instance.Map, ThingPlaceMode.Near, null, null, default(Rot4));
+                GenPlace.TryPlaceThing(darkMatter, __instance.Corpse.Position, __instance.Corpse.Map, ThingPlaceMode.Near, null, null, default(Rot4));
                 __instance.Corpse.Destroy(DestroyMode.Vanish); // Destroy the body
             }
         }

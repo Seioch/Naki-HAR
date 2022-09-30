@@ -12,9 +12,12 @@ namespace Naki_HAR
     public static class Naki_Defof
     {
         public static HediffDef DMDisintegration;
+        public static HediffDef Hediff_DMBurn;
         public static DamageDef DMBurn;
         public static NeedDef NakiRaceDMNeed;
         public static ThingDef DarkMatter;
+        public static SoundDef Naki_DM_Sizzle;
+
 
         [MayRequireRoyalty]
         public static MeditationFocusDef NakiFocus;

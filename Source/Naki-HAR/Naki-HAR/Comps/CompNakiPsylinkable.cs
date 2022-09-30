@@ -12,8 +12,24 @@ namespace Naki_HAR
 {
     class CompNakiPsylinkable : ThingComp
     {
+
+        /*
+         * Note: This is the required attunement per level from Building_Pylon.xml
+            <requiredAttunementPerPsylinkLevel>
+                <li>100</li>
+                <li>140</li>
+                <li>160</li>
+                <li>180</li>
+                <li>200</li>
+                <li>240</li>
+            </requiredAttunementPerPsylinkLevel>
+         * */
+
         // A List of pawns that can link to this building
         private List<Pawn> pawnsThatCanPsylink = new List<Pawn>();
+
+        // Cached pawn for seeing when to fire off a letter telling player that a psylink upgrade is available
+        private Pawn pawnWithLowestPsylink;
 
         // How far away Pawns can be to meditate
         public const float MaxDistance = 3.9f;
@@ -49,7 +65,6 @@ namespace Naki_HAR
 
         // The only pawns who can get a Naki Psylink are Naki. This checks all pawns on the Map, in Caravans, and in Pods if they can use Naki Meditations, if this Pylon's attunement is greater than what they need at that level
         // and that the pawn's current psylink level is at the level we are checking it at.
-        // Note that level is being passed in as a value from 1 to 6, but the array requiredAttunementPerPsylinkLevel in Props is zero indexed, so you have to decrement level by 1
         private IEnumerable<Pawn> GetPawnsThatCanPsylink(int level = -1)
         {
             // Log.Message($"[Naki HAR] GetPawnsThatCanPsylink level: {level.ToString()}");
@@ -104,6 +119,23 @@ namespace Naki_HAR
             }
             this.pawnsThatCanPsylink.Clear();
             this.pawnsThatCanPsylink.AddRange(this.GetPawnsThatCanPsylink(-1));
+            this.pawnWithLowestPsylink = findLowestPsylinkLevel();
+        }
+
+        // Private helper function that iterates though pawnsThatCanPsylink and returns the lowest level in there
+        private Pawn findLowestPsylinkLevel()
+        {
+            Pawn weakestPawn = null;
+            int lowestLink = -1;
+            foreach (Pawn p in pawnsThatCanPsylink)
+            {
+                if (p.GetPsylinkLevel() > lowestLink)
+                {
+                    lowestLink = p.GetPsylinkLevel();
+                    weakestPawn = p;
+                }
+            }
+            return weakestPawn;
         }
 
         // Override to reset the number of meditations ticks done today to 0
@@ -278,17 +310,23 @@ namespace Naki_HAR
             //this.currentAttunement += progress * (1f + this.parent.GetStatValue(StatDefOf.MeditationPlantGrowthOffset, true));
             this.currentAttunement += progress; // Just add the progress for now, no bonuses or detractors. Technically right now multiple pawns means a bonus to progress made because multiple delegates for adding progress are made. 
             this.meditationTicksToday++;
-            this.TryAttunementComplete();
+            this.TryAttuneOrSpawn();
         }
 
         // Custom code to handle attunement fill procedure
-        private void TryAttunementComplete()
+        private void TryAttuneOrSpawn()
         {
             if (meditationTicksToday > DarkMatterTicksRequired)
             {
                 // Spawn a Dark matter under the pylon
                 OnAttunementFill();
             }
+        }
+
+        // Private helper function 
+        private void TrySpawnDarkMatter()
+        {
+
         }
 
         // Taken from CompSpawnSubplant

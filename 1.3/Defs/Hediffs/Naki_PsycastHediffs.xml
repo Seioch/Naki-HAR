@@ -10,11 +10,11 @@
             <capMods>
             <li>
                 <capacity>Breathing</capacity>
-                <postFactor>1.2</postFactor>
+                <postFactor>1.4</postFactor>
             </li>
             <li>
                 <capacity>BloodPumping</capacity>
-                <postFactor>1.2</postFactor>
+                <postFactor>1.4</postFactor>
             </li>
             </capMods>
         </li>
@@ -36,4 +36,69 @@
         </li>
         </comps>
     </HediffDef>
+
+    
+  <!-- Less powerful Decay available at level 1 -->
+  <HediffDef>
+    <defName>DMDecay</defName>
+    <label>dark matter decay</label>
+    <description>A mote of dark matter embedded in the body is quickly disintegrating flesh.\n
+    Charred wounds open up as matter is instantly annhilated into pure energy.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="Naki_HAR.CompProperties_DMDisintegration">
+        <!-- 16 total damage applied over 4 hits -->
+        <maxApplications>4</maxApplications>
+        <tickMax>48</tickMax>
+        <damagePerTick>3</damagePerTick>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Standard disintegration at level 3 -->
+  <HediffDef>
+    <defName>DMDisintegration</defName>
+    <label>dark matter disintegration</label>
+    <description>A grain of dark matter embedded in the body is quickly disintegrating flesh.\n
+    Charred wounds open up as matter is instantly annhilated into pure energy.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <comps>
+      <li Class="Naki_HAR.CompProperties_DMDisintegration">
+        <!-- 30 total damage applied over 6 hits -->
+        <maxApplications>6</maxApplications>
+        <tickMax>32</tickMax>
+        <damagePerTick>4</damagePerTick>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Powerful disintegration  at level 5-->
+  <HediffDef>
+    <defName>DMAnnihilation</defName>
+    <label>dark matter annihilation</label>
+    <description>A shard of dark matter embedded in the body is quickly disintegrating flesh.\n
+    Charred wounds open up as matter is instantly annhilated into pure energy.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="Naki_HAR.CompProperties_DMDisintegration">
+        <!-- 48 total damage applied over 6 hits -->
+        <maxApplications>8</maxApplications>
+        <tickMax>16</tickMax>
+        <damagePerTick>5</damagePerTick>
+      </li>
+    </comps>
+  </HediffDef>
 </Defs>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <SoundDef>
+        <defName>Naki_DM_Sizzle</defName>
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+          <li>
+            <grains>
+              <li Class="AudioGrain_Clip">
+                <clipPath>Naki/sizzle</clipPath>
+              </li>
+            </grains>
+            <volumeRange>70~100</volumeRange>
+            <distRange>1~30</distRange>
+          </li>
+        </subSounds>
+    </SoundDef>
+</Defs>

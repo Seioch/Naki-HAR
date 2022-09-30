@@ -34,7 +34,8 @@ namespace Naki_HAR
         protected const TargetIndex FocusInd = TargetIndex.C;
 
         // How much attunement to give to the Pylon per tick per pawn
-        public static float AttunementProgressPerTick = 6.666667E-05f;
+        // public static float AttunementProgressPerTick = 6.666667E-05f;
+        public static float AttunementProgressPerTick = 0.015f;
 
         // Token: 0x04001EC9 RID: 7881
         private const int TicksBetweenMotesBase = 100;

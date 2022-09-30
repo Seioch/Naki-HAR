@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Verse;
+using Verse.Sound;
 
 namespace Naki_HAR
 {
@@ -41,7 +42,8 @@ namespace Naki_HAR
                 {
                     FilthMaker.TryMakeFilth(c, map, ThingDefOf.Filth_Ash, 1, FilthSourceFlags.None);
                 }
-                this.parent.pawn.TakeDamage(new DamageInfo(Naki_Defof.DMBurn, 4f, 1f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+                this.parent.pawn.TakeDamage(new DamageInfo(Naki_Defof.DMBurn, Props.damagePerTick, 1f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+                Naki_Defof.Naki_DM_Sizzle.PlayOneShot(SoundInfo.InMap((TargetInfo)(Thing)(this.parent.pawn))); // sizzle sound effect
                 tickCounter = 0;
                 applications = applications + 1;
                 if (applications == this.Props.maxApplications) // Maximum number of applications inflicted has been reached

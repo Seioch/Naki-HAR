@@ -8,6 +8,7 @@ using Verse;
 
 namespace Naki_HAR
 {
+    // NOTE this class may be deprecated cause I'm using Need_Chemical currently for DM Need
     public class Need_NakiRaceDMNeed : Need
     {
         public Need_NakiRaceDMNeed(Pawn pawn) : base(pawn)

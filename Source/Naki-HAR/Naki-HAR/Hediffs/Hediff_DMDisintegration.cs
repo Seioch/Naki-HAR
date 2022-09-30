@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RimWorld;
 using Verse;
+using Verse.Sound;
 
 namespace Naki_HAR
 {
@@ -31,7 +32,9 @@ namespace Naki_HAR
                 }
                 else
                 {
-                    pawn.TakeDamage(new DamageInfo(Naki_Defof.DMBurn, 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+                    pawn.TakeDamage(new DamageInfo(Naki_Defof.DMBurn, 8f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+                    // sizzle
+                    Naki_Defof.Naki_DM_Sizzle.PlayOneShot(SoundInfo.InMap((TargetInfo)(Thing)(pawn)));
                     tickCounter = 0;
                     applications = applications + 1;
                     if (applications == hediff.TryGetComp<CompDisintegration>().Props.maxApplications)
