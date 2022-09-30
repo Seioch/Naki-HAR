@@ -35,7 +35,7 @@ namespace Naki_HAR
         public const float MaxDistance = 3.9f;
 
         // How many meditation ticks must be done before spawning a Dark Matter
-        public const int DarkMatterTicksRequired = 30000;
+        private int DarkMatterTicksRequired = 60000;
 
         // A linearlly increasing multipler that increases the amount of attunement needed before the next Psylink upgrade can be given
         private float attunementMultiplerPerGrantedLink = 0.0f;
@@ -316,9 +316,14 @@ namespace Naki_HAR
         // Custom code to handle attunement fill procedure
         private void TryAttuneOrSpawn()
         {
+            // If the amount of meditation today has exceeded the minimum needed to spawn 3 dark matter
             if (meditationTicksToday > DarkMatterTicksRequired)
             {
-                // Spawn a Dark matter under the pylon
+                TrySpawnDarkMatter();
+            }
+            // If the current attunement has exceeded the minimum needed to try to give a psylink
+            if (currentAttunement >= Props.requiredAttunementPerPsylinkLevel.Min())
+            {
                 OnAttunementFill();
             }
         }
@@ -350,8 +355,11 @@ namespace Naki_HAR
 
         public override string CompInspectStringExtra()
         {
-            return "TotalMeditationToday".Translate((this.meditationTicksToday / 2500).ToString() + "LetterHour".Translate(), 
-                this.ProgressMultiplier.ToStringPercent()) + "\n" + "Current Attunement: " + this.currentAttunement.ToString();
+            double percentToDM = (((double)this.meditationTicksToday / (double)DarkMatterTicksRequired))*100;
+            return "TotalMeditationToday".Translate((this.meditationTicksToday / 2500).ToString() + "LetterHour".Translate(), this.ProgressMultiplier.ToStringPercent()) + "\n" 
+                + "Current Attunement: " + this.currentAttunement.ToString("#.##") + "\n"
+                //+ "Progress to dark matter creation: " + this.meditationTicksToday.ToString() + "/" + this.DarkMatterTicksRequired;
+                + "Progress to dark matter creation: " + percentToDM.ToString("##.#") + "%";
         }
 
         // Taken from CompSpawnSubplant

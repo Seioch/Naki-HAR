@@ -9,6 +9,8 @@ using Verse.Sound;
 
 namespace Naki_HAR
 {
+    // This class is orphaned now, but I will save it here for postierity
+    // Why is it orphaned? That's because the Hediffs for disintegration now rely on CompDMDisintegration to do damage over time. 
     public class Hediff_DMDisintegration : HediffWithComps
     {
         public int tickCounter = 0; // Counter between ticks
