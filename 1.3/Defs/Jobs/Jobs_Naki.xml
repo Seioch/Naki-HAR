@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- Naki Meditative -->
-
+  <!-- Naki Meditation Job -->
   <JobDef>
     <defName>Attune</defName>
     <driverClass>Naki_HAR.JobDriver_Attune</driverClass>
@@ -12,4 +11,12 @@
     <taleOnCompletion>Attuned</taleOnCompletion>
   </JobDef>
   
+  <!-- Naki Psylink Upgrade Job -->
+  <JobDef>
+    <defName>LinkNakiPsylinkable</defName>
+    <driverClass>Naki_HAR.JobDriver_LinkNakiPsylinkable</driverClass>
+    <reportString>attuning at TargetA</reportString>
+    <neverShowWeapon>true</neverShowWeapon>
+  </JobDef>
+
 </Defs>

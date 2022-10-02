@@ -116,8 +116,8 @@
               <north>
                   <layerOffset>-0.19</layerOffset>
                   <bodyTypes>
-                      <Female>(0,0.31)</Female>
-                      <Male>(0,0.31)</Male>
+                      <Female>(-0.032,0.34)</Female>
+                      <Male>(-0.032,0.34)</Male>
                   </bodyTypes>
                   <crownTypes>
                       <Normal_Average>(0,0)</Normal_Average>
@@ -181,7 +181,7 @@
           <drawnInBed>false</drawnInBed>
         </li> -->
         <li>
-          <!-- <path>Naki/Face/Faces/Texture</path> -->
+          <!-- The path for the head texture is set above -->
           <path>Naki/Null/Texture</path>
           <bodyPart>Head</bodyPart>				
           <inFrontOfBody>true</inFrontOfBody>

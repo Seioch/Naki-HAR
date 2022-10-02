@@ -54,26 +54,27 @@
 
   <!-- Note: All four of these comps need to be rewitten to not try to futz with the grass system! -->
   <RitualBehaviorDef>
-    <defName>AnimaTreeLinking</defName>
+    <defName>NakiPylonLinking</defName>
     <durationTicks>15000</durationTicks>
-    <workerClass>RitualBehaviorWorker_AnimaLinking</workerClass>
+    <workerClass>Naki_HAR.RitualBehaviorWorker_PylonLinking</workerClass>
     <roles>
-      <li Class="RitualRoleAnimaLinker">
+      <li Class="Naki_HAR.RitualRolePylonLinker">
         <label>linker</label>
         <id>organizer</id>
         <required>true</required>
         <maxCount>1</maxCount>
         <defaultForSelectedColonist>true</defaultForSelectedColonist>
-        <noCandidatesGizmoDesc>Need a colonist with the natural meditation focus type who is below maximum psylink level and not psychically deaf.</noCandidatesGizmoDesc>
+        <noCandidatesGizmoDesc>Needs a Naki colonist who is below maximum psylink level and not psychically deaf.</noCandidatesGizmoDesc>
       </li>
     </roles>
-    <spectatorFilter Class="RitualSpectatorFilter_NatureFocus"> 
-      <description>Must have natural focus type.</description>
+    <spectatorFilter Class="Naki_HAR.RitualSpectatorFilter_NakiFocus"> 
+      <description>Must have Naki focus type.</description>
     </spectatorFilter>
     <spectatorsLabel>Participants</spectatorsLabel>
     <spectatorGerund>participate</spectatorGerund>
     <stages>
-      <li Class="RitualStage_AnimaTreeLinking">
+      <li Class="Naki_HAR.RitualStage_PylonLinking">
+        <!-- This dutyDef from Royalty behaves as intended, which is to move spectator pawns around the target and have them spectate -->
         <defaultDuty>LinkWithAnimaTreeSecondary</defaultDuty>
         <endTriggers>
           <li Class="StageEndTrigger_DurationPercentage">
@@ -84,9 +85,11 @@
         <roleBehaviors>
           <li>
             <roleId>organizer</roleId>
-            <dutyDef>LinkWithAnimaTree</dutyDef>
+            <!-- Custom duty to link with a pylon instead of an Anima tree -->
+            <dutyDef>LinkWithPylon</dutyDef>
+            <!-- Custom position finder that works with CompNakiPsylinkable -->
             <customPositions>
-              <li Class="RitualPosition_AnimaLinkingSpot" />
+              <li Class="Naki_HAR.RitualPosition_PylonLinkingSpot" />
             </customPositions>
           </li>
         </roleBehaviors>

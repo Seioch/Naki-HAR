@@ -29,7 +29,7 @@ namespace Naki_HAR
             {
                 if (!skipReason)
                 {
-                    reason = "RitualTargetAnimaTreeMustBeCapableOfNature".Translate();
+                    reason = "This pawn cannot meditate at a pylon";
                 }
                 return false;
             }
@@ -37,7 +37,7 @@ namespace Naki_HAR
             {
                 if (!skipReason)
                 {
-                    reason = "RitualTargetAnimaTreeMustBePsychicallySensitive".Translate();
+                    reason = "This pawn is not psychically sensitive";
                 }
                 return false;
             }

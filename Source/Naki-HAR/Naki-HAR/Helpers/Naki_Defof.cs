@@ -30,6 +30,9 @@ namespace Naki_HAR
         [MayRequireRoyalty]
         public static JobDef Attune;
 
+        [MayRequireRoyalty]
+        public static JobDef LinkNakiPsylinkable;
+
         static Naki_Defof()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(Naki_Defof));

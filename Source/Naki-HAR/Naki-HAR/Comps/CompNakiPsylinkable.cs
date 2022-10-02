@@ -274,7 +274,7 @@ namespace Naki_HAR
                 Precept_Ritual precept_Ritual = null;
                 for (int i = 0; i < pawn.Ideo.PreceptsListForReading.Count; i++)
                 {
-                    Log.Message(pawn.Ideo.PreceptsListForReading[i].def.defName);
+                    // Log.Message(pawn.Ideo.PreceptsListForReading[i].def.defName); Was trying to find out what precepts pawns have
                     if (pawn.Ideo.PreceptsListForReading[i].def == Naki_Defof.NakiPylonLinking)
                     {
                         precept_Ritual = (Precept_Ritual)pawn.Ideo.PreceptsListForReading[i];
