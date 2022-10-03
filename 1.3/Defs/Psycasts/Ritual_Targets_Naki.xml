@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Sets the target for where the ritual will take place, as well as the workerClass for that ritual -->
+  <RitualObligationTargetFilterDef>
+    <defName>NakiPylonTarget</defName>
+    <workerClass>Naki_HAR.RitualObligationTargetWorker_NakiPylon</workerClass>
+  </RitualObligationTargetFilterDef>
+
+</Defs>

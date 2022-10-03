@@ -44,9 +44,9 @@
   <RitualPatternDef>
     <defName>NakiPylonLinking</defName>
     <ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
-    <ritualBehavior>AnimaTreeLinking</ritualBehavior>
+    <ritualBehavior>NakiPylonLinking</ritualBehavior>
     <ritualTargetFilter>SelectedThing</ritualTargetFilter>
-    <ritualObligationTargetFilter>AnimaTree</ritualObligationTargetFilter>
+    <ritualObligationTargetFilter>NakiPylonTarget</ritualObligationTargetFilter>
     <ritualOutcomeEffect>NakiPylonLinking</ritualOutcomeEffect>
     <playsIdeoMusic>false</playsIdeoMusic>
     <alwaysStartAnytime>true</alwaysStartAnytime>
@@ -64,7 +64,7 @@
         <required>true</required>
         <maxCount>1</maxCount>
         <defaultForSelectedColonist>true</defaultForSelectedColonist>
-        <noCandidatesGizmoDesc>Needs a Naki colonist who is below maximum psylink level and not psychically deaf.</noCandidatesGizmoDesc>
+        <noCandidatesGizmoDesc>Needs a Naki colonist who is below maximum psylink level.</noCandidatesGizmoDesc>
       </li>
     </roles>
     <spectatorFilter Class="Naki_HAR.RitualSpectatorFilter_NakiFocus"> 

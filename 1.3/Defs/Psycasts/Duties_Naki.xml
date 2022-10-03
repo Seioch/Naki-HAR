@@ -6,7 +6,7 @@
     <socialModeMax>Off</socialModeMax>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="JobGiver_AnimaLinking">
+        <li Class="Naki_HAR.JobGiver_PylonLinking">
         </li>
       </subNodes>
     </thinkNode>

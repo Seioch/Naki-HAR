@@ -16,6 +16,8 @@ namespace Naki_HAR
     // The reason why I am making a new one is that I still want the ritual to be a thing, and to not have Naki not use a ritual to psylink if the player is using Ideology.
     class JobDriver_LinkNakiPsylinkable : JobDriver
     {
+        // How long to do the toil for cause magic numbers bad okay? 
+        private readonly int toilDuration = 15000;
         // Unmodified getter
         private Thing PsylinkableThing
         {
@@ -58,7 +60,7 @@ namespace Naki_HAR
             }
             base.AddFailCondition(() => !this.Psylinkable.CanPsylink(this.pawn, new LocalTargetInfo?(this.LinkSpot), true).Accepted);
             yield return Toils_Goto.GotoCell(TargetIndex.B, PathEndMode.OnCell);
-            Toil toil = Toils_General.Wait(15000, TargetIndex.None);
+            Toil toil = Toils_General.Wait(toilDuration, TargetIndex.None);
             toil.tickAction = delegate ()
             {
                 this.pawn.rotationTracker.FaceTarget(this.PsylinkableThing);

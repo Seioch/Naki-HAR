@@ -83,6 +83,7 @@
     <Compile Include="NakiRace.cs" />
     <Compile Include="Needs\NeedNakiRaceDMNeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rituals\RitualObligationTargetWorker_NakiPylon.cs" />
     <Compile Include="Rituals\RitualBehaviorWorker_PylonLinking.cs" />
     <Compile Include="Rituals\RitualRolePylonLinker.cs" />
     <Compile Include="Rituals\RitualSpectatorFilter_NakiFocus.cs" />

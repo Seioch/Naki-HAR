@@ -281,6 +281,8 @@ namespace Naki_HAR
                         break;
                     }
                 }
+                Log.Message($"[Naki HAR] Precept ritual created: {precept_Ritual.def.defName}");
+                Log.Message($"[Naki HAR] this.parent: {this.parent.def.defName}");
                 if (precept_Ritual != null)
                 {
                     Find.WindowStack.Add(precept_Ritual.GetRitualBeginWindow(this.parent, null, null, null, null, pawn));

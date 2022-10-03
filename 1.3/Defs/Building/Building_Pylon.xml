@@ -3,27 +3,27 @@
   <ThingDef ParentName="BuildingBase">
     <defName>NakiMeditationPylon</defName>
     <label>Naki meditation pylon</label>
-    <description>A stabilized portal to the archotech in the center of Omega Eden. Naki can use this to commune with their patron archotech Omega Eden by meditating around the Pylon, strengthening their psychic bond with the archotech.\n\nIf a Naki meditates near this pylon, attument with the archotech will grow, and once it reaches a threshold the pylon will send a bit of dark matter from the heart of Omega Eden to this planet. These vials of dark matter can be used to craft Naki weapons and apparel, as well as fulfill the need for dark matter consumption all Naki have. Full attunement also allows Naki to upgrade their psylink, granting them unique psycasts only Naki can use.</description>
+    <description>A stabilized portal to the center of Omega Eden. Naki can use this to commune with their patron archotech Omega Eden by meditating around the Pylon, strengthening their psychic bond with the archotech.\n\nIf a Naki meditates near this pylon, attument with the archotech will grow, and once it reaches a threshold the pylon will send a bit of dark matter from the heart of Omega Eden to this planet. These vials of dark matter can be used to craft Naki weapons and apparel, as well as fulfill the need for dark matter consumption all Naki have. Full attunement also allows Naki to upgrade their psylink, granting them unique psycasts only Naki can use.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/Production/CraftingSpot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1,1)</drawSize>
+      <drawSize>(3,3)</drawSize>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <useHitPoints>true</useHitPoints>
-    <size>(1,1)</size>
+    <size>(3,3)</size>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <minifiedDef>MinifiedThing</minifiedDef>
     <thingCategories>
       <li>BuildingsMisc</li>
     </thingCategories>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Stony</li>
-    </stuffCategories>
+    <costList>
+      <Steel>150</Steel>
+      <DarkMatter>3</DarkMatter>
+    </costList>
     <designationCategory>Misc</designationCategory>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
@@ -33,7 +33,6 @@
       <Mass>25</Mass>
       <SellPriceFactor>0</SellPriceFactor>
     </statBases>
-    <costStuffCount>150</costStuffCount>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <inspectorTabs>
       <li>ITab_Bills</li>
