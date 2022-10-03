@@ -10,7 +10,8 @@ namespace Naki_HAR
 {
     class RitualRolePylonLinker : RitualRole
     {
-        // Checks to see if the pylon 
+        // Checks to see if the pawn can link to the pylon
+        // TODO: Tagged strings to be added here!
         public override bool AppliesToPawn(Pawn p, out string reason, LordJob_Ritual ritual = null, RitualRoleAssignments assignments = null, Precept_Ritual precept = null, bool skipReason = false)
         {
             reason = null;
@@ -25,11 +26,12 @@ namespace Naki_HAR
             {
                 return true;
             }
-            if (!MeditationFocusDefOf.Natural.CanPawnUse(p) || p.GetPsylinkLevel() >= p.GetMaxPsylinkLevel())
+            // if (!MeditationFocusDefOf.Natural.CanPawnUse(p) || p.GetPsylinkLevel() >= p.GetMaxPsylinkLevel())
+            if (!Naki_Defof.NakiFocus.CanPawnUse(p) || p.GetPsylinkLevel() >= p.GetMaxPsylinkLevel())
             {
                 if (!skipReason)
                 {
-                    reason = "This pawn cannot meditate at a pylon";
+                    reason = "Must be a colonist with the Naki meditation type who is below maximum psylink level.";
                 }
                 return false;
             }

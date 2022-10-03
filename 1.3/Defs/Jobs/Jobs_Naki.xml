@@ -15,7 +15,7 @@
   <JobDef>
     <defName>LinkNakiPsylinkable</defName>
     <driverClass>Naki_HAR.JobDriver_LinkNakiPsylinkable</driverClass>
-    <reportString>attuning at TargetA</reportString>
+    <reportString>linking at TargetA</reportString>
     <neverShowWeapon>true</neverShowWeapon>
   </JobDef>
 

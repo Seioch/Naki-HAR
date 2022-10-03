@@ -203,7 +203,7 @@ namespace Naki_HAR
             if (this.currentAttunement < requiredAttunement)
             {
                 // Acceptance Report reports the required attunement for that Pawn, a bit of flavor text for it, and the current attunement on the Pylon itself
-                Log.Message($"[Naki HAR] Acceptance report for BeginNakiLinkingRitual accepted.");
+                // Log.Message($"[Naki HAR] Acceptance report for BeginNakiLinkingRitual accepted.");
                 return new AcceptanceReport("BeginNakiLinkingRitual".Translate(requiredAttunement.ToString(), this.Props.attunementFlavorText, this.currentAttunement.ToString()));
             }
             if (checkSpot)
@@ -282,7 +282,7 @@ namespace Naki_HAR
                     }
                 }
                 Log.Message($"[Naki HAR] Precept ritual created: {precept_Ritual.def.defName}");
-                Log.Message($"[Naki HAR] this.parent: {this.parent.def.defName}");
+                // Log.Message($"[Naki HAR] this.parent: {this.parent.def.defName}");
                 if (precept_Ritual != null)
                 {
                     Find.WindowStack.Add(precept_Ritual.GetRitualBeginWindow(this.parent, null, null, null, null, pawn));
@@ -300,18 +300,19 @@ namespace Naki_HAR
         // Taken from CompPsylinkable
         // Difference is that we are not going to despawn plants anymore, we are actually going to set the current
         // attunement to 0. 
-        public void FinishLinkingRitual(Pawn pawn, int plantsToKeep)
+        public void FinishLinkingRitual(Pawn pawn)
         {
+            Log.Message($"[Naki HAR] Linking Ritual finished, upgrading psylink for {pawn.Name}");
             if (!ModLister.CheckRoyalty("Psylinkable"))
             {
                 return;
             }
             FleckMaker.Static(this.parent.Position, pawn.Map, FleckDefOf.PsycastAreaEffect, 10f);
             SoundDefOf.PsycastPsychicPulse.PlayOneShot(new TargetInfo(this.parent));
-            CompSpawnSubplant compSpawnSubplant = this.parent.TryGetComp<CompSpawnSubplant>();
 
-            // Set current attunement to 0
-            this.currentAttunement = 0;
+            // Set current attunement to remove the amount of attunement needed for that level
+            int currentPawnPsylinkLevel = pawn.GetPsylinkLevel();
+            this.currentAttunement = this.Props.requiredAttunementPerPsylinkLevel[currentPawnPsylinkLevel + 1]; // Should never go out of index range cause by the time we get here the pawn cannot psylink past level 6
 
             pawn.ChangePsylinkLevel(1, true);
             Find.History.Notify_PsylinkAvailable();

@@ -11,7 +11,7 @@
     <classic>true</classic>
     <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
     <selectionWeight>1.0</selectionWeight>
-    <ritualPatternBase>AnimaTreeLinking</ritualPatternBase>
+    <ritualPatternBase>NakiPylonLinking_RitualPattern</ritualPatternBase>
     <iconPath>UI/Icons/Rituals/AnimaTreeLinking</iconPath>
     <usesIdeoVisualEffects>false</usesIdeoVisualEffects>
     <mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
@@ -21,9 +21,11 @@
   
   <!-- Outcome from a Naki linking ritual -->
   <!-- The curve is rather high because Naki should be able to attune and use Pylons by themselves -->
+  <!-- Also calls a special OutcomeEffectWorker only for Naki -->
   <RitualOutcomeEffectDef>
-    <defName>NakiPylonLinking</defName>
-    <workerClass>RitualOutcomeEffectWorker_AnimaTreeLinking</workerClass>
+    <defName>NakiPylonLinking_Outcome</defName>
+    <!-- Custom worker class to handle psylink granting after the ritual is done -->
+    <workerClass>Naki_HAR.RitualOutcomeEffectWorker_PylonLinking</workerClass>
     <warnOnLowQuality>false</warnOnLowQuality>
     <comps>
       <li Class="RitualOutcomeComp_ParticipantCount">
@@ -42,19 +44,19 @@
   </RitualOutcomeEffectDef>
 
   <RitualPatternDef>
-    <defName>NakiPylonLinking</defName>
+    <defName>NakiPylonLinking_RitualPattern</defName>
     <ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
-    <ritualBehavior>NakiPylonLinking</ritualBehavior>
+    <ritualBehavior>NakiPylonLinking_ritualBehavior</ritualBehavior>
     <ritualTargetFilter>SelectedThing</ritualTargetFilter>
     <ritualObligationTargetFilter>NakiPylonTarget</ritualObligationTargetFilter>
-    <ritualOutcomeEffect>NakiPylonLinking</ritualOutcomeEffect>
+    <ritualOutcomeEffect>NakiPylonLinking_Outcome</ritualOutcomeEffect>
     <playsIdeoMusic>false</playsIdeoMusic>
     <alwaysStartAnytime>true</alwaysStartAnytime>
   </RitualPatternDef>
 
   <!-- Note: All four of these comps need to be rewitten to not try to futz with the grass system! -->
   <RitualBehaviorDef>
-    <defName>NakiPylonLinking</defName>
+    <defName>NakiPylonLinking_ritualBehavior</defName>
     <durationTicks>15000</durationTicks>
     <workerClass>Naki_HAR.RitualBehaviorWorker_PylonLinking</workerClass>
     <roles>

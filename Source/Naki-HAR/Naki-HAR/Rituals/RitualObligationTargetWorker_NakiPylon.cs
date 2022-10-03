@@ -26,16 +26,10 @@ namespace Naki_HAR
         // TODO: Use Tagged Strings to allow translations!
         protected override RitualTargetUseReport CanUseTargetInternal(TargetInfo target, RitualObligation obligation)
         {
-            if (!target.Thing.def.defName.ToLower().Contains("naki"))
-            {
-                Log.Warning("[Naki HAR] Ritual Requester is not a Naki");
-                return false;
-            }
-
             CompNakiPsylinkable compNakiPsylinkable = target.Thing.TryGetComp<CompNakiPsylinkable>();
             if (compNakiPsylinkable == null)
             {
-                Log.Error("[Naki HAR] ERROR: This Naki has no compNakiPsylinkable component!");
+                // Log.Warning($"[Naki HAR] compNakiPsylinkable is null in RitualObligationTargetWorker_NakiPylon. target.Thing is {target.Thing.ToString()}");
                 return false;
             }
             bool flag = false;
@@ -69,6 +63,7 @@ namespace Naki_HAR
                 return "No colonists with the Naki meditation type.";
                 //return "RitualTargetNakiNoPawnsToLink".Translate();
             }
+            // Log.Message("RitualTargetUseReport successfully created Naki linking ritual");
             return true;
         }
 
