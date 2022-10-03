@@ -29,7 +29,6 @@ namespace Naki_HAR
             CompNakiPsylinkable compNakiPsylinkable = target.Thing.TryGetComp<CompNakiPsylinkable>();
             if (compNakiPsylinkable == null)
             {
-                // Log.Warning($"[Naki HAR] compNakiPsylinkable is null in RitualObligationTargetWorker_NakiPylon. target.Thing is {target.Thing.ToString()}");
                 return false;
             }
             bool flag = false;
@@ -67,10 +66,9 @@ namespace Naki_HAR
             return true;
         }
 
-        // Token: 0x06005F38 RID: 24376 RVA: 0x002105D0 File Offset: 0x0020E7D0
+        // TODO: Tagged String
         public override IEnumerable<string> GetTargetInfos(RitualObligation obligation)
         {
-            //yield return "RitualTargetAnimaTreeInfo".Translate();
             yield return "A Naki Pylon.";
             yield break;
         }
