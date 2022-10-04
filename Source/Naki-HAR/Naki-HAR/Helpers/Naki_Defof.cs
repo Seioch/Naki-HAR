@@ -17,6 +17,7 @@ namespace Naki_HAR
         public static NeedDef NakiRaceDMNeed;
         public static ThingDef DarkMatter;
         public static SoundDef Naki_DM_Sizzle;
+        public static SoundDef Naki_Distortion_Sustainer;
 
         [MayRequireRoyalty]
         public static PreceptDef NakiPylonLinking;
