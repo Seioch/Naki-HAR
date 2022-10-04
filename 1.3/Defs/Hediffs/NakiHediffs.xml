@@ -43,7 +43,7 @@
     </injuryProps>
   </HediffDef>
 
-  <!-- Breathing and movement penalty for getting DM healed -->
+  <!-- Pain and movement penalty for getting DM healed -->
   <HediffDef>
     <defName>DMHealingPenalty</defName>
     <label>dark matter healing burden</label>

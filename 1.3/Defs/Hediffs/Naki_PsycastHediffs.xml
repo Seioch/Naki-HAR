@@ -21,12 +21,39 @@
         </stages>
     </HediffDef>
 
+    <!-- Hediff to slow down target by a lot -->
+    <HediffDef>
+      <defName>DMStall</defName>
+      <label>dark matter stall</label>
+      <description>A localized gravity well is hampering movement</description>
+      <isBad>true</isBad>
+      <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <setMax>0.2</setMax>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+    </HediffDef>
+
+    <!-- Much like vertigo, but without the vomiting MTTH -->
     <HediffDef ParentName = "PsycastHediffBase">
         <defName>DMConfusion</defName>
         <label>gravatational disorientation</label>
         <description>A gravity well has destabilized the ear canal, causing disorientation.</description>
         <isBad>true</isBad>
         <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <setMax>0.9</setMax>
+            </li>
+          </capMods>
+        </li>
         </stages>
         <comps>
         <li Class="HediffCompProperties_Disorientation">

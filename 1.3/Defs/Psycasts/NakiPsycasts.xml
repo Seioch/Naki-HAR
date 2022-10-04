@@ -1,119 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    <!-- <AbilityDef ParentName="PsycastBase">
-        <defName>Naki_DM_Amplify</defName>
-        <label>Amplify</label>
-        <description>Overload the target's brain with raw psychic energy, causing it to violently explode.</description>
-        <level>6</level>
-        <iconPath>Psycasts/CP_BrainExploder</iconPath>
-        <writeCombatLog>True</writeCombatLog>
-        <statBases>
-            <Ability_EntropyGain>150</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.08</Ability_PsyfocusCost>
-        </statBases>
-        <verbProperties>
-            <warmupTime>5</warmupTime>
-            <range>17.9</range>
-            <targetParams>
-              <canTargetSelf>True</canTargetSelf>
-              <canTargetAnimals>True</canTargetAnimals>
-              <canTargetLocations>False</canTargetLocations>
-              <canTargetMechs>False</canTargetMechs>
-            </targetParams>
-        </verbProperties>
-        <comps>
-            <li Class="CombatPsycasts.Comps.CompProperties_AbilityBrainExploder">
-                <headExplodeChance>0.5</headExplodeChance>
-            </li>
-        </comps>
-    </AbilityDef>
+    <!-- ========================================= LEVEL 6 ========================================= -->
+    <!-- ========================================= LEVEL 5 ========================================= -->
+    <!-- ========================================= LEVEL 4 ========================================= -->
+    <!-- ========================================= LEVEL 3 ========================================= -->
 
     <AbilityDef ParentName="PsycastBase">
-        <defName>CP_PsychicGrenade</defName>
-        <label>psychic grenade</label>
-        <description>Concentrate psychic energy into an explosive projectile and hurl it towards the target.</description>
-        <level>5</level>
-        <iconPath>Psycasts/CP_PsychicGrenade</iconPath>
-        <writeCombatLog>True</writeCombatLog>
+        <defName>Naki_Disintegrate_Medium</defName>
+        <label>disintegrate</label>
+        <description>Implants a grain of dark matter in the target, causing flesh to decay rapidly.</description>
+        <level>1</level>
+        <iconPath>Naki/Psycasts/Disintegrate</iconPath>
+        <verbProperties>
+            <range>14.9</range>
+        </verbProperties>
         <statBases>
             <Ability_EntropyGain>10</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.02</Ability_PsyfocusCost>
-        </statBases>
-        <verbProperties>
-            <warmupTime>2</warmupTime>
-            <range>14.9</range>
-            <targetParams>
-              <canTargetSelf>False</canTargetSelf>
-              <canTargetLocations>True</canTargetLocations>
-            </targetParams>
-        </verbProperties>
-        <comps>
-            <li Class="CombatPsycasts.Comps.CompProperties_AbilityPsychicSingleProjectile">
-                <projectileDef>CP_Proj_PsychicGrenade</projectileDef>
-            </li>
-        </comps>
-    </AbilityDef>
-
-    <AbilityDef Name="PsycastBulletBase" ParentName="PsycastBase" Abstract="True">
-        <writeCombatLog>True</writeCombatLog>
-        <verbProperties>
-            <warmupTime>1</warmupTime>
-            <range>24.9</range>
-            <targetParams>
-              <canTargetSelf>False</canTargetSelf>
-              <canTargetLocations>True</canTargetLocations>
-              <canTargetAnimals>True</canTargetAnimals>
-              <canTargetPawns>True</canTargetPawns>
-            </targetParams>
-        </verbProperties>
-    </AbilityDef>
-
-    <AbilityDef ParentName="PsycastBulletBase">
-        <defName>CP_LightPsychicSlug</defName>
-        <label>light psychic slug</label>
-        <description>Fire a burst of three small slugs of raw psychic energy.</description>
-        <level>1</level>
-        <iconPath>Psycasts/CP_PsychicSlug</iconPath>
-        <statBases>
-            <Ability_EntropyGain>5</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.01</Ability_PsyfocusCost>
+            <Ability_PsyfocusCost>0.05</Ability_PsyfocusCost>
         </statBases>
         <comps>
-            <li Class="CombatPsycasts.Comps.CompProperties_PsychicSustainedShoot">
-                <verbs>
-                    <li>
-                      <verbClass>CombatPsycasts.Verbs.Verb_PsychicShoot</verbClass>
-                      <hasStandardCommand>true</hasStandardCommand>
-                      <defaultProjectile>CP_Bullet_LightPsychicSlug</defaultProjectile>
-                      <warmupTime>0.5</warmupTime>
-                      <range>24.9</range>
-                      <burstShotCount>3</burstShotCount>
-                      <accuracyTouch>0.9</accuracyTouch>
-                      <accuracyShort>0.7</accuracyShort>
-                      <accuracyMedium>0.5</accuracyMedium>
-                      <accuracyLong>0.4</accuracyLong>
-                      <stopBurstWithoutLos>false</stopBurstWithoutLos>
-                      <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
-                      <soundCast>Shot_ChargeRifle</soundCast>
-                      <soundCastTail>GunTail_Medium</soundCastTail>
-                      <muzzleFlashScale>9</muzzleFlashScale>
-                    </li>
-                </verbs>
-                <sustainedJobDef>CP_CastLightSlug</sustainedJobDef>
-                <maxSustainTicks>6000</maxSustainTicks>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>DMDisintegration</hediffDef>
+                <psychic>False</psychic>
             </li>
         </comps>
-    </AbilityDef>
--->
+    </AbilityDef> 
+
     <AbilityDef ParentName="PsycastBase">
-        <defName>Naki_Confuse</defName>
-        <label>confuse</label>
+        <defName>Naki_MassFog</defName>
+        <label>mass fog</label>
+        <description>Induce noise in the visual centers of the brain, obscuring vision of everyone near the target point.</description>
+        <level>2</level>
+        <iconPath>Naki/Psycasts/MassFog</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <!-- <hotKey>Misc5</hotKey> -->
+        <statBases>
+            <Ability_EntropyGain>30</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.25</Ability_PsyfocusCost>
+            <Ability_Duration>20</Ability_Duration>
+            <Ability_EffectRadius>3.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+        <warmupTime>1</warmupTime>
+        <range>24.9</range>
+        <targetParams>
+            <canTargetSelf>True</canTargetSelf>
+            <canTargetAnimals>True</canTargetAnimals>
+            <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class = "CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>DMConfusion</hediffDef>
+            <onlyBrain>False</onlyBrain>
+            <psychic>False</psychic>
+            <goodwillImpact>-25</goodwillImpact>
+            <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDef>PsycastPsychicEffect</fleckDef>
+        </li>
+    </comps>
+  </AbilityDef>
+
+    <!-- ========================================= LEVEL 2 ========================================= -->
+
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_MindFog</defName>
+        <label>mind fog</label>
         <description>Creates a tiny gravity well in the ear canal of the target, causing acute confusion and disorientation.</description>
         <level>2</level>
-        <iconPath>Naki/Psycasts/Confuse</iconPath>
+        <iconPath>Naki/Psycasts/Mindfog</iconPath>
         <statBases>
             <Ability_EntropyGain>20</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.15</Ability_PsyfocusCost>
+            <Ability_Duration>10</Ability_Duration>
         </statBases>
         <verbProperties>
             <warmupTime>0.5</warmupTime>
@@ -123,7 +86,7 @@
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMConfusion</hediffDef>
                 <durationMultiplier>PsychicSensitivity</durationMultiplier>
-                <psychic>True</psychic>
+                <psychic>False</psychic>
                 <goodwillImpact>-15</goodwillImpact>
                 <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
@@ -133,7 +96,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Restore</defName>
         <label>restore</label>
-        <description>Transmute dark matter into flesh on a target, closing wounds. The sudden regeneration of flesh fatigues the target greatly.</description>
+        <description>Transmute dark matter into flesh on a target, closing wounds. The sudden regeneration of flesh pains and fatigues the target greatly.</description>
         <level>2</level>
         <iconPath>Naki/Psycasts/Restore</iconPath>
         <statBases>
@@ -166,10 +129,12 @@
         </comps>
     </AbilityDef>
 
+    <!-- ========================================= LEVEL 1 ========================================= -->
+
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Disintegrate_Lesser</defName>
         <label>decay</label>
-        <description>Implants a mote of dark matter in the target, causing their flesh to decay rapidly.</description>
+        <description>Implants a mote of dark matter in the target, causing flesh to decay.</description>
         <level>1</level>
         <iconPath>Naki/Psycasts/Decay</iconPath>
         <verbProperties>
@@ -187,6 +152,39 @@
             </li>
         </comps>
     </AbilityDef> 
+
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_Stall</defName>
+        <label>stall</label>
+        <description>Creates a small gravity well near the base of the target, significantly slowing movement.</description>
+        <level>1</level>
+        <iconPath>Naki/Psycasts/Stall</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <!-- <hotKey>Misc3</hotKey> -->
+        <statBases>
+            <Ability_EntropyGain>12</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.04</Ability_PsyfocusCost>
+            <Ability_Duration>6</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <warmupTime>0.25</warmupTime>
+            <range>24.9</range>
+            <targetParams>
+                <canTargetAnimals>True</canTargetAnimals>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>Naki_Stall</hediffDef>
+                <onlyBrain>True</onlyBrain>
+                <psychic>True</psychic>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
 
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Amplify</defName>
