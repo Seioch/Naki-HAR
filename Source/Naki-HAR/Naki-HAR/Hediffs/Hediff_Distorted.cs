@@ -7,7 +7,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace Naki_HAR.Hediffs
+namespace Naki_HAR
 {
     class Hediff_Distorted : Hediff
     {
@@ -25,6 +25,8 @@ namespace Naki_HAR.Hediffs
                 HediffStage result;
                 if (this.field != null)
                 {
+                    // capMods is Capacity Modifiers. What line 29 does is create a new HediffStage, store it in result, and set its internal list capMods to a new list of PawnCapacityModifiers
+                    // This lets the result change the pawn's capacities as needed
                     (result = new HediffStage()).capMods = new List<PawnCapacityModifier>
                     {
                         // Note: Lerp is a math tool to get a number between two indexes. The way setMax is done is that it returns a float between 0.4 and 0.8, growing closer to 0.8 the closer the distance

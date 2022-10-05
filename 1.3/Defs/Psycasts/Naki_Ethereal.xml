@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- EtherealThingBase from base RW -->
+    <ThingDef ParentName="EtherealThingBase">
+        <defName>Naki_DistortionFieldBuilding</defName>
+        <label>distortion field</label>
+        <category>Building</category>
+        <thingClass>Naki_HAR.CompDistortionField</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawOffscreen>true</drawOffscreen>
+        <seeThroughFog>true</seeThroughFog>
+    </ThingDef>
+
+</Defs>

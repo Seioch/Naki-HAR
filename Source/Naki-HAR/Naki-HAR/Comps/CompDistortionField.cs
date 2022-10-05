@@ -13,21 +13,20 @@ namespace Naki_HAR
     // Based on Vortex from VPE, this is an object that slows down and lowers the consciousness of pawns trapped in it
     class CompDistortionField : ThingWithComps
     {
-        // How big the distortion field is
-        public const float RADIUS = 18.9f;
-
-        // How many ticks should it last for
-        public const int DURATION = 2500;
 
         // Sound sustainer
         private Sustainer sustainer;
 
-        // 
-        private int startTick;
+        // What tick did this distortion field start from?
+        private int currentTicks = 0;
+
+        // Maximum amount of ticks the Distortion Field can be alive for
+        private int maxTicks = 2500;
 
         public override void Tick()
         {
             base.Tick();
+            currentTicks++; // Increase the number of ticks that this Distortion Field has lived for
             bool flag = this.sustainer == null;
             if (flag)
             {
@@ -36,12 +35,12 @@ namespace Naki_HAR
             this.sustainer.Maintain();
             for (int i = 0; i < 3; i++)
             {
-                FleckCreationData dataStatic = FleckMaker.GetDataStatic(this.RandomLocation(), base.Map, VPE_DefOf.VPE_VortexSpark, 1f);
+                FleckCreationData dataStatic = FleckMaker.GetDataStatic(this.RandomLocation(), base.Map, Naki_Defof.Naki_Distortion_vibration, 1f);
                 dataStatic.rotation = Rand.Range(0f, 360f);
                 base.Map.flecks.CreateFleck(dataStatic);
                 FleckMaker.ThrowSmoke(this.RandomLocation(), base.Map, 4f);
             }
-            bool flag2 = Find.TickManager.TicksGame - this.startTick > 2500;
+            bool flag2 = this.currentTicks >= maxTicks;
             if (flag2)
             {
                 this.Destroy(0);
@@ -58,12 +57,12 @@ namespace Naki_HAR
                     }
                     else
                     {
-                        bool flag4 = pawn.health.hediffSet.GetFirstHediffOfDef(VPE_DefOf.VPE_Vortex, false) == null;
+                        bool flag4 = pawn.health.hediffSet.GetFirstHediffOfDef(Naki_Defof.Naki_Distortion, false) == null;
                         if (flag4)
                         {
-                            Hediff_Vortexed hediff_Vortexed = (Hediff_Vortexed)HediffMaker.MakeHediff(VPE_DefOf.VPE_Vortex, pawn, null);
-                            hediff_Vortexed.Vortex = this;
-                            pawn.health.AddHediff(hediff_Vortexed, null, null, null);
+                            Hediff_Distorted hediff_Distorted = (Hediff_Distorted)HediffMaker.MakeHediff(Naki_Defof.Naki_Distortion, pawn, null);
+                            hediff_Distorted.field = this;
+                            pawn.health.AddHediff(hediff_Distorted, null, null, null);
                         }
                     }
                 }

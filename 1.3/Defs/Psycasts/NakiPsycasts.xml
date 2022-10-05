@@ -3,14 +3,42 @@
     <!-- ========================================= LEVEL 6 ========================================= -->
     <!-- ========================================= LEVEL 5 ========================================= -->
     <!-- ========================================= LEVEL 4 ========================================= -->
+
+    <!-- VEF and VPE Based Psycast -->
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_DistortionField</defName>
+        <label>distortion field</label>
+        <description>Distorts the time-space continuum in an area, causing victims to think slower.</description>
+        <level>4</level>
+        <iconPath>Naki/Psycasts/DistortionField</iconPath>
+        <statBases>
+            <Ability_EntropyGain>30</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.45</Ability_PsyfocusCost>
+            <Ability_Duration>100</Ability_Duration>
+            <Ability_EffectRadius>18.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>19.9</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="Naki_HAR.CompProperties_AbilityDistortionField">
+                <!-- <spawnableThing>Naki_DistortionField</spawnableThing> -->
+            </li>
+        </comps>
+    </AbilityDef> 
+
     <!-- ========================================= LEVEL 3 ========================================= -->
 
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Disintegrate_Medium</defName>
         <label>disintegrate</label>
         <description>Implants a grain of dark matter in the target, causing flesh to decay rapidly.</description>
-        <level>1</level>
-        <iconPath>Naki/Psycasts/Disintegrate</iconPath>
+        <level>3</level>
+        <iconPath>Naki/Psycasts/Disintegration</iconPath>
         <verbProperties>
             <range>14.9</range>
         </verbProperties>

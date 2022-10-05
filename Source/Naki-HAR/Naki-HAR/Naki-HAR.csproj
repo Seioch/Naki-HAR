@@ -62,6 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\CompAbilityEffect_SpawnEffector.cs" />
+    <Compile Include="Abilities\CompProperties_AbilityDistortionField.cs" />
+    <Compile Include="Comps\CompDistortionField.cs" />
     <Compile Include="Comps\CompDMDisintegration.cs" />
     <Compile Include="Comps\CompDMHealing.cs" />
     <Compile Include="Comps\CompNakiPostSpawn.cs" />
@@ -71,9 +74,12 @@
     <Compile Include="Comps\CompProperties_DMDisintegration.cs" />
     <Compile Include="Comps\CompProperties_CompDMHealing.cs" />
     <Compile Include="Comps\CompProperties_NakiPsylinkable.cs" />
+    <Compile Include="Comps\CompProperties_SpawnableBuilding.cs" />
+    <Compile Include="Comps\CompSpawnedBuilding.cs" />
     <Compile Include="Doers\IngestionOutcomeDoer_GiveHediffCheckRace.cs" />
     <Compile Include="Gizmos\Command_NakiWeaponAmmoCounter.cs" />
     <Compile Include="HarmonyPatches\Naki_HarmonyPatch.cs" />
+    <Compile Include="Hediffs\Hediff_Distorted.cs" />
     <Compile Include="Hediffs\Hediff_DMDisintegration.cs" />
     <Compile Include="Helpers\NakiHelpers.cs" />
     <Compile Include="Helpers\Naki_Defof.cs" />
@@ -94,5 +100,6 @@
   <ItemGroup>
     <Compile Include="Rituals\RitualPosition_PylonLinkingSpot.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

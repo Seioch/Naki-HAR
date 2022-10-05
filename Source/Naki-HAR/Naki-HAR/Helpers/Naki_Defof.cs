@@ -13,11 +13,15 @@ namespace Naki_HAR
     {
         public static HediffDef DMDisintegration;
         public static HediffDef Hediff_DMBurn;
+        public static HediffDef Naki_Distortion;
         public static DamageDef DMBurn;
         public static NeedDef NakiRaceDMNeed;
         public static ThingDef DarkMatter;
+        public static ThingDef Naki_DistortionFieldBuilding;
         public static SoundDef Naki_DM_Sizzle;
         public static SoundDef Naki_Distortion_Sustainer;
+
+        public static FleckDef Naki_Distortion_vibration;
 
         [MayRequireRoyalty]
         public static PreceptDef NakiPylonLinking;

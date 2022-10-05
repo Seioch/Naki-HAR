@@ -21,9 +21,18 @@
         </stages>
     </HediffDef>
 
+    <!-- Hediff to lower consciousness and breathing -->
+    <HediffDef>
+      <defName>Naki_Distortion</defName>
+      <label>gravitational distortion</label>
+      <description>Time-space distortion is hampering concentration and breathing.</description>
+      <initialSeverity>1</initialSeverity>
+      <hediffClass>Naki_HAR.Hediff_Distorted</hediffClass>
+	  </HediffDef>
+
     <!-- Hediff to slow down target by a lot -->
     <HediffDef>
-      <defName>DMStall</defName>
+      <defName>Naki_Stall</defName>
       <label>dark matter stall</label>
       <description>A localized gravity well is hampering movement</description>
       <isBad>true</isBad>
@@ -43,7 +52,7 @@
     <HediffDef ParentName = "PsycastHediffBase">
         <defName>DMConfusion</defName>
         <label>gravatational disorientation</label>
-        <description>A gravity well has destabilized the ear canal, causing disorientation.</description>
+        <description>Gravity waves have destabilized the ear canal, causing disorientation.</description>
         <isBad>true</isBad>
         <stages>
         <li>

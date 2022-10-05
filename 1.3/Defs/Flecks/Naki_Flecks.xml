@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <FleckDef ParentName="FleckBase">
+        <defName>Naki_Distortion_vibration</defName>
+        <fadeInTime>0.1</fadeInTime>
+        <fadeOutTime>0.35</fadeOutTime>
+        <solidTime>0.3</solidTime>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <graphicData>
+          <texPath>Naki/Flecks/distortion_fleck_ph</texPath>
+          <!-- <ticksPerFrame>3</ticksPerFrame> -->
+          <graphicClass>Graphic_FleckPulse</graphicClass>
+          <shaderType>MoteGlow</shaderType>
+          <!-- <random>true</random> -->
+        </graphicData>
+  </FleckDef>
+</Defs>
