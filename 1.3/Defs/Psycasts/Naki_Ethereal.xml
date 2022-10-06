@@ -4,11 +4,18 @@
     <ThingDef ParentName="EtherealThingBase">
         <defName>Naki_DistortionFieldBuilding</defName>
         <label>distortion field</label>
-        <category>Building</category>
-        <thingClass>Naki_HAR.CompDistortionField</thingClass>
+        <category>PsychicEmitter</category>
+        <thingClass>ThingWithComps</thingClass>
         <tickerType>Normal</tickerType>
         <drawOffscreen>true</drawOffscreen>
         <seeThroughFog>true</seeThroughFog>
+        <comps>
+            <li Class="Naki_HAR.CompProperties_DistortionField">
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>3000</delayTicks>
+            </li>
+        </comps>
     </ThingDef>
 
 </Defs>

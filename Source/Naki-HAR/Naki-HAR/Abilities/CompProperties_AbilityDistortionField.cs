@@ -16,12 +16,14 @@ namespace Naki_HAR
         }
 
         // The Distortion Field itself
-        // public ThingDef spawnableThing;
+        public ThingDef thingDef;
 
         // How big the distortion field is
         public float radius = 9.9f;
 
         // How many ticks should it last for
         public int duration = 2500;
+
+        public bool allowOnBuildings = true;
     }
 }

@@ -9,7 +9,7 @@ using Verse;
 
 namespace Naki_HAR
 {
-    class CompAbilityEffect_DistortionField : CompAbilityEffect
+    public class CompAbilityEffect_DistortionField : CompAbilityEffect
     {
         // Get the properties, as well as a reference to a CompDistortionField
         public new CompProperties_AbilityDistortionField Props
@@ -23,27 +23,27 @@ namespace Naki_HAR
         // Similar to how CompAbilityEffect_Waterskip works, but uses the GenSpawn utility to put a building there
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            Log.Message("[Naki HAR] Pre Apply");
             base.Apply(target, dest);
+            Log.Message("[Naki HAR] Apply");
             Map map = this.parent.pawn.Map;
 
-            Log.Message("[Naki HAR] Distortion Field Starting");
-            Thing building = GenSpawn.Spawn(Naki_Defof.Naki_DistortionFieldBuilding, target.Cell, map);
-            building.SetFactionDirect(this.parent.pawn.Faction);
+            Log.Message("[Naki HAR] Distortion Field Spawning");
+            GenSpawn.Spawn(this.Props.thingDef, target.Cell, map, WipeMode.Vanish);
+            //building.SetFactionDirect(this.parent.pawn.Faction);
 
-            CompSpawnedBuilding comp = building.TryGetComp<CompSpawnedBuilding>();
-            if (comp != null)
-            {
-                comp.lastDamageTick = Find.TickManager.TicksGame;
-                comp.damagePerTick = 0; // no damage for distortion field
+            //CompSpawnedBuilding comp = building.TryGetComp<CompSpawnedBuilding>();
+            //if (comp != null)
+            //{
+            //    comp.lastDamageTick = Find.TickManager.TicksGame;
+            //    comp.damagePerTick = 0; // no damage for distortion field
 
-                int duration = this.Props.duration;
-                if (duration > 0)
-                    comp.finalTick = comp.lastDamageTick + duration;
-            } else
-            {
-                Log.Warning("[Naki HAR] Could not spawn Distortion Field Effector");
-            }
+            //    int duration = this.Props.duration;
+            //    if (duration > 0)
+            //        comp.finalTick = comp.lastDamageTick + duration;
+            //} else
+            //{
+            //    Log.Warning("[Naki HAR] Could not spawn Distortion Field Effector");
+            //}
         }
 
         // Token: 0x060051B9 RID: 20921 RVA: 0x001B7D04 File Offset: 0x001B5F04
@@ -70,10 +70,10 @@ namespace Naki_HAR
             GenDraw.DrawFieldEdges(this.AffectedCells(target, this.parent.pawn.Map).ToList<IntVec3>(), this.Valid(target, false) ? Color.white : Color.red, null);
         }
 
-        // Token: 0x060051BB RID: 20923 RVA: 0x001B7D74 File Offset: 0x001B5F74
+        // checks if the target is valid
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
-            if (target.Cell.Filled(this.parent.pawn.Map))
+            if (target.Cell.Filled(this.parent.pawn.Map) || (target.Cell.GetFirstBuilding(this.parent.pawn.Map) != null))
             {
                 if (throwMessages)
                 {

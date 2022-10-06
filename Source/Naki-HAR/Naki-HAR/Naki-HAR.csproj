@@ -71,6 +71,7 @@
     <Compile Include="Comps\CompNakiPsylinkable.cs" />
     <Compile Include="Comps\CompNakiWeapons.cs" />
     <Compile Include="Comps\CompProperties_CompNakiWeapons.cs" />
+    <Compile Include="Comps\CompProperties_DistortionField.cs" />
     <Compile Include="Comps\CompProperties_DMDisintegration.cs" />
     <Compile Include="Comps\CompProperties_CompDMHealing.cs" />
     <Compile Include="Comps\CompProperties_NakiPsylinkable.cs" />

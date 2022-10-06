@@ -5,28 +5,35 @@
     <!-- ========================================= LEVEL 4 ========================================= -->
 
     <!-- VEF and VPE Based Psycast -->
-    <AbilityDef ParentName="PsycastBase">
+    <AbilityDef ParentName="PsycastBaseSkip">
         <defName>Naki_DistortionField</defName>
         <label>distortion field</label>
         <description>Distorts the time-space continuum in an area, causing victims to think slower.</description>
         <level>4</level>
         <iconPath>Naki/Psycasts/DistortionField</iconPath>
+        <canUseAoeToGetTargets>True</canUseAoeToGetTargets>
         <statBases>
             <Ability_EntropyGain>30</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.45</Ability_PsyfocusCost>
+            <Ability_PsyfocusCost>0.04</Ability_PsyfocusCost>
             <Ability_Duration>100</Ability_Duration>
             <Ability_EffectRadius>9.9</Ability_EffectRadius>
         </statBases>
         <verbProperties>
-            <range>19.9</range>
+            <warmupTime>1</warmupTime>
+            <range>24.9</range>
             <targetParams>
                 <canTargetPawns>False</canTargetPawns>
                 <canTargetLocations>True</canTargetLocations>
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="Naki_HAR.CompProperties_AbilityDistortionField">
-                <!-- <spawnableThing>Naki_DistortionField</spawnableThing> -->
+            <!-- <li Class="Naki_HAR.CompProperties_AbilityDistortionField"> -->
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>Naki_DistortionFieldBuilding</thingDef>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>BulletShieldAreaEffect</fleckDef>
+                <sound>Psycast_Skip_Exit</sound>
             </li>
         </comps>
     </AbilityDef> 
@@ -41,6 +48,9 @@
         <iconPath>Naki/Psycasts/Disintegration</iconPath>
         <verbProperties>
             <range>14.9</range>
+            <targetParams>
+                <canTargetAnimals>True</canTargetAnimals>
+            </targetParams>
         </verbProperties>
         <statBases>
             <Ability_EntropyGain>10</Ability_EntropyGain>
@@ -108,6 +118,9 @@
         </statBases>
         <verbProperties>
             <warmupTime>0.5</warmupTime>
+            <targetParams>
+                <canTargetAnimals>True</canTargetAnimals>
+            </targetParams>
         </verbProperties>
         <comps>
             <li Class = "CompProperties_AbilityGiveHediff">
@@ -167,6 +180,9 @@
         <iconPath>Naki/Psycasts/Decay</iconPath>
         <verbProperties>
             <range>14.9</range>
+            <targetParams>
+                <canTargetAnimals>True</canTargetAnimals>
+            </targetParams>
         </verbProperties>
         <statBases>
             <Ability_EntropyGain>10</Ability_EntropyGain>

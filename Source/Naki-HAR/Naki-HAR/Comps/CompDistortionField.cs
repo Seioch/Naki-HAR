@@ -11,7 +11,7 @@ using UnityEngine;
 namespace Naki_HAR
 {
     // Based on Vortex from VPE, this is an object that slows down and lowers the consciousness of pawns trapped in it
-    class CompDistortionField : ThingWithComps
+    class CompDistortionField : ThingComp
     {
 
         // Sound sustainer
@@ -26,38 +26,39 @@ namespace Naki_HAR
         // Radius of effect
         private float radius = 9.9f;
 
-        public override void Tick()
+        public override void CompTick()
         {
-            base.Tick();
+            base.CompTick();
+            Map parentMap = this.parent.Map;
             currentTicks++; // Increase the number of ticks that this Distortion Field has lived for
             bool flag = this.sustainer == null;
             if (flag)
             {
-                this.sustainer = SoundStarter.TrySpawnSustainer(Naki_Defof.Naki_Distortion_Sustainer, this);
+                this.sustainer = SoundStarter.TrySpawnSustainer(Naki_Defof.Naki_Distortion_Sustainer, this.parent);
             }
             this.sustainer.Maintain();
             for (int i = 0; i < 3; i++)
             {
-                FleckCreationData dataStatic = FleckMaker.GetDataStatic(this.RandomLocation(), base.Map, Naki_Defof.Naki_Distortion_vibration, 1f);
+                FleckCreationData dataStatic = FleckMaker.GetDataStatic(this.RandomLocation(), base.parent.Map, Naki_Defof.Naki_Distortion_vibration, 1f);
                 dataStatic.rotation = Rand.Range(0f, 360f);
-                base.Map.flecks.CreateFleck(dataStatic);
-                FleckMaker.ThrowSmoke(this.RandomLocation(), base.Map, 4f);
+                parentMap.flecks.CreateFleck(dataStatic);
+                FleckMaker.ThrowSmoke(this.RandomLocation(), parentMap, 4f);
             }
             bool flag2 = this.currentTicks >= maxTicks;
             if (flag2)
             {
                 Log.Message("[Naki HAR] Destroying distortion field");
-                this.Destroy(0);
+                this.parent.Destroy(0);
             }
-            bool flag3 = Gen.IsHashIntervalTick(this, 30);
+            bool flag3 = Gen.IsHashIntervalTick(this.parent, 30);
             if (flag3)
             {
-                foreach (Pawn pawn in GenRadial.RadialDistinctThingsAround(base.Position, base.Map, radius, true).OfType<Pawn>())
+                foreach (Pawn pawn in GenRadial.RadialDistinctThingsAround(base.parent.Position, parentMap, radius, true).OfType<Pawn>())
                 {
                     bool isMechanoid = pawn.RaceProps.IsMechanoid;
                     if (isMechanoid)
                     {
-                        pawn.stances.stunner.StunFor(30, this, false, true);
+                        pawn.stances.stunner.StunFor(30, this.parent, false, true);
                     }
                     else
                     {
@@ -73,9 +74,9 @@ namespace Naki_HAR
             }
         }
 
-        public override void Draw()
-        {
-        }
+        //public override void Draw()
+        //{
+        //}
 
         // Local helper to make sure that an inputted float x is set to 0 out of float max
         public static float Wrap(float x, float max)
@@ -91,7 +92,7 @@ namespace Naki_HAR
         // TODO: Document here exactly how this works
         private Vector3 RandomLocation()
         {
-            return this.DrawPos + Vector3Utility.RotatedBy(new Vector3(CompDistortionField.Wrap(Mathf.Abs(Rand.Gaussian(0f, 18.9f)), 18.9f), 0f, 0f), Rand.Range(0f, 360f));
+            return this.parent.DrawPos + Vector3Utility.RotatedBy(new Vector3(CompDistortionField.Wrap(Mathf.Abs(Rand.Gaussian(0f, 18.9f)), 18.9f), 0f, 0f), Rand.Range(0f, 360f));
         }
     }
 }

@@ -34,12 +34,12 @@ namespace Naki_HAR
                         new PawnCapacityModifier
                         {
                             capacity = PawnCapacityDefOf.Consciousness,
-                            setMax = Mathf.Lerp(0.4f, 0.8f, IntVec3Utility.DistanceTo(this.pawn.Position, this.field.Position) / fieldRadius)  
+                            setMax = Mathf.Lerp(0.4f, 0.8f, IntVec3Utility.DistanceTo(this.pawn.Position, this.field.parent.Position) / fieldRadius)  
                         },
                         new PawnCapacityModifier
                         {
                             capacity = PawnCapacityDefOf.Breathing,
-                            setMax = Mathf.Lerp(0.4f, 0.8f, IntVec3Utility.DistanceTo(this.pawn.Position, this.field.Position) / fieldRadius)
+                            setMax = Mathf.Lerp(0.4f, 0.8f, IntVec3Utility.DistanceTo(this.pawn.Position, this.field.parent.Position) / fieldRadius)
                         }
                     };
                 }
@@ -56,7 +56,7 @@ namespace Naki_HAR
         {
             get
             {
-                return this.field.Destroyed || IntVec3Utility.DistanceTo(this.pawn.Position, this.field.Position) >= fieldRadius;
+                return this.field.parent.Destroyed || IntVec3Utility.DistanceTo(this.pawn.Position, this.field.parent.Position) >= fieldRadius;
             }
         }
 
@@ -64,7 +64,8 @@ namespace Naki_HAR
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_References.Look<CompDistortionField>(ref this.field, "distortionfield", false);
+            // Could not expose the CompDistortionField here. Commenting it out to see what happens. 
+            // Scribe_References.Look<CompDistortionField>(ref this.field, "distortionfield", false);
         }
 
         // Token: 0x04000146 RID: 326
