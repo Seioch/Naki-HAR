@@ -23,6 +23,9 @@ namespace Naki_HAR
         // Maximum amount of ticks the Distortion Field can be alive for
         private int maxTicks = 2500;
 
+        // Radius of effect
+        private float radius = 9.9f;
+
         public override void Tick()
         {
             base.Tick();
@@ -43,12 +46,13 @@ namespace Naki_HAR
             bool flag2 = this.currentTicks >= maxTicks;
             if (flag2)
             {
+                Log.Message("[Naki HAR] Destroying distortion field");
                 this.Destroy(0);
             }
             bool flag3 = Gen.IsHashIntervalTick(this, 30);
             if (flag3)
             {
-                foreach (Pawn pawn in GenRadial.RadialDistinctThingsAround(base.Position, base.Map, 18.9f, true).OfType<Pawn>())
+                foreach (Pawn pawn in GenRadial.RadialDistinctThingsAround(base.Position, base.Map, radius, true).OfType<Pawn>())
                 {
                     bool isMechanoid = pawn.RaceProps.IsMechanoid;
                     if (isMechanoid)

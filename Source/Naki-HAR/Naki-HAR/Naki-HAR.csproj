@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abilities\CompAbilityEffect_SpawnEffector.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_DistortionField.cs" />
     <Compile Include="Abilities\CompProperties_AbilityDistortionField.cs" />
     <Compile Include="Comps\CompDistortionField.cs" />
     <Compile Include="Comps\CompDMDisintegration.cs" />

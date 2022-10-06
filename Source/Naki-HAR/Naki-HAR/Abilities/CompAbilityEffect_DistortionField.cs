@@ -23,9 +23,11 @@ namespace Naki_HAR
         // Similar to how CompAbilityEffect_Waterskip works, but uses the GenSpawn utility to put a building there
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            Log.Message("[Naki HAR] Pre Apply");
             base.Apply(target, dest);
             Map map = this.parent.pawn.Map;
 
+            Log.Message("[Naki HAR] Distortion Field Starting");
             Thing building = GenSpawn.Spawn(Naki_Defof.Naki_DistortionFieldBuilding, target.Cell, map);
             building.SetFactionDirect(this.parent.pawn.Faction);
 

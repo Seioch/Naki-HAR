@@ -15,7 +15,7 @@
             <Ability_EntropyGain>30</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.45</Ability_PsyfocusCost>
             <Ability_Duration>100</Ability_Duration>
-            <Ability_EffectRadius>18.9</Ability_EffectRadius>
+            <Ability_EffectRadius>9.9</Ability_EffectRadius>
         </statBases>
         <verbProperties>
             <range>19.9</range>
