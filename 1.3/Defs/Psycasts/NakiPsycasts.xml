@@ -4,16 +4,16 @@
     <!-- ========================================= LEVEL 5 ========================================= -->
     <!-- ========================================= LEVEL 4 ========================================= -->
 
-    <!-- VEF and VPE Based Psycast -->
-    <AbilityDef ParentName="PsycastBaseSkip">
+    <AbilityDef ParentName="PsycastBase">
         <defName>Naki_DistortionField</defName>
         <label>distortion field</label>
         <description>Distorts the time-space continuum in an area, causing victims to think slower.</description>
         <level>4</level>
         <iconPath>Naki/Psycasts/DistortionField</iconPath>
-        <canUseAoeToGetTargets>True</canUseAoeToGetTargets>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <statBases>
-            <Ability_EntropyGain>30</Ability_EntropyGain>
+        <!-- Testing numbers change later -->
+            <Ability_EntropyGain>10</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.04</Ability_PsyfocusCost>
             <Ability_Duration>100</Ability_Duration>
             <Ability_EffectRadius>9.9</Ability_EffectRadius>
@@ -28,10 +28,10 @@
         </verbProperties>
         <comps>
             <!-- <li Class="Naki_HAR.CompProperties_AbilityDistortionField"> -->
-            <li Class="CompProperties_AbilitySpawn">
-                <thingDef>Naki_DistortionFieldBuilding</thingDef>
+            <li Class = "CompProperties_AbilitySpawn">
+                <thingDef>SolarPinhole</thingDef>
             </li>
-            <li Class="CompProperties_AbilityFleckOnTarget">
+            <li Class = "CompProperties_AbilityFleckOnTarget">
                 <fleckDef>BulletShieldAreaEffect</fleckDef>
                 <sound>Psycast_Skip_Exit</sound>
             </li>
@@ -69,7 +69,7 @@
         <defName>Naki_MassFog</defName>
         <label>mass fog</label>
         <description>Induce noise in the visual centers of the brain, obscuring vision of everyone near the target point.</description>
-        <level>2</level>
+        <level>3</level>
         <iconPath>Naki/Psycasts/MassFog</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <!-- <hotKey>Misc5</hotKey> -->

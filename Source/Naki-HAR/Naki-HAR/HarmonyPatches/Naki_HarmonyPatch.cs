@@ -35,6 +35,10 @@ namespace Naki_HAR
             Log.Message("[Naki HAR] Patching MeditationUtility");
             harm.Patch(AccessTools.Method(typeof(MeditationUtility), "GetMeditationJob"),
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(GetMeditationJob_Postfix)));
+            // Log.Message("[Naki HAR] Patching Apply");
+            //harm.Patch(AccessTools.Method(typeof(CompAbilityEffect), "Apply"),
+            //    prefix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(Apply_Prefix)));
+            Log.Message("[Naki HAR] Patching complete!");
         }
 
         public static void VerbTrackerAmmo_Postfix(ref VerbTracker __instance, ref IEnumerable<Command> __result)
@@ -108,6 +112,12 @@ namespace Naki_HAR
                 return true;
             }
         }
+
+        //public static bool Apply_Prefix(LocalTargetInfo target, LocalTargetInfo dest)
+        //{
+        //    Log.Message("[Naki HAR] Apply_Prefix was called, which means an apply was called from a psycast");
+        //    return true;
+        //}
 
         // This prefix intercepts the code path to getting a meditation job. If the pawn is a Naki, create an Attunement jobdef instead. 
         public static void GetMeditationJob_Postfix(ref Job __result, Pawn pawn, bool forJoy = false)
