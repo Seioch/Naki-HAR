@@ -10,6 +10,7 @@ namespace Naki_HAR
 {
     public class CompProperties_AbilityDistortionField : CompProperties_AbilityEffect
     {
+        // Orphaned?
         public CompProperties_AbilityDistortionField()
         {
             this.compClass = typeof(CompAbilityEffect_DistortionField);

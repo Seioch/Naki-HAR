@@ -13,7 +13,7 @@
             <li Class="Naki_HAR.CompProperties_DistortionField">
             </li>
             <li Class="CompProperties_DestroyAfterDelay">
-                <delayTicks>3000</delayTicks>
+                <delayTicks>2000</delayTicks>
             </li>
         </comps>
     </ThingDef>

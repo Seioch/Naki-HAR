@@ -16,7 +16,7 @@ namespace Naki_HAR
         // The closer the pawn is to the center, the stronger the penalty to consciousness and breathing is made
         // Note that here 18.9 is the static unchanging radius of the field. We can change this later if you want larger/smaller fields
 
-        private readonly float fieldRadius = 18.9f;
+        private readonly float fieldRadius = 9.9f;
 
         public override HediffStage CurStage
         {

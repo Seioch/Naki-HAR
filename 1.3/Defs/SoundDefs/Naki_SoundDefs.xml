@@ -29,7 +29,7 @@
           <grains>
             <li Class="AudioGrain_Clip">
               <!-- TODO: Make distortion field sustainer -->
-              <clipPath>Naki/sizzle</clipPath>
+              <clipPath>Naki/DistortionField</clipPath>
             </li>
           </grains>
           <volumeRange>42</volumeRange>

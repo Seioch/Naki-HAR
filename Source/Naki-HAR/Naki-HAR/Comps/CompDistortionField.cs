@@ -21,7 +21,7 @@ namespace Naki_HAR
         private int currentTicks = 0;
 
         // Maximum amount of ticks the Distortion Field can be alive for
-        private int maxTicks = 2500;
+        private int maxTicks = 800;
 
         // Radius of effect
         private float radius = 9.9f;
@@ -48,6 +48,7 @@ namespace Naki_HAR
             if (flag2)
             {
                 Log.Message("[Naki HAR] Destroying distortion field");
+                this.sustainer.End();
                 this.parent.Destroy(0);
             }
             bool flag3 = Gen.IsHashIntervalTick(this.parent, 30);
@@ -92,7 +93,7 @@ namespace Naki_HAR
         // TODO: Document here exactly how this works
         private Vector3 RandomLocation()
         {
-            return this.parent.DrawPos + Vector3Utility.RotatedBy(new Vector3(CompDistortionField.Wrap(Mathf.Abs(Rand.Gaussian(0f, 18.9f)), 18.9f), 0f, 0f), Rand.Range(0f, 360f));
+            return this.parent.DrawPos + Vector3Utility.RotatedBy(new Vector3(CompDistortionField.Wrap(Mathf.Abs(Rand.Gaussian(0f, radius)), radius), 0f, 0f), Rand.Range(0f, 360f));
         }
     }
 }
