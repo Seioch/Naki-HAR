@@ -29,7 +29,7 @@
         <comps>
             <!-- <li Class="Naki_HAR.CompProperties_AbilityDistortionField"> -->
             <li Class = "CompProperties_AbilitySpawn">
-                <thingDef>SolarPinhole</thingDef>
+                <thingDef>Naki_DistortionFieldBuilding</thingDef>
             </li>
             <li Class = "CompProperties_AbilityFleckOnTarget">
                 <fleckDef>BulletShieldAreaEffect</fleckDef>
