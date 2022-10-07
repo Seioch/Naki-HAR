@@ -11,7 +11,7 @@ namespace Naki_HAR
 {
     public class CompAbilityEffect_DistortionField : CompAbilityEffect
     {
-        // Orphaned?
+        // Orphaned. TODO Clean up and delete this later
         // Get the properties, as well as a reference to a CompDistortionField
         public new CompProperties_AbilityDistortionField Props
         {

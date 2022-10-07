@@ -7,9 +7,9 @@ using Verse;
 
 namespace Naki_HAR
 {
-    public class CompProperties_DistortionField : CompProperties
+    class CompProperties_AnnihilationField : CompProperties
     {
-        public CompProperties_DistortionField()
+        public CompProperties_AnnihilationField()
         {
             this.compClass = typeof(CompDistortionField);
         }

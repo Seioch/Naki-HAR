@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <!-- Hediff to increase pawn capacities -->
     <HediffDef ParentName = "PsycastHediffBase">
         <defName>Naki_Amplify</defName>
         <label>dark matter amplification</label>
@@ -44,6 +45,30 @@
               <setMax>0.2</setMax>
             </li>
           </capMods>
+        </li>
+      </stages>
+    </HediffDef>
+
+    <!-- Lower hearing and vision. A lot like PsychicBlindness but scaled up for a level 4 psycast -->
+    <HediffDef ParentName = "PsycastHediffBase">
+      <defName>Naki_Darkness</defName>
+      <label>darkness</label>
+      <description>Dark matter is annihilating light as it enters the eyes, causing blindness and mild disorientation.</description>
+      <isBad>true</isBad>
+      <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Sight</capacity>
+              <setMax>0.5</setMax>
+            </li>
+            <li>
+              <!-- Realistically hearing doesn't affect anything other than social but this is good flavor I guess. -->
+              <capacity>Hearing</capacity>
+              <setMax>0.5</setMax>
+            </li>
+          </capMods>
+          <capacityFactorEffectMultiplier>PsychicSensitivity</capacityFactorEffectMultiplier>
         </li>
       </stages>
     </HediffDef>

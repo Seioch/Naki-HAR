@@ -2,7 +2,114 @@
 <Defs>
     <!-- ========================================= LEVEL 6 ========================================= -->
     <!-- ========================================= LEVEL 5 ========================================= -->
+
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_MassDestruction</defName>
+        <label>mass destruction</label>
+        <description>Implants a large shard of dark matter into the living things in an area, causing rapid disintegration in the affected victims.</description>
+        <level>5</level>
+        <iconPath>Naki/Psycasts/MassDestruction</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <statBases>
+        <Ability_EntropyGain>50</Ability_EntropyGain>
+        <Ability_PsyfocusCost>0.55</Ability_PsyfocusCost>
+        <Ability_Duration>60</Ability_Duration>
+        <Ability_EffectRadius>3.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+        <warmupTime>1</warmupTime>
+        <range>34.9</range>
+        <targetParams>
+            <canTargetHumans>True</canTargetHumans>
+            <canTargetMechs>True</canTargetMechs>
+            <canTargetAnimals>True</canTargetAnimals>
+            <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class = "CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>DMDisintegration</hediffDef>
+            <psychic>False</psychic>
+            <goodwillImpact>-65</goodwillImpact>
+            <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDef>PsycastPsychicEffect</fleckDef>
+        </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="PsycastBaseSkip">
+        <defName>Naki_DMShield</defName>
+        <label>dark matter bullet shield</label>
+        <description>Creates a small sphere that annihilates fast moving objects. Does not affect people or animals.</description>
+        <level>5</level>
+        <iconPath>UI/Abilities/BulletShield</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <statBases>
+            <Ability_EntropyGain>35</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.55</Ability_PsyfocusCost>
+            <Ability_EffectRadius>3.9</Ability_EffectRadius>
+            <Ability_Duration>15</Ability_Duration>
+        </statBases>
+        <verbProperties>
+        <warmupTime>1</warmupTime>
+        <range>24.9</range>
+        <targetParams>
+            <canTargetPawns>False</canTargetPawns>
+            <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilitySpawn">
+            <thingDef>BulletShieldPsychic</thingDef>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDef>BulletShieldAreaEffect</fleckDef>
+            <sound>Psycast_Skip_Exit</sound>
+        </li>
+        </comps>
+    </AbilityDef>
+
     <!-- ========================================= LEVEL 4 ========================================= -->
+
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_Regeneration</defName>
+        <label>regeneration</label>
+        <description>Transmute dark matter into flesh on a target, closing grevious wounds. The sudden regeneration of flesh pains and fatigues the target greatly.</description>
+        <level>4</level>
+        <iconPath>Naki/Psycasts/Regeneration</iconPath>
+        <statBases>
+            <Ability_EntropyGain>30</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.45</Ability_PsyfocusCost>
+        </statBases>
+        <verbProperties>
+            <warmupTime>1.5</warmupTime>
+            <range>10.9</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "Naki_HAR.CompProperties_CompDMHealing">
+		        <compClass>Naki_HAR.CompDMHealing</compClass>
+		        <sound>PsycastPsychicEffect</sound>
+                <maxApplications>14</maxApplications>
+                <healingEffectiveness>0.2</healingEffectiveness>
+            </li>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>DMHealingPenalty</hediffDef>
+                <onlyBrain>True</onlyBrain>
+                <psychic>True</psychic>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+            </li>
+        </comps>
+    </AbilityDef>
 
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_DistortionField</defName>
@@ -13,8 +120,8 @@
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <statBases>
         <!-- Testing numbers change later -->
-            <Ability_EntropyGain>10</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.04</Ability_PsyfocusCost>
+            <Ability_EntropyGain>40</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.4</Ability_PsyfocusCost>
             <Ability_Duration>15</Ability_Duration>
             <Ability_EffectRadius>9.9</Ability_EffectRadius>
         </statBases>
@@ -37,6 +144,45 @@
             </li>
         </comps>
     </AbilityDef> 
+
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_Darkness</defName>
+        <label>darkness pulse</label>
+        <description>A cloud of Dark Matter spawned in the eyes of the target destroys light as it enters the eye, causing blindness.</description>
+        <level>4</level>
+        <iconPath>Naki/Psycasts/DarknessPulse</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <!-- <hotKey>Misc5</hotKey> -->
+        <statBases>
+            <Ability_EntropyGain>20</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.04</Ability_PsyfocusCost>
+            <Ability_Duration>30</Ability_Duration>
+            <Ability_EffectRadius>4.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+        <warmupTime>1</warmupTime>
+        <range>24.9</range>
+        <targetParams>
+            <canTargetSelf>True</canTargetSelf>
+            <canTargetAnimals>True</canTargetAnimals>
+            <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class = "CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>Naki_Darkness</hediffDef>
+            <onlyBrain>True</onlyBrain>
+            <psychic>False</psychic>
+            <goodwillImpact>-25</goodwillImpact>
+            <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDef>PsycastPsychicEffect</fleckDef>
+        </li>
+        </comps>
+  </AbilityDef>
+
 
     <!-- ========================================= LEVEL 3 ========================================= -->
 

@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    <!-- EtherealThingBase from base RW -->
+    <!-- EtherealThingBase is part of base RW -->
+
+    <!-- Distortion field -->
+    <ThingDef ParentName="EtherealThingBase">
+        <defName>Naki_DistortionFieldBuilding</defName>
+        <label>distortion field</label>
+        <category>PsychicEmitter</category>
+        <thingClass>ThingWithComps</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawOffscreen>true</drawOffscreen>
+        <seeThroughFog>true</seeThroughFog>
+        <comps>
+            <li Class="Naki_HAR.CompProperties_DistortionField">
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>2000</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Annihilation Field -->
     <ThingDef ParentName="EtherealThingBase">
         <defName>Naki_DistortionFieldBuilding</defName>
         <label>distortion field</label>

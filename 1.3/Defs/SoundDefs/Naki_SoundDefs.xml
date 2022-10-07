@@ -11,8 +11,8 @@
                 <clipPath>Naki/sizzle</clipPath>
               </li>
             </grains>
-            <volumeRange>70~100</volumeRange>
-            <distRange>1~30</distRange>
+            <volumeRange>50~70</volumeRange>
+            <distRange>20~50</distRange>
           </li>
         </subSounds>
     </SoundDef>

@@ -14,7 +14,7 @@ namespace Naki_HAR
         // This is the Hediff that is applied to a pawn caught in a distortion field
         // The stages here return two PawnCapacityModifiers, set by how close the pawn is to the center of the distortion field. 
         // The closer the pawn is to the center, the stronger the penalty to consciousness and breathing is made
-        // Note that here 18.9 is the static unchanging radius of the field. We can change this later if you want larger/smaller fields
+        // Note that here 9.9 is the static unchanging radius of the field. We can change this later if you want larger/smaller fields
 
         private readonly float fieldRadius = 9.9f;
 
