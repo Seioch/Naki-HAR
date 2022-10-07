@@ -14,4 +14,16 @@
           <!-- <random>true</random> -->
         </graphicData>
   </FleckDef>
+  <FleckDef ParentName="FleckBase">
+        <defName>Naki_BlackHole</defName>
+        <fadeInTime>0.1</fadeInTime>
+        <fadeOutTime>0.1</fadeOutTime>
+        <solidTime>3</solidTime>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <graphicData>
+          <texPath>Naki/Flecks/BlackHole</texPath>
+          <graphicClass>Graphic_FleckSplash</graphicClass>
+          <shaderType>MoteGlow</shaderType>
+        </graphicData>
+  </FleckDef>
 </Defs>

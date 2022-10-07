@@ -22,15 +22,15 @@
 
     <!-- Annihilation Field -->
     <ThingDef ParentName="EtherealThingBase">
-        <defName>Naki_DistortionFieldBuilding</defName>
-        <label>distortion field</label>
+        <defName>Naki_AnnihilationField</defName>
+        <label>annihilation field</label>
         <category>PsychicEmitter</category>
         <thingClass>ThingWithComps</thingClass>
         <tickerType>Normal</tickerType>
         <drawOffscreen>true</drawOffscreen>
         <seeThroughFog>true</seeThroughFog>
         <comps>
-            <li Class="Naki_HAR.CompProperties_DistortionField">
+            <li Class="Naki_HAR.CompProperties_AnnihilationField">
             </li>
             <li Class="CompProperties_DestroyAfterDelay">
                 <delayTicks>2000</delayTicks>

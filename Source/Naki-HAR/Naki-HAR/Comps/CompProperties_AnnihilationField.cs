@@ -7,11 +7,18 @@ using Verse;
 
 namespace Naki_HAR
 {
-    class CompProperties_AnnihilationField : CompProperties
+    public class CompProperties_AnnihilationField : CompProperties
     {
         public CompProperties_AnnihilationField()
         {
-            this.compClass = typeof(CompDistortionField);
+            this.compClass = typeof(CompAnnihilationField);
         }
+
+        // The maximum amount of time the Annihilation Field can last 
+        public int maxticks = 900;
+
+        public float radius = 11.9f;
+
+        public float damagePerTick = 1.0f;
     }
 }

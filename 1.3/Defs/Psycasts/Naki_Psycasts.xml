@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     <!-- ========================================= LEVEL 6 ========================================= -->
+
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_AnnihilationField</defName>
+        <label>annihilation field</label>
+        <description>Creates a miniature black hole in the area, drawing in and disintegrating all living creatures that go near it.</description>
+        <level>6</level>
+        <iconPath>Naki/Psycasts/AnnihilationField</iconPath>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <statBases>
+        <!-- Testing numbers change later -->
+            <Ability_EntropyGain>10</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.1</Ability_PsyfocusCost>
+            <Ability_Duration>15</Ability_Duration>
+            <Ability_EffectRadius>14.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <warmupTime>1</warmupTime>
+            <range>28.9</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <!-- <li Class="Naki_HAR.CompProperties_AbilityDistortionField"> -->
+            <li Class = "CompProperties_AbilitySpawn">
+                <thingDef>Naki_AnnihilationField</thingDef>
+            </li>
+            <li Class = "CompProperties_AbilityFleckOnTarget">
+                <fleckDef>BulletShieldAreaEffect</fleckDef>
+                <sound>Psycast_Skip_Exit</sound>
+            </li>
+        </comps>
+    </AbilityDef> 
+
     <!-- ========================================= LEVEL 5 ========================================= -->
 
     <AbilityDef ParentName="PsycastBase">
