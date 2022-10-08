@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Verse;
+using Verse.Sound;
 using RimWorld;
 using UnityEngine;
 
 namespace Naki_HAR
 {
+    [StaticConstructorOnStartup]
     public class CompAnnihilationField : ThingComp
     {
         public int currentTicks = 0;
@@ -22,17 +24,19 @@ namespace Naki_HAR
 
         public static float lerpSpeed = 0.01f;
 
-        // Where the field is (it won't move anyways)
-        private IntVec3 fieldPos;
+        private bool spawnedBlackHole = false;
 
-        // The field's current rotation;
-        private Rot4 fieldRot;
+        // Sound sustainer
+        private Sustainer sustainer;
 
-        // Where the field graphic is
-        private Vector3 drawPos;
+        // Materials for effects taken from CompProjectileInterceptor
+        private static readonly Material ForceFieldMat = MaterialPool.MatFrom("Other/ForceField", ShaderDatabase.MoteGlow);
 
-        // Cached ref to the parent's map
-        private Map parentMap;
+        private static readonly Material ForceFieldConeMat = MaterialPool.MatFrom("Other/ForceFieldCone", ShaderDatabase.MoteGlow);
+
+        private static readonly MaterialPropertyBlock MatPropertyBlock = new MaterialPropertyBlock();
+
+        private const float TextureActualRingSizeFactor = 1.1601562f;
 
         public CompProperties_AnnihilationField Props
         {
@@ -42,45 +46,80 @@ namespace Naki_HAR
             }
         }
 
-        public override void Initialize(CompProperties props)
+        public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            base.Initialize(props);
-            fieldPos = this.parent.Position;
-            drawPos = this.parent.DrawPos;
-            fieldRot = this.parent.Rotation;
-            parentMap = this.parent.Map;
+            base.PostSpawnSetup(respawningAfterLoad);
+
+            Log.Message("[Naki HAR] Annihilation Field Activating");
+
+            // fieldPos = this.parent.Position;
+            // drawPos = this.parent.DrawPos;
+            // fieldRot = this.parent.Rotation;
+            // parentMap = this.parent.Map;
 
             // Black hole center Fleck graphic
-            FleckCreationData dataStatic = FleckMaker.GetDataStatic(drawPos, parentMap, Naki_Defof.Naki_BlackHole, 1f);
-            dataStatic.rotationRate = 1f;
-            parentMap.flecks.CreateFleck(dataStatic);
+            //FleckCreationData dataStatic = FleckMaker.GetDataStatic(this.parent.Position.ToVector3(), this.parent.Map, Naki_Defof.Naki_BlackHole, 1f);
+            //dataStatic.rotationRate = 1f;
+            //this.parent.Map.flecks.CreateFleck(dataStatic);
+        }
+
+        public override void PostDraw()
+        {
+            base.PostDraw();
+
+            Vector3 pos = this.parent.Position.ToVector3Shifted();
+            pos.y = AltitudeLayer.MoteOverhead.AltitudeFor();
+
+            CompAnnihilationField.MatPropertyBlock.SetColor(ShaderPropertyIDs.Color, Color.black);
+            Matrix4x4 matrix = default(Matrix4x4);
+            matrix.SetTRS(pos, Quaternion.identity, new Vector3(this.Props.radius * 2f * 1.1601562f, 1f, this.Props.radius * 2f * 1.1601562f));
+            Graphics.DrawMesh(MeshPool.plane10, matrix, CompAnnihilationField.ForceFieldMat, 0, null, 0, CompAnnihilationField.MatPropertyBlock);
         }
 
         public override void CompTick()
         {
+            base.CompTick();
             // Increment the amount of ticks the field has existed for
             currentTicks++;
+
+            bool flag = this.sustainer == null;
+            if (flag)
+            {
+                this.sustainer = SoundStarter.TrySpawnSustainer(Naki_Defof.Naki_Distortion_Sustainer, this.parent);
+            }
+            this.sustainer.Maintain();
+
+            if (!spawnedBlackHole)
+            {
+                FleckCreationData dataStatic = FleckMaker.GetDataStatic(this.parent.DrawPos, this.parent.Map, Naki_Defof.Naki_BlackHole, 6f);
+                dataStatic.rotation = Rand.Range(0f, 360f);
+                this.parent.Map.flecks.CreateFleck(dataStatic);
+                spawnedBlackHole = true; // do it once
+            }
+
             bool selfDestroy = this.currentTicks >= this.Props.maxticks;
             if (selfDestroy)
             {
-                Log.Message("[Naki HAR] Destroying annihilation field");
+                Log.Message("[Naki HAR] Destroying Annihilation field");
                 // this.sustainer.End();
+                this.sustainer.End();
                 this.parent.Destroy(0);
                 return;
             }
-            // Check to see if any pawns should be drawn in every 250 ticks
-            // Null Reference error here
-            if (this.tmpPawns.Any() && currentTicks % GenTicks.TickRareInterval == 0)
+            // Check to see if any pawns should be drawn in every 30 ticks
+            // Null Reference error here?
+            if (currentTicks % 30 == 0)
             {
-                this.tmpPawns.Clear();
+                Log.Message("[Naki HAR] Annihilation field checking for victims");
+                // this.tmpPawns.Clear();
                 int rangeForGrabbingPawns = Mathf.RoundToInt(this.Props.radius * 2);
                 IntVec2 rangeIntVec2 = new IntVec2(rangeForGrabbingPawns, rangeForGrabbingPawns);
 
-                foreach (IntVec3 intVec3 in GenAdj.OccupiedRect(fieldPos, fieldRot, rangeIntVec2))
+                foreach (IntVec3 intVec3 in GenAdj.OccupiedRect(this.parent.Position, this.parent.Rotation, rangeIntVec2))
                 {
-                    if (!intVec3.InBounds(parentMap))
+                    if (!intVec3.InBounds(this.parent.Map))
                         continue;
-                    List<Thing> cellThings = parentMap.thingGrid.ThingsListAt(intVec3);
+                    List<Thing> cellThings = this.parent.Map.thingGrid.ThingsListAt(intVec3);
                     if (cellThings == null)
                         continue;
 
@@ -97,25 +136,29 @@ namespace Naki_HAR
             }
 
             // Move victim pawns closer to the middle and damage them if they are in there
-            foreach (Pawn pawn in this.tmpPawns)
+            bool flag3 = Gen.IsHashIntervalTick(this.parent, 30);
+            if (flag3)
             {
-                if (!pawn.DestroyedOrNull() && pawn.Spawned)
+                foreach (Pawn pawn in this.tmpPawns)
                 {
-                    if (pawn.Position != fieldPos)
+                    if (!pawn.DestroyedOrNull() && pawn.Spawned)
                     {
-                        Vector3 vector3 = Vector3.Lerp(pawn.Position.ToVector3(), fieldPos.ToVector3(), lerpSpeed);
-                        pawn.Position = vector3.ToIntVec3();
-                        pawn.Notify_Teleported();
-                        pawn.pather.nextCell = fieldPos;
-                    }
+                        if (pawn.Position != this.parent.Position)
+                        {
+                            Vector3 vector3 = Vector3.Lerp(pawn.Position.ToVector3(), this.parent.Position.ToVector3(), lerpSpeed);
+                            pawn.Position = vector3.ToIntVec3();
+                            pawn.Notify_Teleported();
+                            pawn.pather.nextCell = this.parent.Position;
+                        }
 
-                    if (this.Props.damagePerTick > 0)
-                    {
-                        DamageInfo dinfo = new DamageInfo(DamageDefOf.Blunt, this.Props.damagePerTick / GenTicks.TicksPerRealSecond, float.MaxValue, instigator: this.parent);
-                        pawn.TakeDamage(dinfo);
+                        if (this.Props.damagePerTick > 0)
+                        {
+                            DamageInfo dinfo = new DamageInfo(DamageDefOf.Blunt, this.Props.damagePerTick, float.MaxValue, instigator: this.parent);
+                            pawn.TakeDamage(dinfo);
+                        }
                     }
                 }
-            }
+            }   
         }
     }
 }

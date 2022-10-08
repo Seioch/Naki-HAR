@@ -15,10 +15,10 @@ namespace Naki_HAR
         }
 
         // The maximum amount of time the Annihilation Field can last 
-        public int maxticks = 900;
+        public int maxticks = 600;
 
-        public float radius = 11.9f;
+        public float radius = 6.9f;
 
-        public float damagePerTick = 1.0f;
+        public float damagePerTick = 3.0f;
     }
 }
