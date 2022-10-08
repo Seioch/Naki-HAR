@@ -20,17 +20,19 @@
         </comps>
     </ThingDef>
 
-    <!-- Annihilation Field -->
+    <!-- Gravity Well -->
     <ThingDef ParentName="EtherealThingBase">
-        <defName>Naki_AnnihilationField</defName>
-        <label>annihilation field</label>
+        <defName>Naki_GravityWell</defName>
+        <label>gravity well</label>
         <category>PsychicEmitter</category>
         <thingClass>ThingWithComps</thingClass>
         <tickerType>Normal</tickerType>
         <drawOffscreen>true</drawOffscreen>
         <seeThroughFog>true</seeThroughFog>
         <comps>
-            <li Class="Naki_HAR.CompProperties_AnnihilationField">
+            <li Class="Naki_HAR.CompProperties_GravityWell">
+                <damagePerTick>0</damagePerTick>
+                <maxticks>300</maxticks>
             </li>
             <li Class="CompProperties_DestroyAfterDelay">
                 <delayTicks>2000</delayTicks>

@@ -3,11 +3,11 @@
     <!-- ========================================= LEVEL 6 ========================================= -->
 
     <AbilityDef ParentName="PsycastBase">
-        <defName>Naki_AnnihilationField</defName>
-        <label>annihilation field</label>
-        <description>Creates a miniature black hole in the area, drawing in and disintegrating all living creatures that go near it.</description>
+        <defName>Naki_GravityWell</defName>
+        <label>graviy well</label>
+        <description>Creates a miniature black hole in the area, drawing in all living creatures that go near it.</description>
         <level>6</level>
-        <iconPath>Naki/Psycasts/AnnihilationField</iconPath>
+        <iconPath>Naki/Psycasts/GravityWell</iconPath>
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <statBases>
         <!-- Testing numbers change later -->
@@ -27,7 +27,7 @@
         <comps>
             <!-- <li Class="Naki_HAR.CompProperties_AbilityDistortionField"> -->
             <li Class = "CompProperties_AbilitySpawn">
-                <thingDef>Naki_AnnihilationField</thingDef>
+                <thingDef>Naki_GravityWell</thingDef>
             </li>
             <li Class = "CompProperties_AbilityFleckOnTarget">
                 <fleckDef>BulletShieldAreaEffect</fleckDef>
@@ -36,13 +36,11 @@
         </comps>
     </AbilityDef> 
 
-    <!-- ========================================= LEVEL 5 ========================================= -->
-
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_MassDestruction</defName>
         <label>mass destruction</label>
-        <description>Implants a large shard of dark matter into the living things in an area, causing rapid disintegration in the affected victims.</description>
-        <level>5</level>
+        <description>Implants a large shard of dark matter into all living things in an area, causing rapid disintegration in the affected victims.</description>
+        <level>6</level>
         <iconPath>Naki/Psycasts/MassDestruction</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <statBases>
@@ -74,6 +72,33 @@
         </li>
         </comps>
     </AbilityDef>
+
+    <!-- ========================================= LEVEL 5 ========================================= -->
+
+    <AbilityDef ParentName="PsycastBase">
+        <defName>Naki_Disintegrate_Large</defName>
+        <label>annihilation</label>
+        <description>Implants a shard of dark matter in the target, causing flesh to decay rapidly.</description>
+        <level>5</level>
+        <iconPath>Naki/Psycasts/Annihilation</iconPath>
+        <verbProperties>
+            <range>14.9</range>
+            <targetParams>
+                <canTargetAnimals>True</canTargetAnimals>
+            </targetParams>
+        </verbProperties>
+        <statBases>
+            <Ability_EntropyGain>35</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.25</Ability_PsyfocusCost>
+        </statBases>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>DMAnnihilation</hediffDef>
+                <psychic>False</psychic>
+            </li>
+        </comps>
+    </AbilityDef> 
 
     <AbilityDef ParentName="PsycastBaseSkip">
         <defName>Naki_DMShield</defName>

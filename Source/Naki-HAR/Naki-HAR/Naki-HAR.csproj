@@ -64,14 +64,14 @@
   <ItemGroup>
     <Compile Include="Abilities\CompAbilityEffect_DistortionField.cs" />
     <Compile Include="Abilities\CompProperties_AbilityDistortionField.cs" />
-    <Compile Include="Comps\CompAnnihilationField.cs" />
+    <Compile Include="Comps\CompGravityWell.cs" />
     <Compile Include="Comps\CompDistortionField.cs" />
     <Compile Include="Comps\CompDMDisintegration.cs" />
     <Compile Include="Comps\CompDMHealing.cs" />
     <Compile Include="Comps\CompNakiPostSpawn.cs" />
     <Compile Include="Comps\CompNakiPsylinkable.cs" />
     <Compile Include="Comps\CompNakiWeapons.cs" />
-    <Compile Include="Comps\CompProperties_AnnihilationField.cs" />
+    <Compile Include="Comps\CompProperties_GravityWell.cs" />
     <Compile Include="Comps\CompProperties_CompNakiWeapons.cs" />
     <Compile Include="Comps\CompProperties_DistortionField.cs" />
     <Compile Include="Comps\CompProperties_DMDisintegration.cs" />

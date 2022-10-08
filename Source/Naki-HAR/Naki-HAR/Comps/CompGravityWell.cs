@@ -11,7 +11,7 @@ using UnityEngine;
 namespace Naki_HAR
 {
     [StaticConstructorOnStartup]
-    public class CompAnnihilationField : ThingComp
+    public class CompGravityWell : ThingComp
     {
         public int currentTicks = 0;
 
@@ -38,11 +38,11 @@ namespace Naki_HAR
 
         private const float TextureActualRingSizeFactor = 1.1601562f;
 
-        public CompProperties_AnnihilationField Props
+        public CompProperties_GravityWell Props
         {
             get
             {
-                return (CompProperties_AnnihilationField)this.props;
+                return (CompProperties_GravityWell)this.props;
             }
         }
 
@@ -70,10 +70,10 @@ namespace Naki_HAR
             Vector3 pos = this.parent.Position.ToVector3Shifted();
             pos.y = AltitudeLayer.MoteOverhead.AltitudeFor();
 
-            CompAnnihilationField.MatPropertyBlock.SetColor(ShaderPropertyIDs.Color, Color.black);
+            CompGravityWell.MatPropertyBlock.SetColor(ShaderPropertyIDs.Color, Color.black);
             Matrix4x4 matrix = default(Matrix4x4);
             matrix.SetTRS(pos, Quaternion.identity, new Vector3(this.Props.radius * 2f * 1.1601562f, 1f, this.Props.radius * 2f * 1.1601562f));
-            Graphics.DrawMesh(MeshPool.plane10, matrix, CompAnnihilationField.ForceFieldMat, 0, null, 0, CompAnnihilationField.MatPropertyBlock);
+            Graphics.DrawMesh(MeshPool.plane10, matrix, CompGravityWell.ForceFieldMat, 0, null, 0, CompGravityWell.MatPropertyBlock);
         }
 
         public override void CompTick()
@@ -107,7 +107,6 @@ namespace Naki_HAR
                 return;
             }
             // Check to see if any pawns should be drawn in every 30 ticks
-            // Null Reference error here?
             if (currentTicks % 30 == 0)
             {
                 Log.Message("[Naki HAR] Annihilation field checking for victims");
@@ -134,10 +133,10 @@ namespace Naki_HAR
                     }
                 }
             }
-
             // Move victim pawns closer to the middle and damage them if they are in there
-            bool flag3 = Gen.IsHashIntervalTick(this.parent, 30);
-            if (flag3)
+            // Compile and test to see if damaging them a bit every second clears job priority Queue
+            bool flag2 = Gen.IsHashIntervalTick(this.parent, 30);
+            if (flag2)
             {
                 foreach (Pawn pawn in this.tmpPawns)
                 {
@@ -150,15 +149,22 @@ namespace Naki_HAR
                             pawn.Notify_Teleported();
                             pawn.pather.nextCell = this.parent.Position;
                         }
-
-                        if (this.Props.damagePerTick > 0)
-                        {
-                            DamageInfo dinfo = new DamageInfo(DamageDefOf.Blunt, this.Props.damagePerTick, float.MaxValue, instigator: this.parent);
-                            pawn.TakeDamage(dinfo);
-                        }
                     }
                 }
-            }   
+            }
+            bool flag3 = (Gen.IsHashIntervalTick(this.parent, 60) && this.Props.damagePerTick > 0);
+            if (flag3)
+            {
+                foreach (Pawn pawn in this.tmpPawns)
+                {
+                    if (!pawn.DestroyedOrNull() && pawn.Spawned)
+                    {
+                        DamageInfo dinfo = new DamageInfo(DamageDefOf.Blunt, this.Props.damagePerTick, float.MaxValue, instigator: this.parent);
+                        pawn.TakeDamage(dinfo);
+                        pawn.stances.stunner.StunFor(30, this.parent, false, true);
+                    }
+                }
+            }
         }
     }
 }

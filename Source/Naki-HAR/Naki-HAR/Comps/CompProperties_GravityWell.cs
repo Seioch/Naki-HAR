@@ -7,11 +7,11 @@ using Verse;
 
 namespace Naki_HAR
 {
-    public class CompProperties_AnnihilationField : CompProperties
+    public class CompProperties_GravityWell : CompProperties
     {
-        public CompProperties_AnnihilationField()
+        public CompProperties_GravityWell()
         {
-            this.compClass = typeof(CompAnnihilationField);
+            this.compClass = typeof(CompGravityWell);
         }
 
         // The maximum amount of time the Annihilation Field can last 
@@ -19,6 +19,6 @@ namespace Naki_HAR
 
         public float radius = 6.9f;
 
-        public float damagePerTick = 3.0f;
+        public float damagePerTick = 1.0f;
     }
 }
