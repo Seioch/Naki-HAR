@@ -4,7 +4,7 @@
 
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_GravityWell</defName>
-        <label>graviy well</label>
+        <label>gravity well</label>
         <description>Creates a miniature black hole in the area, drawing in all living creatures that go near it.</description>
         <level>6</level>
         <iconPath>Naki/Psycasts/GravityWell</iconPath>
