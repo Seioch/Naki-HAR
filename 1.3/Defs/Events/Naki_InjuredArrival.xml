@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ <IncidentDef>
+    <defName>Naki_InjuredArrival</defName>
+    <label>naki injured arrival</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_GiveQuest</workerClass>
+    <letterLabel>Subspace Rupture: Injured Naki</letterLabel>
+    <letterText>An injured Naki named named {PAWN_nameDef} emerged from a subspace rupture.\n\n If you don't want {PAWN_nameDef}, you can leave {PAWN_objective} to die, sell {PAWN_objective} into slavery, or recruit {PAWN_objective}.</letterText>
+    <baseChance>0.4</baseChance>
+    <pawnKind>Naki_Citizen</pawnKind>
+    <populationEffect>IncreaseMedium</populationEffect>
+  </IncidentDef>
+  
+  </Defs>
