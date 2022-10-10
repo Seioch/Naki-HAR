@@ -24,6 +24,8 @@ namespace Naki_HAR
 
         public static FleckDef Naki_Distortion_vibration;
         public static FleckDef Naki_BlackHole;
+        public static FleckDef Naki_GW_line_A;
+        public static FleckDef Naki_GW_line_B;
 
         [MayRequireRoyalty]
         public static PreceptDef NakiPylonLinking;

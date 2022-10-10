@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Naki_HAR
@@ -15,7 +16,6 @@ namespace Naki_HAR
         {
             threshPercents = Thresholds;
         }
-        // public static bool Enabled { get; set; }
 
         public override bool ShowOnNeedList => !Disabled;
 
@@ -39,14 +39,11 @@ namespace Naki_HAR
         }
         private static float _daysToEmpty;
 
-
         public static readonly List<float> Thresholds = new List<float>()
         {
             ThreshEmpty,
             ThreshPeril,
-            ThreshAgitated,
-            ThreshNeedy,
-            ThreshSatisfied,
+            ThreshProblematic
         };
 
         public override float CurLevel
@@ -59,17 +56,42 @@ namespace Naki_HAR
         public static int TickMultTimer => 10;
 
         public static float ThreshEmpty => 0.00f;
-        public static float ThreshPeril => 0.10f;
-        public static float ThreshAgitated => 0.30f;
-        public static float ThreshNeedy => 0.50f;
-        public static float ThreshSatisfied => 0.70f;
+        public static float ThreshPeril => 0.20f;
+        public static float ThreshProblematic => 0.60f;
         public bool PawnAffected => !pawn.IsNaki();
+
+        public bool Peril
+        {
+            get
+            {
+                return this.CurLevel <= ThreshProblematic;
+            }
+        }
+
+        public bool Problematic
+        {
+            get
+            {
+                return this.CurLevel <= ThreshPeril;
+            }
+        }
 
         private float GetFallPerTick()
         {
             return DecayPerDay / 60000.0f;
         }
-        private int curTick = 0;
+
+        public override void DrawOnGUI(Rect rect, int maxThresholdMarkers = 2147483647, float customMargin = -1f, bool drawArrows = true, bool doTooltip = true, Rect? rectForTooltip = null)
+        {
+            if (this.threshPercents == null)
+            {
+                this.threshPercents = new List<float>();
+            }
+            this.threshPercents.Clear();
+            this.threshPercents.Add(ThreshPeril);
+            this.threshPercents.Add(ThreshProblematic);
+            base.DrawOnGUI(rect, maxThresholdMarkers, customMargin, drawArrows, doTooltip, rectForTooltip);
+        }
 
         // Executes drop in DM need every 10 ticks
         public override void NeedInterval()
@@ -79,23 +101,16 @@ namespace Naki_HAR
                 return;
             }
 
-            curTick++;
-
-            if (curTick >= 10)
+            if (!def.freezeWhileSleeping || pawn.Awake())
             {
-                curTick = 0;
+                // 150 ticks per NeedInterval call. 
+                CurLevel -= 150 * TickMultTimer * GetFallPerTick();
+            }
 
-                if (!PawnAffected) // Only affect Naki TODO see if this is too strong for a starting decay.
-                {
-                    CurLevel = ThreshNeedy;
-                    return;
-                }
-
-                if (!def.freezeWhileSleeping || pawn.Awake())
-                {
-                    // 150 ticks per NeedInterval call. 
-                    CurLevel -= 150 * TickMultTimer * GetFallPerTick();
-                }
+            // Check to see if we should inflict the pawn with withdrawal symptoms
+            if (CurLevel < ThreshProblematic)
+            {
+                
             }
         }
     }

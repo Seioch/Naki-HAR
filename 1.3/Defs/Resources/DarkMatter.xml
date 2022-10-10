@@ -17,12 +17,12 @@
       <MarketValue>70</MarketValue>
       <Mass>0.01</Mass>
     </statBases>
-    <techLevel>Medieval</techLevel>
+    <techLevel>Ultra</techLevel>
     <ingestible>
       <foodType>Processed</foodType>
       <drugCategory>Medical</drugCategory>
       <baseIngestTicks>240</baseIngestTicks>
-      <ingestSound>Ingest_Snort</ingestSound>
+      <ingestSound>Ingest_Pill</ingestSound>
       <ingestHoldOffsetStanding>
         <northDefault>
           <offset>(0.21,0,0.05)</offset>
@@ -40,7 +40,7 @@
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>NakiRaceDMNeed</need>
-          <offset>0.2</offset>
+          <offset>0.25</offset>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -48,7 +48,7 @@
       <li Class="CompProperties_Drug">
         <chemical>DarkMatter</chemical>
         <addictiveness>1.00</addictiveness>
-        <needLevelOffset>0.2</needLevelOffset>
+        <needLevelOffset>0.25</needLevelOffset>
         <listOrder>1009</listOrder>
       </li>
     </comps>

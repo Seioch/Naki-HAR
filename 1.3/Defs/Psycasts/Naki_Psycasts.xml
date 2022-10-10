@@ -438,7 +438,7 @@
 
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Amplify</defName>
-        <label>Dark Matter Amplify</label>
+        <label>dark matter amplify</label>
         <description>Dark matter is used to transmute intra-muscular fat into usable energy, granting improved bodily function.</description>
         <level>1</level>
         <writeCombatLog>True</writeCombatLog>

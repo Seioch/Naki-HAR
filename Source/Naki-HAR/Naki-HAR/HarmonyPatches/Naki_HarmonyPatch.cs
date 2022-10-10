@@ -24,20 +24,20 @@ namespace Naki_HAR
             Log.Message("[Naki HAR] Trying to patch Naki");
             harm = new Harmony("Seioch.Naki.HAR");
             Log.Message("[Naki HAR] Patching VerbTracker");
-            harm.Patch(AccessTools.Method(typeof(VerbTracker), "GetVerbsCommands"), 
+            harm.Patch(AccessTools.Method(typeof(VerbTracker), "GetVerbsCommands"),
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(VerbTrackerAmmo_Postfix)));
             Log.Message("[Naki HAR] Patching Kill");
-            harm.Patch(AccessTools.Method(typeof(Pawn), "Kill"), 
+            harm.Patch(AccessTools.Method(typeof(Pawn), "Kill"),
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(Kill_Postfix)));
             Log.Message("[Naki HAR] Patching TryGiveAbilityOfLevel");
-            harm.Patch(AccessTools.Method(typeof(Hediff_Psylink), "TryGiveAbilityOfLevel"), 
+            harm.Patch(AccessTools.Method(typeof(Hediff_Psylink), "TryGiveAbilityOfLevel"),
                 prefix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(TryGiveAbilityOfLevel_Prefix)));
             Log.Message("[Naki HAR] Patching MeditationUtility");
             harm.Patch(AccessTools.Method(typeof(MeditationUtility), "GetMeditationJob"),
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(GetMeditationJob_Postfix)));
-            // Log.Message("[Naki HAR] Patching Apply");
-            //harm.Patch(AccessTools.Method(typeof(CompAbilityEffect), "Apply"),
-            //    prefix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(Apply_Prefix)));
+            Log.Message("[Naki HAR] Patching GainAbility");
+            harm.Patch(AccessTools.Method(typeof(Pawn_AbilityTracker), "GainAbility"),
+                postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(GainAbility_Postfix)));
             Log.Message("[Naki HAR] Patching complete!");
         }
 
@@ -64,6 +64,7 @@ namespace Naki_HAR
             if (__instance.health.hediffSet.GetFirstHediffOfDef(Naki_Defof.Hediff_DMBurn) != null) // If the pawn that just died has Hediff_DMBurn damage
             //if (dinfo.ToString().Contains("DMBurn")) // If the pawn that just died has died from DMBurn
             {
+                float victimMass = __instance.def.BaseMass;
                 // Spawn dark matter?
                 Thing darkMatter = ThingMaker.MakeThing(Naki_Defof.DarkMatter, null);
                 darkMatter.stackCount = 1; // Maybe later use GenMath to create a random amount of DM from 1-3
@@ -113,11 +114,32 @@ namespace Naki_HAR
             }
         }
 
-        //public static bool Apply_Prefix(LocalTargetInfo target, LocalTargetInfo dest)
-        //{
-        //    Log.Message("[Naki HAR] Apply_Prefix was called, which means an apply was called from a psycast");
-        //    return true;
-        //}
+        public static void GainAbility_Postfix(ref Pawn_AbilityTracker __instance, AbilityDef def)
+        {
+            if (__instance.pawn.IsNaki())
+            {
+                // Log.Message($"[Naki HAR] GainAbility_Postfix: Naki Detected, AbilityDef granted was: {def.defName}");
+            } else
+            {
+                if (def.defName.ToLower().Contains("naki"))
+                {
+                    // Log.Message($"[Naki HAR] GainAbility_Postfix: Non-Naki Detected gaining Naki Ability {def.defName}, re-rolling");
+                    // Remove the current ability
+                    __instance.pawn.abilities.RemoveAbility(def);
+                    // roll a new ability that does not have naki in there
+                    AbilityDef newAbilityDef = (from a in DefDatabase<AbilityDef>.AllDefs
+                                             where a.level == def.level && !a.defName.ToLower().Contains("naki")
+                                             select a).RandomElement<AbilityDef>();
+                    // Log.Message($"[Naki HAR] GainAbility_Postfix: Rerolled new non-naki ability {newAbilityDef.defName}");
+                    if (!__instance.abilities.Any((Ability a) => a.def == newAbilityDef))
+                    {
+                        __instance.abilities.Add(AbilityUtility.MakeAbility(newAbilityDef, __instance.pawn));
+                    }
+                    __instance.Notify_TemporaryAbilitiesChanged();
+                }
+            }
+
+        }
 
         // This prefix intercepts the code path to getting a meditation job. If the pawn is a Naki, create an Attunement jobdef instead. 
         public static void GetMeditationJob_Postfix(ref Job __result, Pawn pawn, bool forJoy = false)

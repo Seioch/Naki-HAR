@@ -38,7 +38,7 @@ namespace Naki_HAR
         public const float MaxDistance = 3.9f;
 
         // How many meditation ticks must be done before spawning a Dark Matter
-        private readonly int DarkMatterTicksRequired = 60000;
+        private readonly int DarkMatterTicksRequired = 45000;
 
         // A linearlly increasing multipler that increases the amount of attunement needed before the next Psylink upgrade can be given
         private float attunementMultiplerPerGrantedLink = 0.0f;
@@ -51,6 +51,10 @@ namespace Naki_HAR
 
         // If this pylon has spawned dark matter today
         private bool hasSpawnedDM = false;
+
+        // Range of dark matter to spawn
+        private readonly int minDMSpawn = 3;
+        private readonly int maxDMSpawn = 6; 
 
         // Private list of meditation penalties if you are spending X number of ticks mediating at this Pylon
         private static readonly List<Pair<int, float>> TicksToProgressMultipliers = new List<Pair<int, float>>
@@ -352,7 +356,7 @@ namespace Naki_HAR
         private void TrySpawnDarkMatter()
         {
             Thing thing = ThingMaker.MakeThing(Naki_Defof.DarkMatter, null);
-            thing.stackCount = rnd.Next(1,3);
+            thing.stackCount = rnd.Next(minDMSpawn, maxDMSpawn);
             GenPlace.TryPlaceThing(thing, this.parent.InteractionCell, this.parent.Map, ThingPlaceMode.Near, null, (IntVec3 p) => p != this.parent.Position && p != this.parent.InteractionCell, default(Rot4));
             this.hasSpawnedDM = true;
         }

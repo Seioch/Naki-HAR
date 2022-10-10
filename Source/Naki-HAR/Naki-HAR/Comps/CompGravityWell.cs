@@ -30,13 +30,13 @@ namespace Naki_HAR
         private Sustainer sustainer;
 
         // Materials for effects taken from CompProjectileInterceptor
-        private static readonly Material ForceFieldMat = MaterialPool.MatFrom("Other/ForceField", ShaderDatabase.MoteGlow);
+        //private static readonly Material ForceFieldMat = MaterialPool.MatFrom("Other/ForceField", ShaderDatabase.MoteGlow);
 
-        private static readonly Material ForceFieldConeMat = MaterialPool.MatFrom("Other/ForceFieldCone", ShaderDatabase.MoteGlow);
+        //private static readonly Material ForceFieldConeMat = MaterialPool.MatFrom("Other/ForceFieldCone", ShaderDatabase.MoteGlow);
 
-        private static readonly MaterialPropertyBlock MatPropertyBlock = new MaterialPropertyBlock();
+        //private static readonly MaterialPropertyBlock MatPropertyBlock = new MaterialPropertyBlock();
 
-        private const float TextureActualRingSizeFactor = 1.1601562f;
+        //private const float TextureActualRingSizeFactor = 1.1601562f;
 
         public CompProperties_GravityWell Props
         {
@@ -66,14 +66,24 @@ namespace Naki_HAR
         public override void PostDraw()
         {
             base.PostDraw();
+        }
 
-            Vector3 pos = this.parent.Position.ToVector3Shifted();
-            pos.y = AltitudeLayer.MoteOverhead.AltitudeFor();
-
-            CompGravityWell.MatPropertyBlock.SetColor(ShaderPropertyIDs.Color, Color.black);
-            Matrix4x4 matrix = default(Matrix4x4);
-            matrix.SetTRS(pos, Quaternion.identity, new Vector3(this.Props.radius * 2f * 1.1601562f, 1f, this.Props.radius * 2f * 1.1601562f));
-            Graphics.DrawMesh(MeshPool.plane10, matrix, CompGravityWell.ForceFieldMat, 0, null, 0, CompGravityWell.MatPropertyBlock);
+        private static void CreateGravityFleck(Map map, Vector3 position, float radius = 3f, int variant = 0)
+        {
+            float num = UnityEngine.Random.Range(0f, 6.2831855f);
+            float num2 = 360f * num / 6.2831855f;
+            Vector3 vector = new Vector3(radius * Mathf.Cos(num), 0f, radius * Mathf.Sin(num));
+            Vector3 spawnPosition = position + vector;
+            FleckManager flecks = map.flecks;
+            FleckCreationData fleckCreationData = default(FleckCreationData);
+            fleckCreationData.def = ((variant == 0) ? Naki_Defof.Naki_GW_line_A : Naki_Defof.Naki_GW_line_B);
+            fleckCreationData.scale = UnityEngine.Random.Range(1.8f, 2.4f);
+            fleckCreationData.spawnPosition = spawnPosition;
+            fleckCreationData.rotationRate = 0f;
+            fleckCreationData.rotation = 180f - num2;
+            fleckCreationData.velocitySpeed = UnityEngine.Random.Range(2.9f, 3.9f);
+            fleckCreationData.velocityAngle = 270f - num2;
+            flecks.CreateFleck(fleckCreationData);
         }
 
         public override void CompTick()
@@ -106,11 +116,12 @@ namespace Naki_HAR
                 this.parent.Destroy(0);
                 return;
             }
-            // Check to see if any pawns should be drawn in every 30 ticks
-            if (currentTicks % 30 == 0)
+            // Check to see if any pawns should be drawn in every 10 ticks
+            bool flag1 = Gen.IsHashIntervalTick(this.parent, 10);
+            if (flag1)
             {
-                Log.Message("[Naki HAR] Annihilation field checking for victims");
-                // this.tmpPawns.Clear();
+                // Log.Message("[Naki HAR] Annihilation field checking for victims");
+                this.tmpPawns.Clear();
                 int rangeForGrabbingPawns = Mathf.RoundToInt(this.Props.radius * 2);
                 IntVec2 rangeIntVec2 = new IntVec2(rangeForGrabbingPawns, rangeForGrabbingPawns);
 
@@ -132,7 +143,18 @@ namespace Naki_HAR
                         }
                     }
                 }
+
+                // Create some gravity well flecks
+                if (currentTicks < this.Props.maxticks - 150)
+                {
+                    // FleckMaker.Static(this.parent.DrawPos, this.parent.Map, FleckDefOf.PsycastAreaEffect, 1.5f);
+                    for (int i = 0; i < 5; i++)
+                    {
+                        CreateGravityFleck(this.parent.Map, this.parent.DrawPos, this.Props.radius / 2, UnityEngine.Random.Range(0, 1));
+                    }
+                }
             }
+
             // Move victim pawns closer to the middle and damage them if they are in there
             // Compile and test to see if damaging them a bit every second clears job priority Queue
             bool flag2 = Gen.IsHashIntervalTick(this.parent, 30);

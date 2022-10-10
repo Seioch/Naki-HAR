@@ -14,6 +14,7 @@
           <!-- <random>true</random> -->
         </graphicData>
   </FleckDef>
+
   <FleckDef ParentName="FleckBase">
         <defName>Naki_BlackHole</defName>
         <fadeInTime>0.1</fadeInTime>
@@ -23,7 +24,7 @@
         <graphicData>
           <texPath>Naki/Flecks/BlackHole1024</texPath>
           <graphicClass>Graphic_FleckPulse</graphicClass>
-          <!-- <shaderType>MoteGlowDistorted</shaderType> -->
+          <shaderType>MoteGlowDistorted</shaderType>
           <shaderParameters>
             <_DistortionTex>/Things/Mote/PsychicDistortionRing</_DistortionTex>
             <_distortionIntensity>0.03</_distortionIntensity>
@@ -31,5 +32,35 @@
           </shaderParameters>
           <color>(1.0, 1.0, 1.0)</color>
         </graphicData>
+  </FleckDef>
+
+  <!-- gravity well line A -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Naki_GW_line_A</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <texPath>Naki/Flecks/GW_line_A</texPath>
+      <drawSize>0.25</drawSize>
+    </graphicData>
+    <fadeInTime>0.2</fadeInTime>
+    <fadeOutTime>0.2</fadeOutTime>
+    <solidTime>0.3</solidTime>
+  </FleckDef>
+
+  <!-- gravity well line B -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Naki_GW_line_B</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <graphicData>
+      <graphicClass>Graphic_FleckPulse</graphicClass>
+      <!-- <shaderType>MoteGlowDistorted</shaderType> -->
+      <texPath>Naki/Flecks/GW_line_B</texPath>
+      <drawSize>0.25</drawSize>
+    </graphicData>
+    <fadeInTime>0.5</fadeInTime>
+    <fadeOutTime>0.2</fadeOutTime>
+    <solidTime>0.3</solidTime>
   </FleckDef>
 </Defs>
