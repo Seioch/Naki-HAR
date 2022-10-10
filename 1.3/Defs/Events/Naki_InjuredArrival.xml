@@ -2,21 +2,23 @@
 <Defs>
  <IncidentDef>
     <defName>Naki_InjuredArrival</defName>
-    <label>naki injured arrival</label>
+    <label>subspace rupture</label>
     <category>Misc</category>
     <targetTags>
       <li>Map_PlayerHome</li>
     </targetTags>
     <workerClass>IncidentWorker_GiveQuest</workerClass>
     <letterLabel>Subspace Rupture: Injured Naki</letterLabel>
-    <letterText>An injured Naki named named {PAWN_nameDef} emerged from a subspace rupture.\n\n If you don't want {PAWN_nameDef}, you can leave {PAWN_objective} to die, sell {PAWN_objective} into slavery, or recruit {PAWN_objective}.</letterText>
-    <baseChance>0.4</baseChance>
-    <pawnKind>Naki_Citizen</pawnKind>
+    <!-- <letterText>An injured Naki named named {PAWN_nameDef} emerged from a subspace rupture.\n\n If you don't want {PAWN_nameDef}, you can leave {PAWN_objective} to die, sell {PAWN_objective} into slavery, or recruit {PAWN_objective}.</letterText> -->
+    <baseChance>1.0</baseChance>
+    <questScriptDef>Naki_InjuredArrivalQuest</questScriptDef>
+    <!-- <pawnKind>Naki_Citizen</pawnKind> -->
     <populationEffect>IncreaseMedium</populationEffect>
+    <requireColonistsPresent>True</requireColonistsPresent>
   </IncidentDef>
 
   <QuestScriptDef>
-    <defName>RefugeePodCrash</defName>
+    <defName>Naki_InjuredArrivalQuest</defName>
     <autoAccept>true</autoAccept>
     <defaultCharity>true</defaultCharity>
     <successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_RefugeePodCrash</successHistoryEvent>
@@ -25,15 +27,15 @@
     <isRootSpecial>true</isRootSpecial>
     <questNameRules>
       <rulesStrings>
-        <li>questName->Transport pod crash</li>
+        <li>questName->Subspace Rupture</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->A transport pod crashes with a refugee</li>
+        <li>questDescription->A subspace rupture drops an injured Naki.</li>
       </rulesStrings>
     </questDescriptionRules>
-    <root Class="QuestNode_Root_RefugeePodCrash" />
+    <root Class="Naki_HAR.QuestNode_Root_NakiSubspaceRupture" />
   </QuestScriptDef>
   
   </Defs>

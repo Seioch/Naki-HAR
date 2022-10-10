@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingSetMakerDef>
+    <defName>NakiSubspaceRupture</defName>
+    <root Class="Naki_HAR.ThingSetMaker_NakiSubspaceRupture" />
+  </ThingSetMakerDef>
+
+</Defs>

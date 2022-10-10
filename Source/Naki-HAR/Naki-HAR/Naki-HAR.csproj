@@ -92,6 +92,9 @@
     <Compile Include="NakiRace.cs" />
     <Compile Include="Needs\NeedNakiRaceDMNeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quests\DownedNakiQuestUtility.cs" />
+    <Compile Include="Quests\QuestNode_Root_NakiSubspaceRupture.cs" />
+    <Compile Include="Quests\ThingSetMaker_NakiSubspaceRupture.cs" />
     <Compile Include="Rituals\RitualObligationTargetWorker_NakiPylon.cs" />
     <Compile Include="Rituals\RitualBehaviorWorker_PylonLinking.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_PylonLinking.cs" />

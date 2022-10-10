@@ -21,6 +21,8 @@ namespace Naki_HAR
         public static ThingDef Naki_GravityWell;
         public static SoundDef Naki_DM_Sizzle;
         public static SoundDef Naki_Distortion_Sustainer;
+        public static PawnKindDef Naki_Citizen;
+        public static ThingSetMakerDef NakiSubspaceRupture;
 
         public static FleckDef Naki_Distortion_vibration;
         public static FleckDef Naki_BlackHole;
