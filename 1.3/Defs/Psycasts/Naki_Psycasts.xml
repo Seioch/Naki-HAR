@@ -5,14 +5,13 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_GravityWell</defName>
         <label>gravity well</label>
-        <description>Creates a miniature black hole in the area, drawing in all living creatures that go near it.</description>
+        <description>Creates a miniature gravity well at the targeted area, drawing in all living creatures that go near it.</description>
         <level>6</level>
         <iconPath>Naki/Psycasts/GravityWell</iconPath>
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <statBases>
-        <!-- Testing numbers change later -->
-            <Ability_EntropyGain>10</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.1</Ability_PsyfocusCost>
+            <Ability_EntropyGain>40</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.65</Ability_PsyfocusCost>
             <Ability_Duration>15</Ability_Duration>
             <Ability_EffectRadius>6.9</Ability_EffectRadius>
         </statBases>
@@ -25,7 +24,6 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <!-- <li Class="Naki_HAR.CompProperties_AbilityDistortionField"> -->
             <li Class = "CompProperties_AbilitySpawn">
                 <thingDef>Naki_GravityWell</thingDef>
             </li>
@@ -45,7 +43,7 @@
         <writeCombatLog>True</writeCombatLog>
         <statBases>
         <Ability_EntropyGain>50</Ability_EntropyGain>
-        <Ability_PsyfocusCost>0.55</Ability_PsyfocusCost>
+        <Ability_PsyfocusCost>0.75</Ability_PsyfocusCost>
         <Ability_Duration>60</Ability_Duration>
         <Ability_EffectRadius>3.9</Ability_EffectRadius>
         </statBases>
@@ -89,7 +87,7 @@
         </verbProperties>
         <statBases>
             <Ability_EntropyGain>35</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.25</Ability_PsyfocusCost>
+            <Ability_PsyfocusCost>0.45</Ability_PsyfocusCost>
         </statBases>
         <comps>
             <li Class = "CompProperties_AbilityGiveHediff">
@@ -105,14 +103,14 @@
         <label>dark matter bullet shield</label>
         <description>Creates a small sphere that annihilates fast moving objects. Does not affect people or animals.</description>
         <level>5</level>
-        <iconPath>UI/Abilities/BulletShield</iconPath>
+        <iconPath>Naki/Psycasts/BulletShield</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <statBases>
             <Ability_EntropyGain>35</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.55</Ability_PsyfocusCost>
             <Ability_EffectRadius>3.9</Ability_EffectRadius>
-            <Ability_Duration>15</Ability_Duration>
+            <Ability_Duration>25</Ability_Duration>
         </statBases>
         <verbProperties>
         <warmupTime>1</warmupTime>
@@ -142,8 +140,8 @@
         <level>4</level>
         <iconPath>Naki/Psycasts/Regeneration</iconPath>
         <statBases>
-            <Ability_EntropyGain>30</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.45</Ability_PsyfocusCost>
+            <Ability_EntropyGain>35</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.55</Ability_PsyfocusCost>
         </statBases>
         <verbProperties>
             <warmupTime>1.5</warmupTime>
@@ -214,8 +212,8 @@
         <writeCombatLog>True</writeCombatLog>
         <!-- <hotKey>Misc5</hotKey> -->
         <statBases>
-            <Ability_EntropyGain>20</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.04</Ability_PsyfocusCost>
+            <Ability_EntropyGain>25</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.35</Ability_PsyfocusCost>
             <Ability_Duration>30</Ability_Duration>
             <Ability_EffectRadius>4.9</Ability_EffectRadius>
         </statBases>
@@ -259,8 +257,8 @@
             </targetParams>
         </verbProperties>
         <statBases>
-            <Ability_EntropyGain>10</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.05</Ability_PsyfocusCost>
+            <Ability_EntropyGain>15</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.35</Ability_PsyfocusCost>
         </statBases>
         <comps>
             <li Class = "CompProperties_AbilityGiveHediff">
@@ -318,7 +316,7 @@
         <level>2</level>
         <iconPath>Naki/Psycasts/Mindfog</iconPath>
         <statBases>
-            <Ability_EntropyGain>20</Ability_EntropyGain>
+            <Ability_EntropyGain>15</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.15</Ability_PsyfocusCost>
             <Ability_Duration>10</Ability_Duration>
         </statBases>
@@ -348,7 +346,7 @@
         <iconPath>Naki/Psycasts/Restore</iconPath>
         <statBases>
             <Ability_EntropyGain>20</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.15</Ability_PsyfocusCost>
+            <Ability_PsyfocusCost>0.25</Ability_PsyfocusCost>
         </statBases>
         <verbProperties>
             <warmupTime>0.5</warmupTime>
@@ -391,14 +389,16 @@
             </targetParams>
         </verbProperties>
         <statBases>
-            <Ability_EntropyGain>10</Ability_EntropyGain>
-            <Ability_PsyfocusCost>0.05</Ability_PsyfocusCost>
+            <Ability_EntropyGain>15</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.15</Ability_PsyfocusCost>
         </statBases>
         <comps>
             <li Class = "CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMDecay</hediffDef>
                 <psychic>False</psychic>
+                <goodwillImpact>-15</goodwillImpact>
+                <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
         </comps>
     </AbilityDef> 
