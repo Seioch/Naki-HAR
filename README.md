@@ -1,4 +1,4 @@
-# Naki: Dark Matter Raccoons
+# Naki: Dark Matter Raccoons for Rimworld 1.3
 Current release: Alpha 0.1
 ---
 # Warning! This mod requires you to have the Royalty expansion!
