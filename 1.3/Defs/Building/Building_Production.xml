@@ -4,7 +4,7 @@
 <ThingDef ParentName="BenchBase">
 	<defName>Naki_Fabricator</defName>
 	<label>Naki fabricator</label>
-	<description>A workstation to transmute Dark Matter into normal matter.</description>
+	<description>A workstation to transmute Dark Matter darkweave, a strong fabric used as a base material for all Naki apparel and weaponry.</description>
 	<thingClass>Building_WorkTable</thingClass>
 	<graphicData>
 		<texPath>Naki/Building/Electric_Tailoring_Bench/Texture</texPath>

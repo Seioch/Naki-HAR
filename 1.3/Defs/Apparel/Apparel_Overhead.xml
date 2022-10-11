@@ -125,7 +125,7 @@
 	<label>naki researcher glasses</label>
 	<description>A pair of glasses for reading. Little info displays helps researchers read and work late into the night.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/Overhead/Casual_Hair_Pin/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Glasses/Texture</texPath>
 	</graphicData>
 	<costList>
 		<Cloth>25</Cloth>
@@ -219,7 +219,7 @@
 	<label>naki darkweave hat</label>
 	<description>A cap often worn by Naki security guards or military officers. An inner layer of darkweave slightly enhances psycasting abilities.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/Overhead/Gothic_Hair_Pin/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/DarkHat/Texture</texPath>
 	</graphicData>
 	<costList>
 		<DarkMatter>8</DarkMatter>

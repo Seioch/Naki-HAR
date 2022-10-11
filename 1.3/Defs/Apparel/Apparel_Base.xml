@@ -46,7 +46,6 @@
 		<useWornGraphicMask>true</useWornGraphicMask>
 	</apparel>
 	<tradeability>Sellable</tradeability>
-	<!-- Maybe this will let traders sell Naki clothes? -->
 	<tradeTags>
       <li>Apparel</li>
     </tradeTags>

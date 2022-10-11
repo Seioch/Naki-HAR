@@ -166,7 +166,7 @@
 	<label>naki long pants</label>
 	<description>Comfortable long pants for desk jobs and colder parts of the starbase.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/OnSkin/Pajamas_A/Texture</texPath>
+		<texPath>Naki/Apparel/OnSkin/Hot_Pants/Texture</texPath>
 	</graphicData>
 	<costList>
 		<Cloth>25</Cloth>
@@ -192,7 +192,7 @@
 			<li>Torso</li>
 			<li>Legs</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/OnSkin/Pajamas_A/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/OnSkin/Hot_Pants/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
 
@@ -236,7 +236,7 @@
 	<label>Naki ruffled shirt</label>
 	<description>A fancy shirt for formal meeting and events</description>
 	<graphicData>
-		<texPath>Naki/Apparel/OnSkin/Open_Front_Knit/Texture</texPath>
+		<texPath>Naki/Apparel/OnSkin/Open_Shoulder_Knit/Texture</texPath>
 	</graphicData>
 	<costList>
 		<Cloth>25</Cloth>
@@ -262,7 +262,7 @@
 		<bodyPartGroups>
 			<li>Torso</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/OnSkin/Open_Front_Knit/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/OnSkin/Open_Shoulder_Knit/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
 
@@ -458,7 +458,7 @@
 	<label>naki security armor</label>
 	<description>Security uniforms for Naki guards. Darkweave linings slightly enhance the wearer's psycasting abiltiies.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/OnSkin/Bikini_Armor/Texture</texPath>
+		<texPath>Naki/Apparel/OnSkin/Military_Uniform/Texture</texPath>
 	</graphicData>
 	<costList>
 		<DarkMatter>12</DarkMatter>
