@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!-- Remember The Tiers!
+	Tier 1: Casual Clothing
+	Tier 2: Worker Clothing, light armor
+	Tier 3: Military Officer and Enlisted Clothing, medium armor
+	Tier 4: Power armor, Space suits
+ -->
+
 <ThingDef Name="Naki_OverheadBase" ParentName="Naki_ApparelBase" Abstract="True">
 	<statBases>
 		<Mass>0.2</Mass>
@@ -16,7 +23,7 @@
 	</thingCategories>
 </ThingDef>
 
-<!--================================================== Tear 1 ==================================================-->
+<!--================================================== Tier 1 ==================================================-->
 
 <ThingDef Name="Naki_OverheadBaseTear1" ParentName="Naki_OverheadBase" Abstract="True">
 	<recipeMaker>
@@ -26,6 +33,11 @@
 		<tags>
 			<li>Naki_Colonist</li>
 			<li>Naki_Citizen</li>
+			<li>Royal</li>
+			<li>RoyalTier1</li>
+			<li>RoyalTier2</li>
+			<li>RoyalTier3</li>
+			<li>RoyalTier4</li>
 		</tags>
 	</apparel>
 </ThingDef>
@@ -33,7 +45,7 @@
 <ThingDef ParentName="Naki_OverheadBaseTear1">
 	<defName>Naki_Overhead_Winter_Hat</defName>
 	<label>Naki winter hat</label>
-	<description>간단한 겨울모자입니다. 추위에 약한 쿠린들도 겨울을 편하게 보내게 해줍니다.</description>
+	<description>A snug cap that protects the head from the cold.</description>
 	<costStuffCount>25</costStuffCount>
 	<stuffCategories>
 		<li>Fabric</li>
@@ -60,7 +72,7 @@
 <ThingDef ParentName="Naki_OverheadBaseTear1">
 	<defName>Naki_Overhead_Summer_Hat</defName>
 	<label>Naki summer hat</label>
-	<description>간단한 여름모자입니다. 아주 더운 여름날이라도 이 모자와 함께라면 버틸 수 있습니다.</description>
+	<description>A floppy brimmed hat to protect the head from the summer heat.</description>
 	<costStuffCount>25</costStuffCount>
 	<stuffCategories>
 		<li>Fabric</li>
@@ -94,14 +106,24 @@
 		<tags>
 			<li>Naki_Colonist</li>
 			<li>Naki_Citizen</li>
+			<li>Naki_Military</li>
+			<!--Royal-->
+			<li>Royal</li>
+			<li>RoyalTier1</li>
+			<li>RoyalTier2</li>
+			<li>RoyalTier3</li>
+			<li>RoyalTier4</li>
+			<li>RoyalTier5</li>
+			<li>RoyalTier6</li>
+			<li>RoyalTier7</li>
 		</tags>
 	</apparel>
 </ThingDef>
 
 <ThingDef ParentName="Naki_OverheadBaseTear2">
-	<defName>Naki_Overhead_Casual_Hair_Pin</defName>
-	<label>Naki casual hair pin</label>
-	<description>캐주얼한 느낌의 머리핀입니다. 단순히 착용만 해도 활기가 생기는 거 같습니다.</description>
+	<defName>Naki_Overhead_Glasses</defName>
+	<label>naki researcher glasses</label>
+	<description>A pair of glasses for reading. Little info displays helps researchers read and work late into the night.</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Overhead/Casual_Hair_Pin/Texture</texPath>
 	</graphicData>
@@ -127,14 +149,15 @@
 		<wornGraphicPath>Naki/Apparel/Overhead/Casual_Hair_Pin/Texture</wornGraphicPath>
 	</apparel>
 	<equippedStatOffsets>
-		<MentalBreakThreshold>-0.06</MentalBreakThreshold>
+		<GlobalLearningFactor>1.1</GlobalLearningFactor>
+		<MentalBreakThreshold>-0.02</MentalBreakThreshold>
 	</equippedStatOffsets>
 </ThingDef>
 
 <ThingDef ParentName="Naki_OverheadBase">
 	<defName>Naki_Overhead_Goggles</defName>
 	<label>Naki goggles</label>
-	<description>전투용 고글입니다. 최소한의 방어력을 제공해줍니다.</description>
+	<description>Combat goggles for Naki security details. These help Naki see targets at long ranges.</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Overhead/Goggles/Texture</texPath>
 	</graphicData>
@@ -158,9 +181,8 @@
 	<apparel>
 		<useWornGraphicMask>false</useWornGraphicMask>
 		<tags>
-			<li>Naki_Grunt</li>
-			<li>Naki_Sniper</li>
-			<li>Naki_Sniper_H</li>
+			<li>Naki_Marine</li>
+			<li>Naki_EliteMarine</li>
 		</tags>
 		<bodyPartGroups>
 			<li>UpperHead</li>
@@ -179,21 +201,28 @@
 	<apparel>
 		<tags>
 			<li>Naki_OverheadT3</li>
+			<li>Naki_Military</li>
 			<li>Royal</li>
-        	<li>RoyalTier2</li>
+        	<li>RoyalTier1</li>
+			<li>RoyalTier2</li>
+			<li>RoyalTier3</li>
+			<li>RoyalTier4</li>
+			<li>RoyalTier5</li>
+			<li>RoyalTier6</li>
+			<li>RoyalTier7</li>
 		</tags>
 	</apparel>
 </ThingDef>
 
 <ThingDef ParentName="Naki_OverheadBaseTear3">
-	<defName>Naki_Overhead_Gothic_Hair_Pin</defName>
-	<label>Naki gothic hair pin</label>
-	<description>고딕 양식의 머리핀입니다.</description>
+	<defName>Naki_Overhead_Darkweave_Hat</defName>
+	<label>naki darkweave hat</label>
+	<description>A cap often worn by Naki security guards or military officers. An inner layer of darkweave slightly enhances psycasting abilities.</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Overhead/Gothic_Hair_Pin/Texture</texPath>
 	</graphicData>
 	<costList>
-		<DevilstrandCloth>25</DevilstrandCloth>
+		<DarkMatter>8</DarkMatter>
 	</costList>
 	<costStuffCount>50</costStuffCount>
 	<stuffCategories>
@@ -214,60 +243,20 @@
 		<wornGraphicPath>Naki/Apparel/Overhead/Gothic_Hair_Pin/Texture</wornGraphicPath>
 	</apparel>
 	<equippedStatOffsets>
-		<FoodPoisonChance>-0.2</FoodPoisonChance>
-	</equippedStatOffsets>
-</ThingDef>
-
-<ThingDef ParentName="Naki_OverheadBaseTear3">
-	<defName>Naki_Overhead_Bikini_Armor_Headgear</defName>
-	<label>Naki bikini armor headgear</label>
-	<description>비키니 아머용 머리 방어구입니다. 보기보다 매우 튼튼합니다.</description>
-	<apparel>
-	<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
-		<bodyPartGroups>
-			<li>UpperHead</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Overhead/Bikini_Armor_Headgear/Texture</wornGraphicPath>
-      <tags>
-		<li>Naki_Melee</li>
- 		<li>RoyalCombatGear</li>
-      </tags>
-	</apparel>
-	<graphicData>
-		<texPath>Naki/Apparel/Overhead/Bikini_Armor_Headgear/Texture</texPath>
-	</graphicData>
-	<costList>
-		<DevilstrandCloth>25</DevilstrandCloth>
-	</costList>
-	<costStuffCount>50</costStuffCount>
-	<stuffCategories>
-		<li>Metallic</li>
-	</stuffCategories>
-	<statBases>
-		<MaxHitPoints>200</MaxHitPoints>
-		<WorkToMake>12000</WorkToMake>
-		<StuffEffectMultiplierArmor>0.30</StuffEffectMultiplierArmor>
-		<StuffEffectMultiplierInsulation_Cold>0.00</StuffEffectMultiplierInsulation_Cold>
-		<StuffEffectMultiplierInsulation_Heat>0.00</StuffEffectMultiplierInsulation_Heat>
-		<Insulation_Cold>10</Insulation_Cold>
-		<Insulation_Heat>5</Insulation_Heat>
-	</statBases>
-	<equippedStatOffsets>
-		<MeleeHitChance>1.0</MeleeHitChance>
-		<MeleeDodgeChance>2.0</MeleeDodgeChance>
-		<MoveSpeed>0.1</MoveSpeed>
+		<PsychicSensitivityOffset>0.3</PsychicSensitivityOffset>
+		<PsychicEntropyRecoveryRate>0.06</PsychicEntropyRecoveryRate>
 	</equippedStatOffsets>
 </ThingDef>
 
 <ThingDef ParentName="Naki_OverheadBaseTear3">
 	<defName>Naki_Overhead_Military_Helmet</defName>
-	<label>Naki Military Helmet</label>
-	<description>플라스틸 방탄판이 장착된 전투용 방탄모입니다. 머리를 향해 날라오는 총알을 막을 수 있는 최후의 수단입니다.</description>
+	<label>naki military helmet</label>
+	<description>An armored helmet used by Naki security guards and marines. Slightly enhances psycasting ability while providing ample protection</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Overhead/Military_Helmet_A/Texture</texPath>
 	</graphicData>
 	<costList>
-		<DevilstrandCloth>25</DevilstrandCloth>
+		<DarkMatter>15</DarkMatter>
 	</costList>
 	<costStuffCount>50</costStuffCount>
 	<stuffCategories>
@@ -277,38 +266,34 @@
 		<MaxHitPoints>300</MaxHitPoints>
 		<WorkToMake>16000</WorkToMake>
 		<StuffEffectMultiplierArmor>0.45</StuffEffectMultiplierArmor>
-		<StuffEffectMultiplierInsulation_Cold>0.00</StuffEffectMultiplierInsulation_Cold>
-		<StuffEffectMultiplierInsulation_Heat>0.00</StuffEffectMultiplierInsulation_Heat>
+		<StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
 		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 		<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
 		<ArmorRating_Heat>0.20</ArmorRating_Heat>
 	</statBases>
 	<equippedStatOffsets>
 		<AimingDelayFactor>-0.1</AimingDelayFactor>
+		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
+		<PsychicEntropyRecoveryRate>0.03</PsychicEntropyRecoveryRate>
 	</equippedStatOffsets>
 	<apparel>
 		<bodyPartGroups>
 			<li>FullHead</li>
 		</bodyPartGroups>
 		<wornGraphicPath>Naki/Apparel/Overhead/Military_Helmet_A/Texture</wornGraphicPath>
-		<tags>
-			<li>Naki_Military</li>
- 			<li>RoyalCombatGear</li>
-			<li>Royal</li>
-			<li>RoyalTier4</li>
-		</tags>
 	</apparel>
 </ThingDef>
 
 <ThingDef ParentName="Naki_OverheadBaseTear3">
 	<defName>Naki_Overhead_Traditional_Hair_Pin</defName>
 	<label>Naki traditional hair pin</label>
-	<description>귀여운 꽃 모양의 머리핀입니다.</description>
+	<description>A cute hair pin given to off-station travelers. It's said to help with negotations and trade deals.</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Overhead/Traditional_Hair_Pin/Texture</texPath>
 	</graphicData>
 	  <costList>
-		<DevilstrandCloth>25</DevilstrandCloth>
+		<DarkMatter>6</DarkMatter>
 	</costList>
 	<costStuffCount>50</costStuffCount>
 	<stuffCategories>
@@ -329,58 +314,14 @@
 		<bodyPartGroups>
 			<li>UpperHead</li>
 		</bodyPartGroups>
-		<tags>
-			<li>Royal</li>
-			<li>RoyalTier5</li>
-			<li>Naki_Trader</li>
-		</tags>
 		<wornGraphicPath>Naki/Apparel/Overhead/Traditional_Hair_Pin/Texture</wornGraphicPath>
 		<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Naki_OverheadBaseTear3">
-	<defName>Naki_Overhead_Cute_Hair_Pin</defName>
-	<label>Naki cute hair pin</label>
-	<description>귀여운 여우 모양의 머리핀입니다.</description>
-	<apparel>
-		<bodyPartGroups>
-			<li>UpperHead</li>
-		</bodyPartGroups>
-		<tags>
-			<li>Royal</li>
-			<li>RoyalTier5</li>
-			<li>Naki_Trader</li>
-		</tags>
-	<hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
-	<wornGraphicPath>Naki/Apparel/Overhead/Cute_Hair_Pin/Texture</wornGraphicPath>
-	</apparel>
-	<graphicData>
-		<texPath>Naki/Apparel/Overhead/Cute_Hair_Pin/Texture</texPath>
-	</graphicData>
-	<costList>
-		<DevilstrandCloth>25</DevilstrandCloth>
-	</costList>
-	<costStuffCount>50</costStuffCount>
-	<stuffCategories>
-		<li>Fabric</li>
-		<li>Leathery</li>
-	</stuffCategories>
-	<statBases>
-		<MaxHitPoints>150</MaxHitPoints>
-		<WorkToMake>4000</WorkToMake>
-		<StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
-		<StuffEffectMultiplierInsulation_Cold>0.00</StuffEffectMultiplierInsulation_Cold>
-		<StuffEffectMultiplierInsulation_Heat>0.00</StuffEffectMultiplierInsulation_Heat>
-	</statBases>
-	<equippedStatOffsets>
-		<SocialImpact>0.5</SocialImpact>
-	</equippedStatOffsets>
-</ThingDef>
-
 <!--================================================== Tier 4 ==================================================-->
 
-<!-- <ThingDef Name="Naki_OverheadBaseTear4" ParentName="Naki_OverheadBase" Abstract="True">
+<ThingDef Name="Naki_OverheadBaseTear4" ParentName="Naki_OverheadBase" Abstract="True">
 	<recipeMaker>
 		<researchPrerequisite>Naki_ApparelT4</researchPrerequisite>
 	</recipeMaker>
@@ -401,34 +342,38 @@
 </ThingDef>
 
 <ThingDef ParentName="Naki_OverheadBaseTear4">
-	<defName>Naki_Redfox_Helmet</defName>
-	<label>Naki Redfox Helmet</label>
-	<description>Highly protective military helmet for Naki Redfox soldiers. Capable of absorbing incredible punishment due to interweaving layers of devilstrand and energy shielding.</description>
+	<defName>Naki_Overhead_Marine_Helmet</defName>
+	<label>naki marine helmet</label>
+	<description>A combat helmet for Naki elite marines. It protects the head considerably while enhancing psycasting abilities.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/Overhead/Marine_Melee/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Marine_Helmet/Texture</texPath>
 	</graphicData>
 	<tradeTags>
       <li>HiTechArmor</li>
     </tradeTags>
-	<costList>
-		<DevilstrandCloth>80</DevilstrandCloth>
-		<Plasteel>50</Plasteel>
-		<ComponentSpacer>1</ComponentSpacer>
-	</costList>
+    <costList>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>100</Plasteel>
+      <Uranium>40</Uranium>
+	  <DarkMatter>20</DarkMatter>
+    </costList>
 	<statBases>
 		<MaxHitPoints>300</MaxHitPoints>
-		<WorkToMake>24000</WorkToMake>
+		<WorkToMake>64000</WorkToMake>
 		<Mass>1.5</Mass>
 		<Flammability>0.4</Flammability>
 		<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
 		<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
 		<ArmorRating_Heat>0.54</ArmorRating_Heat>
-		<Insulation_Cold>4</Insulation_Cold>
-		<Insulation_Heat>2</Insulation_Heat>
+		<Insulation_Cold>48</Insulation_Cold>
+    	<Insulation_Heat>48</Insulation_Heat>
+		<EquipDelay>4</EquipDelay>
 	</statBases>
 	<equippedStatOffsets>
-		<MeleeHitChance>2.0</MeleeHitChance>
-		<MeleeDodgeChance>3.0</MeleeDodgeChance>
+		<PsychicSensitivityOffset>0.15</PsychicSensitivityOffset>
+        <PsychicEntropyRecoveryRate>0.03</PsychicEntropyRecoveryRate>
+		<MeleeHitChance>3.0</MeleeHitChance>
+		<!-- <ShootingAccuracyPawn>3.0</ShootingAccuracyPawn> -->
 		<AimingDelayFactor>-0.2</AimingDelayFactor>
 		<MoveSpeed>0.1</MoveSpeed>
 	</equippedStatOffsets>
@@ -436,60 +381,8 @@
 		<bodyPartGroups>
 			<li>FullHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Overhead/Marine_Melee/Texture</wornGraphicPath>
-		<tags>
-			<li>Naki_GitterworldGear</li>
- 			<li>RoyalCombatGear</li>
-		</tags>
+		<wornGraphicPath>Naki/Apparel/Overhead/Marine_Helmet/Texture</wornGraphicPath>
 	</apparel>
-</ThingDef> -->
-
-<!-- Content merged with Redfox helmet -->
-<!-- <ThingDef ParentName="Naki_OverheadBaseTear4">
-	<defName>Naki_Shadowfox_Helmet</defName>
-	<label>Naki Shadowfox Helmet</label>
-	<description>Highly protective military armor for Naki Shadowfox soldiers. This helmet sacrifices some protection for a suite of rangefinders and target acquisition devices.</description>
-	<graphicData>
-		<texPath>Naki/Apparel/Overhead/Marine_Ranged/Texture</texPath>
-	</graphicData>
-	<tradeTags>
-      <li>HiTechArmor</li>
-    </tradeTags>
-	<costList>
-		<DevilstrandCloth>80</DevilstrandCloth>
-		<Plasteel>50</Plasteel>
-		<ComponentSpacer>1</ComponentSpacer>
-	</costList>
-	<statBases>
-		<MaxHitPoints>300</MaxHitPoints>
-		<WorkToMake>24000</WorkToMake>
-		<Mass>1.0</Mass>
-		<Flammability>0.4</Flammability>
-		<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
-		<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
-		<ArmorRating_Heat>0.46</ArmorRating_Heat>
-		<Insulation_Cold>4</Insulation_Cold>
-		<Insulation_Heat>2</Insulation_Heat>
-		<EquipDelay>2</EquipDelay>
-	</statBases>
-	<equippedStatOffsets>
-		<AimingDelayFactor>-0.2</AimingDelayFactor>
-		<MoveSpeed>0.1</MoveSpeed>
-	</equippedStatOffsets>
-	<apparel>
-		<bodyPartGroups>
-			<li>FullHead</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Overhead/Marine_Ranged/Texture</wornGraphicPath>
-		<tags>
-			<li>Naki_GitterworldGear</li>
- 			<li>RoyalCombatGear</li>
-			<li>Royal</li>
-			<li>RoyalTier4</li>
-			<li>EVA</li>
-		</tags>
-	</apparel>
-</ThingDef> -->
-
+</ThingDef> 
 
 </Defs>

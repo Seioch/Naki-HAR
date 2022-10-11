@@ -12,12 +12,6 @@
 		<parent>Naki_Apparel</parent>
 	</ThingCategoryDef>
 
-	<!-- <ThingCategoryDef>
-		<defName>Naki_Apparel_Stocking</defName>
-		<label>Naki stocking apparel</label>
-		<parent>Naki_Apparel</parent>
-	</ThingCategoryDef> -->
-
 	<ThingCategoryDef>
 		<defName>Naki_Apparel_OnSkin</defName>
 		<label>Naki onskin apparel</label>

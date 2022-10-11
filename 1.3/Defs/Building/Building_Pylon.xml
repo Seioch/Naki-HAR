@@ -10,6 +10,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(5,5)</drawSize>
     </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
     <altitudeLayer>Building</altitudeLayer>
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <useHitPoints>true</useHitPoints>
@@ -82,5 +83,8 @@
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
       <ai_chillDestination>true</ai_chillDestination>
     </building>
+    <researchPrerequisites>
+      <li>Naki_DM_station</li>
+    </researchPrerequisites>
   </ThingDef>
 </Defs>

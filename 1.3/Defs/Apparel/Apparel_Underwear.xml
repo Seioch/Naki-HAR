@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!-- Remember The Tiers!
+	Tier 1: Casual Clothing
+	Tier 2: Worker Clothing, light armor
+	Tier 3: Military Officer and Enlisted Clothing, medium armor
+	Tier 4: Power armor, Space suits
+ -->
+
 <ThingDef Name="Naki_UnderwearBase" ParentName="Naki_ApparelBase" Abstract="True">
 	<defName>Naki_Apparel_Underwear</defName>
 	<recipeMaker>
@@ -26,11 +33,18 @@
 		<tags>
 			<li>Naki_Underwear</li>
 			<li>Naki_Colonist</li>
+			<li>Naki_Citizen</li>
+			<li>Naki_Military</li>
 			<li>IndustrialBasic</li>
-			<li>Neolithic</li>
 			<!--Royal-->
 			<li>Royal</li>
+			<li>RoyalTier1</li>
+			<li>RoyalTier2</li>
+			<li>RoyalTier3</li>
+			<li>RoyalTier4</li>
 			<li>RoyalTier5</li>
+			<li>RoyalTier6</li>
+			<li>RoyalTier7</li>
 			<!--Royal-->
 		</tags>
 	</apparel>
@@ -40,7 +54,7 @@
 </ThingDef>
 
 <ThingDef ParentName="Naki_UnderwearBase">
-	<defName>Naki_Underwear</defName>
+	<defName>Naki_White_Underwear</defName>
 	<label>Naki white underwear</label>
 	<description>Plain underwear, dyed white</description>
 	<graphicData>
@@ -49,173 +63,23 @@
 	<apparel>
 		<bodyPartGroups>
 			<li>Torso</li>
-			<li>Legs</li>
 		</bodyPartGroups>
 		<wornGraphicPath>Naki/Apparel/Underwear/White_Underwear/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
+
 <ThingDef ParentName="Naki_UnderwearBase">
-	<defName>Naki_Underwear_Stuffed</defName>
-	<label>Naki underwear</label>
-	<description>Plain underwear that matches the color of the material used</description>
+	<defName>Naki_Colored_Underwear</defName>
+	<label>Naki colored underwear</label>
+	<description>Plain underwear</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Underwear/White_Underwear/Texture</texPath>
 	</graphicData>
 	<apparel>
-		<useWornGraphicMask>false</useWornGraphicMask>
 		<bodyPartGroups>
 			<li>Torso</li>
-			<li>Legs</li>
 		</bodyPartGroups>
 		<wornGraphicPath>Naki/Apparel/Underwear/White_Underwear/Texture</wornGraphicPath>
-	</apparel>
-</ThingDef>
-
-<ThingDef ParentName="Naki_UnderwearBase">
-	<defName>Naki_Underwear_Prude</defName>
-	<label>Naki prude underwear</label>
-	<description>Underwear so light and comfortable Naki often forget they're even wearing it</description>
-	<graphicData>
-		<texPath>Naki/Apparel/Underwear/Prude_Underwear/Texture</texPath>
-	</graphicData>
-	<apparel>
-		<useWornGraphicMask>false</useWornGraphicMask>
-		<bodyPartGroups>
-			<li>Torso</li>
-			<li>Legs</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Underwear/Prude_Underwear/Texture</wornGraphicPath>
-	</apparel>
-</ThingDef>
-
-<ThingDef ParentName="Naki_UnderwearBase">
-	<defName>Naki_Underwear_Black</defName>
-	<label>Naki black underwear</label>
-	<description>Plain underwear, dyed black</description>
-	<graphicData>
-		<texPath>Naki/Apparel/Underwear/Black_Underwear/Texture</texPath>
-	</graphicData>
-	<apparel>
-		<bodyPartGroups>
-			<li>Torso</li>
-			<li>Legs</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Underwear/Black_Underwear/Texture</wornGraphicPath>
-	</apparel>
-</ThingDef>
-
-
-<ThingDef ParentName="Naki_UnderwearBase">
-	<defName>Naki_Underwear_Red</defName>
-	<label>Naki red underwear</label>
-	<description>Plain underwear, dyed red</description>
-	<graphicData>
-		<texPath>Naki/Apparel/Underwear/Red_Underwear/Texture</texPath>
-	</graphicData>
-	<apparel>
-		<bodyPartGroups>
-			<li>Torso</li>
-			<li>Legs</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Underwear/Red_Underwear/Texture</wornGraphicPath>
-	</apparel>
-</ThingDef>
-
-
-<ThingDef ParentName="Naki_UnderwearBase">
-	<defName>Naki_Underwear_Striped</defName>
-	<label>Naki white striped Bra</label>
-	<description>Cute striped underwear. They've been dyed white.</description>
-	<graphicData>
-		<texPath>Naki/Apparel/Underwear/Striped_Underwear/Texture</texPath>
-	</graphicData>
-	<apparel>
-		<bodyPartGroups>
-			<li>Torso</li>
-			<li>Legs</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Underwear/Striped_Underwear/Texture</wornGraphicPath>
-	</apparel>
-</ThingDef>
-
-<ThingDef ParentName="Naki_UnderwearBase">
-	<defName>Naki_Underwear_Striped_Stuffed</defName>
-	<label>Naki striped underwear</label>
-	<description>Cute striped bra. Colorable.</description>
-	<graphicData>
-		<texPath>Naki/Apparel/Underwear/Striped_Underwear/Texture</texPath>
-	</graphicData>
-	<apparel>
-		<useWornGraphicMask>false</useWornGraphicMask>
-		<bodyPartGroups>
-			<li>Torso</li>
-			<li>Legs</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Underwear/Striped_Underwear/Texture</wornGraphicPath>
-	</apparel>
-</ThingDef>
-
-
-<ThingDef ParentName="Naki_UnderwearBase">
-	<defName>Naki_Underwear_Slim</defName>
-	<label>Naki slim underwear</label>
-	<description>Slim underwear for Naki. Doesn't cover much.</description>
-	<graphicData>
-		<texPath>Naki/Apparel/Underwear/Slim_Underwear/Texture</texPath>
-	</graphicData>
-	<apparel>
-		<bodyPartGroups>
-			<li>Torso</li>
-			<li>Legs</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Underwear/Slim_Underwear/Texture</wornGraphicPath>
-	</apparel>
-</ThingDef>
-
-<ThingDef ParentName="Naki_UnderwearBase">
-	<defName>Naki_Waterfox_Armor</defName>
-	<label>Naki waterfox skinsuit</label>
-	<description>Replica skinsuit from the old Naki republic. The Waterfox logistical corp dedicated themselves to supplying the Naki military. This skinsuit provided basic protection while improving work efficiency.</description>
-	<graphicData>
-		<texPath>Naki/Apparel/OnSkin/Waterfox_armor/Texture</texPath>
-	</graphicData>
-	<tradeTags>
-      <li>HiTechArmor</li>
-    </tradeTags>
-    <costList>
-      <ComponentSpacer>1</ComponentSpacer>
-      <Plasteel>50</Plasteel>
-      <Uranium>10</Uranium>
-	  <DevilstrandCloth>75</DevilstrandCloth>
-    </costList>
-	<statBases>
-		<MaxHitPoints>200</MaxHitPoints>
-		<WorkToMake>40000</WorkToMake>
-		<ArmorRating_Sharp>0.21</ArmorRating_Sharp>
-		<ArmorRating_Blunt>0.14</ArmorRating_Blunt>
-		<ArmorRating_Heat>4.0</ArmorRating_Heat>
-		<Insulation_Cold>48</Insulation_Cold>
-    	<Insulation_Heat>48</Insulation_Heat>
-		<EquipDelay>2</EquipDelay>
-	</statBases>
-	<equippedStatOffsets>
-		<WorkSpeedGlobal>0.3</WorkSpeedGlobal>
-	</equippedStatOffsets>
-	<apparel>
-		<bodyPartGroups>
-			<li>Torso</li>
-			<li>Legs</li>
-			<li>Arms</li>
-			<li>Neck</li>
-			<li>Shoulders</li>
-			<li>Feet</li>
-			<li>Hands</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/OnSkin/Waterfox_armor/Texture</wornGraphicPath>
-		<tags>
-			<li>Naki_Glitterworld</li>
- 			<li>RoyalCombatGear</li>
-		</tags>
 	</apparel>
 </ThingDef>
 

@@ -65,8 +65,7 @@
 		<li>PlaceWorker_PreventInteractionSpotOverlap</li>
 	</placeWorkers>
 	<researchPrerequisites>
-		<li>Gunsmithing</li>
-		<li>Electricity</li>
+		<li>Naki_DM_station</li>
 	</researchPrerequisites>
 </ThingDef>
 

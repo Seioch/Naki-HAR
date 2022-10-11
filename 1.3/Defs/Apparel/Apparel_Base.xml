@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!-- Remember The Tiers!
+	Tier 1: Casual Clothing
+	Tier 2: Worker Clothing, light armor
+	Tier 3: Military Officer and Enlisted Clothing, medium armor
+	Tier 4: Power armor, Space suits
+ -->
+
   <ThingDef Name="ApparelBase_Naki" ParentName="ApparelBase" Abstract="True">
     <thingClass>Apparel</thingClass>
     <category>Item</category>

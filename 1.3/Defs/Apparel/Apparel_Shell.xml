@@ -26,6 +26,7 @@
 		<tags>
 			<li>Naki_Colonist</li>
 			<li>Naki_Citizen</li>
+			<li>Naki_Military</li>
 		</tags>
 	</apparel>
 </ThingDef>
@@ -33,7 +34,7 @@
 <ThingDef ParentName="Naki_ShellBaseTear1">
 	<defName>Naki_Shell_Cardigan</defName>
 	<label>Naki cardigan</label>
-	<description>푹신푹신하고 따듯한 카디건입니다. 옷이 늘어나지 않게 조심하세요!</description>
+	<description>A warm cardigan to protect against cold or heat.</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Shell/Cardigan/Texture</texPath>
 	</graphicData>
@@ -47,7 +48,7 @@
 		<WorkToMake>8000</WorkToMake>
 		<StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
 		<StuffEffectMultiplierInsulation_Cold>0.80</StuffEffectMultiplierInsulation_Cold>
-		<StuffEffectMultiplierInsulation_Heat>0.60</StuffEffectMultiplierInsulation_Heat>
+		<StuffEffectMultiplierInsulation_Heat>0.30</StuffEffectMultiplierInsulation_Heat>
 	</statBases>
 	<apparel>
 		<useWornGraphicMask>false</useWornGraphicMask>
@@ -62,7 +63,7 @@
 <ThingDef ParentName="Naki_ShellBaseTear1">
 	<defName>Naki_Shell_Duster</defName>
 	<label>Naki duster</label>
-	<description>상당한 더위와 어느정도의 추위를 막아 줄 수 있는 세련된 외투입니다.</description>
+	<description>A light duster to protect against heat.</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Shell/Duster/Texture</texPath>
 	</graphicData>
@@ -75,7 +76,7 @@
 		<MaxHitPoints>200</MaxHitPoints>
 		<WorkToMake>8000</WorkToMake>
 		<StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
-		<StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
 		<StuffEffectMultiplierInsulation_Heat>0.80</StuffEffectMultiplierInsulation_Heat>
 	</statBases>
 	<apparel>
@@ -91,9 +92,9 @@
 </ThingDef>
 
 <ThingDef ParentName="Naki_ShellBaseTear1">
-	<defName>Naki_Shell_Winter_Padding</defName>
-	<label>Naki winter padding</label>
-	<description>두꺼운 겨울 패딩입니다. 추위를 잘 타는 쿠린들에게는 겨울 필수품입니다.</description>
+	<defName>Naki_Shell_Parka</defName>
+	<label>naki parka</label>
+	<description>A heavy parka to protect even against the bitter cold of the depths of a starbase.</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Shell/Winter_Padding/Texture</texPath>
 	</graphicData>
@@ -143,9 +144,9 @@
 </ThingDef>
 
 <ThingDef ParentName="Naki_ShellBaseTear3">
-	<defName>Naki_OnSkin_Traditional_Coat</defName>
-	<label>Naki traditional coat</label>
-	<description>단조로운 남색 코트 위에 흰색 무늬가 인상적인 쿠린들의 전통의상입니다.</description>
+	<defName>Naki_Shell_NavyOfficerCoat</defName>
+	<label>naki navy officer coat</label>
+	<description>A coat worn by officers of the naki navy.</description>
 	<graphicData>
 		<texPath>Naki/Apparel/Shell/Traditional_Coat/Texture</texPath>
 	</graphicData>
@@ -157,14 +158,9 @@
 			<li>Legs</li>
 		</bodyPartGroups>
 		<wornGraphicPath>Naki/Apparel/Shell/Traditional_Coat/Texture</wornGraphicPath>
-		<tags>
-			<li>Royal</li>
-			<li>RoyalTier5</li>
-			
-		</tags>
 	</apparel>
 	<costList>
-		<DevilstrandCloth>25</DevilstrandCloth>
+		<Hyperweave>10</Hyperweave>
 	</costList>
 	<costStuffCount>100</costStuffCount>
 	<stuffCategories>
@@ -173,19 +169,92 @@
 	</stuffCategories>
 	<statBases>
 		<MaxHitPoints>250</MaxHitPoints>
-		<WorkToMake>12000</WorkToMake>
+		<WorkToMake>6000</WorkToMake>
 		<StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
-		<StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
-		<StuffEffectMultiplierInsulation_Heat>0.80</StuffEffectMultiplierInsulation_Heat>
+		<StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Heat>0.30</StuffEffectMultiplierInsulation_Heat>
 	</statBases>
 	<equippedStatOffsets>
-		<SocialImpact>0.2</SocialImpact>
+		<SocialImpact>0.15</SocialImpact>
 	</equippedStatOffsets>
+</ThingDef>
+
+<ThingDef ParentName="Naki_ShellBaseTear3">
+	<defName>Naki_Shell_ScientistCoat</defName>
+	<label>naki scientist coat</label>
+	<description>A coat worn by dark matter scientists. Darkweave lining enhances the wearer's psycasting power.</description>
+	<graphicData>
+		<texPath>Naki/Apparel/Shell/Traditional_Coat/Texture</texPath>
+	</graphicData>
+	<apparel>
+		<bodyPartGroups>
+			<li>Torso</li>
+			<li>Shoulders</li>
+			<li>Arms</li>
+			<li>Legs</li>
+		</bodyPartGroups>
+		<wornGraphicPath>Naki/Apparel/Shell/Traditional_Coat/Texture</wornGraphicPath>
+	</apparel>
+	<costList>
+		<Hyperweave>10</Hyperweave>
+		<DarkMatter>15</DarkMatter>
+	</costList>
+	<costStuffCount>100</costStuffCount>
+	<stuffCategories>
+		<li>Fabric</li>
+		<li>Leathery</li>
+	</stuffCategories>
+	<statBases>
+		<MaxHitPoints>250</MaxHitPoints>
+		<WorkToMake>6000</WorkToMake>
+		<StuffEffectMultiplierArmor>0.10</StuffEffectMultiplierArmor>
+		<StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Heat>0.20</StuffEffectMultiplierInsulation_Heat>
+	</statBases>
+	<equippedStatOffsets>
+		<GlobalLearningFactor>0.2</GlobalLearningFactor>
+		<PsychicSensitivityOffset>0.3</PsychicSensitivityOffset>
+        <PsychicEntropyRecoveryRate>0.09</PsychicEntropyRecoveryRate>
+	</equippedStatOffsets>
+</ThingDef>
+
+<ThingDef ParentName="Naki_ShellBaseTear3">
+	<defName>Naki_Shell_TrenchCoat</defName>
+	<label>naki trenchcoat</label>
+	<description>A coat worn by off-station security guards and officers. Provides a decent amount of protection without heavy weight.</description>
+	<graphicData>
+		<texPath>Naki/Apparel/Shell/Traditional_Coat/Texture</texPath>
+	</graphicData>
+	<apparel>
+		<bodyPartGroups>
+			<li>Torso</li>
+			<li>Shoulders</li>
+			<li>Arms</li>
+			<li>Legs</li>
+		</bodyPartGroups>
+		<wornGraphicPath>Naki/Apparel/Shell/Traditional_Coat/Texture</wornGraphicPath>
+	</apparel>
+	<costList>
+		<Hyperweave>10</Hyperweave>
+		<Plasteel>15</Plasteel>
+	</costList>
+	<costStuffCount>100</costStuffCount>
+	<stuffCategories>
+		<li>Fabric</li>
+		<li>Leathery</li>
+	</stuffCategories>
+	<statBases>
+		<MaxHitPoints>250</MaxHitPoints>
+		<WorkToMake>6000</WorkToMake>
+		<StuffEffectMultiplierArmor>0.30</StuffEffectMultiplierArmor>
+		<StuffEffectMultiplierInsulation_Cold>0.40</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
+	</statBases>
 </ThingDef>
 
 <!--================================================== Endgame Armor ==================================================-->
 
-<!-- <ThingDef Name="Naki_ShellArmor" ParentName="Naki_ShellBase" Abstract="True">
+<ThingDef Name="Naki_ShellArmor" ParentName="Naki_ShellBase" Abstract="True">
 	<recipeMaker>
 		<researchPrerequisite>Naki_ApparelT4</researchPrerequisite>
 	</recipeMaker>
@@ -208,11 +277,11 @@
 </ThingDef>
 
 <ThingDef ParentName="Naki_ShellArmor">
-	<defName>Naki_Redfox_Armor</defName>
-	<label>Naki redfox armor</label>
-	<description>Replica power armor from the old Naki republic. The Redfox army would wear this armor for space and ground combat.</description>
+	<defName>Naki_Shell_Marine_Armor</defName>
+	<label>naki marine armor</label>
+	<description>Powered assault armor for Naki elite marines. It protect the user greatly while enhancing psycasting powers.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/OnSkin/Redfox_armor/Texture</texPath>
+		<texPath>Naki/Apparel/OnSkin/Marine/Texture</texPath>
 	</graphicData>
 	<tradeTags>
       <li>HiTechArmor</li>
@@ -221,7 +290,7 @@
       <ComponentSpacer>4</ComponentSpacer>
       <Plasteel>100</Plasteel>
       <Uranium>40</Uranium>
-	  <DevilstrandCloth>75</DevilstrandCloth>
+	  <DarkMatter>20</DarkMatter>
     </costList>
 	<statBases>
 		<MaxHitPoints>300</MaxHitPoints>
@@ -234,10 +303,11 @@
 		<EquipDelay>6</EquipDelay>
 	</statBases>
 	<equippedStatOffsets>
+		<PsychicSensitivityOffset>0.15</PsychicSensitivityOffset>
+        <PsychicEntropyRecoveryRate>0.03</PsychicEntropyRecoveryRate>
 		<MeleeHitChance>3.0</MeleeHitChance>
 		<ShootingAccuracyPawn>3.0</ShootingAccuracyPawn>
-		<MeleeDodgeChance>9.0</MeleeDodgeChance>
-		<MoveSpeed>0.4</MoveSpeed>
+		<MoveSpeed>0.3</MoveSpeed>
 	</equippedStatOffsets>
 	<apparel>
 		<bodyPartGroups>
@@ -249,61 +319,8 @@
 			<li>Feet</li>
 			<li>Hands</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/OnSkin/Redfox_armor/Texture</wornGraphicPath>
-		<tags>
-			<li>Naki_Glitterworld</li>
- 			<li>RoyalCombatGear</li>
-		</tags>
+		<wornGraphicPath>Naki/Apparel/OnSkin/Marine/Texture</wornGraphicPath>
 	</apparel>
-</ThingDef> -->
-
-<!-- Content merged with Redfox armor -->
-<!-- <ThingDef ParentName="Naki_ShellArmor">
-	<defName>Naki_Shadowfox_Armor</defName>
-	<label>Naki shadowfox armor</label>
-	<description>Replica power armor from the old Naki republic. The Shadowfox special forces wore this advanced armor to enhance assassination capabilities. Hidden servos augment shooting stability and movement speed.</description>
-	<graphicData>
-		<texPath>Naki/Apparel/OnSkin/Shadowfox_armor/Texture</texPath>
-	</graphicData>
-	<tradeTags>
-      <li>HiTechArmor</li>
-    </tradeTags>
-    <costList>
-      <ComponentSpacer>4</ComponentSpacer>
-      <Plasteel>100</Plasteel>
-      <Uranium>20</Uranium>
-	  <DevilstrandCloth>75</DevilstrandCloth>
-    </costList>
-	<statBases>
-		<MaxHitPoints>300</MaxHitPoints>
-		<WorkToMake>64000</WorkToMake>
-		<ArmorRating_Sharp>0.31</ArmorRating_Sharp>
-		<ArmorRating_Blunt>0.23</ArmorRating_Blunt>
-		<ArmorRating_Heat>4.0</ArmorRating_Heat>
-		<Insulation_Cold>96</Insulation_Cold>
-    	<Insulation_Heat>96</Insulation_Heat>
-		<EquipDelay>6</EquipDelay>
-	</statBases>
-	<equippedStatOffsets>
-		<ShootingAccuracyPawn>3.0</ShootingAccuracyPawn>
-		<MoveSpeed>0.4</MoveSpeed>
-	</equippedStatOffsets>
-	<apparel>
-		<bodyPartGroups>
-			<li>Torso</li>
-			<li>Legs</li>
-			<li>Arms</li>
-			<li>Neck</li>
-			<li>Shoulders</li>
-			<li>Feet</li>
-			<li>Hands</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/OnSkin/Shadowfox_armor/Texture</wornGraphicPath>
-		<tags>
-			<li>Naki_Glitterworld</li>
- 			<li>RoyalCombatGear</li>
-		</tags>
-	</apparel>
-</ThingDef> -->
+</ThingDef> 
 
 </Defs>

@@ -671,55 +671,37 @@
 <!--=============================================================================================================================-->
 		<raceRestriction>
       <apparelList>
+        <li>Naki_Colored_Underwear</li> 
+        <li>Naki_White_Underwear</li> 
 				<li>Naki_OnSkin_Shirt</li>
 				<li>Naki_OnSkin_T_Shirt</li>
-				<li>Naki_OnSkin_Hot_Pants</li>
-				<li>Naki_OnSkin_PajamasA</li>
-				<li>Naki_OnSkin_PajamasB</li>
-				<li>Naki_OnSkin_PajamasC</li>
-				<li>Naki_OnSkin_One_Piece_Dress</li>
-				<li>Naki_OnSkin_Open_Back_Knit</li>
-				<li>Naki_OnSkin_Open_Shoulder_Knit</li>
-				<li>Naki_OnSkin_Hoodie</li>
-				<li>Naki_OnSkin_Casual_Wear</li>
-				<li>Naki_OnSkin_Armored_Gothic_Dress</li>
-				<li>Naki_OnSkin_Gothic_Dress</li>
-				<li>Naki_OnSkin_Bikini_Armor</li>
-				<li>Naki_OnSkin_Military_Uniform</li>
-				<li>Naki_OnSkin_Nun_Dress</li>
-				<li>Naki_OnSkin_Work_Jumpsuit</li>
-				<li>Naki_OnSkin_Traditional_Simple_Dress</li>
-				<li>Naki_OnSkin_Traditional_Fancy_Dress</li>
-				<li>Naki_OnSkin_Traditional_Luxury_Dress</li>
-				<li>Naki_OnSkin_Cute_Dress</li>
-				<li>Naki_OnSkin_Seductive_White_Dress</li>
-				<li>Naki_OnSkin_Seductive_Black_Dress</li>
-				<li>Naki_Underwear</li> 
-				<li>Naki_Underwear_Stuffed</li> 
-				<li>Naki_Underwear_Black</li> 
-				<li>Naki_Underwear_Red</li> 
-				<li>Naki_Underwear_Striped</li> 
-				<li>Naki_Underwear_Striped_Stuffed</li> 
-				<li>Naki_Underwear_Slim</li>
-				<li>Naki_Underwear_Prude</li>
+				<li>Naki_OnSkin_Short_Pants</li>
+				<li>Naki_OnSkin_LongPants</li>
+        <li>Naki_OnSkin_OnePiece_GalaxyDress</li>
+        <li>Naki_OnSkin_Ruffled_Shirt</li>
+        <li>Naki_OnSkin_Maid_Dress</li>
+        <li>Naki_OnSkin_Work_Jumpsuit</li>
+        <li>Naki_OnSkin_Doctor_Uniform</li>
+        <li>Naki_OnSkin_Armor_Pants</li>
+        <li>Naki_Security_Armor</li>
+        <li>Naki_OnSkin_Marine_Uniform</li>
+				<li>Naki_Colored_Underwear</li> 
 				<li>Naki_Middle_Body_Armor</li>
 				<li>Naki_Overhead_Winter_Hat</li>
 				<li>Naki_Overhead_Summer_Hat</li>
-				<li>Naki_Overhead_Casual_Hair_Pin</li>
+				<li>Naki_Overhead_Glasses</li>
 				<li>Naki_Overhead_Goggles</li>
-				<li>Naki_Overhead_Gothic_Hair_Pin</li>
-				<li>Naki_Overhead_Bikini_Armor_Headgear</li>
+				<li>Naki_Overhead_Darkweave_Hat</li>
 				<li>Naki_Overhead_Military_Helmet</li>
 				<li>Naki_Overhead_Traditional_Hair_Pin</li>
-				<li>Naki_Overhead_Cute_Hair_Pin</li>
+				<li>Naki_Overhead_Marine_Helmet</li>
 				<li>Naki_Shell_Cardigan</li>
 				<li>Naki_Shell_Duster</li>
-				<li>Naki_Shell_Winter_Padding</li>
-				<li>Naki_OnSkin_Traditional_Coat</li>
-        <!-- <li>Naki_Redfox_Armor</li>
-        <li>Naki_Redfox_Helmet</li>
-        <li>Naki_Waterfox_Armor</li> -->
-				<!--<li>Naki_Belt_Scarf</li> -->
+				<li>Naki_Shell_Parka</li>
+				<li>Naki_Shell_NavyOfficerCoat</li>
+        <li>Naki_Shell_ScientistCoat</li>
+        <li>Naki_Shell_TrenchCoat</li>
+        <li>Naki_Shell_Marine_Armor</li>
       </apparelList>
 			<whiteApparelList>
 				<li>Apparel_ShieldBelt</li>
@@ -727,8 +709,9 @@
 			</whiteApparelList>
             <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
             <buildingList>
-            <!-- Add Pylon and Assembler here once it is coded. -->
-                
+              <!-- Add Pylon and Fabricator here once it is coded. -->
+              <li>NakiMeditationPylon</li>
+              <li>Naki_Fabricator</li>
             </buildingList>
     </raceRestriction>
 	</alienRace>

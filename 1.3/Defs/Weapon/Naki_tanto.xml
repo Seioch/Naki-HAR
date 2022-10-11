@@ -46,7 +46,7 @@
       </li>
 	</tools>
 	<recipeMaker>
-		<researchPrerequisite>ChargedShot</researchPrerequisite>
+		<researchPrerequisite>Naki_melee_weapons</researchPrerequisite>
 		<skillRequirements>
 			<Crafting>14</Crafting>
 		</skillRequirements>

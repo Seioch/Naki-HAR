@@ -36,7 +36,7 @@
 		</li>
 	</comps>
 	<recipeMaker>
-		<researchPrerequisite>Naki_DM_station</researchPrerequisite>
+		<researchPrerequisite>Naki_ranged_weapons</researchPrerequisite>
 		<skillRequirements>
 			<Crafting>10</Crafting>
 		</skillRequirements>
