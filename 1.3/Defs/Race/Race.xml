@@ -729,8 +729,6 @@
       <LeatherAmount>55</LeatherAmount>
       <Mass>50</Mass>
 	  <PainShockThreshold>0.85</PainShockThreshold>
-	  <NegotiationAbility>1.1</NegotiationAbility> <!--외교 영향력-->
-	  <SocialImpact>1.1</SocialImpact> <!--사회적 영향력-->
 	  <ButcheryMechanoidEfficiency>0.8</ButcheryMechanoidEfficiency> <!--메카노이드 분해 효율-->
 	  <ButcheryMechanoidSpeed>0.8</ButcheryMechanoidSpeed> 
 	  <SmeltingSpeed>0.8</SmeltingSpeed> 
@@ -780,7 +778,7 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>12</power>
+        <power>10</power>
         <cooldownTime>1.6</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         <chanceFactor>0.4</chanceFactor>
@@ -808,7 +806,7 @@
       <nameCategory>HumanStandard</nameCategory>
 	  <body>Naki_Body</body>
       <baseBodySize>0.9</baseBodySize>
-      <baseHealthScale>0.9</baseHealthScale>
+      <baseHealthScale>1.0</baseHealthScale>
       <foodType>OmnivoreHuman</foodType>
       <gestationPeriodDays>45</gestationPeriodDays>
       <meatMarketValue>0.8</meatMarketValue>

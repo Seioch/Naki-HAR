@@ -10,7 +10,7 @@
       <xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
 
       <value>
-        <li>Naki_PlayerFaction</li>
+        <!-- <li>Naki_PlayerFaction</li> -->
         <li>Naki_HiddenFaction</li>
       </value>
     </match>
