@@ -94,6 +94,8 @@
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMAnnihilation</hediffDef>
                 <psychic>False</psychic>
+                <goodwillImpact>-65</goodwillImpact>
+               <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
         </comps>
     </AbilityDef> 
@@ -259,6 +261,8 @@
         <statBases>
             <Ability_EntropyGain>15</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.35</Ability_PsyfocusCost>
+            <goodwillImpact>-35</goodwillImpact>
+            <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
         </statBases>
         <comps>
             <li Class = "CompProperties_AbilityGiveHediff">
