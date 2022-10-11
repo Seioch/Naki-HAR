@@ -31,12 +31,16 @@ Nakis are still living beings made of flesh, but their bodies contain high amoun
 On a personal level, Naki are still people. They have individual personalities, quirks, and life goals. However, they are all still bound to the will of Omega Eden. They have an urge to build one of the two Naki endgame structures and will eventually do so in secret or in public. 
 ---
 # Features
-1. A new race of Archotech-created, raccoon-themed people. They are quick learners, and have access to reality-bending psycasts that can disintegrate enemies from within.
-2. A unique, bespoke psycast system that involves attuning to their Archotech god through a wormhole to the center of a black hole.
+1. A new race of Archotech-created, raccoon-themed people. They are quick learners, and have access to reality-bending psycasts that can disintegrate enemies from within. But, they need to consume dark matter to continue living.
+2. A unique psycast system that involves attuning to their Archotech god through a wormhole to the center of a black hole.
 3. 60 new backstories
 4. Powerful unique weapons that require dark matter, and self-destruct after extended use.
 5. A hidden faction, with 2 quests to gain Naki for your colony.
 6. Unique apparel and crafting station. 
+---
+# Upcoming Features
+1. Expansion of the Dark Matter need feature
+2. Destroy the planet endgame event
 ---
 # Installation instructions
 1. Humanoid Alien Races
