@@ -316,7 +316,7 @@ namespace Naki_HAR
 
             // Set current attunement to remove the amount of attunement needed for that level
             int currentPawnPsylinkLevel = pawn.GetPsylinkLevel();
-            this.currentAttunement = this.Props.requiredAttunementPerPsylinkLevel[currentPawnPsylinkLevel + 1]; // Should never go out of index range cause by the time we get here the pawn cannot psylink past level 6
+            this.currentAttunement = this.currentAttunement - this.Props.requiredAttunementPerPsylinkLevel[currentPawnPsylinkLevel + 1]; // Should never go out of index range cause by the time we get here the pawn cannot psylink past level 6
 
             pawn.ChangePsylinkLevel(1, true);
             Find.History.Notify_PsylinkAvailable();
@@ -421,6 +421,7 @@ namespace Naki_HAR
         {
             Scribe_Collections.Look<Pawn>(ref this.pawnsThatCanPsylink, "pawnsThatCanPsylink", LookMode.Reference, Array.Empty<object>());
             Scribe_Values.Look<float>(ref this.currentAttunement, "currentAttunement", 0f, false);
+            Scribe_Values.Look<bool>(ref this.hasSpawnedDM, "hasSpawnedDM", false, false);
             Scribe_Values.Look<int>(ref this.meditationTicksToday, "meditationTicksToday", 0, false);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {

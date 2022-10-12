@@ -8,7 +8,7 @@
       <li>
         <label>voidborn</label>
         <description>{PAWN_nameDef} was created from the mind of an archotech. Their body appears normal, but contains stable heavy particles.</description>
-        <!-- <allowedMeditationFocusTypes><li>Naki</li></allowedMeditationFocusTypes> -->
+        <allowedMeditationFocusTypes><li>Naki</li></allowedMeditationFocusTypes>
       </li>
     </degreeDatas>
   </TraitDef>

@@ -38,11 +38,7 @@
 	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 	<surfaceType>Item</surfaceType>
 	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-	<inspectorTabs>
-		<li>ITab_Bills</li>
-	</inspectorTabs>
 	<building>
-		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
       	<ai_chillDestination>false</ai_chillDestination>
 	</building>
