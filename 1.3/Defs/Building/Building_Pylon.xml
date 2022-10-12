@@ -35,9 +35,6 @@
       <SellPriceFactor>0</SellPriceFactor>
     </statBases>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs> 
     <comps>
         <!-- Meditation Focus type setter -->
         <li Class="CompProperties_MeditationFocus">
