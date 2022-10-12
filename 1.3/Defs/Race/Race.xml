@@ -642,8 +642,11 @@
 					<key>HairDef</key>
 					<value>
 						<hasStyle>true</hasStyle>
-						<styleTagsOverride>
+            <!-- <styleTags>
               <li>Naki</li>
+            </styleTags> -->
+						<styleTagsOverride>
+                <li>Naki</li>
             </styleTagsOverride>
 					</value>
 				</li>

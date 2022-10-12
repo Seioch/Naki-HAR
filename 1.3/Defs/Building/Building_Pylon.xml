@@ -75,6 +75,11 @@
         <glowRadius>3.75</glowRadius>
         <glowColor>(110,116,125,0)</glowColor>
       </li>
+      <!-- More for distortion -->
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_PsychicConditionCauserEffect</mote>
+        <emissionInterval>150</emissionInterval>
+      </li>
     </comps>
     <building>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
