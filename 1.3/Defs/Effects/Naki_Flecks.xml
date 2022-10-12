@@ -16,7 +16,7 @@
   </FleckDef>
 
   <FleckDef ParentName="FleckBase">
-        <defName>Naki_BlackHole</defName>
+        <defName>Naki_GravityWellFleck</defName>
         <fadeInTime>0.1</fadeInTime>
         <fadeOutTime>1.0</fadeOutTime>
         <solidTime>3.0</solidTime>
@@ -25,6 +25,24 @@
           <texPath>Naki/Flecks/BlackHole1024</texPath>
           <graphicClass>Graphic_FleckPulse</graphicClass>
           <shaderType>MoteGlowDistorted</shaderType>
+          <shaderParameters>
+            <_DistortionTex>/Things/Mote/PsychicDistortionRing</_DistortionTex>
+            <_distortionIntensity>0.03</_distortionIntensity>
+            <_brightnessMultiplier>1.5</_brightnessMultiplier>
+          </shaderParameters>
+          <color>(1.0, 1.0, 1.0)</color>
+        </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+        <defName>Naki_BlackHoleFleck</defName>
+        <fadeInTime>0.1</fadeInTime>
+        <fadeOutTime>1.0</fadeOutTime>
+        <solidTime>3.0</solidTime>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <graphicData>
+          <texPath>Naki/Flecks/BlackHole1024</texPath>
+          <graphicClass>Graphic_FleckPulse</graphicClass>
           <shaderParameters>
             <_DistortionTex>/Things/Mote/PsychicDistortionRing</_DistortionTex>
             <_distortionIntensity>0.03</_distortionIntensity>

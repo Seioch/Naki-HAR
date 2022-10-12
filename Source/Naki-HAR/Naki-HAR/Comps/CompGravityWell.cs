@@ -49,18 +49,6 @@ namespace Naki_HAR
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-
-            Log.Message("[Naki HAR] Annihilation Field Activating");
-
-            // fieldPos = this.parent.Position;
-            // drawPos = this.parent.DrawPos;
-            // fieldRot = this.parent.Rotation;
-            // parentMap = this.parent.Map;
-
-            // Black hole center Fleck graphic
-            //FleckCreationData dataStatic = FleckMaker.GetDataStatic(this.parent.Position.ToVector3(), this.parent.Map, Naki_Defof.Naki_BlackHole, 1f);
-            //dataStatic.rotationRate = 1f;
-            //this.parent.Map.flecks.CreateFleck(dataStatic);
         }
 
         public override void PostDraw()
@@ -77,7 +65,7 @@ namespace Naki_HAR
             FleckManager flecks = map.flecks;
             FleckCreationData fleckCreationData = default(FleckCreationData);
             fleckCreationData.def = ((variant == 0) ? Naki_Defof.Naki_GW_line_A : Naki_Defof.Naki_GW_line_B);
-            fleckCreationData.scale = UnityEngine.Random.Range(1.8f, 2.4f);
+            fleckCreationData.scale = UnityEngine.Random.Range(0.8f, 1.4f);
             fleckCreationData.spawnPosition = spawnPosition;
             fleckCreationData.rotationRate = 0f;
             fleckCreationData.rotation = 180f - num2;
@@ -101,7 +89,7 @@ namespace Naki_HAR
 
             if (!spawnedBlackHole)
             {
-                FleckCreationData dataStatic = FleckMaker.GetDataStatic(this.parent.DrawPos, this.parent.Map, Naki_Defof.Naki_BlackHole, 6f);
+                FleckCreationData dataStatic = FleckMaker.GetDataStatic(this.parent.DrawPos, this.parent.Map, Naki_Defof.Naki_GravityWellFleck, 6f);
                 dataStatic.rotation = Rand.Range(0f, 360f);
                 this.parent.Map.flecks.CreateFleck(dataStatic);
                 spawnedBlackHole = true; // do it once

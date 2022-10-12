@@ -80,6 +80,8 @@
     <Compile Include="Comps\CompProperties_SpawnableBuilding.cs" />
     <Compile Include="Comps\CompSpawnedBuilding.cs" />
     <Compile Include="Doers\IngestionOutcomeDoer_GiveHediffCheckRace.cs" />
+    <Compile Include="Effects\CompGravityWellMoteEmitter.cs" />
+    <Compile Include="Effects\CompProperties_GravityWellMoteEmitter.cs" />
     <Compile Include="Gizmos\Command_NakiWeaponAmmoCounter.cs" />
     <Compile Include="HarmonyPatches\Naki_HarmonyPatch.cs" />
     <Compile Include="Hediffs\Hediff_Distorted.cs" />

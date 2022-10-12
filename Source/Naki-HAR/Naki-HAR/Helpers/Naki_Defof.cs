@@ -25,7 +25,8 @@ namespace Naki_HAR
         public static ThingSetMakerDef NakiSubspaceRupture;
 
         public static FleckDef Naki_Distortion_vibration;
-        public static FleckDef Naki_BlackHole;
+        public static FleckDef Naki_BlackHoleFleck;
+        public static FleckDef Naki_GravityWellFleck;
         public static FleckDef Naki_GW_line_A;
         public static FleckDef Naki_GW_line_B;
 

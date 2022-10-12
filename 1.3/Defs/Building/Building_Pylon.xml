@@ -9,7 +9,12 @@
       <texPath>Naki/Building/PylonTexture</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(5,5)</drawSize>
+      <shadowData>
+        <volume>(3.8,3.5,3.6)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
     </graphicData>
+    <tickerType>Normal</tickerType>
     <castEdgeShadows>true</castEdgeShadows>
     <altitudeLayer>Building</altitudeLayer>
     <scatterableOnMapGen>false</scatterableOnMapGen>
@@ -75,10 +80,12 @@
         <glowRadius>3.75</glowRadius>
         <glowColor>(110,116,125,0)</glowColor>
       </li>
-      <!-- More for distortion -->
-      <li Class="CompProperties_MoteEmitter">
-        <mote>Mote_PsychicConditionCauserEffect</mote>
+      <!-- Mote for distortion -->
+      <li Class="Naki_HAR.CompProperties_GravityWellMoteEmitter">
+        <mote>Mote_NakiGravityWell</mote>
         <emissionInterval>150</emissionInterval>
+        <offsetZ>1.5</offsetZ>
+        <maintain>False</maintain>
       </li>
     </comps>
     <building>
