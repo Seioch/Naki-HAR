@@ -86,5 +86,8 @@
     <researchPrerequisites>
       <li>Naki_DM_station</li>
     </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
   </ThingDef>
 </Defs>

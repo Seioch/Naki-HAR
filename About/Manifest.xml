@@ -3,10 +3,12 @@
 	<identifier>Naki Race HAR Edition</identifier>
 	<version>0.0.1</version>
 	<dependencies>
+		<li>Ludeon.Rimworld.Royalty</li>
 		<li>erdelf.HumanoidAlienRaces</li>
 	</dependencies>
 	<incompatibleWith />
 	<loadAfter>
+		<li>Ludeon.Rimworld.Royalty</li>
 		<li>erdelf.HumanoidAlienRaces</li>
 	</loadAfter>
 	<suggests>
