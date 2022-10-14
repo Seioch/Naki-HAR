@@ -78,7 +78,9 @@
     <Compile Include="Comps\CompProperties_CompDMHealing.cs" />
     <Compile Include="Comps\CompProperties_NakiPsylinkable.cs" />
     <Compile Include="Comps\CompProperties_SpawnableBuilding.cs" />
+    <Compile Include="Comps\CompProperties_UseNakiPsytrainer.cs" />
     <Compile Include="Comps\CompSpawnedBuilding.cs" />
+    <Compile Include="Comps\CompUseEffect_GainNakiAbility.cs" />
     <Compile Include="Doers\IngestionOutcomeDoer_GiveHediffCheckRace.cs" />
     <Compile Include="Effects\CompGravityWellMoteEmitter.cs" />
     <Compile Include="Effects\CompProperties_GravityWellMoteEmitter.cs" />

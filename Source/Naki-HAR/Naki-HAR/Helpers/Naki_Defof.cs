@@ -19,6 +19,7 @@ namespace Naki_HAR
         public static ThingDef DarkMatter;
         public static ThingDef Naki_DistortionFieldBuilding;
         public static ThingDef Naki_GravityWell;
+        public static ThingDef Naki_Fabricator;
         public static SoundDef Naki_DM_Sizzle;
         public static SoundDef Naki_Distortion_Sustainer;
         public static PawnKindDef Naki_Citizen;

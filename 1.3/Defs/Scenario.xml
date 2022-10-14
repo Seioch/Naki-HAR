@@ -3,14 +3,13 @@
 <ScenarioDef>
 	<defName>Naki_Scenario</defName>
 	<label>Naki Explorers</label>
-	<description>
-Naki was a race of raccoon-themed humans whose civilization existed entirely in spaceborne starbases that orbited black holes. They venerated black holes, and used exotic tecnology to draw Dark Matter from them, using it to enhance their bodies.\n\n
-Several hundred years ago, the Empire declared war on the Naki, jealous of the Naki dark matter technology. The decades long war turned into a gruesome stalemate, where Naki starbases powered by dark matter survived planet cracking weapons with ease. Eventually, after a decade of siege, the Empire began to fling the starbases entirely into their local black holes, choosing genocide over victory. Although the Empire would eventually win the war, it precipitated their eventual decline on the rim, and slowly the Empire waned in signficance.\n\n
-Centuries later, reports of Naki appearing on the surface of rimworlds began to surface. These new Naki claim that they were saved by an Archotech named Omega Eden, and now they have returned to the material world to bring back a gift for their savior. What that gift entails, however, remains a mystery.\n\n
+	<description>Naki was a race of raccoon-themed humans whose civilization existed entirely in spaceborne starbases that orbited black holes. They venerated black holes, and used exotic tecnology to draw Dark Matter from them, using it to enhance their civilization.\n\n
+Several hundred years ago, the Empire declared war on the Naki, jealous of Naki dark matter technology. The decades long war turned into a gruesome stalemate, where Naki starbases powered by dark matter survived planet cracking weapons with ease. Eventually, after a decade of siege, the Empire began to fling the starbases entirely into their local black holes, choosing genocide over victory. Although the Empire would eventually win the war, it precipitated their eventual decline on the rim, and slowly the Empire waned in signficance.\n\n
+Centuries later, reports of Naki appearing on the surface of rimworlds began to surface. These new Naki claim that they are agents of an Archotech named Omega Eden, and now they have returned to the material world to bring back knowledge to their savior. What this process entails, however, remains a mystery.\n\n
 Set off on a quest to bring back the best gift for your race's savior, Omega Eden. Either open up a doorway to the center of a black hole to draw upon its infinite wealth of materials, or bring the entire planet back to Omega Eden. Your destiny awaits.
  </description>
 	<scenario>
-		<summary>Pioneers depart with the hope of establishing a new society.</summary>
+		<summary>Explorers arrive on the rim, seeking knowledge and adventure.</summary>
 		<playerFaction>
 			<def>PlayerFaction</def>
 			<factionDef>Naki_PlayerFaction</factionDef>
@@ -73,6 +72,14 @@ Set off on a quest to bring back the best gift for your race's savior, Omega Ede
 				<def>StartingThing_Defined</def>
 				<thingDef>Naki_Middle_Body_Armor</thingDef>
 				<stuff>Steel</stuff>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Naki_Gun_Pistol</thingDef>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Naki_Gun_Charge_Rifle</thingDef>
 			</li>
 			<!-- Game start dialog -->
 			<li Class="ScenPart_GameStartDialog">
