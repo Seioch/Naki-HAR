@@ -1,5 +1,3 @@
-
-        <li>KNickname->Catlady
 CatHoarder
 Furballs
 Claws
@@ -12,8 +10,6 @@ Chef
 Fixer
 Barkeep
 Target
-Birdnest
-ChocoMonster
 Burps
 Camper
 Kitters
@@ -27,8 +23,6 @@ Bacon
 Foxy
 Fluff
 Flippers
-TechSupport
-CustomerService
 Ghost
 Sleepy
 Cranky
@@ -39,8 +33,6 @@ Mom
 Trout
 Speedo
 Fingers
-Bang Bang
-Sawed Off
 Funky
 Flowers
 Koneko
@@ -61,7 +53,6 @@ Cheese
 Riceball
 MoneyBags
 Tissue
-Wetblanket
 Ears
 Tougue
 British
@@ -72,7 +63,7 @@ Teabags
 Eggroll
 Peaches
 Chips
-Derptastic
+Derp
 Copycat
 Wires
 Hacker
@@ -80,7 +71,6 @@ Golden
 Beans
 Coolios
 Darka
-Dresses
 Frills
 Lazy
 Happy
@@ -101,11 +91,8 @@ Bloopers
 Scratchy
 Meows
 Naptime
-Ginormous
-Titanic
 Bandit
 Hopper
-Tester
 Ace
 Wines
 Hairy
@@ -117,5 +104,5 @@ Sergent
 Silky
 Smooth
 Smelly
-Squeeky
+Squeaky
 Baseball
