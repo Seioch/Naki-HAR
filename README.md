@@ -1,5 +1,5 @@
 # Naki: Dark Matter Raccoons for Rimworld 1.3
-Current release: Alpha 0.1
+Current release: Alpha
 ---
 # Warning! This mod requires you to have the Royalty expansion!
 ## Want to test and provide feedback? Join the development discord: https://discord.gg/hSaPVTczJZ
@@ -51,6 +51,9 @@ TBD
 ---
 # Credits
 Code: Seioch (aka HolofoilD)
+
 Key Art: [Nguyenanh2132](https://twitter.com/Anh2132)
+
 Sprites: [Arxian](https://www.webtoons.com/en/challenge/no-steel/list?title_no=576813)
-Sprites: [Zergo]()
+
+Sprites: [Zergo](https://steamcommunity.com/id/XenoZergo/)
