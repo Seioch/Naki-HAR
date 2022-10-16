@@ -5,7 +5,6 @@
     <race>Naki_Race</race>
     <defaultFactionType>Naki_HiddenFaction</defaultFactionType>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-	  <baseRecruitDifficulty>0.9</baseRecruitDifficulty>
     <invNutrition>3</invNutrition>
     <!-- <apparelRequired>
         <li>Naki_Underwear</li>

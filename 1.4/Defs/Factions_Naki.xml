@@ -29,7 +29,6 @@
 	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
 	<factionNameMaker>NamerFactionOutlander</factionNameMaker>
 	<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
-	<geneticVariance>1</geneticVariance>
 	<startingResearchTags>
 		<li>ClassicStart</li>
 	</startingResearchTags>
@@ -98,7 +97,6 @@
 			<commonality>1</commonality>
 		</li>
 	</backstoryFilters>
-	<geneticVariance>0</geneticVariance>
 	<!-- <styleTags>
 		<li>Naki</li>
 	</styleTags> -->
