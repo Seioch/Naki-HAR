@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<RecipeDef ParentName="SurgeryFlesh">
+	<defName>Naki_InstallFakeTail</defName>
+	<label>install fake Naki tail</label>
+	<description>Install a fake Naki tail.</description>
+	<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<jobString>Installing fake Naki tail.</jobString>
+	<workAmount>2000</workAmount>
+	<skillRequirements>
+		<Medicine>5</Medicine>
+	</skillRequirements>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Naki_FakeTail</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories>
+			<li>Medicine</li>
+		</categories>
+		<thingDefs>
+			<li>Naki_FakeTail</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>Naki_Tail</li>
+	</appliedOnFixedBodyParts>
+	<addsHediff>Naki_FakeTail</addsHediff>
+</RecipeDef>
+
+<RecipeDef ParentName="SurgeryFlesh">
+	<defName>Naki_InstallBionicEar</defName>
+	<label>install bionic Naki ear</label>
+	<description>Install a bionic Naki ear.</description>
+	<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<jobString>Installing bionic Naki ear.</jobString>
+	<workAmount>2000</workAmount>
+	<skillRequirements>
+		<Medicine>5</Medicine>
+	</skillRequirements>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Naki_BionicEar</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories>
+			<li>Medicine</li>
+		</categories>
+		<thingDefs>
+			<li>Naki_BionicEar</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>Naki_Ear</li>
+	</appliedOnFixedBodyParts>
+	<addsHediff>Naki_BionicEar</addsHediff>
+</RecipeDef>
+
+<RecipeDef ParentName="SurgeryFlesh">
+	<defName>Naki_InstallBionicTail</defName>
+	<label>install bionic Naki tail</label>
+	<description>Install a bionic Naki tail.</description>
+	<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<jobString>Installing bionic Naki tail.</jobString>
+	<workAmount>2000</workAmount>
+	<skillRequirements>
+		<Medicine>5</Medicine>
+	</skillRequirements>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Naki_BionicTail</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories>
+			<li>Medicine</li>
+		</categories>
+		<thingDefs>
+			<li>Naki_BionicTail</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>Naki_Tail</li>
+	</appliedOnFixedBodyParts>
+	<addsHediff>Naki_BionicTail</addsHediff>
+</RecipeDef>
+
+<!-- Surgery to add Naki Tail Blade -->
+<RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+    <defName>InstallTailBlade</defName>
+    <label>install a Naki tail blade</label>
+    <description>Install a Naki Tail Blade.</description>
+    <descriptionHyperlinks>
+      <ThingDef>NakiTailBlade</ThingDef>
+      <HediffDef>NakiTailBlade</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing tail blade.</jobString>
+	<skillRequirements>
+		<Medicine>5</Medicine>
+	</skillRequirements>
+    <ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>2</count>
+		</li>
+        <li>
+			<filter>
+			<thingDefs>
+				<li>NakiTailBlade</li>
+			</thingDefs>
+			</filter>
+			<count>1</count>
+        </li>
+    </ingredients>
+    <fixedIngredientFilter>
+		<categories>
+			<li>Medicine</li>
+		</categories>
+		<thingDefs>
+			<li>NakiTailBlade</li>
+		</thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Naki_Tail</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>NakiTailBlade</addsHediff>
+</RecipeDef>
+
+</Defs>

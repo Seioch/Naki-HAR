@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>Voidborn</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>voidborn</label>
+        <description>{PAWN_nameDef} was created from the mind of an archotech. Their body appears normal, but contains stable heavy particles.</description>
+        <allowedMeditationFocusTypes><li>NakiFocus</li></allowedMeditationFocusTypes>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+</Defs>

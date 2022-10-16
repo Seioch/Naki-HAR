@@ -35,11 +35,13 @@ namespace Naki_HAR
         {
             if (!pawn.Dead)
             {
-                IEnumerable<Hediff_Injury> hediffs = pawn.health.hediffSet.GetHediffs<Hediff_Injury>();
-                Func<Hediff_Injury, bool> predicate = (Hediff_Injury injury) => (injury != null && injury.Visible && injury.def.everCurableByItem && !injury.IsPermanent() && injury.CanHealNaturally());
-                IEnumerable<Hediff_Injury> injuryList = hediffs.Where(predicate);
-                if (injuryList.Count() == 0) return null;
-                return injuryList.ElementAt(Rand.Range(0, injuryList.Count()));
+                // 1.4 overhauls how GetHediffs is done. You can run the predicate filters on the GetHediffs method itself, and it pushes the result to a referenced List rather than Collection
+                List<Hediff_Injury> hediffs = new List<Hediff_Injury>();
+                Predicate<Hediff_Injury> predicate = (Hediff_Injury injury) => (injury != null && injury.Visible && injury.def.everCurableByItem && !injury.IsPermanent() && injury.CanHealNaturally());
+                pawn.health.hediffSet.GetHediffs<Hediff_Injury>(ref hediffs, predicate);
+                // IEnumerable<Hediff_Injury> injuryList = hediffs.Where(predicate);
+                if (hediffs.Count() == 0) return null;
+                return hediffs.ElementAt(Rand.Range(0, hediffs.Count()));
             }
             return null;
         }

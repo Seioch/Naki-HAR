@@ -1,4 +1,3 @@
-CatHoarder
 Furballs
 Claws
 Tails

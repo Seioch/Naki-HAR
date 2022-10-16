@@ -44,10 +44,10 @@ namespace Naki_HAR
         }
 
         // Token: 0x06005EA2 RID: 24226 RVA: 0x0020ECA8 File Offset: 0x0020CEA8
-        public override int ExpectedDurationOverride(Precept_Ritual ritual, RitualRoleAssignments assignments, float quality)
+        public override String ExpectedDuration(Precept_Ritual ritual, RitualRoleAssignments assignments, float quality)
         {
             int count = assignments.SpectatorsForReading.Count;
-            return Mathf.RoundToInt((float)ritual.behavior.def.durationTicks.max / RitualStage_PylonLinking.ProgressPerParticipantCurve.Evaluate((float)(count + 1)));
+            return Mathf.RoundToInt((float)ritual.behavior.def.durationTicks.max / RitualStage_AnimaTreeLinking.ProgressPerParticipantCurve.Evaluate((float)(count + 1))).ToStringTicksToPeriod(false, false, true, true, false);
         }
     }
 }

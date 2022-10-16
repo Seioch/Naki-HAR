@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef Name="Mote_PsychicConditionCauserEffect" ParentName="MoteBase">
+        <defName>Mote_NakiGravityWell</defName>
+        <mote>
+        <fadeInTime>0.1</fadeInTime>
+        <solidTime>0.62</solidTime>
+        <fadeOutTime>0.5</fadeOutTime>
+        </mote>
+        <graphicData>
+            <graphicClass>Graphic_MotePulse</graphicClass>
+            <texPath>Things/Mote/PsychicConditionCauserMask</texPath>
+            <shaderType>MotePsychicConditionCauser</shaderType>
+            <shaderParameters>
+                <_distortionIntensity>0.015</_distortionIntensity>
+                <_brightnessMultiplier>1.1</_brightnessMultiplier>
+                <_distortionScale>40</_distortionScale>
+            </shaderParameters>
+            <drawSize>6</drawSize>
+        </graphicData>
+    </ThingDef>
+</Defs>

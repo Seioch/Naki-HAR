@@ -1,0 +1,2059 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--==========유년기==========-->
+<AlienRace.BackstoryDef Name="Naki_BaseBackstory" Abstract="True">
+	<disallowedTraits>
+		<li>
+			<defName>Beauty</defName>
+			<degree>-1</degree>
+			<chance>100</chance>
+		</li>
+		<li>
+			<defName>Beauty</defName>
+			<degree>-2</degree>
+			<chance>100</chance>
+		</li>
+	</disallowedTraits>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<bodyTypeMale>Male</bodyTypeMale>
+</AlienRace.BackstoryDef>
+<!--고아-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_01</defName>
+	<title>Naki Orphan</title>
+	<titleShort>Orphan</titleShort>
+	<baseDescription>[PAWN_nameDef]'s parents were killed by raiders when [PAWN_pronoun] was young. [PAWN_pronoun] is mostly fine nowadays, but sometimes [PAWN_pronoun] suffers from nightmares about that day.</baseDescription>
+	<slot>Childhood</slot>
+	<skillGains>
+		<li>
+		<defName>Medicine</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+		<defName>Intellectual</defName>
+		<amount>2</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+		<li>Violent</li>
+	</workDisables>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--어린 시녀-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_02</defName>
+	<title>Naki Station Servant</title>
+	<titleShort>Maid</titleShort>
+	<baseDescription>[PAWN_nameDef]'s parents died in the Naki-Empire war, leaving [PAWN_pronoun] with nothing. A Dark Matter researcher took them in as a servant.</baseDescription>
+	<slot>Childhood</slot>
+	<skillGains>
+		<li>
+		<defName>Social</defName>
+		<amount>4</amount>
+		</li>
+		<li>
+		<defName>Cooking</defName>
+		<amount>2</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--여우무리 일원-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_03</defName>
+	<title>Naki Starwatcher</title>
+	<titleShort>Starwatcher</titleShort>
+	<baseDescription>As a child, [PAWN_pronoun] loved the stars and would stare at them for hours on end. [PAWN_nameDef] gathered some friends and created their own observatory club squad. They eventually funded their own black hole telescope and used it to discover the secrets of dark matter drawing.</baseDescription>
+	<slot>Childhood</slot>
+	<skillGains>
+		<li>
+		<defName>Shooting</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+		<defName>Social</defName>
+		<amount>-2</amount>
+		</li>
+		<li>
+		<defName>Intellectual</defName>
+		<amount>2</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--따돌려진 아이-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_04</defName>
+	<title>Naki Lonely Child</title>
+	<titleShort>Lonely</titleShort>
+	<baseDescription>[PAWN_nameDef] was always nervous around other Naki, even more so around non-Naki. [PAWN_pronoun] grew up as a lonely child, too afraid to talk to others.</baseDescription>
+	<slot>Childhood</slot>
+	<skillGains>
+		<li>
+		<defName>Social</defName>
+		<amount>-6</amount>
+		</li>
+		<li>
+		<defName>Medicine</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+		<defName>Intellectual</defName>
+		<amount>6</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--비행청소년-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_05</defName>
+	<title>Naki Gifted Child</title>
+	<titleShort>Gifted</titleShort>
+	<baseDescription>[PAWN_nameDef] was the smartest Naki on their station, oftentimes outclassing established researchers in their knowledge. [PAWN_pronoun] quickly rose through the ranks and became an esteemed dark matter scientist.</baseDescription>
+	<slot>Childhood</slot>
+	<skillGains>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>6</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>6</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--빈민가 고아-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_06</defName>
+	<title>Naki Wildchild</title>
+	<titleShort>Wildchild</titleShort>
+	<baseDescription>[PAWN_nameDef] spent their childhood wandering through ventalation shafts and corridors, looking for adventure and thrills. Sadly, they weren't able to find and defeat the fabled station dragon.</baseDescription>
+	<slot>Childhood</slot>
+	<skillGains>
+		<li>
+		<defName>Melee</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+		<defName>Shooting</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+		<defName>Construction</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+		<defName>Plants</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+		<defName>Crafting</defName>
+		<amount>2</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--공잡이-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_07</defName>
+	<title>Naki Gamer</title>
+	<titleShort>Gamer</titleShort>
+	<baseDescription>[PAWN_nameDef] wasn't all that interested in studying black holes. Instead, [PAWN_pronoun] grew up playing holo-games, mostly shooters.</baseDescription>
+	<slot>Childhood</slot>
+	<skillGains>
+		<li>
+		<defName>Shooting</defName>
+		<amount>4</amount>
+		</li>
+		<li>
+		<defName>Melee</defName>
+		<amount>-2</amount>
+		</li>
+		<li>
+		<defName>Social</defName>
+		<amount>-2</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--동물원 아르바이터-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_08</defName>
+	<title>Naki Farmkeeper</title>
+	<titleShort>Farmkeeper</titleShort>
+	<baseDescription>[PAWN_nameDef] grew up among the many farming modules of their starbase. Instead of learning about Dark Matter, [PAWN_pronoun] learned about plants and animals.</baseDescription>
+	<slot>Childhood</slot>
+	<skillGains>
+		<li>
+		<defName>Intellectual</defName>
+		<amount>-2</amount>
+		</li>
+		<li>
+		<defName>Animals</defName>
+		<amount>4</amount>
+		</li>
+		<li>
+		<defName>Plants</defName>
+		<amount>4</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--게으른 아이-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_09</defName>
+	<title>Naki Lazy child</title>
+	<titleShort>Lazy</titleShort>
+	<baseDescription>[PAWN_nameDef] got really tired of everything, so [PAWN_pronoun] just sat in a room and played games day and night. [PAWN_pronoun] didn't care about friends either. As [PAWN_pronoun] didn't wash often, [PAWN_pronoun] room smelled bad too. [PAWN_nameDef]'s parents were very worried about their child.</baseDescription>
+	<slot>Childhood</slot>
+	<forcedTraits>
+		<li>
+			<defName>Industriousness</defName>
+			<degree>-1</degree>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--평범한 아이-->
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryChild_10</defName>
+	<title>Naki Ordinary Child</title>
+	<titleShort>Ordinary</titleShort>
+	<baseDescription>Born in an average middle class family, [PAWN_nameDef] grew up fine, warmly loved by their parents. Sometimes, families do work out on the rim.</baseDescription>
+	<slot>Childhood</slot>
+	<skillGains>
+		<li>
+		<defName>Social</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+		<defName>Intellectual</defName>
+		<amount>2</amount>
+		</li>
+		<li>
+		<defName>Medicine</defName>
+		<amount>2</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+
+<!--==========성년기==========-->
+<!--신문기자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_01</defName>
+	<title>Naki Researcher</title>
+	<titleShort>Journalist</titleShort>
+	<baseDescription>[PAWN_nameDef] was a Dark Matter researcher before the destruction of the Naki starbases. [PAWN_pronoun] discovered many uses of Dark Matter, including infinite energy sources, weaponry, and space propulsion.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--고용된 메이드-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_02</defName>
+	<title>Naki Habitat Maid</title>
+	<titleShort>Maid</titleShort>
+	<baseDescription>[PAWN_nameDef] was a main on the giant Naki starbases. [PAWN_pronoun] did cleaning and prepared meals for the many Naki who lived in space. [PAWN_pronoun] also was in charge of keeping the station clean of trash.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Cooking</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--레스토랑 종업원-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_03</defName>
+	<title>Naki Space Engineer</title>
+	<titleShort>Engineer</titleShort>
+	<baseDescription>[PAWN_nameDef] maintained the many starcraft that Naki stations needed to get supplies. [PAWN_pronoun] learned how to fix ships with nothing but a bit of scrap plasteel and simple tools.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Artistic</defName>
+			<amount>2</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--사냥감-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_04</defName>
+	<title>Naki Survivor</title>
+	<titleShort>Survivor</titleShort>
+	<baseDescription>The destruction of the Naki starbases left few survivors, and [PAWN_nameDef] was one of them. Before being caught and thrown into a black hole by the Empire, [PAWN_nameDef] survived as a renegade rebel fighting the empire where [PAWN_pronoun] could.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Melee</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Tough</defName>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--테러리스트-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_05</defName>
+	<title>Naki Marine</title>
+	<titleShort>Marine</titleShort>
+	<baseDescription>[PAWN_nameDef] was a trained soldier for the Naki defensive forces. [PAWN_pronoun] was extensively trained in interstellar combat ranging from anti-walker weapons and ship-to-ship combat.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>-4</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--관경병 생존자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_06</defName>
+	<title>Naki Phage Survivor</title>
+	<titleShort>Survivor</titleShort>
+	<baseDescription>At the height of the Naki-Empire war, the Empire engineered a virus to try to wipe out the Naki in their starbases. However, the Naki scientists were able to use volunteers such as [PAWN_nameDef] to engineer a cure.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>-4</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Immunity</defName>
+			<degree>-1</degree>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--마사지샵 점원-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_07</defName>
+	<title>Naki Natural Healer</title>
+	<titleShort>Natural Healer</titleShort>
+	<baseDescription>[PAWN_nameDef] ran a natural healing shop in the Naki starbases. Although most Naki used untratech medicine, [PAWN_pronoun] job was to heal the minds and fatigue of those who came to them.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--자연의 여우-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_08</defName>
+	<title>Naki Eager Explorer</title>
+	<titleShort>Explorer</titleShort>
+	<baseDescription>[PAWN_nameDef] was excited to be released from Omega Eden, and asked the archotech for as much knowledge of the rim as it could provide. [PAWN_pronoun] learned everything there was about survival: food gathering, farming, electricity generation, and building.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Cooking</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Construction</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Plants</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Mining</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--시민-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_09</defName>
+	<title>Naki Citizen</title>
+	<titleShort>Citizen</titleShort>
+	<baseDescription>[PAWN_nameDef] was an ordinary citizen on Naki starbases. Citizens had to work hard every day to support the research operations done on the Omega Eden black hole.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Cooking</defName>
+	<amount>2</amount>
+	</li>	
+	<li>
+	<defName>Construction</defName>
+	<amount>2</amount>
+	</li>	
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--은행 접수원-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_10</defName>
+	<title>Naki Receptionist</title>
+	<titleShort>Receptionist</titleShort>
+	<baseDescription>[PAWN_nameDef] was a smart Naki who worked in a bank, in charge of various banking tasks. Though the Naki focused on Dark Matter research, they also took contracts off station from other worlds.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Melee</defName>
+	<amount>-2</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--포도밭의 파수꾼-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_11</defName>
+	<title>Naki Farmhand</title>
+	<titleShort>Farmhand</titleShort>
+	<baseDescription>[PAWN_nameDef] was one of many farmers who worked the starbase's growing quarters. [PAWN_pronoun] worked very hard to feed an entire spacefaring race.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Animals</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Plants</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--경비행기 파일럿-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_12</defName>
+	<title>Naki Pilot</title>
+	<titleShort>Pilot</titleShort>
+	<baseDescription>[PAWN_nameDef] was a pilot who's able to fly light starcraft. [PAWN_pronoun] often flew patrols to scare off pirates from raiding transports.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Animals</defName>
+	<amount>-2</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Citizen</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--경찰-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_13</defName>
+	<title>Naki Enforcer</title>
+	<titleShort>Enforcer</titleShort>
+	<baseDescription>[PAWN_nameDef] is an excellent police officer who made sure the starbases ran lawfully. [PAWN_nameDef] was generally lenient on their enforcement of the law, for better or for worse.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--붉은여우 병기창 계원-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_14</defName>
+	<title>Naki Weapons Crafter</title>
+	<titleShort>Crafter</titleShort>
+<baseDescription>[PAWN_nameDef] was a weapons developer after the destruction of the Naki starbases. [PAWN_pronoun] used the incredible power of the Omega Eden archotech to create powerful weapons to protect the Naki explorers on the Rim.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>6</amount>
+	</li>
+		<li>
+	<defName>Intellectual</defName>
+	<amount>1</amount>
+	</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Industriousness</defName>
+			<degree>1</degree>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--선교사-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_15</defName>
+	<title>Naki Missionary</title>
+	<titleShort>Missionary</titleShort>
+	<baseDescription>[PAWN_nameDef] believed that Dark Matter science could save the universe from destruction. [PAWN_nameDef]'s teachings were rejected by many, so they took on the Explorer role eagerly to spread their teaching on the rim.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>-4</amount>
+	</li>
+		<li>
+	<defName>Melee</defName>
+	<amount>-4</amount>
+	</li>
+		<li>
+	<defName>Social</defName>
+	<amount>4</amount>
+	</li>
+		<li>
+	<defName>Medicine</defName>
+	<amount>4</amount>
+	</li>
+		<li>
+	<defName>Cooking</defName>
+	<amount>4</amount>
+	</li>
+		<li>
+	<defName>Plants</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Kind</defName>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--무역회사 사원-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_16</defName>
+	<title>Naki Offworld Trader</title>
+	<titleShort>Offworld Trader</titleShort>
+	<baseDescription>[PAWN_nameDef] helped find research contracts with planets far away from Naki starbases. [PAWN_pronoun] was able to ensure that enough money was made to keep the starbase running smoothly.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>8</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--활주로 신호수-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_17</defName>
+	<title>Naki Space Controller</title>
+	<titleShort>Controller</titleShort>
+	<baseDescription>[PAWN_nameDef] was a space traffic controller of a Naki starbase. [PAWN_pronoun] controlled the comings and goings of hundreds of starships per day. The job was extremely stressful.</baseDescription>
+	<slot>Adulthood</slot>
+	<forcedTraits>
+		<li>
+			<defName>Nerves</defName>
+			<degree>2</degree>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--캐러밴 무역상-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_18</defName>
+	<title>Naki Window Washer</title>
+	<titleShort>Washer</titleShort>
+	<baseDescription>[PAWN_nameDef] was a washer for the Naki starbase's many windows. [PAWN_pronoun] would often go on spacewalks to clean the massive glass domes that served as observatories for the Omega Eden</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Cooking</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Plants</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--편의점 아르바이터-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_19</defName>
+	<title>Naki Part-timer</title>
+	<titleShort>Part-timer</titleShort>
+	<baseDescription>[PAWN_nameDef] was a Naki who worked part-time at a starbase convenience store. Instead of participating in science, [PAWN_pronoun] sold pre-packaged food and drinks to the stations inhabitants.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Cooking</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--관광지 호객꾼-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_20</defName>
+	<title>Naki Entertainer</title>
+	<titleShort>Entertainer</titleShort>
+	<baseDescription>[PAWN_nameDef] was a moderately successful stand-up comedian on a starbase. [PAWN_pronoun] went on stage every night to tell jokes and anecdotes about space living. Once, [PAWN_pronoun] performed in front of 10,000 people in a large arena.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--전통시장 점주-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_21</defName>
+	<title>Naki Research Assistant</title>
+	<titleShort>Assistant</titleShort>
+	<baseDescription>[PAWN_nameDef] worked as an assistant to the Dark Matter researchers on Naki starbases. [PAWN_pronoun] would sort paperwork and fill out spreadsheets at the end of a long experiment.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--전직 쉐프-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_22</defName>
+	<title>Naki Former Chef</title>
+	<titleShort>Chef</titleShort>
+	<baseDescription>[PAWN_nameDef] was a chef working in a hotel on the starbase. However, [PAWN_pronoun] was fired after receiving frequent complaints from customers that fur was found in their food.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Cooking</defName>
+	<amount>-2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--동물 사육사-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_23</defName>
+	<title>Naki Animal Handler</title>
+	<titleShort>Handler</titleShort>
+<baseDescription>[PAWN_nameDef] raised livestock in artificial fields on a Naki starbase. [PAWN_nameDef] cared for the many animals [PAWN_pronoun] raised, and eventually opened up a petting zoo.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>4</amount>
+	</li>	
+	<li>
+	<defName>Animals</defName>
+	<amount>6</amount>
+	</li>	
+	<li>
+	<defName>Medicine</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--수경재배 농부-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_24</defName>
+	<title>Naki Astro Miner</title>
+	<titleShort>Miner</titleShort>
+	<baseDescription>[PAWN_nameDef] went on expeditions to asteroids to mine valuable minerals. [PAWN_pronoun] worked with a large crew to ensure that Naki starbases would always have raw resources to repair and maintain the starbase.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+		<li>
+	<defName>Social</defName>
+	<amount>-2</amount>
+	</li>
+	<li>
+	<defName>Animals</defName>
+	<amount>-2</amount>
+	</li>
+		<li>
+	<defName>Mining</defName>
+	<amount>6</amount>
+	</li>
+		<li>
+	<defName>Intellectual</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--도예가-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_25</defName>
+	<title>Naki Potter</title>
+	<titleShort>Potter</titleShort>
+<baseDescription>[PAWN_nameDef] was one of the few potters left in the Naki Republic due to the development of 3D printing technology. [PAWN_pronoun] created works that pursue beauty and value rather than practicality, and these were sold as masterpiece items with high prices.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Cooking</defName>
+	<amount>2</amount>
+	</li>	
+	<li>
+	<defName>Artistic</defName>
+	<amount>4</amount>
+	</li>	
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--모자제작자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_26</defName>
+	<title>Naki Hatmaker</title>
+	<titleShort>Hatmaker</titleShort>
+<baseDescription>[PAWN_nameDef] tailors various hats made with silk. [PAWN_pronoun] went to a distant human country to learn how to tailor hats with traditional methods, and the hats [PAWN_pronoun] tailored became very popular among Nakis. But [PAWN_pronoun] gained painful chronic illness due to mercury poisoning, which was one of the ingredient of the silk, and now lives with anxiety and hand tremors.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>-6</amount>
+	</li>
+	<li>
+	<defName>Artistic</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Wimp</defName>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--시계장인-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_27</defName>
+	<title>Naki Watchmaker</title>
+	<titleShort>Watchmaker</titleShort>
+	<baseDescription>[PAWN_nameDef] spent a lot of time learning how to make clocks in a human nation. [PAWN_pronoun] gained great popularity among wealthy Nakis since [PAWN_pronoun] carved each piece of watch with delicate handwork and made artistic masterpieces.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Crafting</defName>
+	<amount>8</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--생선요리 쉐프-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_28</defName>
+	<title>Naki Fishmonger</title>
+	<titleShort>Fishmonger</titleShort>
+	<baseDescription>[PAWN_nameDef] knows how to make delicate dish dishes very well. [PAWN_pronoun] could trim fish neatly with a sharp knife, mix with various sweet and sour sauces, and cook it in a oven or frying pan. The cuisine of [PAWN_nameDef] was so popular that even humans would come from a far, but after the humans closed the border, only the Naki could eat it.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Cooking</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--의상 디자이너-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_29</defName>
+	<title>Naki Dress Designer</title>
+	<titleShort>Designer</titleShort>
+	<baseDescription>[PAWN_nameDef] just got a job as a dress designer after graduated from school. [PAWN_pronoun] dreams of making a variety of pretty dresses, but still lacks skill. [PAWN_pronoun] is currently an intern in a studio, but [PAWN_pronoun] dreams of creating their own studio and making dresses under their own name.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Artistic</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>3</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--재단사-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_30</defName>
+	<title>Naki Tailor</title>
+	<titleShort>Tailor</titleShort>
+	<baseDescription>The oldest city of Naki had several alleys filled with old, small shops. [PAWN_nameDef] had a small tailors. Not only did [PAWN_pronoun] sell fabric and clothes, [PAWN_pronoun] also repaired them with sewing machines and made simple clothes or decorations.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--생산라인 작업자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_31</defName>
+	<title>Naki Factory Worker</title>
+	<titleShort>Worker</titleShort>
+	<baseDescription>[PAWN_nameDef] assembled electronic parts and picked out defects in the production line of a starbase factory. The income was not that good, but [PAWN_pronoun] worked hard, dreaming of a better life.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Crafting</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--벌목공-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_32</defName>
+	<title>Naki Lumberjack</title>
+	<titleShort>Lumberjack</titleShort>
+	<baseDescription>[PAWN_nameDef] worked as a lumberjack in a dense forest. The work was dangerous, and [PAWN_pronoun] hated physical labor like any other Naki, but [PAWN_pronoun] thought it was cool to swing a giant axe.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Plants</defName>
+	<amount>6</amount>
+	</li>
+	<li>
+	<defName>Mining</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--가난한 로봇 연구자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_33</defName>
+	<title>Naki Poor Roboticist</title>
+	<titleShort>Roboticist</titleShort>
+	<baseDescription>[PAWN_nameDef] studied various mechanoids. [PAWN_pronoun] discovered a few defects while researching discarded mechanoids and put a lot of efforts to resolve them, but there was not much of success. Afterwards, the Republic's funding was cut off, and [PAWN_pronoun] was struggling with a needy life in a small housing.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Crafting</defName>
+	<amount>6</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--우주비행사-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_34</defName>
+	<title>Naki Astronaut</title>
+	<titleShort>Astronaut</titleShort>
+	<baseDescription>[PAWN_nameDef] is an experienced astroscientist, and [PAWN_pronoun] trained hard to become one. There are no missions to outer space except sending unmanned probes, but if someone were going to the outer space by a manned spacecraft, she would have been the first.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--정비창 보조공-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_35</defName>
+	<title>Naki Mechanic Assistant</title>
+	<titleShort>Mechanic</titleShort>
+	<baseDescription>[PAWN_nameDef] was an assistant to starship mechanics. [PAWN_pronoun] originally lacked experience and skill, however [PAWN_pronoun] was able to quickly learn the basics of starcraft maintenance.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>-4</amount>
+	</li>
+	<li>
+	<defName>Construction</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--전기공-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_36</defName>
+	<title>Naki Electrician</title>
+	<titleShort>Electrician</titleShort>
+	<baseDescription>[PAWN_nameDef] crawled through starbase corridors and crawspaces, and replaced electric wires and parts. [PAWN_pronoun] was able to keep balance despite the cramped quarters, but occasionally [PAWN_pronoun] would get shocked by a live wire.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Construction</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--배관공-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_37</defName>
+	<title>Naki Plumber</title>
+	<titleShort>Plumber</titleShort>
+	<baseDescription>[PAWN_nameDef]'s original job was to run water piping through the starbase's internal infrastructure. However, [PAWN_pronoun] made far more money unclogging sinks and showers that stopped working due to furballs.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Construction</defName>
+	<amount>6</amount>
+	</li><li>
+	<defName>Crafting</defName>
+	<amount>4</amount>
+	</li><li>
+	<defName>Intellectual</defName>
+	<amount>-2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--은여우 중공업 기술자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_38</defName>
+	<title>Naki Heavy Industry Technician</title>
+	<titleShort>Technician</titleShort>
+	<baseDescription>Although Naki weren't known for their industry, [PAWN_nameDef] worked as a technician for one of the few Naki companies that manufactured electronics. </baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Construction</defName>
+	<amount>6</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--레스토랑 웨이터-->
+ <!-- <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_39</defName>
+	<title>Naki Restaurant Waiter</title>
+	<titleShort>Waiter</titleShort>
+	<baseDescription>[PAWN_nameDef] worked as a waiter in a luxury restaurant. [PAWN_pronoun] took orders or took hats and coats from customers and put them on hangers. But [PAWN_pronoun] actually wanted to work in a kitchen because [PAWN_pronoun] had knowledge for cooking a little bit.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Cooking</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef> -->
+<!--간호사-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_40</defName>
+	<title>Naki Nurse</title>
+	<titleShort>Nurse</titleShort>
+	<baseDescription>[PAWN_nameDef] is a veteran nurse. Even when Naki were seriously wounded in the Empire-Naki war, [PAWN_pronoun] did not panic and carefully treated their wounds.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--천문학자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_41</defName>
+	<title>Naki Astronomer</title>
+	<titleShort>Astronomer</titleShort>
+	<baseDescription>[PAWN_nameDef] analyzed data sent by a deep space probe to create a detailed space map, and calculated the interplanetary flight paths for local starships.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Melee</defName>
+	<amount>-2</amount>
+	</li>
+	<li>
+	<defName>Construction</defName>
+	<amount>-2</amount>
+	</li>
+	<li>
+	<defName>Mining</defName>
+	<amount>-2</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>8</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--생명공학자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_42</defName>
+	<title>Naki Bioengineer</title>
+	<titleShort>Bioengineer</titleShort>
+	<baseDescription>[PAWN_nameDef] was a bioengineer studying genetic engineering. [PAWN_pronoun] researched the genes of Naki and found new treatments for diseases. [PAWN_pronoun] discovered that Naki had a genetic makeup that could not occur without artificial gene manipulation, but [PAWN_pronoun] decided to keep it as a secret.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Animals</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--인공지능 공학자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_43</defName>
+	<title>Naki AI Engineer</title>
+	<titleShort>AI Engineer</titleShort>
+	<baseDescription>[PAWN_nameDef] designed algorithms and mechanoids to assist in Naki research efforts. A lot of their research involved shooting small robots into the event horizon of Omega Eden.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>8</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--지질학자-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_44</defName>
+	<title>Naki Geologist</title>
+	<titleShort>Geologist</titleShort>
+	<baseDescription>[PAWN_nameDef] was a geologist who surveyed the surface of black holes. [PAWN_pronoun] discovered several anomalies with Omega Eden's surface, suggesting that matter and data could enter and exit the black hole.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Mining</defName>
+	<amount>6</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--고등학교 교사-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_45</defName>
+	<title>Naki Teacher</title>
+	<titleShort>Teacher</titleShort>
+	<baseDescription>[PAWN_nameDef] was a starbase school math teacher and a mentor. [PAWN_pronoun] had a busy life teaching many Naki children until they get graduated.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Melee</defName>
+	<amount>3</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>3</amount>
+	</li>
+	<li>
+	<defName>Animals</defName>
+	<amount>3</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>3</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--외과 의사-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_46</defName>
+	<title>Naki Surgeon</title>
+	<titleShort>Surgeon</titleShort>
+	<baseDescription>[PAWN_nameDef] was a leading surgeon working in the starbase's medical facilities. Although originally trained for cosmetic procedures, [PAWN_pronoun] learned how to treat trauma patients during the Naki-Empire war.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>8</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--의료보건부 공무원-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_47</defName>
+	<title>Naki Family Doctor</title>
+	<titleShort>Doctor</titleShort>
+	<baseDescription>[PAWN_nameDef] was a public healthcare doctor for Naki famalies. [PAWN_pronoun] tried to keep [PAWN_pronoun] contained to normal cases, however the war pushed [PAWN_pronoun] to accept more troubling injury cases.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>6</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--아이돌-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_48</defName>
+	<title>Naki Pop Idol</title>
+	<titleShort>Pop Idol</titleShort>
+	<baseDescription>[PAWN_nameDef] was a rare non-scientist Naki who found fame in singing. [PAWN_pronoun] had great dancing skills, outstanding singing skills, and an exotic, beautiful appearance that stunned Naki and non-Naki alike.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>8</amount>
+	</li>
+	<li>
+	<defName>Cooking</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Construction</defName>
+	<amount>-2</amount>
+	</li>
+	<li>
+	<defName>Mining</defName>
+	<amount>-2</amount>
+	</li>
+	<li>
+	<defName>Artistic</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Beauty</defName>
+			<degree>2</degree>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--떠오르는 가수-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_49</defName>
+	<title>Naki Bar Singer</title>
+	<titleShort>Singer</titleShort>
+	<baseDescription>[PAWN_nameDef] was a well-known singer who sung at local bars, and released several music albums. Sadly, [PAWN_pronoun]'s career didn't advance much beyond local singing gigs.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Social</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Artistic</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--드라마 배우-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_50</defName>
+	<title>Naki Space Newscaster</title>
+	<titleShort>Newscaster</titleShort>
+	<baseDescription>[PAWN_nameDef] was a newscaster for the Naki starbase, and often traveled off station to cover news from other planets. [PAWN_pronoun] would bring back stories of other colonies and civilizations, which astounded the Naki who lived their entire lives in space.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Cooking</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Artistic</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Beauty</defName>
+			<degree>1</degree>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--가극단 단원-->
+ <!-- <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_51</defName>
+	<title>Naki Opera Actor</title>
+	<titleShort>Actor</titleShort>
+	<baseDescription>[PAWN_nameDef] was a member of a opera troupe who sang beautiful songs and plays in decorated beautiful costumes. The troupe was not that famous, but [PAWN_pronoun] loved the Republic's small towns filled with forests, fields, sounds of nature and most importantly, friendly Nakis.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Artistic</defName>
+	<amount>8</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Beauty</defName>
+			<degree>1</degree>
+
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Colonist</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef> -->
+<!--소총수-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_52</defName>
+	<title>Naki Enlisted</title>
+	<titleShort>Enlisted</titleShort>
+	<baseDescription>[PAWN_nameDef] enlisted in the Naki Marines. Although the Naki didn't wage war, [PAWN_pronoun] protected the starbase against breach raiders and space pirates.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>1</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--지정사수-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_53</defName>
+	<title>Naki Naval Marksman</title>
+	<titleShort>Marksman</titleShort>
+	<baseDescription>While most Naki would train with rifles, [PAWN_nameDef] trained with naval artillery. Learning how to shoot shipborne weapons translated well to handheld weapons.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>8</amount>
+	</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>ShootingAccuracy</defName>
+			<degree>1</degree>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--레인저-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_54</defName>
+	<title>Naki Offworld Ranger</title>
+	<titleShort>Ranger</titleShort>
+	<baseDescription>[PAWN_nameDef] was a marine in charge of protecting Naki who traveled off the station. [PAWN_pronoun] had to learn extensive survival skills and fighting techniques to protect their charges.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>6</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Animals</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Plants</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<workDisables>
+		<li>Social</li>
+	</workDisables>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--정찰병-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_55</defName>
+	<title>Naki Infiltrator</title>
+	<titleShort>Infiltrator</titleShort>
+	<baseDescription>After the Empire declared war on the Naki, some volunteered to infiltrate the Empire to sabotage their ships. [PAWN_pronoun] was able to take down several destroyers before being captured, but [PAWN_pronoun] was able to escape.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Plants</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--의무관-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_56</defName>
+	<title>Naki Medic</title>
+	<titleShort>Medic</titleShort>
+	<baseDescription>[PAWN_nameDef] became a medic to save dying fellow soldiers in battlefield. [PAWN_pronoun] honed medical skills to save comrades, but [PAWN_pronoun] soon realised that sometimes Naki have to kill enemies to save allies.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>6</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--분대장-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_57</defName>
+	<title>Naki Sergeant</title>
+	<titleShort>Sergeant</titleShort>
+	<baseDescription>[PAWN_nameDef] was a commanding officer in the Naki Marines. [PAWN_pronoun] was in charge of several combat groups, and led defensive actions in the Empire-Naki war.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>6</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--붉은여우-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_58</defName>
+	<title>Naki Supersoldier</title>
+	<titleShort>Supersoldier</titleShort>
+	<baseDescription>Shortly before the Empire began genociding the Naki, several Naki research groups attempted to genetically engineer the perfect Naki supersoldier. [PAWN_pronoun] was one of them, however by the time [PAWN_pronoun] made it to the battlefield, it was too late.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>10</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>8</amount>
+	</li>
+	<li>
+	<defName>Medicine</defName>
+	<amount>4</amount>
+	</li>
+	</skillGains>
+	<workDisables>
+		<li>Social</li>
+		<li>Animals</li>
+		<li>Artistic</li>
+	</workDisables>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--여우장교-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_59</defName>
+	<title>Naki Naval Officer</title>
+	<titleShort>Officer</titleShort>
+	<baseDescription>[PAWN_nameDef] is one of the many naval officers of the Naki Navy. [PAWN_pronoun] made sure that all of the naval enlisted were trained well, and all starships ran smoothly.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>6</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Social</defName>
+	<amount>6</amount>
+	</li>
+	<li>
+	<defName>Intellectual</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+<!--강하폭격기 파일럿-->
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_60</defName>
+	<title>Naki Bomber Pilot</title>
+	<titleShort>Pilot</titleShort>
+	<baseDescription>[PAWN_nameDef] was a Naki starfighter pilot during the Naki-Empire war. [PAWN_pronoun] used strafing techniques to precisely bomb weakspots in Empire star cruisers, damaging many of them beyond repair.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+	<li>
+	<defName>Shooting</defName>
+	<amount>4</amount>
+	</li>
+	<li>
+	<defName>Melee</defName>
+	<amount>2</amount>
+	</li>
+	<li>
+	<defName>Crafting</defName>
+	<amount>2</amount>
+	</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+
+ <AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_61</defName>
+	<title>Naki Vigilante</title>
+	<titleShort>Vigilante</titleShort>
+	<baseDescription>After the destruction of the Naki starbases, a few remaining Naki swore to exact revenge for the destruction of their species. [PAWN_nameDef] ran guerella operations against the Empire, sabotaging trade routes and bombing ships.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+		<li>
+			<defName>Shooting</defName>
+			<amount>13</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>12</amount>
+		</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Bloodlust</defName>
+			<chance>100</chance>
+		</li>
+	</forcedTraits>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef ParentName="Naki_BaseBackstory">
+	<defName>Naki_BackstoryAdult_62</defName>
+	<title>Naki Null-Grav Engineer</title>
+	<titleShort>Engineer</titleShort>
+	<baseDescription>Work on the exterior of the many stations Naki call home is very dangerous, but essential for survival. [PAWN_nameDef] trained for years to fulfill this purpose, and brags to many about how work always gets done, with any tools at hand. The years spent outside a proper gravity source has taken a toll upon [PAWN_pronoun] muscles, though.</baseDescription>
+	<slot>Adulthood</slot>
+	<skillGains>
+		<li>
+			<defName>Construction</defName>
+			<amount>6</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Melee</defName>
+			<amount>-2</amount>
+		</li>
+		<li>
+			<defName>Mining</defName>
+			<amount>-2</amount>
+		</li>
+	</skillGains>
+	<spawnCategories>
+		<li>Naki_Marine</li>
+		<li>Naki_EliteMarine</li>
+		<li>Naki_Citizen</li>
+		<li>Naki_Colonist</li>
+	</spawnCategories>
+</AlienRace.BackstoryDef>
+
+</Defs>

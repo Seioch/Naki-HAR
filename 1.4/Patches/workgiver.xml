@@ -1,0 +1,10 @@
+<Patch>
+		
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName="DoBillsMakeApparel"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>Naki_Fabricator</li>
+		</value>
+	</Operation>
+	
+</Patch>

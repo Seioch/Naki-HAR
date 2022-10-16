@@ -14,11 +14,6 @@ namespace Naki_HAR
 
     public class NakiRace : Verse.Mod
     {
-        public delegate RecipeDef CreateRecipeDefDelegate(ThingDef def, int adjustedCount);
-        public static CreateRecipeDefDelegate createRecipe;
-
-        public new static Type GetType() => typeof(NakiRace);
-
         public NakiRace(ModContentPack content) : base(content)
         {
         }

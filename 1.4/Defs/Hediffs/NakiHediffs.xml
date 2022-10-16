@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef>
+    <defName>DMBurn</defName>
+    <label>burn</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} disintegrated away.</deathMessage>
+    <hediff>Hediff_DMBurn</hediff>
+    <hediffSolid>Hediff_DMBurn</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Electric</impactSoundType>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>12</defaultDamage> <!-- Fire does 10 damage -->
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+  </DamageDef>
+
+  <HediffDef ParentName="InjuryBase">
+    <defName>Hediff_DMBurn</defName>
+    <label>dark matter burn</label>
+    <labelNoun>a burnt wound</labelNoun>
+    <description>A charred gash where flesh was disintegrated</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>patched</labelTendedWell>
+        <labelTendedWellInner>bandaged</labelTendedWellInner>
+        <labelSolidTendedWell>tended</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.05</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>disintegration scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0225</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.045</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Disintegrated</destroyedLabel>
+      <destroyedOutLabel>Disintegrated</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+  <!-- Pain and movement penalty for getting DM healed -->
+  <HediffDef>
+    <defName>DMHealingPenalty</defName>
+    <label>dark matter healing burden</label>
+    <description>Sudden transmutation of flesh has burdened the body with fatigue.</description>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.4</setMax>
+          </li>
+        </capMods>
+        <painOffset>0.2</painOffset>
+        <capacityFactorEffectMultiplier>PsychicSensitivity</capacityFactorEffectMultiplier>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

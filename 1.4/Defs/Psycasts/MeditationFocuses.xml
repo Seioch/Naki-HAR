@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <MeditationFocusDef>
+    <defName>NakiFocus</defName>
+    <label>naki</label>
+    <requiredBackstoriesAny>
+      <li>
+        <categoryName>Naki_Citizen</categoryName>
+        <slot>Childhood</slot>
+      </li>
+    </requiredBackstoriesAny>
+  </MeditationFocusDef>
+</Defs>

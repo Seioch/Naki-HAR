@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>Naki_FakeTail</defName>
+	<label>fake Naki tail</label>
+	<labelNoun>a fake Naki tail</labelNoun>
+	<description>A fake Naki tail to restore one's tailed beauty. Because it can't move, balanced walking and running is impaired.</description>
+	<spawnThingOnRemoved>Naki_FakeTail</spawnThingOnRemoved>
+	<stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.02</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+	<addedPartProps>
+		<solid>true</solid>
+		<partEfficiency>0.8</partEfficiency>
+	</addedPartProps>
+</HediffDef>
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>Naki_BionicTail</defName>
+	<label>bionic Naki tail</label>
+	<labelNoun>a bionic Naki tail</labelNoun>
+	<description>A bionic Naki tail.</description>
+	<spawnThingOnRemoved>Naki_BionicTail</spawnThingOnRemoved>
+	<stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.02</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+	<addedPartProps>
+		<solid>true</solid>
+		<partEfficiency>1</partEfficiency>
+	</addedPartProps>
+</HediffDef>
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>Naki_BionicEar</defName>
+	<label>bionic Naki ear</label>
+	<labelNoun>a bionic Naki ear</labelNoun>
+	<description>A bionic Naki ear</description>
+	<spawnThingOnRemoved>Naki_BionicEar</spawnThingOnRemoved>
+	<addedPartProps>
+		<solid>true</solid>
+		<partEfficiency>1.0</partEfficiency>
+	</addedPartProps>
+</HediffDef>
+
+<!-- Tail Blade -->
+
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>NakiTailBlade</defName>
+    <label>Naki tail blade</label>
+    <labelNoun>a Naki tail blade</labelNoun>
+    <description>An installed Naki Tail Blade.</description>
+    <descriptionHyperlinks><ThingDef>NakiTailBlade</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+			<li>
+				<label>blade</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<armorPenetration>0.25</armorPenetration>
+				<power>10</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<armorPenetration>0.3</armorPenetration>
+				<power>12</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>NakiTailBlade</spawnThingOnRemoved>
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+</Defs>

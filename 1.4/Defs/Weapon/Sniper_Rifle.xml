@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BaseMakeableGun">
+	<defName>Naki_Gun_Sniper_Rifle</defName>
+	<label>naki anti-warwalker rifle</label>
+	<description>A long-range anti-warwalker rifle that fires anti-matter rounds. Dual cores creates a large bolt of antimatter, which when fired can punch holes through reinforced armor.</description>
+	<graphicData>
+		<texPath>Naki/Weapon/Sniper_Rifle/Texture</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<equippedAngleOffset>45</equippedAngleOffset>
+	<soundInteract>Interact_ChargeRifle</soundInteract>
+	<statBases>
+		<WorkToMake>48000</WorkToMake>
+		<Mass>6.0</Mass>
+		<AccuracyTouch>0.15</AccuracyTouch>
+		<AccuracyShort>0.25</AccuracyShort>
+		<AccuracyMedium>0.75</AccuracyMedium>
+		<AccuracyLong>0.95</AccuracyLong>
+		<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+	</statBases>
+	<weaponTags>
+		<!-- Should not have a standard tag because it should not spawn naturally -->
+		<li>NakiGun</li>
+	</weaponTags>
+	<costList>
+		<Plasteel>120</Plasteel>
+		<ComponentSpacer>9</ComponentSpacer>
+		<DarkMatter>27</DarkMatter>
+	</costList>
+	<comps>
+		<!-- Special comp to decrement remaining ammo, destroy on empty, and display ammo remaining -->
+		<li Class="Naki_HAR.CompProperties_CompNakiWeapons">
+			<maximumShots>20</maximumShots>
+		</li>
+	</comps>
+	<recipeMaker>
+		<researchPrerequisite>Naki_ranged_weapons</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+        <recipeUsers Inherit="False">
+            <li>Naki_Fabricator</li>
+        </recipeUsers>
+	</recipeMaker>
+	<!-- Custom verb to count shots -->
+	<verbs>
+		<li>
+			<verbClass>Naki_HAR.Verb_NumberedShoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Naki_Bullet_Sniper_Rifle</defaultProjectile>
+			<warmupTime>2.5</warmupTime>
+			<range>44.9</range>
+			<burstShotCount>1</burstShotCount>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<soundCast>Naki_Shot_Sniper_Rifle</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</li>
+	</verbs>
+
+	<tools>
+		<li>
+			<label>stock</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+		</li>
+		<li>
+			<label>barrel</label>
+			<capacities>
+				<li>Blunt</li>
+				<li>Poke</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+		</li>
+	</tools>
+</ThingDef>
+
+<ThingDef ParentName="BaseBullet">
+	<defName>Naki_Bullet_Sniper_Rifle</defName>
+	<label>naki anti-walker rifle bullet</label>
+	<projectile>
+		<damageDef>Bullet</damageDef>
+		<damageAmountBase>65</damageAmountBase>
+		<stoppingPower>2.9</stoppingPower>
+		<armorPenetrationBase>0.75</armorPenetrationBase>
+		<speed>100</speed>
+	</projectile>
+	<graphicData>
+		<texPath>Naki/Weapon/Sniper_Bullet/Texture</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+</ThingDef>
+
+<SoundDef>
+	<defName>Naki_Shot_Sniper_Rifle</defName>  
+	<context>MapOnly</context>  
+	<maxSimultaneous>1</maxSimultaneous>  
+	<subSounds>
+		<li>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Naki/NakiSniperRifle</clipPath>
+				</li>
+			</grains>      
+			<volumeRange>35~45</volumeRange>
+		</li>
+	</subSounds>
+</SoundDef>
+
+</Defs>

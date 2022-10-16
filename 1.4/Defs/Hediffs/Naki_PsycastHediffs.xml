@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Hediff to increase pawn capacities -->
+    <HediffDef ParentName = "PsycastHediffBase">
+        <defName>Naki_Amplify</defName>
+        <label>dark matter amplification</label>
+        <description>Dark matter is amplifying this body's natural functions.</description>
+        <isBad>false</isBad>
+        <stages>
+        <li>
+            <capMods>
+            <li>
+                <capacity>Breathing</capacity>
+                <postFactor>1.4</postFactor>
+            </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <postFactor>1.4</postFactor>
+            </li>
+            </capMods>
+        </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Hediff to lower consciousness and breathing -->
+    <HediffDef>
+      <defName>Naki_Distortion</defName>
+      <label>gravitational distortion</label>
+      <description>Time-space distortion is hampering concentration and breathing.</description>
+      <initialSeverity>1</initialSeverity>
+      <hediffClass>Naki_HAR.Hediff_Distorted</hediffClass>
+	  </HediffDef>
+
+    <!-- Hediff to slow down target by a lot -->
+    <HediffDef>
+      <defName>Naki_Stall</defName>
+      <label>dark matter stall</label>
+      <description>A localized gravity well is hampering movement</description>
+      <isBad>true</isBad>
+      <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <setMax>0.2</setMax>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+    </HediffDef>
+
+    <!-- Lower hearing and vision. A lot like PsychicBlindness but scaled up for a level 4 psycast -->
+    <HediffDef ParentName = "PsycastHediffBase">
+      <defName>Naki_Darkness</defName>
+      <label>darkness</label>
+      <description>Dark matter is annihilating light as it enters the eyes, causing blindness and mild disorientation.</description>
+      <isBad>true</isBad>
+      <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Sight</capacity>
+              <setMax>0.5</setMax>
+            </li>
+            <li>
+              <!-- Realistically hearing doesn't affect anything other than social but this is good flavor I guess. -->
+              <capacity>Hearing</capacity>
+              <setMax>0.5</setMax>
+            </li>
+          </capMods>
+          <capacityFactorEffectMultiplier>PsychicSensitivity</capacityFactorEffectMultiplier>
+        </li>
+      </stages>
+    </HediffDef>
+
+    <!-- Much like vertigo, but without the vomiting MTTH -->
+    <HediffDef ParentName = "PsycastHediffBase">
+        <defName>DMConfusion</defName>
+        <label>gravatational disorientation</label>
+        <description>Gravity waves have destabilized the ear canal, causing disorientation.</description>
+        <isBad>true</isBad>
+        <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <setMax>0.9</setMax>
+            </li>
+          </capMods>
+        </li>
+        </stages>
+        <comps>
+        <li Class="HediffCompProperties_Disorientation">
+            <wanderMtbHours>0.05</wanderMtbHours>
+            <singleWanderDurationTicks>240</singleWanderDurationTicks>
+            <wanderRadius>4</wanderRadius>
+        </li>
+        </comps>
+    </HediffDef>
+
+    
+  <!-- Less powerful Decay available at level 1 -->
+  <HediffDef>
+    <defName>DMDecay</defName>
+    <label>dark matter decay</label>
+    <description>A mote of dark matter embedded in the body is quickly disintegrating flesh.\n
+    Charred wounds open up as matter is instantly annhilated into pure energy.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="Naki_HAR.CompProperties_DMDisintegration">
+        <!-- 16 total damage applied over 4 hits -->
+        <maxApplications>4</maxApplications>
+        <tickMax>48</tickMax>
+        <damagePerTick>3</damagePerTick>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Standard disintegration at level 3 -->
+  <HediffDef>
+    <defName>DMDisintegration</defName>
+    <label>dark matter disintegration</label>
+    <description>A grain of dark matter embedded in the body is quickly disintegrating flesh.\n
+    Charred wounds open up as matter is instantly annhilated into pure energy.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <comps>
+      <li Class="Naki_HAR.CompProperties_DMDisintegration">
+        <!-- 30 total damage applied over 6 hits -->
+        <maxApplications>6</maxApplications>
+        <tickMax>32</tickMax>
+        <damagePerTick>4</damagePerTick>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Powerful disintegration  at level 5-->
+  <HediffDef>
+    <defName>DMAnnihilation</defName>
+    <label>dark matter annihilation</label>
+    <description>A shard of dark matter embedded in the body is quickly disintegrating flesh.\n
+    Charred wounds open up as matter is instantly annhilated into pure energy.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="Naki_HAR.CompProperties_DMDisintegration">
+        <!-- 48 total damage applied over 6 hits -->
+        <maxApplications>8</maxApplications>
+        <tickMax>16</tickMax>
+        <damagePerTick>5</damagePerTick>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

@@ -14,7 +14,7 @@ namespace Naki_HAR
         protected override void Generate(ThingSetMakerParams parms, List<Thing> outThings)
         {
             Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(Naki_Defof.Naki_Citizen, DownedNakiQuestUtility.GetNakiFaction(), PawnGenerationContext.NonPlayer,
-                -1, false, false, false, false, true, false, 20f, false, true, true, true, false, false, false, false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null, null, false, false, false));
+                -1, false, false, false, true, false, 1f, false, true, false, true, true, false, false, false, false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, null, null, false, false, false, false, null, null, null, null, null, 0f, DevelopmentalStage.Adult, null, null, null, false));
             outThings.Add(pawn);
             HealthUtility.DamageUntilDowned(pawn, true);
         }

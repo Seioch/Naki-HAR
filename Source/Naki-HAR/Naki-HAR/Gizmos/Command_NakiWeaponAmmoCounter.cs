@@ -21,13 +21,13 @@ namespace Naki_HAR
 
         public Command_NakiWeaponAmmoCounter()
         {
-            this.order = -100f;
+            this.Order = -100f;
         }
 
         public Command_NakiWeaponAmmoCounter(CompNakiWeapons c)
         {
             this.compNakiWeapons = c;
-            this.order = -100f;
+            this.Order = -100f;
         }
 
         public override float GetWidth(float maxWidth)

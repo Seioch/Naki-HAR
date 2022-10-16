@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ChemicalDef>
+    <defName>DarkMatter</defName>
+    <label>dark matter</label>
+    <addictionHediff>DarkMatterAddiction</addictionHediff>
+    <canBinge>false</canBinge>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>NakiRaceDMNeed</defName>
+    <!-- Custom needclass disabled cause RW needs are really complex  -->
+    <!-- <needClass>Naki_HAR.Need_NakiRaceDMNeed</needClass> -->
+    <needClass>Need_Chemical</needClass>
+    <label>dark matter need</label>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>     <!-- Set this to true only if the Hediff is spawning -->
+    <description>Naki need Dark Matter to use psycasts and heal. Lacking Dark Matter will prevent healing and casting.</description>
+    <listPriority>45</listPriority>
+    <fallPerDay>0.333</fallPerDay>
+    <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+    <colonistsOnly>false</colonistsOnly>
+    <showForCaravanMembers>false</showForCaravanMembers>
+    <baseLevel>1.0</baseLevel>
+    <freezeWhileSleeping>true</freezeWhileSleeping>
+    <minIntelligence>Humanlike</minIntelligence>
+  </NeedDef>
+
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>DarkMatterAddiction</defName>
+    <label>dark mattter addiction</label>
+    <description>Naki bodies contain high amounts of exotic heavy particles. Heavy atoms allow Naki to live outside of Omega Eden, but make them reliant on daily ingestion or meditation.
+                \nWithout dark matter, Naki bodies cannot function properly.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>NakiRaceDMNeed</causesNeed>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li></li>
+      <li>
+        <label>unmet</label>
+        <painFactor>0.2</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>DMWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>DarkMatterAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>dark matter deficiency</label>
+        <description>My limbs feel like lead. Everything around me looks grey, and the glow has left my hair and ears. I feel like I'm falling apart.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>
