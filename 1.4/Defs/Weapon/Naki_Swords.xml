@@ -10,6 +10,7 @@
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
     <uiIconScale>1.0</uiIconScale>
+	<equippedAngleOffset>-20</equippedAngleOffset>
 	<techLevel>Industrial</techLevel>
 	<weaponTags>
 		<li>Naki_melee_weapons</li>
