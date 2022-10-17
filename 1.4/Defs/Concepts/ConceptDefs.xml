@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ConceptDef ParentName="NotedOpportunisticBase">
+    <defName>NakiPylonConcept</defName>
+    <label>Meditating for Dark Matter</label>
+    <helpText>Naki have two opportunities to gain more Dark Matter. You can use any of the Decay/Disintegration/Annihilation psycasts to kill a living creature to get one unit per creature killed. Or, meditating sufficiently at a Pylon will generate a lump of dark matter once per day.</helpText>
+    <opportunityDecays>false</opportunityDecays>
+  </ConceptDef>
+
+</Defs>

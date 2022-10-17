@@ -74,7 +74,7 @@
             <requiredFocus>NakiFocus</requiredFocus>
             <linkSound>AnimaTreeLink</linkSound>
             <enoughAttunementLetterLabel>About: Pylon Attunement Linking</enoughAttunementLetterLabel>
-            <enoughAttunementLetterText>This pylon has reached {0} attunement. This is enough for a Naki to upgrade their link to Omega Eden!\n\nThe linking ritual gives a level of psylink and the ability to use psychic powers. Upgrading to a higher level requires increasing amounts of Attunement.\n\nThe Attunement requirements for linking rituals to upgrade psycasters are:\n\n{1}\n\nNote: Only Naki can meditate to or link with anima trees. You can see a person's focus types by looking at their info card with the 'i' button.</enoughAttunementLetterText>
+            <enoughAttunementLetterText>This pylon has reached {0} attunement. This is enough for a Naki to upgrade their link to Omega Eden!\n\nThe linking ritual upgrades the level of psylink and assigns one new psycast power. Upgrading to a higher level requires increasing amounts of Attunement.\n\nThe Attunement requirements for linking rituals to upgrade psycasters are:\n\n{1}\n\nNote: Only Naki can meditate to or link with Pylons. You can see a person's focus types by looking at their info card with the 'i' button.</enoughAttunementLetterText>
         </li>
       <!-- Glow -->
       <li Class="CompProperties_Glower">
@@ -90,6 +90,7 @@
       </li>
     </comps>
     <building>
+      <spawnedConceptLearnOpportunity>NakiPylonConcept</spawnedConceptLearnOpportunity>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
       <ai_chillDestination>true</ai_chillDestination>
     </building>

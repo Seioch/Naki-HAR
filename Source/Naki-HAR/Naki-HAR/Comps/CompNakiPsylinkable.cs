@@ -189,7 +189,8 @@ namespace Naki_HAR
             } else if (requiredAttunement < this.currentAttunement)
             {
                 Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: required attunement insufficient. Required: {requiredAttunement} Has: {this.currentAttunement}");
-                return new AcceptanceReport($"Cannot Psylink: Insufficient attunement. Current attunement: {this.currentAttunement}. Pawn {pawn.Name} requires {requiredAttunement} to upgrade.");
+                // return new AcceptanceReport($"Cannot Psylink: Insufficient attunement. Current attunement: {this.currentAttunement}. Pawn {pawn.Name} requires {requiredAttunement} to upgrade.");
+                return new AcceptanceReport("BeginLinkingRitualInsifficientAttunement".Translate(this.currentAttunement.ToString(), pawn.Name.ToString(), requiredAttunement.ToString()));
             }
 
             if (!this.Props.requiredFocus.CanPawnUse(pawn))
@@ -209,12 +210,12 @@ namespace Naki_HAR
                 return new AcceptanceReport((pawn2 == null) ? "Reserved".Translate() : "ReservedBy".Translate(pawn.LabelShort, pawn2));
             }
             // This pylon has enough attunement to begin a psylink ritual
-            if (this.currentAttunement < requiredAttunement)
-            {
-                // Acceptance Report reports the required attunement for that Pawn, a bit of flavor text for it, and the current attunement on the Pylon itself
-                // Log.Message($"[Naki HAR] Acceptance report for BeginNakiLinkingRitual accepted.");
-                return new AcceptanceReport("BeginNakiLinkingRitual".Translate(requiredAttunement.ToString(), this.Props.attunementFlavorText, this.currentAttunement.ToString()));
-            }
+            //if (this.currentAttunement > requiredAttunement)
+            //{
+            //     Acceptance Report reports the required attunement for that Pawn, a bit of flavor text for it, and the current attunement on the Pylon itself
+            //     Log.Message($"[Naki HAR] Acceptance report for BeginNakiLinkingRitual accepted.");
+            //    return new AcceptanceReport("BeginNakiLinkingRitual".Translate(requiredAttunement.ToString(), this.Props.attunementFlavorText, this.currentAttunement.ToString()));
+            //}
             if (checkSpot)
             {
                 LocalTargetInfo localTargetInfo;

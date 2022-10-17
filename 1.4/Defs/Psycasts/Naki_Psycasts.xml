@@ -37,7 +37,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_MassDestruction</defName>
         <label>mass destruction</label>
-        <description>Implants a large shard of dark matter into all living things in an area, causing rapid disintegration in the affected victims.</description>
+        <description>Implants a large shard of dark matter into all living things in an area, causing rapid disintegration in the affected victims. Disintegrated creatures leave behind Dark Matter.</description>
         <level>6</level>
         <iconPath>Naki/Psycasts/MassDestruction</iconPath>
         <writeCombatLog>True</writeCombatLog>
@@ -76,7 +76,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Disintegrate_Large</defName>
         <label>annihilation</label>
-        <description>Implants a shard of dark matter in the target, causing flesh to decay rapidly.</description>
+        <description>Implants a shard of dark matter in the target, causing flesh to decay rapidly. Disintegrated creatures leave behind Dark Matter.</description>
         <level>5</level>
         <iconPath>Naki/Psycasts/Annihilation</iconPath>
         <verbProperties>
@@ -249,7 +249,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Disintegrate_Medium</defName>
         <label>disintegrate</label>
-        <description>Implants a grain of dark matter in the target, causing flesh to decay rapidly.</description>
+        <description>Implants a grain of dark matter in the target, causing flesh to decay rapidly. Disintegrated creatures leave behind Dark Matter.</description>
         <level>3</level>
         <iconPath>Naki/Psycasts/Disintegration</iconPath>
         <verbProperties>
@@ -383,7 +383,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Disintegrate_Lesser</defName>
         <label>decay</label>
-        <description>Implants a mote of dark matter in the target, causing flesh to decay.</description>
+        <description>Implants a mote of dark matter in the target, causing flesh to decay. Disintegrated creatures leave behind Dark Matter.</description>
         <level>1</level>
         <iconPath>Naki/Psycasts/Decay</iconPath>
         <verbProperties>
