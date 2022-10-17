@@ -5,6 +5,7 @@
     <label>Naki meditation pylon</label>
     <description>A stabilized portal to the center of Omega Eden. Naki can use this to commune with their patron archotech Omega Eden by meditating around the Pylon, strengthening their psychic bond with the archotech.\n\nIf a Naki meditates near this pylon, attument with the archotech will grow, and once it reaches a threshold the pylon will send a bit of dark matter from the heart of Omega Eden to this planet. These vials of dark matter can be used to craft Naki weapons and apparel, as well as fulfill the need for dark matter consumption all Naki have. Full attunement also allows Naki to upgrade their psylink, granting them unique psycasts only Naki can use.</description>
     <thingClass>Building</thingClass>
+    <rotatable>false</rotatable>
     <graphicData>
       <texPath>Naki/Building/PylonTexture</texPath>
       <graphicClass>Graphic_Single</graphicClass>

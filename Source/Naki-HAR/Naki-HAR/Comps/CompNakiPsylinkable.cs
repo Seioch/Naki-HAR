@@ -165,10 +165,10 @@ namespace Naki_HAR
             if (currentLevel == -1)
             {
                 // This Naki has no Psylink! This should not happen but let's log it
-                Log.Warning("[Naki HAR] GetRequiredAttunement: This Naki has no psylink level");
+                Log.Error("[Naki HAR] GetRequiredAttunement: This Naki has no psylink level");
                 return -1;
             }
-            return this.Props.requiredAttunementPerPsylinkLevel[currentLevel - 1];
+            return this.Props.requiredAttunementPerPsylinkLevel[currentLevel + 1];
         }
 
 
@@ -181,10 +181,15 @@ namespace Naki_HAR
             }
 
             float requiredAttunement = this.GetRequiredAttunement(pawn);
+            
+            // Error checks and attunement checks
             if (requiredAttunement == -1)
             {
-                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: required attunement insufficient. Required: {requiredAttunement} Has: {this.currentAttunement}");
                 return false;
+            } else if (requiredAttunement < this.currentAttunement)
+            {
+                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: required attunement insufficient. Required: {requiredAttunement} Has: {this.currentAttunement}");
+                return new AcceptanceReport($"Cannot Psylink: Insufficient attunement. Current attunement: {this.currentAttunement}. Pawn {pawn.Name} requires {requiredAttunement} to upgrade.");
             }
 
             if (!this.Props.requiredFocus.CanPawnUse(pawn))

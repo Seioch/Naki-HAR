@@ -31,6 +31,10 @@ namespace Naki_HAR
         public static FleckDef Naki_GW_line_A;
         public static FleckDef Naki_GW_line_B;
 
+        public static AbilityDef Naki_Disintegrate_Lesser;
+        public static AbilityDef Naki_Stall;
+        public static AbilityDef Naki_Amplify;
+
         [MayRequireRoyalty]
         public static PreceptDef NakiPylonLinking;
 

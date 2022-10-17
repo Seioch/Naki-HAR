@@ -39,8 +39,14 @@ namespace Naki_HAR
                 //HediffDef psylink = HediffDef.Named("PsychicAmplifier");
                 Hediff_Psylink psylink = (Hediff_Psylink)HediffMaker.MakeHediff(HediffDefOf.PsychicAmplifier, pawn, null);
                 dmAddiction.initialSeverity = 1.0f;
-                psylink.suppressPostAddLetter = true;
+                psylink.suppressPostAddLetter = false;
                 pawn.health.AddHediff(psylink, pawn.health.hediffSet.GetBrain(), null, null);
+
+                // Make sure the Nakis will have all 3 level 1 basic psycasts. You can apparently just blithely call GainAbility on all level 1
+                // psycasts cause the game checks if the pawn already has it. Thanks tynan!
+                pawn.abilities.GainAbility(Naki_Defof.Naki_Amplify);
+                pawn.abilities.GainAbility(Naki_Defof.Naki_Disintegrate_Lesser);
+                pawn.abilities.GainAbility(Naki_Defof.Naki_Stall);
             }
         }
     }
