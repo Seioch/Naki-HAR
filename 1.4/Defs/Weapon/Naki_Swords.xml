@@ -56,7 +56,7 @@
 </ThingDef>
 
 <ThingDef ParentName="BaseMeleeWeapon">
-	<defName>Naki_MeleeWeapon_DarkTanto</defName>
+	<defName>Naki_DarkTanto</defName>
 	<label>naki darkmetal tanto</label>
 	<description>A shortsword infused with dark matter. It can cut through armor like a hot knife through butter.</description>
 	<graphicData>
