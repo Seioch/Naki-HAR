@@ -32,7 +32,7 @@
         <comps>
             <li Class="Naki_HAR.CompProperties_GravityWell">
                 <damagePerTick>0</damagePerTick>
-                <maxticks>300</maxticks>
+                <maxticks>600</maxticks>
             </li>
             <li Class="CompProperties_DestroyAfterDelay">
                 <delayTicks>2000</delayTicks>

@@ -42,40 +42,40 @@
     </statBases>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <comps>
-        <!-- Meditation Focus type setter -->
-        <li Class="CompProperties_MeditationFocus">
-            <statDef>MeditationFocusStrength</statDef>
-            <focusTypes>
-            <li>NakiFocus</li>
-            </focusTypes>
-            <offsets>
-            <!-- Trash cans as implemented in VFE core act as animus stones. Easter egg by Aeolys. -->
-            <li MayRequire="VanillaExpanded.VFECore" Class="FocusStrengthOffset_BuildingDefs">
-                <defs>
-                    <Bin_Small>0.01</Bin_Small>
-                    <Bin_Large>0.02</Bin_Large>
-                </defs>
-                <radius>9.9</radius>
-                <maxBuildings>4</maxBuildings>
-                <explanationKey>MeditationFocusPerAnimusStoneAndShrine</explanationKey>
-                <explanationKeyAbstract>MeditationFocusPerAnimusStoneAndShrineAbstract</explanationKeyAbstract>
-            </li>
-            </offsets>
-        </li>
-        <li Class="Naki_HAR.CompProperties_NakiPsylinkable">
-            <requiredAttunementPerPsylinkLevel>
-                <li>100</li>
-                <li>150</li>
-                <li>200</li>
-                <li>250</li>
-                <li>300</li>
-                <li>350</li>
-            </requiredAttunementPerPsylinkLevel>
-            <requiredFocus>NakiFocus</requiredFocus>
-            <linkSound>AnimaTreeLink</linkSound>
-            <enoughAttunementLetterLabel>About: Pylon Attunement Linking</enoughAttunementLetterLabel>
-            <enoughAttunementLetterText>This pylon has reached {0} attunement. This is enough for a Naki to upgrade their link to Omega Eden!\n\nThe linking ritual upgrades the level of psylink and assigns one new psycast power. Upgrading to a higher level requires increasing amounts of Attunement.\n\nThe Attunement requirements for linking rituals to upgrade psycasters are:\n\n{1}\n\nNote: Only Naki can meditate to or link with Pylons. You can see a person's focus types by looking at their info card with the 'i' button.</enoughAttunementLetterText>
-        </li>
+      <!-- Meditation Focus type setter -->
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>NakiFocus</li>
+        </focusTypes>
+        <offsets>
+          <!-- Trash cans as implemented in VFE core act as animus stones. Easter egg by Aeolys. -->
+          <li MayRequire="VanillaExpanded.VFECore" Class="FocusStrengthOffset_BuildingDefs">
+            <defs>
+              <Bin_Small>0.01</Bin_Small>
+              <Bin_Large>0.02</Bin_Large>
+            </defs>
+            <radius>9.9</radius>
+            <maxBuildings>4</maxBuildings>
+            <explanationKey>MeditationFocusPerAnimusStoneAndShrine</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerAnimusStoneAndShrineAbstract</explanationKeyAbstract>
+          </li>
+        </offsets>
+      </li>
+      <li Class="Naki_HAR.CompProperties_NakiPsylinkable">
+        <requiredAttunementPerPsylinkLevel>
+          <li>100</li>
+          <li>150</li>
+          <li>200</li>
+          <li>250</li>
+          <li>300</li>
+          <li>350</li>
+        </requiredAttunementPerPsylinkLevel>
+        <requiredFocus>NakiFocus</requiredFocus>
+        <linkSound>AnimaTreeLink</linkSound>
+        <enoughAttunementLetterLabel>About: Pylon Attunement Linking</enoughAttunementLetterLabel>
+        <enoughAttunementLetterText>This pylon has reached {0} attunement. This is enough for a Naki to upgrade their link to Omega Eden!\n\nThe linking ritual upgrades the level of psylink and assigns one new psycast power. Upgrading to a higher level requires increasing amounts of Attunement.\n\nThe Attunement requirements for linking rituals to upgrade psycasters are:\n\n{1}\n\nNote: Only Naki can meditate to or link with Pylons. You can see a person's focus types by looking at their info card with the 'i' button.</enoughAttunementLetterText>
+      </li>
       <!-- Glow -->
       <li Class="CompProperties_Glower">
         <glowRadius>3.75</glowRadius>

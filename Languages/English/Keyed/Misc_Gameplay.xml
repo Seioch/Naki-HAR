@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-<!-- Psylinking -->
+    <!-- Psylinking -->
     <BeginLinkingRitualInsifficientAttunement>Cannot Psylink: Insufficient attunement. Current attunement: {0}. Pawn {1} requires {2} to upgrade.</BeginLinkingRitualInsifficientAttunement>
 </LanguageData>

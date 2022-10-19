@@ -63,14 +63,28 @@ namespace Naki_HAR
             Vector3 vector = new Vector3(radius * Mathf.Cos(num), 0f, radius * Mathf.Sin(num));
             Vector3 spawnPosition = position + vector;
             FleckManager flecks = map.flecks;
-            FleckCreationData fleckCreationData = default(FleckCreationData);
-            fleckCreationData.def = ((variant == 0) ? Naki_Defof.Naki_GW_line_A : Naki_Defof.Naki_GW_line_B);
-            fleckCreationData.scale = UnityEngine.Random.Range(0.8f, 1.4f);
-            fleckCreationData.spawnPosition = spawnPosition;
-            fleckCreationData.rotationRate = 0f;
-            fleckCreationData.rotation = 180f - num2;
-            fleckCreationData.velocitySpeed = UnityEngine.Random.Range(2.9f, 3.9f);
-            fleckCreationData.velocityAngle = 270f - num2;
+            //FleckCreationData fleckCreationData = new FleckCreationData();
+            //FleckDef fleck = ((variant == 0) ? Naki_Defof.Naki_GW_line_A : Naki_Defof.Naki_GW_line_B);
+            //fleckCreationData.def = fleck;
+            //fleckCreationData.scale = 1f;
+            //fleckCreationData.targetSize = 1f; //?
+            //fleckCreationData.spawnPosition = spawnPosition;
+            //// FleckCreationData fleckCreationData = FleckMaker.GetDataStatic(spawnPosition, map, fleck, UnityEngine.Random.Range(0.8f, 1.4f));
+            //fleckCreationData.rotationRate = 0f;
+            //fleckCreationData.rotation = 180f - num2;
+            //fleckCreationData.velocitySpeed = UnityEngine.Random.Range(2.9f, 3.9f);
+            //fleckCreationData.velocityAngle = 270f - num2;
+            FleckCreationData fleckCreationData = new FleckCreationData
+            {
+                def = ((variant == 0) ? Naki_Defof.Naki_GW_line_A : Naki_Defof.Naki_GW_line_B),
+                spawnPosition = spawnPosition,
+                velocityAngle = 270f - num,
+                velocitySpeed = UnityEngine.Random.Range(2.9f, 3.9f),
+                rotationRate = 0,
+                rotation = 180f - num2,
+                scale = 1f,
+                ageTicksOverride = -1
+            };
             flecks.CreateFleck(fleckCreationData);
         }
 
@@ -108,6 +122,16 @@ namespace Naki_HAR
             bool flag1 = Gen.IsHashIntervalTick(this.parent, 10);
             if (flag1)
             {
+                // Create some gravity well flecks
+                if (this.currentTicks < this.Props.maxticks)
+                {
+                    // FleckMaker.Static(this.parent.DrawPos, this.parent.Map, FleckDefOf.PsycastAreaEffect, 1.5f);
+                    Log.Message("[Naki HAR] Spawning flecks");
+                    for (int i = 0; i < 5; i++)
+                    {
+                        CreateGravityFleck(this.parent.Map, this.parent.DrawPos, this.Props.radius / 2, UnityEngine.Random.Range(0, 1));
+                    }
+                }
                 // Log.Message("[Naki HAR] Annihilation field checking for victims");
                 this.tmpPawns.Clear();
                 int rangeForGrabbingPawns = Mathf.RoundToInt(this.Props.radius * 2);
@@ -129,16 +153,6 @@ namespace Naki_HAR
                         {
                             this.tmpPawns.Add(p);
                         }
-                    }
-                }
-
-                // Create some gravity well flecks
-                if (currentTicks < this.Props.maxticks - 150)
-                {
-                    // FleckMaker.Static(this.parent.DrawPos, this.parent.Map, FleckDefOf.PsycastAreaEffect, 1.5f);
-                    for (int i = 0; i < 5; i++)
-                    {
-                        CreateGravityFleck(this.parent.Map, this.parent.DrawPos, this.Props.radius / 2, UnityEngine.Random.Range(0, 1));
                     }
                 }
             }

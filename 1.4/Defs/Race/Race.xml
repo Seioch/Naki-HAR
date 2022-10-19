@@ -1,372 +1,372 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+  <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
     <defName>Naki_Race</defName>
     <label>Naki</label>
     <description>A race of raccoon-themed spacers sent to the rimworlds by their archotech god.</description>
-<!--=============================================================================================================================-->
+    <!--=============================================================================================================================-->
     <alienRace>
-		<generalSettings>
-			<immuneToXenophobia>true</immuneToXenophobia>
-			<maleGenderProbability>0.25</maleGenderProbability>
-			<immuneToAge>true</immuneToAge>
-      <humanRecipeImport>true</humanRecipeImport>           
-			<forcedRaceTraitEntries>
+      <generalSettings>
+        <immuneToXenophobia>true</immuneToXenophobia>
+        <maleGenderProbability>0.25</maleGenderProbability>
+        <immuneToAge>true</immuneToAge>
+        <humanRecipeImport>true</humanRecipeImport>
+        <forcedRaceTraitEntries>
           <li>
-              <defName>Beauty</defName>
-              <degree>2</degree>
-              <chance>10</chance>
+            <defName>Beauty</defName>
+            <degree>2</degree>
+            <chance>10</chance>
           </li>
           <li>
-              <defName>Beauty</defName>
-              <degree>1</degree>
-              <chance>25</chance>
+            <defName>Beauty</defName>
+            <degree>1</degree>
+            <chance>25</chance>
           </li>
           <li>
-              <defName>Bisexual</defName>
-              <chance>15</chance>
+            <defName>Bisexual</defName>
+            <chance>15</chance>
           </li>
           <li>
-              <defName>FastLearner</defName>
-              <chance>15</chance>
+            <defName>FastLearner</defName>
+            <chance>15</chance>
           </li>
           <li>
-              <defName>Voidborn</defName>
-              <chance>100</chance>
+            <defName>Voidborn</defName>
+            <chance>100</chance>
           </li>
-      </forcedRaceTraitEntries>
-			<disallowedTraits>
-        <li>
-          <defName>Beauty</defName>
-          <degree>-1</degree>
-        </li>
-        <li>
-          <defName>Beauty</defName>
-          <degree>-2</degree>
-        </li>
-        <li>
-          <defName>SlowLearner</defName>
-        </li>
-        <li>
-          <!-- Naki gotta have their dark matter powder 'kay? -->
-          <defName>DrugDesire</defName>
-          <degree>-1</degree>
-        </li>
-        <li>
-          <!-- Naki gotta be able to use space magic 'kay? -->
-          <defName>PsychicSensitivity</defName>
-          <degree>-1</degree>
-        </li>
-        <li>
-          <!-- Really RW? Two levels of your brain is bent outta shape? -->
-          <defName>PsychicSensitivity</defName>
-          <degree>-2</degree>
-        </li>        
-			</disallowedTraits>
-	<maxDamageForSocialfight>8</maxDamageForSocialfight>
-	
+        </forcedRaceTraitEntries>
+        <disallowedTraits>
+          <li>
+            <defName>Beauty</defName>
+            <degree>-1</degree>
+          </li>
+          <li>
+            <defName>Beauty</defName>
+            <degree>-2</degree>
+          </li>
+          <li>
+            <defName>SlowLearner</defName>
+          </li>
+          <li>
+            <!-- Naki gotta have their dark matter powder 'kay? -->
+            <defName>DrugDesire</defName>
+            <degree>-1</degree>
+          </li>
+          <li>
+            <!-- Naki gotta be able to use space magic 'kay? -->
+            <defName>PsychicSensitivity</defName>
+            <degree>-1</degree>
+          </li>
+          <li>
+            <!-- Really RW? Two levels of your brain is bent outta shape? -->
+            <defName>PsychicSensitivity</defName>
+            <degree>-2</degree>
+          </li>
+        </disallowedTraits>
+        <maxDamageForSocialfight>8</maxDamageForSocialfight>
 
-		<alienPartGenerator>
-        <bodyTypes>
-          <li>Female</li>
-          <li>Male</li>
-        </bodyTypes>
-        <headTypes>
-          <li>Female_AverageNormal</li>
-          <li>Female_AveragePointy</li>
-          <li>Male_AverageNormal</li>
-          <li>Male_AveragePointy</li>
-        </headTypes>
-			<headOffset>(0 ,-0.07)</headOffset>
-      <!-- May be deprecated in HAR 1.4 -->
-      <!-- <useGenderedHeads>true</useGenderedHeads> -->
-			<!-- <useGenderedBodies>true</useGenderedBodies> -->
-			<atlasScale>4</atlasScale>
-      <bodyAddons>
-			  <li>
-          <!-- Dark Tail -->
-          <path>Naki/Tail/Single/AltTails/Texture</path>
-          <bodyPart>nakitail</bodyPart>				  
-          <inFrontOfBody>false</inFrontOfBody>
-          <colorChannel>hair</colorChannel>
-          <drawSize>0.9</drawSize>
-          <defaultOffset>Tail</defaultOffset>
-          <drawnDesiccated>false</drawnDesiccated>
-          <offsets>
-              <south>
-                <layerOffset>-0.19</layerOffset>
-                  <bodyTypes>
-                      <Female>(-0.3729904,0.2315113)</Female>
-                      <Male>(-0.3729904,0.2315113)</Male>
-                  </bodyTypes>
-                  <headTypes>
-                      <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                      <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                      <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                      <Male_AveragePointy>(0,0)</Male_AveragePointy>
-                  </headTypes>
-              </south>
-              <north>
+
+        <alienPartGenerator>
+          <bodyTypes>
+            <li>Female</li>
+            <li>Male</li>
+          </bodyTypes>
+          <headTypes>
+            <li>Female_AverageNormal</li>
+            <li>Female_AveragePointy</li>
+            <li>Male_AverageNormal</li>
+            <li>Male_AveragePointy</li>
+          </headTypes>
+          <headOffset>(0 ,-0.07)</headOffset>
+          <!-- May be deprecated in HAR 1.4 -->
+          <!-- <useGenderedHeads>true</useGenderedHeads> -->
+          <!-- <useGenderedBodies>true</useGenderedBodies> -->
+          <atlasScale>4</atlasScale>
+          <bodyAddons>
+            <li>
+              <!-- Dark Tail -->
+              <path>Naki/Tail/Single/AltTails/Texture</path>
+              <bodyPart>nakitail</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <colorChannel>hair</colorChannel>
+              <drawSize>0.9</drawSize>
+              <defaultOffset>Tail</defaultOffset>
+              <drawnDesiccated>false</drawnDesiccated>
+              <offsets>
+                <south>
                   <layerOffset>-0.19</layerOffset>
                   <bodyTypes>
-                      <Female>(-0.032,0.34)</Female>
-                      <Male>(-0.032,0.34)</Male>
+                    <Female>(-0.3729904,0.2315113)</Female>
+                    <Male>(-0.3729904,0.2315113)</Male>
                   </bodyTypes>
-                  <headTypes>
-                      <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                      <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                      <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                      <Male_AveragePointy>(0,0)</Male_AveragePointy>
-                  </headTypes>
-              </north>
-              <east>
-                  <layerOffset>-0.19</layerOffset>
-                  <bodyTypes>
-                      <Female>(-0.4972991,0.2958201)</Female>
-                      <Male>(-0.4972991,0.2958201)</Male>
-                  </bodyTypes>
-                  <headTypes>
-                      <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                      <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                      <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                      <Male_AveragePointy>(0,0)</Male_AveragePointy>
-                  </headTypes>
-              </east>
-          </offsets>
-          <drawnInBed>false</drawnInBed>
-        </li>
-        <li>
-          <!-- The path for the head texture is set above -->
-          <path>Naki/Null/Texture</path>
-          <bodyPart>Head</bodyPart>				
-          <inFrontOfBody>true</inFrontOfBody>
-          <colorChannel>skin</colorChannel>
-          <drawSize>0.9</drawSize>
-          <angle>0</angle>
-          <!-- <layerOffset>-0.274</layerOffset> -->
-          <defaultOffset>Head</defaultOffset>
-          <offsets>
-            <west>
-              <layerOffset>-0.2758</layerOffset>
-              <bodyTypes>
-                  <Female>(0.009646305,-0.4951769)</Female>
-                  <Male>(0.009646305,-0.4951769)</Male>
-              </bodyTypes>
-              <headTypes>
-                <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                <Male_AveragePointy>(0,0)</Male_AveragePointy>
-              </headTypes>
-            </west>
-            <south>
-              <layerOffset>-0.2758</layerOffset>
-              <bodyTypes>
-                  <Female>(0.003215437,-0.4694535)</Female>
-                  <Male>(0.003215437,-0.4694535)</Male>
-              </bodyTypes>
-              <headTypes>
-                <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                <Male_AveragePointy>(0,0)</Male_AveragePointy>
-              </headTypes>
-            </south>
-            <north>
-              <layerOffset>-0.2758</layerOffset>
-              <bodyTypes>
-                  <Female>(0,0.7877813)</Female>
-                  <Male>(0,0.7877813)</Male>
-              </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0,0)</Female_AverageNormal>
                     <Female_AveragePointy>(0,0)</Female_AveragePointy>
                     <Male_AverageNormal>(0,0)</Male_AverageNormal>
                     <Male_AveragePointy>(0,0)</Male_AveragePointy>
                   </headTypes>
-            </north>
-            <east>
-              <layerOffset>-0.2758</layerOffset>
-              <bodyTypes>
-                  <Female>(0.009646305,-0.4951769)</Female>
-                  <Male>(0.009646305,-0.4951769)</Male>
-              </bodyTypes>
-                <headTypes>
-                  <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                  <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                  <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                  <Male_AveragePointy>(0,0)</Male_AveragePointy>
-                </headTypes>
-            </east>
-          </offsets>
-				</li>
-				
-        <li>
-        <path>Naki/Ear/B/Left/LTexture</path>
-        <bodyPart>left ear</bodyPart>				
-        <inFrontOfBody>true</inFrontOfBody>
-        <colorChannel>hair</colorChannel>
-				<drawSize>0.9</drawSize>
-        <angle>0</angle>
-        <defaultOffset>Head</defaultOffset>
-        <offsets>
-          <west>
-            <bodyTypes>
-                <!-- Vectors -->
-                <Female>(0,-0.22)</Female>
-                <Male>(0,-0.22)</Male>
-                <!-- Originals -->
-                <!-- <Female>(0,-0.5)</Female>
+                </south>
+                <north>
+                  <layerOffset>-0.19</layerOffset>
+                  <bodyTypes>
+                    <Female>(-0.032,0.34)</Female>
+                    <Male>(-0.032,0.34)</Male>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </north>
+                <east>
+                  <layerOffset>-0.19</layerOffset>
+                  <bodyTypes>
+                    <Female>(-0.4972991,0.2958201)</Female>
+                    <Male>(-0.4972991,0.2958201)</Male>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </east>
+              </offsets>
+              <drawnInBed>false</drawnInBed>
+            </li>
+            <li>
+              <!-- The path for the head texture is set above -->
+              <path>Naki/Null/Texture</path>
+              <bodyPart>Head</bodyPart>
+              <inFrontOfBody>true</inFrontOfBody>
+              <colorChannel>skin</colorChannel>
+              <drawSize>0.9</drawSize>
+              <angle>0</angle>
+              <!-- <layerOffset>-0.274</layerOffset> -->
+              <defaultOffset>Head</defaultOffset>
+              <offsets>
+                <west>
+                  <layerOffset>-0.2758</layerOffset>
+                  <bodyTypes>
+                    <Female>(0.009646305,-0.4951769)</Female>
+                    <Male>(0.009646305,-0.4951769)</Male>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </west>
+                <south>
+                  <layerOffset>-0.2758</layerOffset>
+                  <bodyTypes>
+                    <Female>(0.003215437,-0.4694535)</Female>
+                    <Male>(0.003215437,-0.4694535)</Male>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </south>
+                <north>
+                  <layerOffset>-0.2758</layerOffset>
+                  <bodyTypes>
+                    <Female>(0,0.7877813)</Female>
+                    <Male>(0,0.7877813)</Male>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </north>
+                <east>
+                  <layerOffset>-0.2758</layerOffset>
+                  <bodyTypes>
+                    <Female>(0.009646305,-0.4951769)</Female>
+                    <Male>(0.009646305,-0.4951769)</Male>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </east>
+              </offsets>
+            </li>
+
+            <li>
+              <path>Naki/Ear/B/Left/LTexture</path>
+              <bodyPart>left ear</bodyPart>
+              <inFrontOfBody>true</inFrontOfBody>
+              <colorChannel>hair</colorChannel>
+              <drawSize>0.9</drawSize>
+              <angle>0</angle>
+              <defaultOffset>Head</defaultOffset>
+              <offsets>
+                <west>
+                  <bodyTypes>
+                    <!-- Vectors -->
+                    <Female>(0,-0.22)</Female>
+                    <Male>(0,-0.22)</Male>
+                    <!-- Originals -->
+                    <!-- <Female>(0,-0.5)</Female>
                 <Male>(0,-0.5)</Male> -->
-            </bodyTypes>
-            <headTypes>
-              <Female_AverageNormal>(0,0)</Female_AverageNormal>
-              <Female_AveragePointy>(0,0)</Female_AveragePointy>
-              <Male_AverageNormal>(0,0)</Male_AverageNormal>
-              <Male_AveragePointy>(0,0)</Male_AveragePointy>
-            </headTypes>
-          </west>
-          <south>
-            <bodyTypes>
-                <!-- Vector offsets -->
-                <Female>(0,-0.16)</Female>
-                <Male>(0,-0.16)</Male>
-                <!-- Original Offsets -->
-                <!-- <Female>(0,-0.49)</Female>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </west>
+                <south>
+                  <bodyTypes>
+                    <!-- Vector offsets -->
+                    <Female>(0,-0.16)</Female>
+                    <Male>(0,-0.16)</Male>
+                    <!-- Original Offsets -->
+                    <!-- <Female>(0,-0.49)</Female>
                 <Male>(0,-0.49)</Male> -->
-            </bodyTypes>
-            <headTypes>
-              <Female_AverageNormal>(0,0)</Female_AverageNormal>
-              <Female_AveragePointy>(0,0)</Female_AveragePointy>
-              <Male_AverageNormal>(0,0)</Male_AverageNormal>
-              <Male_AveragePointy>(0,0)</Male_AveragePointy>
-            </headTypes>
-          </south>
-          <north>
-            <bodyTypes>
-                <Female>(0,-0.06)</Female>
-                <Male>(0,-0.06)</Male>
-                <!-- Originals -->
-                <!-- <Female>(0,-0.3)</Female>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(0,-0.06)</Female>
+                    <Male>(0,-0.06)</Male>
+                    <!-- Originals -->
+                    <!-- <Female>(0,-0.3)</Female>
                 <Male>(0,-0.3)</Male> -->
-            </bodyTypes>
-            <headTypes>
-              <Female_AverageNormal>(0,0)</Female_AverageNormal>
-              <Female_AveragePointy>(0,0)</Female_AveragePointy>
-              <Male_AverageNormal>(0,0)</Male_AverageNormal>
-              <Male_AveragePointy>(0,0)</Male_AveragePointy>
-            </headTypes>
-          </north>
-          <east>
-            <!-- For vectors -->
-            <layerOffset>-0.37</layerOffset>
-            <!-- Originals -->
-            <!-- <layerOffset>0</layerOffset> -->
-            <bodyTypes>
-                <!-- Vector offsets -->
-                <Female>(0.02,-0.24)</Female> <!-- For some reason Female head needs a bit less offset?! -->
-                <Male>(0.02,-0.24)</Male>
-                <!-- Original Offsets -->
-                <!-- <Female>(0.02,-0.49)</Female> For some reason Female head needs a bit less offset?!
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </north>
+                <east>
+                  <!-- For vectors -->
+                  <layerOffset>-0.37</layerOffset>
+                  <!-- Originals -->
+                  <!-- <layerOffset>0</layerOffset> -->
+                  <bodyTypes>
+                    <!-- Vector offsets -->
+                    <Female>(0.02,-0.24)</Female> <!-- For some reason Female head needs a bit less offset?! -->
+                    <Male>(0.02,-0.24)</Male>
+                    <!-- Original Offsets -->
+                    <!-- <Female>(0.02,-0.49)</Female> For some reason Female head needs a bit less offset?!
                 <Male>(0.09,-0.49)</Male> -->
-            </bodyTypes>
-            <headTypes>
-              <Female_AverageNormal>(0,0)</Female_AverageNormal>
-              <Female_AveragePointy>(0,0)</Female_AveragePointy>
-              <Male_AverageNormal>(0,0)</Male_AverageNormal>
-              <Male_AveragePointy>(0,0)</Male_AveragePointy>
-            </headTypes>
-          </east>
-        </offsets>
-        </li>
-		
-        <li>
-          <path>Naki/Ear/B/Right/RTexture</path>
-          <bodyPart>right ear</bodyPart>				
-          <inFrontOfBody>true</inFrontOfBody>
-          <colorChannel>hair</colorChannel> 
-          <drawSize>0.9</drawSize>
-          <angle>0</angle>
-          <defaultOffset>Head</defaultOffset>
-          <offsets>
-            <west>
-                <!-- Vector -->
-                <layerOffset>-0.37</layerOffset>
-                <!-- Original -->
-                <!-- <layerOffset>0</layerOffset> -->
-                <bodyTypes>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </east>
+              </offsets>
+            </li>
+
+            <li>
+              <path>Naki/Ear/B/Right/RTexture</path>
+              <bodyPart>right ear</bodyPart>
+              <inFrontOfBody>true</inFrontOfBody>
+              <colorChannel>hair</colorChannel>
+              <drawSize>0.9</drawSize>
+              <angle>0</angle>
+              <defaultOffset>Head</defaultOffset>
+              <offsets>
+                <west>
+                  <!-- Vector -->
+                  <layerOffset>-0.37</layerOffset>
+                  <!-- Original -->
+                  <!-- <layerOffset>0</layerOffset> -->
+                  <bodyTypes>
                     <!-- Vectors -->
                     <Female>(0.03,-0.25)</Female>
-                    <Male>(0.03,-0.25)</Male> 
+                    <Male>(0.03,-0.25)</Male>
                     <!-- Originals -->
                     <!-- <Female>(0.03,-0.51)</Female>
                     <Male>(0.05,-0.51)</Male>  -->
-                </bodyTypes>
-                <headTypes>
-                  <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                  <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                  <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                  <Male_AveragePointy>(0,0)</Male_AveragePointy>
-                </headTypes>
-              </west>
-              <south>
-                <bodyTypes>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </west>
+                <south>
+                  <bodyTypes>
                     <!-- Vector offsets -->
                     <Female>(0,-0.16)</Female>
                     <Male>(0,-0.16)</Male>
                     <!-- Original Offsets -->
                     <!-- <Female>(0,-0.49)</Female>
                     <Male>(0,-0.49)</Male> -->
-                </bodyTypes>
-                <headTypes>
-                  <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                  <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                  <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                  <Male_AveragePointy>(0,0)</Male_AveragePointy>
-                </headTypes>
-              </south>
-              <north>
-                <bodyTypes>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </south>
+                <north>
+                  <bodyTypes>
                     <!-- Vectors -->
                     <Female>(0,-0.06)</Female>
                     <Male>(0,-0.06)</Male>
                     <!-- Originals -->
                     <!-- <Female>(0,-0.3)</Female>
                     <Male>(0,-0.3)</Male> -->
-                </bodyTypes>
-                <headTypes>
-                  <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                  <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                  <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                  <Male_AveragePointy>(0,0)</Male_AveragePointy>
-                </headTypes>
-              </north>
-              <east>
-                <bodyTypes>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </north>
+                <east>
+                  <bodyTypes>
                     <!-- Vector offsets -->
                     <Female>(0,-0.22)</Female>
                     <Male>(0,-0.22)</Male>
                     <!-- Originals -->
                     <!-- <Female>(0.03,-0.51)</Female>
                     <Male>(0.03,-0.51)</Male> -->
-                </bodyTypes>
-                <headTypes>
-                  <Female_AverageNormal>(0,0)</Female_AverageNormal>
-                  <Female_AveragePointy>(0,0)</Female_AveragePointy>
-                  <Male_AverageNormal>(0,0)</Male_AverageNormal>
-                  <Male_AveragePointy>(0,0)</Male_AveragePointy>
-                </headTypes>
-              </east>
-          </offsets>
-        </li>
-			
-    </bodyAddons>
-			
-    <customDrawSize>(0.9, 0.9)</customDrawSize>
-        <customPortraitDrawSize>(.9, .9)</customPortraitDrawSize>
-		
-		<colorChannels>
-				<li>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </east>
+              </offsets>
+            </li>
+
+          </bodyAddons>
+
+          <customDrawSize>(0.9, 0.9)</customDrawSize>
+          <customPortraitDrawSize>(.9, .9)</customPortraitDrawSize>
+
+          <colorChannels>
+            <li>
               <name>skin</name>
               <first Class="ColorGenerator_Options">
                 <options>
@@ -390,7 +390,7 @@
               </first>
               <second Class="ColorGenerator_Options">
                 <options>
-				<!--brown-->
+                  <!--brown-->
                   <li>
                     <weight>10</weight>
                     <only>RGBA(94,72,30,255)</only>
@@ -419,7 +419,7 @@
                     <weight>10</weight>
                     <only>RGBA(69,24,0,255)</only>
                   </li>
-				  <!-- Blue -->
+                  <!-- Blue -->
                   <li>
                     <weight>10</weight>
                     <only>RGBA(81,123,132,255)</only>
@@ -468,7 +468,7 @@
                     <weight>10</weight>
                     <only>RGBA(127,180,190,255)</only>
                   </li>
-				  <!--Green-->
+                  <!--Green-->
                   <li>
                     <weight>10</weight>
                     <only>RGBA(164,200,185,255)</only>
@@ -529,7 +529,7 @@
                     <weight>10</weight>
                     <only>RGBA(141,184,137,255)</only>
                   </li>
-				  
+
                   <li>
                     <weight>10</weight>
                     <only>RGBA(237,98,122,255)</only>
@@ -570,13 +570,13 @@
                     <weight>10</weight>
                     <only>RGBA(255, 20, 147,255)</only>
                   </li>
-				  
-				  
+
+
                   <li>
                     <weight>10</weight>
                     <only>RGBA(139,137,160,255)</only>
                   </li>
-				  
+
                   <li>
                     <weight>10</weight>
                     <only>RGBA(240,255,255,255)</only>
@@ -584,44 +584,44 @@
                 </options>
               </second>
             </li>
-			<li>
-			<name>hair</name>
-					<first Class="ColorGenerator_Options">
-						<options> 
-							<!--<li>
+            <li>
+              <name>hair</name>
+              <first Class="ColorGenerator_Options">
+                <options>
+                  <!--<li>
 								<weight>100</weight>  Name=() 
 								<only>RGBA(,,,1)</only>  RGB=(,,) # 
 							</li> -->
-						<!--Common-->
-						<!--Blacks-->
-							<li>
-								<weight>5</weight> <!-- Name=(Charcoal) -->
-								<only>RGBA(0.29,0.29,0.29,1)</only> <!-- RGB=(73,73,73) #494949 -->
-							</li>
-							<li>
-								<weight>5</weight> <!-- Name=(Nero) -->
-								<only>RGBA(0.18,0.18,0.18,1)</only> <!-- RGB=(45,45,45) # -->
-							</li>
-						<!--Greys-->
-							<li>
-								<weight>5</weight> <!-- Name=(Shady Lady) -->
-								<only>RGBA(0.59,0.59,0.59,1)</only> <!-- RGB=(150,150,150) #969696 -->
-							</li>
-							<li>
-								<weight>5</weight> <!-- Name=(Mortar) -->
-								<only>RGBA(0.34,0.34,0.34,1)</only> <!-- RGB=(86,86,86) #565656 -->
-							</li>
-						<!--Exotic-->
-						</options>
-					</first>
-				</li>
-			</colorChannels>
-		
-		
-		</alienPartGenerator>
-    </generalSettings>
+                  <!--Common-->
+                  <!--Blacks-->
+                  <li>
+                    <weight>5</weight> <!-- Name=(Charcoal) -->
+                    <only>RGBA(0.29,0.29,0.29,1)</only> <!-- RGB=(73,73,73) #494949 -->
+                  </li>
+                  <li>
+                    <weight>5</weight> <!-- Name=(Nero) -->
+                    <only>RGBA(0.18,0.18,0.18,1)</only> <!-- RGB=(45,45,45) # -->
+                  </li>
+                  <!--Greys-->
+                  <li>
+                    <weight>5</weight> <!-- Name=(Shady Lady) -->
+                    <only>RGBA(0.59,0.59,0.59,1)</only> <!-- RGB=(150,150,150) #969696 -->
+                  </li>
+                  <li>
+                    <weight>5</weight> <!-- Name=(Mortar) -->
+                    <only>RGBA(0.34,0.34,0.34,1)</only> <!-- RGB=(86,86,86) #565656 -->
+                  </li>
+                  <!--Exotic-->
+                </options>
+              </first>
+            </li>
+          </colorChannels>
 
-<!--=============================================================================================================================-->
+
+        </alienPartGenerator>
+      </generalSettings>
+
+      <!--=============================================================================================================================-->
       <graphicPaths>
         <!-- 1.3 paths -->
         <!-- <head>Naki/Head/B/</head> -->
@@ -629,110 +629,110 @@
         <head>Naki/Head/C/</head>
         <body>Naki/Body/A/</body>
       </graphicPaths>
-			<styleSettings>
-				<li>
-					<key>HairDef</key>
-					<value>
-						<hasStyle>true</hasStyle>
+      <styleSettings>
+        <li>
+          <key>HairDef</key>
+          <value>
+            <hasStyle>true</hasStyle>
             <!-- <styleTags>
               <li>Naki</li>
             </styleTags> -->
-						<styleTagsOverride>
-                <li>Naki</li>
+            <styleTagsOverride>
+              <li>Naki</li>
             </styleTagsOverride>
-					</value>
-				</li>
-				<li>
-					<key>TattooDef</key>
-					<value>
-						<hasStyle>true</hasStyle>
-					</value>
-				</li>
-				<li>
-					<key>BeardDef</key>
-					<value>
-						<hasStyle>false</hasStyle>
-					</value>
-				</li>
-			</styleSettings>
-<!--=============================================================================================================================-->
-        <!-- <hairSettings>
+          </value>
+        </li>
+        <li>
+          <key>TattooDef</key>
+          <value>
+            <hasStyle>true</hasStyle>
+          </value>
+        </li>
+        <li>
+          <key>BeardDef</key>
+          <value>
+            <hasStyle>false</hasStyle>
+          </value>
+        </li>
+      </styleSettings>
+      <!--=============================================================================================================================-->
+      <!-- <hairSettings>
             <hasHair>true</hasHair>
 			<getsGreyAt>85</getsGreyAt>
             <styleTags>
                 <li>Naki</li>
             </styleTags>
         </hairSettings> -->
-<!--=============================================================================================================================-->
-		<raceRestriction>
-      <apparelList>
-        <li>Naki_Colored_Underwear</li> 
-        <li>Naki_White_Underwear</li> 
-				<li>Naki_OnSkin_Shirt</li>
-				<li>Naki_OnSkin_T_Shirt</li>
-				<li>Naki_OnSkin_Short_Pants</li>
-				<li>Naki_OnSkin_LongPants</li>
-        <li>Naki_OnSkin_OnePiece_GalaxyDress</li>
-        <li>Naki_OnSkin_Ruffled_Shirt</li>
-        <li>Naki_OnSkin_Maid_Dress</li>
-        <li>Naki_OnSkin_Work_Jumpsuit</li>
-        <li>Naki_OnSkin_Doctor_Uniform</li>
-        <li>Naki_OnSkin_Armor_Pants</li>
-        <li>Naki_Security_Armor</li>
-        <li>Naki_OnSkin_Marine_Uniform</li>
-				<li>Naki_Colored_Underwear</li> 
-				<li>Naki_Middle_Body_Armor</li>
-				<li>Naki_Overhead_Winter_Hat</li>
-				<li>Naki_Overhead_Summer_Hat</li>
-				<li>Naki_Overhead_Glasses</li>
-				<li>Naki_Overhead_Goggles</li>
-				<li>Naki_Overhead_Darkweave_Hat</li>
-				<li>Naki_Overhead_Military_Helmet</li>
-				<li>Naki_Overhead_Traditional_Hair_Pin</li>
-				<li>Naki_Overhead_Marine_Helmet</li>
-				<li>Naki_Shell_Cardigan</li>
-				<li>Naki_Shell_Duster</li>
-				<li>Naki_Shell_Parka</li>
-				<li>Naki_Shell_NavyOfficerCoat</li>
-        <li>Naki_Shell_ScientistCoat</li>
-        <li>Naki_Shell_TrenchCoat</li>
-        <li>Naki_Shell_Marine_Armor</li>
-      </apparelList>
-			<whiteApparelList>
-				<li>Apparel_ShieldBelt</li>
-				<li>Apparel_SmokepopBelt</li>
-			</whiteApparelList>
-            <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
-            <buildingList>
-              <!-- Add Pylon and Fabricator here once it is coded. -->
-              <li>NakiMeditationPylon</li>
-              <li>Naki_Fabricator</li>
-            </buildingList>
-    </raceRestriction>
-	</alienRace>
-<!--=============================================================================================================================-->
-  <statBases>
-    <MarketValue>2700</MarketValue>
-    <Flammability>0.3</Flammability>
-    <MoveSpeed>5</MoveSpeed>
-    <MentalBreakThreshold>0.4</MentalBreakThreshold>
-    <ComfyTemperatureMax>35</ComfyTemperatureMax>
-    <ComfyTemperatureMin>0</ComfyTemperatureMin>
-	  <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
-	  <CarryingCapacity>100</CarryingCapacity>
-	  <MeatAmount>55</MeatAmount>
+      <!--=============================================================================================================================-->
+      <raceRestriction>
+        <apparelList>
+          <li>Naki_Colored_Underwear</li>
+          <li>Naki_White_Underwear</li>
+          <li>Naki_OnSkin_Shirt</li>
+          <li>Naki_OnSkin_T_Shirt</li>
+          <li>Naki_OnSkin_Short_Pants</li>
+          <li>Naki_OnSkin_LongPants</li>
+          <li>Naki_OnSkin_OnePiece_GalaxyDress</li>
+          <li>Naki_OnSkin_Ruffled_Shirt</li>
+          <li>Naki_OnSkin_Maid_Dress</li>
+          <li>Naki_OnSkin_Work_Jumpsuit</li>
+          <li>Naki_OnSkin_Doctor_Uniform</li>
+          <li>Naki_OnSkin_Armor_Pants</li>
+          <li>Naki_Security_Armor</li>
+          <li>Naki_OnSkin_Marine_Uniform</li>
+          <li>Naki_Colored_Underwear</li>
+          <li>Naki_Middle_Body_Armor</li>
+          <li>Naki_Overhead_Winter_Hat</li>
+          <li>Naki_Overhead_Summer_Hat</li>
+          <li>Naki_Overhead_Glasses</li>
+          <li>Naki_Overhead_Goggles</li>
+          <li>Naki_Overhead_Darkweave_Hat</li>
+          <li>Naki_Overhead_Military_Helmet</li>
+          <li>Naki_Overhead_Traditional_Hair_Pin</li>
+          <li>Naki_Overhead_Marine_Helmet</li>
+          <li>Naki_Shell_Cardigan</li>
+          <li>Naki_Shell_Duster</li>
+          <li>Naki_Shell_Parka</li>
+          <li>Naki_Shell_NavyOfficerCoat</li>
+          <li>Naki_Shell_ScientistCoat</li>
+          <li>Naki_Shell_TrenchCoat</li>
+          <li>Naki_Shell_Marine_Armor</li>
+        </apparelList>
+        <whiteApparelList>
+          <li>Apparel_ShieldBelt</li>
+          <li>Apparel_SmokepopBelt</li>
+        </whiteApparelList>
+        <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+        <buildingList>
+          <!-- Add Pylon and Fabricator here once it is coded. -->
+          <li>NakiMeditationPylon</li>
+          <li>Naki_Fabricator</li>
+        </buildingList>
+      </raceRestriction>
+    </alienRace>
+    <!--=============================================================================================================================-->
+    <statBases>
+      <MarketValue>2700</MarketValue>
+      <Flammability>0.3</Flammability>
+      <MoveSpeed>5</MoveSpeed>
+      <MentalBreakThreshold>0.4</MentalBreakThreshold>
+      <ComfyTemperatureMax>35</ComfyTemperatureMax>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+      <CarryingCapacity>100</CarryingCapacity>
+      <MeatAmount>55</MeatAmount>
       <LeatherAmount>55</LeatherAmount>
       <Mass>50</Mass>
-	  <PainShockThreshold>0.85</PainShockThreshold>
-	  <ButcheryMechanoidEfficiency>0.8</ButcheryMechanoidEfficiency> <!--메카노이드 분해 효율-->
-	  <ButcheryMechanoidSpeed>0.8</ButcheryMechanoidSpeed> 
-	  <SmeltingSpeed>0.8</SmeltingSpeed> 
-	  <ResearchSpeed>1.2</ResearchSpeed>
-	  <MiningSpeed>0.8</MiningSpeed>
-	  <RestRateMultiplier>1.3</RestRateMultiplier>
-	  <PlantWorkSpeed>0.8</PlantWorkSpeed>
-  </statBases>
-<!--=============================================================================================================================-->
+      <PainShockThreshold>0.85</PainShockThreshold>
+      <ButcheryMechanoidEfficiency>0.8</ButcheryMechanoidEfficiency> <!--메카노이드 분해 효율-->
+      <ButcheryMechanoidSpeed>0.8</ButcheryMechanoidSpeed>
+      <SmeltingSpeed>0.8</SmeltingSpeed>
+      <ResearchSpeed>1.2</ResearchSpeed>
+      <MiningSpeed>0.8</MiningSpeed>
+      <RestRateMultiplier>1.3</RestRateMultiplier>
+      <PlantWorkSpeed>0.8</PlantWorkSpeed>
+    </statBases>
+    <!--=============================================================================================================================-->
     <tools>
       <li>
         <label>left fist</label>
@@ -790,7 +790,7 @@
         <chanceFactor>0.1</chanceFactor>
       </li>
     </tools>
-<!--=============================================================================================================================-->
+    <!--=============================================================================================================================-->
     <race>
       <thinkTreeMain>Humanlike</thinkTreeMain>
       <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
@@ -799,7 +799,7 @@
       <lifeExpectancy>120</lifeExpectancy>
       <leatherDef>Leather_Human</leatherDef>
       <nameCategory>HumanStandard</nameCategory>
-	  <body>Naki_Body</body>
+      <body>Naki_Body</body>
       <baseBodySize>0.9</baseBodySize>
       <baseHealthScale>1.0</baseHealthScale>
       <foodType>OmnivoreHuman</foodType>
@@ -807,7 +807,7 @@
       <meatMarketValue>0.8</meatMarketValue>
       <manhunterOnDamageChance>0.60</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.04</manhunterOnTameFailChance>
-	  <nameGenerator>NamerPerson_Naki</nameGenerator>
+      <nameGenerator>NamerPerson_Naki</nameGenerator>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>
@@ -852,8 +852,8 @@
           <li>(20,100)</li>
           <li>(30,100)</li>
           <li>(40,10)</li>
-		  <li>(60,5)</li>
-		  <li>(80,1)</li>
+          <li>(60,5)</li>
+          <li>(80,1)</li>
           <li>(120,0)</li>
         </points>
       </ageGenerationCurve>
@@ -862,17 +862,17 @@
         <li>Human</li>
       </hediffGiverSets>
     </race>
-<!--=========================================== Surgery Recipes ================================================-->
+    <!--=========================================== Surgery Recipes ================================================-->
     <recipes>
       <li>Naki_InstallFakeTail</li>
       <li>Naki_InstallBionicEar</li>
       <li>Naki_InstallBionicTail</li>
     </recipes>
-<!--=========================================== Custom Components ================================================-->
+    <!--=========================================== Custom Components ================================================-->
     <comps>
       <li>
         <compClass>Naki_HAR.CompNakiPostSpawn</compClass>
       </li>
     </comps>
-</AlienRace.ThingDef_AlienRace>
+  </AlienRace.ThingDef_AlienRace>
 </Defs>

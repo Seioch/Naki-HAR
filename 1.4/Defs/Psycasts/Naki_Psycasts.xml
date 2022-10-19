@@ -24,15 +24,15 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilitySpawn">
+            <li Class="CompProperties_AbilitySpawn">
                 <thingDef>Naki_GravityWell</thingDef>
             </li>
-            <li Class = "CompProperties_AbilityFleckOnTarget">
+            <li Class="CompProperties_AbilityFleckOnTarget">
                 <fleckDef>BulletShieldAreaEffect</fleckDef>
                 <sound>Psycast_Skip_Exit</sound>
             </li>
         </comps>
-    </AbilityDef> 
+    </AbilityDef>
 
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_MassDestruction</defName>
@@ -42,32 +42,32 @@
         <iconPath>Naki/Psycasts/MassDestruction</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <statBases>
-        <Ability_EntropyGain>50</Ability_EntropyGain>
-        <Ability_PsyfocusCost>0.75</Ability_PsyfocusCost>
-        <Ability_Duration>60</Ability_Duration>
-        <Ability_EffectRadius>3.9</Ability_EffectRadius>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+            <Ability_PsyfocusCost>0.75</Ability_PsyfocusCost>
+            <Ability_Duration>60</Ability_Duration>
+            <Ability_EffectRadius>3.9</Ability_EffectRadius>
         </statBases>
         <verbProperties>
-        <warmupTime>1</warmupTime>
-        <range>34.9</range>
-        <targetParams>
-            <canTargetHumans>True</canTargetHumans>
-            <canTargetMechs>True</canTargetMechs>
-            <canTargetAnimals>True</canTargetAnimals>
-            <canTargetLocations>True</canTargetLocations>
-        </targetParams>
+            <warmupTime>1</warmupTime>
+            <range>34.9</range>
+            <targetParams>
+                <canTargetHumans>True</canTargetHumans>
+                <canTargetMechs>True</canTargetMechs>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
         </verbProperties>
         <comps>
-        <li Class = "CompProperties_AbilityGiveHediff">
-            <compClass>CompAbilityEffect_GiveHediff</compClass>
-            <hediffDef>DMDisintegration</hediffDef>
-            <psychic>False</psychic>
-            <goodwillImpact>-65</goodwillImpact>
-            <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
-        </li>
-        <li Class="CompProperties_AbilityFleckOnTarget">
-            <fleckDef>PsycastPsychicEffect</fleckDef>
-        </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>DMDisintegration</hediffDef>
+                <psychic>False</psychic>
+                <goodwillImpact>-65</goodwillImpact>
+                <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
         </comps>
     </AbilityDef>
 
@@ -90,15 +90,15 @@
             <Ability_PsyfocusCost>0.45</Ability_PsyfocusCost>
         </statBases>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMAnnihilation</hediffDef>
                 <psychic>False</psychic>
                 <goodwillImpact>-65</goodwillImpact>
-               <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+                <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
         </comps>
-    </AbilityDef> 
+    </AbilityDef>
 
     <AbilityDef ParentName="PsycastBaseSkip">
         <defName>Naki_DMShield</defName>
@@ -115,21 +115,21 @@
             <Ability_Duration>25</Ability_Duration>
         </statBases>
         <verbProperties>
-        <warmupTime>1</warmupTime>
-        <range>24.9</range>
-        <targetParams>
-            <canTargetPawns>False</canTargetPawns>
-            <canTargetLocations>True</canTargetLocations>
-        </targetParams>
+            <warmupTime>1</warmupTime>
+            <range>24.9</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
         </verbProperties>
         <comps>
-        <li Class="CompProperties_AbilitySpawn">
-            <thingDef>BulletShieldPsychic</thingDef>
-        </li>
-        <li Class="CompProperties_AbilityFleckOnTarget">
-            <fleckDef>BulletShieldAreaEffect</fleckDef>
-            <sound>Psycast_Skip_Exit</sound>
-        </li>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>BulletShieldPsychic</thingDef>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>BulletShieldAreaEffect</fleckDef>
+                <sound>Psycast_Skip_Exit</sound>
+            </li>
         </comps>
     </AbilityDef>
 
@@ -155,13 +155,13 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "Naki_HAR.CompProperties_CompDMHealing">
-		        <compClass>Naki_HAR.CompDMHealing</compClass>
-		        <sound>PsycastPsychicEffect</sound>
+            <li Class="Naki_HAR.CompProperties_CompDMHealing">
+                <compClass>Naki_HAR.CompDMHealing</compClass>
+                <sound>PsycastPsychicEffect</sound>
                 <maxApplications>14</maxApplications>
                 <healingEffectiveness>0.2</healingEffectiveness>
             </li>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMHealingPenalty</hediffDef>
                 <onlyBrain>True</onlyBrain>
@@ -179,7 +179,7 @@
         <iconPath>Naki/Psycasts/DistortionField</iconPath>
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <statBases>
-        <!-- Testing numbers change later -->
+            <!-- Testing numbers change later -->
             <Ability_EntropyGain>40</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.4</Ability_PsyfocusCost>
             <Ability_Duration>15</Ability_Duration>
@@ -195,15 +195,15 @@
         </verbProperties>
         <comps>
             <!-- <li Class="Naki_HAR.CompProperties_AbilityDistortionField"> -->
-            <li Class = "CompProperties_AbilitySpawn">
+            <li Class="CompProperties_AbilitySpawn">
                 <thingDef>Naki_DistortionFieldBuilding</thingDef>
             </li>
-            <li Class = "CompProperties_AbilityFleckOnTarget">
+            <li Class="CompProperties_AbilityFleckOnTarget">
                 <fleckDef>BulletShieldAreaEffect</fleckDef>
                 <sound>Psycast_Skip_Exit</sound>
             </li>
         </comps>
-    </AbilityDef> 
+    </AbilityDef>
 
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Darkness</defName>
@@ -220,28 +220,28 @@
             <Ability_EffectRadius>4.9</Ability_EffectRadius>
         </statBases>
         <verbProperties>
-        <warmupTime>1</warmupTime>
-        <range>24.9</range>
-        <targetParams>
-            <canTargetSelf>True</canTargetSelf>
-            <canTargetAnimals>True</canTargetAnimals>
-            <canTargetLocations>True</canTargetLocations>
-        </targetParams>
+            <warmupTime>1</warmupTime>
+            <range>24.9</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
         </verbProperties>
         <comps>
-        <li Class = "CompProperties_AbilityGiveHediff">
-            <compClass>CompAbilityEffect_GiveHediff</compClass>
-            <hediffDef>Naki_Darkness</hediffDef>
-            <onlyBrain>True</onlyBrain>
-            <psychic>False</psychic>
-            <goodwillImpact>-25</goodwillImpact>
-            <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
-        </li>
-        <li Class="CompProperties_AbilityFleckOnTarget">
-            <fleckDef>PsycastPsychicEffect</fleckDef>
-        </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>Naki_Darkness</hediffDef>
+                <onlyBrain>True</onlyBrain>
+                <psychic>False</psychic>
+                <goodwillImpact>-25</goodwillImpact>
+                <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
         </comps>
-  </AbilityDef>
+    </AbilityDef>
 
 
     <!-- ========================================= LEVEL 3 ========================================= -->
@@ -263,7 +263,7 @@
             <Ability_PsyfocusCost>0.35</Ability_PsyfocusCost>
         </statBases>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMDisintegration</hediffDef>
                 <psychic>False</psychic>
@@ -271,7 +271,7 @@
                 <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
         </comps>
-    </AbilityDef> 
+    </AbilityDef>
 
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_MassFog</defName>
@@ -288,28 +288,28 @@
             <Ability_EffectRadius>3.9</Ability_EffectRadius>
         </statBases>
         <verbProperties>
-        <warmupTime>1</warmupTime>
-        <range>24.9</range>
-        <targetParams>
-            <canTargetSelf>True</canTargetSelf>
-            <canTargetAnimals>True</canTargetAnimals>
-            <canTargetLocations>True</canTargetLocations>
-        </targetParams>
+            <warmupTime>1</warmupTime>
+            <range>24.9</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
         </verbProperties>
         <comps>
-        <li Class = "CompProperties_AbilityGiveHediff">
-            <compClass>CompAbilityEffect_GiveHediff</compClass>
-            <hediffDef>DMConfusion</hediffDef>
-            <onlyBrain>False</onlyBrain>
-            <psychic>False</psychic>
-            <goodwillImpact>-25</goodwillImpact>
-            <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
-        </li>
-        <li Class="CompProperties_AbilityFleckOnTarget">
-            <fleckDef>PsycastPsychicEffect</fleckDef>
-        </li>
-    </comps>
-  </AbilityDef>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>DMConfusion</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <psychic>False</psychic>
+                <goodwillImpact>-25</goodwillImpact>
+                <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
 
     <!-- ========================================= LEVEL 2 ========================================= -->
 
@@ -331,7 +331,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMConfusion</hediffDef>
                 <durationMultiplier>PsychicSensitivity</durationMultiplier>
@@ -362,13 +362,13 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "Naki_HAR.CompProperties_CompDMHealing">
-		        <compClass>Naki_HAR.CompDMHealing</compClass>
-		        <sound>PsycastPsychicEffect</sound>
+            <li Class="Naki_HAR.CompProperties_CompDMHealing">
+                <compClass>Naki_HAR.CompDMHealing</compClass>
+                <sound>PsycastPsychicEffect</sound>
                 <maxApplications>10</maxApplications>
                 <healingEffectiveness>0.1</healingEffectiveness>
             </li>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMHealingPenalty</hediffDef>
                 <onlyBrain>True</onlyBrain>
@@ -397,7 +397,7 @@
             <Ability_PsyfocusCost>0.15</Ability_PsyfocusCost>
         </statBases>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>DMDecay</hediffDef>
                 <psychic>False</psychic>
@@ -405,7 +405,7 @@
                 <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
         </comps>
-    </AbilityDef> 
+    </AbilityDef>
 
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Stall</defName>
@@ -428,7 +428,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>Naki_Stall</hediffDef>
                 <onlyBrain>True</onlyBrain>
@@ -451,11 +451,11 @@
             <warmupTime>1</warmupTime>
             <range>20</range>
             <targetParams>
-              <canTargetSelf>True</canTargetSelf>
-              <canTargetLocations>False</canTargetLocations>
-              <canTargetAnimals>True</canTargetAnimals>
-              <canTargetPawns>True</canTargetPawns>
-              <canTargetMechs>False</canTargetMechs>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetMechs>False</canTargetMechs>
             </targetParams>
         </verbProperties>
         <statBases>
@@ -464,7 +464,7 @@
             <Ability_Duration>60</Ability_Duration>
         </statBases>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>Naki_Amplify</hediffDef>
                 <onlyBrain>True</onlyBrain>
