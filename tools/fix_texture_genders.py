@@ -1,31 +1,20 @@
-import glob as glob
+import cv2
 import os, shutil
+import argparse
+from pathlib import Path
 
+parser = argparse.ArgumentParser(description="Add Male Tag to textures")
+parser.add_argument('--dir', dest='dir', type=str, required=True, help='Path to a directory of png images')
+args = parser.parse_args()
 
-texture_paths = glob.glob("C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Naki-HAR\\Textures\\Naki\\Head\\C\\*.png", recursive=True)
-
-print(len(texture_paths))
-
-# for path in texture_paths:
-#     base, filename = os.path.split(path)
-#     print(base)
-#     print(filename)
-#     if("Female" in filename):
-#         new_filename = filename
-#         # replace the Female with Male and resave the file
-#         new_filename = new_filename.replace("Female", "Male")
-#         print(new_filename)
-#         shutil.copyfile(path, os.path.join(base, new_filename))
-#     # break
+textures = Path(args.dir).rglob('*.png')
 
 # Replace the head texture names with ones for Male and Female
-for path in texture_paths:
+for path in textures:
     base, filename = os.path.split(path)
     print(base)
     print(filename)
-    # break
-    new_filename_male = "Male_" + filename
-    new_filename_female = "Female_" + filename
-    shutil.copyfile(path, os.path.join(base, new_filename_male)) # clone all the existing non Male_ prefixed sprites and prefix them
-    os.rename(path, os.path.join(base, new_filename_female)) # rename the female sprites to have Female_ prefix
-    # break
+    if ("Female" in filename):
+        new_filename_male = filename.replace("Female", "Male")
+        shutil.copyfile(path, os.path.join(base, new_filename_male)) # clone all the existing non Male_ prefixed sprites and prefix them
+        # break

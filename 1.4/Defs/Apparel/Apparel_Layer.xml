@@ -7,29 +7,4 @@
 	<drawOrder>-4</drawOrder>
 </ApparelLayerDef>
 
-<!-- Keeping this layerdef for backwards compatability, although the stocking item itself is gone.  -->
-<!-- <ApparelLayerDef>
-	<defName>Naki_Stocking</defName>
-	<label>stocking</label>
-	<drawOrder>-3</drawOrder>
-</ApparelLayerDef>
-
-<ApparelLayerDef>
-	<defName>Naki_Apparel_Middle</defName>
-	<label>Naki middle apparel</label>
-	<drawOrder>1</drawOrder>
-</ApparelLayerDef>
-
-<ApparelLayerDef>
-	<defName>Naki_Apparel_OnSkin</defName>
-	<label>Naki onskin apparel</label>
-	<drawOrder>0</drawOrder>
-</ApparelLayerDef>
-
-<ApparelLayerDef>
-	<defName>Naki_Apparel_Shell</defName>
-	<label>Naki shell apparel</label>
-	<drawOrder>2</drawOrder>
-</ApparelLayerDef> -->
-
 </Defs>

@@ -86,7 +86,7 @@
             <li>
               <!-- Dark Tail -->
               <path>Naki/Tail/Single/AltTails/Texture</path>
-              <bodyPart>nakitail</bodyPart>
+              <bodyPartLabel>nakitail</bodyPartLabel>
               <inFrontOfBody>false</inFrontOfBody>
               <colorChannel>hair</colorChannel>
               <drawSize>0.9</drawSize>
@@ -138,7 +138,7 @@
             <li>
               <!-- The path for the head texture is set above -->
               <path>Naki/Null/Texture</path>
-              <bodyPart>Head</bodyPart>
+              <bodyPartLabel>Head</bodyPartLabel>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>skin</colorChannel>
               <drawSize>0.9</drawSize>
@@ -203,7 +203,7 @@
 
             <li>
               <path>Naki/Ear/B/Left/LTexture</path>
-              <bodyPart>left ear</bodyPart>
+              <bodyPartLabel>left ear</bodyPartLabel>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
               <drawSize>0.9</drawSize>
@@ -282,7 +282,7 @@
 
             <li>
               <path>Naki/Ear/B/Right/RTexture</path>
-              <bodyPart>right ear</bodyPart>
+              <bodyPartLabel>right ear</bodyPartLabel>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
               <drawSize>0.9</drawSize>
