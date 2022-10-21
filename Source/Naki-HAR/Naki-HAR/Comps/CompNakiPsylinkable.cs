@@ -40,8 +40,11 @@ namespace Naki_HAR
         // How many meditation ticks must be done before spawning a Dark Matter
         private readonly int DarkMatterTicksRequired = 45000;
 
+        // Maximum about of stored attunement;
+        private readonly int MAX_ATTUNEMENT = 1000;
+
         // A linearlly increasing multipler that increases the amount of attunement needed before the next Psylink upgrade can be given
-        private float attunementMultiplerPerGrantedLink = 0.0f;
+        // private float attunementMultiplerPerGrantedLink = 0.0f;
 
         // Current attunement created by meditating Naki
         public float currentAttunement = 0.0f;
@@ -75,19 +78,28 @@ namespace Naki_HAR
 
         // The only pawns who can get a Naki Psylink are Naki. This checks all pawns on the Map, in Caravans, and in Pods if they can use Naki Meditations, if this Pylon's attunement is greater than what they need at that level
         // and that the pawn's current psylink level is at the level we are checking it at.
-        private IEnumerable<Pawn> GetPawnsThatCanPsylink(int level = -1)
+        //private IEnumerable<Pawn> GetPawnsThatCanPsylink(int level = -1)
+        //{
+        //    // Log.Message($"[Naki HAR] GetPawnsThatCanPsylink level: {level.ToString()}");
+        //    return from p in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists
+        //           // where this.Props.requiredFocus.CanPawnUse(p) && p.IsNaki() && currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[level - 1] && (level == -1 || p.GetPsylinkLevel() == level)
+        //           where this.Props.requiredFocus.CanPawnUse(p) && p.IsNaki() && (level == -1 || p.GetPsylinkLevel() == level)
+        //           select p;
+        //}
+        private IEnumerable<Pawn> GetPawnsThatCanPsylink()
         {
-            // Log.Message($"[Naki HAR] GetPawnsThatCanPsylink level: {level.ToString()}");
+            // Problem: I dunno how to get the attunement required for the next level of psycast by indexing by current psylink level.
+            // MAX_ATTUNEMENT is 1000
+            // p.GetPsylinkLevel() < 6 means that the pawn is still at level 5
             return from p in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists
-                   // where this.Props.requiredFocus.CanPawnUse(p) && p.IsNaki() && currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[level - 1] && (level == -1 || p.GetPsylinkLevel() == level)
-                   where this.Props.requiredFocus.CanPawnUse(p) && p.IsNaki() && (level == -1 || p.GetPsylinkLevel() == level)
+                   where p.GetPsylinkLevel() < 6 && p.IsNaki() && this.Props.requiredFocus.CanPawnUse(p) && (currentAttunement>= this.Props.requiredAttunementPerPsylinkLevel[p.GetPsylinkLevel() + 1])
                    select p;
         }
 
         private void OnAttunementFill()
         {
             bool canUpgradePsylink = false;
-            foreach (Pawn item in this.GetPawnsThatCanPsylink(-1))
+            foreach (Pawn item in this.GetPawnsThatCanPsylink())
             {
                 if (!this.pawnsThatCanPsylink.Contains(item))
                 {
@@ -125,10 +137,10 @@ namespace Naki_HAR
                         });
                     }
                 }
-                Find.LetterStack.ReceiveLetter(this.Props.enoughAttunementLetterLabel, this.Props.enoughAttunementLetterText.Formatted(this.currentAttunement, text.TrimEndNewlines()), LetterDefOf.NeutralEvent, new LookTargets(this.GetPawnsThatCanPsylink(-1)), null, null, null, null);
+                Find.LetterStack.ReceiveLetter(this.Props.enoughAttunementLetterLabel, this.Props.enoughAttunementLetterText.Formatted(this.currentAttunement, text.TrimEndNewlines()), LetterDefOf.NeutralEvent, new LookTargets(this.GetPawnsThatCanPsylink()), null, null, null, null);
             }
             this.pawnsThatCanPsylink.Clear();
-            this.pawnsThatCanPsylink.AddRange(this.GetPawnsThatCanPsylink(-1));
+            this.pawnsThatCanPsylink.AddRange(this.GetPawnsThatCanPsylink());
             this.pawnWithLowestPsylink = findLowestPsylinkLevel();
         }
 
@@ -149,11 +161,11 @@ namespace Naki_HAR
         }
 
         // Override to reset the number of meditations ticks done today to 0
-        public override void CompTickLong()
+        public override void CompTick()
         {
-            base.CompTickLong();
-            Log.Message("GenLocalDate.DayTick(this.parent.Map)");
-            if (GenLocalDate.DayTick(this.parent.Map) < 2000)
+            base.CompTick();
+            // Log.Message("GenLocalDate.DayTick(this.parent.Map)");
+            if (GenLocalDate.DayTick(this.parent.Map) < 2000 && hasSpawnedDM)
             {
                 Log.Message("Resetting meditation ticks for DM spawning");
                 this.meditationTicksToday = 0;
@@ -170,6 +182,10 @@ namespace Naki_HAR
                 // This Naki has no Psylink! This should not happen but let's log it
                 Log.Error("[Naki HAR] GetRequiredAttunement: This Naki has no psylink level");
                 return -1;
+            } else if (currentLevel > 5)
+            {
+                // Pawn is at max level
+                return -1;
             }
             return this.Props.requiredAttunementPerPsylinkLevel[currentLevel + 1];
         }
@@ -179,36 +195,37 @@ namespace Naki_HAR
         {
             if (pawn.Dead || pawn.Faction != Faction.OfPlayer)
             {
-                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn is dead or not player faction");
+                // Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn is dead or not player faction");
                 return false;
             }
 
+            if (pawn.GetPsylinkLevel() >= pawn.GetMaxPsylinkLevel())
+            {
+                // Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn at max psylink");
+                return new AcceptanceReport("BeginLinkingRitualMaxPsylinkLevel".Translate());
+            }
+
             float requiredAttunement = this.GetRequiredAttunement(pawn);
-            
             // Error checks and attunement checks
             if (requiredAttunement == -1)
             {
                 return false;
-            } else if (requiredAttunement < this.currentAttunement)
+            } else if (requiredAttunement > this.currentAttunement)
             {
-                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: required attunement insufficient. Required: {requiredAttunement} Has: {this.currentAttunement}");
+                // Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: required attunement insufficient. Required: {requiredAttunement} Has: {this.currentAttunement}");
                 // return new AcceptanceReport($"Cannot Psylink: Insufficient attunement. Current attunement: {this.currentAttunement}. Pawn {pawn.Name} requires {requiredAttunement} to upgrade.");
-                return new AcceptanceReport("BeginLinkingRitualInsifficientAttunement".Translate(this.currentAttunement.ToString(), pawn.Name.ToString(), requiredAttunement.ToString()));
+                return new AcceptanceReport("BeginLinkingRitualInsufficientAttunement".Translate(this.currentAttunement.ToString(), pawn.Name.ToString(), requiredAttunement.ToString()));
             }
 
             if (!this.Props.requiredFocus.CanPawnUse(pawn))
             {
-                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn cannot use this Focus");
+                // Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn cannot use this Focus");
                 return new AcceptanceReport("BeginLinkingRitualNeedFocus".Translate(this.Props.requiredFocus.label));
             }
-            if (pawn.GetPsylinkLevel() >= pawn.GetMaxPsylinkLevel())
-            {
-                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn at max psyfocus");
-                return new AcceptanceReport("BeginLinkingRitualMaxPsylinkLevel".Translate());
-            }
+            
             if (!pawn.Map.reservationManager.CanReserve(pawn, this.parent, 1, -1, null, false))
             {
-                Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn cannot reserve pylon on this map");
+                // Log.Message($"[Naki HAR] Acceptance report not accepted. Reason: pawn cannot reserve pylon on this map");
                 Pawn pawn2 = pawn.Map.reservationManager.FirstRespectedReserver(this.parent, pawn);
                 return new AcceptanceReport((pawn2 == null) ? "Reserved".Translate() : "ReservedBy".Translate(pawn.LabelShort, pawn2));
             }
@@ -340,8 +357,12 @@ namespace Naki_HAR
             {
                 progress *= this.ProgressMultiplier;
             }
-            //this.currentAttunement += progress * (1f + this.parent.GetStatValue(StatDefOf.MeditationPlantGrowthOffset, true));
-            this.currentAttunement += progress; // Just add the progress for now, no bonuses or detractors. Technically right now multiple pawns means a bonus to progress made because multiple delegates for adding progress are made. 
+            // Just add the progress for now, no bonuses or detractors. Technically right now multiple pawns means a bonus to progress made because multiple delegates for adding progress are made. 
+            // But don't add any more if the current attunement goes beyond MAX_ATTUNEMENT
+            if (this.currentAttunement < MAX_ATTUNEMENT)
+            {
+                this.currentAttunement += progress; 
+            }
             this.meditationTicksToday++;
             this.TryAttuneOrSpawn();
         }
@@ -354,7 +375,7 @@ namespace Naki_HAR
             {
                 TrySpawnDarkMatter();
             }
-            // If the current attunement has exceeded the minimum needed to try to give a psylink
+            // If the current attunement has exceeded the minimum needed to try to give a psylink at level 2
             if (currentAttunement >= Props.requiredAttunementPerPsylinkLevel.Min())
             {
                 OnAttunementFill();
