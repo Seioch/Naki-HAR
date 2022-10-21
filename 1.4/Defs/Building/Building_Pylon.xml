@@ -84,7 +84,7 @@
       <!-- Mote for distortion -->
       <li Class="Naki_HAR.CompProperties_GravityWellMoteEmitter">
         <mote>Mote_NakiGravityWell</mote>
-        <emissionInterval>150</emissionInterval>
+        <emissionInterval>300</emissionInterval>
         <offsetZ>1.5</offsetZ>
         <maintain>False</maintain>
       </li>

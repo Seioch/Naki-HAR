@@ -151,8 +151,11 @@ namespace Naki_HAR
         // Override to reset the number of meditations ticks done today to 0
         public override void CompTickLong()
         {
+            base.CompTickLong();
+            Log.Message("GenLocalDate.DayTick(this.parent.Map)");
             if (GenLocalDate.DayTick(this.parent.Map) < 2000)
             {
+                Log.Message("Resetting meditation ticks for DM spawning");
                 this.meditationTicksToday = 0;
                 hasSpawnedDM = false;
             }

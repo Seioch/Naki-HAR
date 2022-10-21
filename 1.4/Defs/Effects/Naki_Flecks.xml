@@ -23,7 +23,7 @@
     <solidTime>9.0</solidTime>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <graphicData>
-      <texPath>Naki/Flecks/BlackHole1024</texPath>
+      <texPath>Naki/Flecks/BlackHole</texPath>
       <graphicClass>Graphic_FleckPulse</graphicClass>
       <!-- <shaderType>MoteGlowDistorted</shaderType> -->
       <shaderParameters>
@@ -40,10 +40,10 @@
     <defName>Naki_BlackHoleFleck</defName>
     <fadeInTime>0.1</fadeInTime>
     <fadeOutTime>1.0</fadeOutTime>
-    <solidTime>3.0</solidTime>
+    <solidTime>6.0</solidTime>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <graphicData>
-      <texPath>Naki/Flecks/BlackHole1024</texPath>
+      <texPath>Naki/Flecks/BlackHole</texPath>
       <graphicClass>Graphic_FleckPulse</graphicClass>
       <shaderParameters>
         <_DistortionTex>/Things/Mote/PsychicDistortionRing</_DistortionTex>
