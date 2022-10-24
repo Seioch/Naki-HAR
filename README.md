@@ -14,6 +14,8 @@ The Naki civilization was a former order of ultratech-level space-faring people 
 
 Although the Empire believed the Naki to be weak, trapped in their spaceborne habitats, it met a fearsome foe. While low in numbers, Naki home stations were nigh impervious to shipborne weapons, drawing infinite power from the black holes they orbited. Naki warships blasted through skip shields and armor easily, their dark matter-powered weaponry disintegrating protection systems. Many Empire fleets were decimated in the decades-long war, leading to their eventual splintering and decline in the current Rimworld timeline.
 
+![The fall of the Naki civilization](Preview/Naki_downfall.png)
+
 The Empire refused to surrender and soon implemented their final solution: eradicating the Naki starbases. With the remainder of their navy, the Empire launched a suicidal charge with effector weapons: physically pushing the starbases out of orbit. The black holes, the proud jewel of the Naki civilization, became their destroyer as the spaceborne habitats, each housing millions of Naki, fell beyond the event horizon. 
 
 With the Naki fleets and stations defeated, the Empire succumbed to the protracted proxy war and splintered among the rim. Recently, absurd reports of miniature black portals opening on the rimworlds have surfaced. Nakis, their bodies imbued with the power of dark matter, have begun to materialize on the surface of planets. Some claim they escaped a cultist order led by a powerful archotech living in the supermassive blackhole Omega Eden. Others claim to be simply settlers compelled by their archotech god to live a peaceful life on the rim. Regardless of how truthful these stories are, there is far more to their return than what appears on the surface. 
