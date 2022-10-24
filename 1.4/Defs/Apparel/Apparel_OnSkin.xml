@@ -165,7 +165,7 @@
 		<label>naki long pants</label>
 		<description>Comfortable long pants for desk jobs and colder parts of the starbase.</description>
 		<graphicData>
-			<texPath>Naki/Apparel/OnSkin/Hot_Pants/Texture</texPath>
+			<texPath>Naki/Apparel/OnSkin/Long_Pants/Pants</texPath>
 		</graphicData>
 		<costList>
 			<Cloth>25</Cloth>
@@ -188,10 +188,9 @@
 				<li>Naki_Citizen</li>
 			</tags>
 			<bodyPartGroups>
-				<li>Torso</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<wornGraphicPath>Naki/Apparel/OnSkin/Hot_Pants/Texture</wornGraphicPath>
+			<wornGraphicPath>Naki/Apparel/OnSkin/Long_Pants/Pants</wornGraphicPath>
 		</apparel>
 	</ThingDef>
 
@@ -470,9 +469,9 @@
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
 			<WorkToMake>16000</WorkToMake>
-			<StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierArmor>0.20</StuffEffectMultiplierArmor>
 			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 			<Insulation_Cold>10</Insulation_Cold>
 			<Insulation_Heat>10</Insulation_Heat>
 		</statBases>
@@ -506,7 +505,7 @@
 			<Hyperweave>15</Hyperweave>
 			<Plasteel>15</Plasteel>
 		</costList>
-		<costStuffCount>50</costStuffCount>
+		<costStuffCount>125</costStuffCount>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -514,7 +513,7 @@
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
 			<WorkToMake>16000</WorkToMake>
-			<StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierArmor>0.35</StuffEffectMultiplierArmor>
 			<StuffEffectMultiplierInsulation_Cold>0.40</StuffEffectMultiplierInsulation_Cold>
 			<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
 			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
