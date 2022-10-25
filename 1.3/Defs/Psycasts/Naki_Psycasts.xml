@@ -144,6 +144,7 @@
         <statBases>
             <Ability_EntropyGain>35</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.55</Ability_PsyfocusCost>
+            <Ability_Duration>20</Ability_Duration>
         </statBases>
         <verbProperties>
             <warmupTime>1.5</warmupTime>
@@ -159,7 +160,7 @@
 		        <compClass>Naki_HAR.CompDMHealing</compClass>
 		        <sound>PsycastPsychicEffect</sound>
                 <maxApplications>14</maxApplications>
-                <healingEffectiveness>0.2</healingEffectiveness>
+                <healingEffectiveness>0.3</healingEffectiveness>
             </li>
             <li Class = "CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -351,6 +352,7 @@
         <statBases>
             <Ability_EntropyGain>20</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.25</Ability_PsyfocusCost>
+            <Ability_Duration>20</Ability_Duration>
         </statBases>
         <verbProperties>
             <warmupTime>0.5</warmupTime>
