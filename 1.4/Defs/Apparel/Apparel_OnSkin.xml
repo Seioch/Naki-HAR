@@ -183,6 +183,7 @@
 			<StuffEffectMultiplierInsulation_Heat>0.20</StuffEffectMultiplierInsulation_Heat>
 		</statBases>
 		<apparel>
+			<useWornGraphicMask>false</useWornGraphicMask>
 			<tags>
 				<li>Naki_Colonist</li>
 				<li>Naki_Citizen</li>

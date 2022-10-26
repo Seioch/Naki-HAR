@@ -148,7 +148,7 @@
 	<label>naki navy officer coat</label>
 	<description>A coat worn by officers of the naki navy.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/Shell/Traditional_Coat/Texture</texPath>
+		<texPath>Naki/Apparel/Shell/NavyCoat/Texture</texPath>
 	</graphicData>
 	<apparel>
 		<bodyPartGroups>
@@ -157,7 +157,7 @@
 			<li>Arms</li>
 			<li>Legs</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Shell/Traditional_Coat/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Shell/NavyCoat/Texture</wornGraphicPath>
 	</apparel>
 	<costList>
 		<Hyperweave>10</Hyperweave>
