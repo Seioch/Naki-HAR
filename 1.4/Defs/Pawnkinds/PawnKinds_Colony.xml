@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!--==============================================플레이어펙션==============================================-->
 <Defs>
   <PawnKindDef>
     <race>Naki_Race</race>
@@ -9,7 +8,7 @@
     <forceNormalGearQuality>true</forceNormalGearQuality>
     <defName>Naki_Colonist</defName>
     <label>naki colonist</label>
-    <defaultFactionType>Naki_PlayerFaction</defaultFactionType>
+    <defaultFactionType>Naki_PlayerFaction</defaultFactionType> 
     <backstoryCategories>
       <li>Naki_Citizen</li>
     </backstoryCategories>
@@ -19,7 +18,7 @@
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <apparelMoney>
       <min>800</min>
-      <max>1200</max>
+      <max>1000</max>
     </apparelMoney>
     <!-- <apparelRequired> -->
       <!-- If needed force spawn apparel here -->
@@ -29,45 +28,3 @@
     <initialResistanceRange>13~21</initialResistanceRange>
   </PawnKindDef>
 </Defs>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

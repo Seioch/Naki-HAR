@@ -483,7 +483,6 @@
 				<li>Arms</li>
 				<li>Shoulders</li>
 				<li>Neck</li>
-
 				<li>Hands</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Naki/Apparel/OnSkin/Bikini_Armor/Texture</wornGraphicPath>
@@ -503,8 +502,9 @@
 			<texPath>Naki/Apparel/OnSkin/Marine/Texture</texPath>
 		</graphicData>
 		<costList>
-			<Hyperweave>15</Hyperweave>
+			<Hyperweave>25</Hyperweave>
 			<Plasteel>15</Plasteel>
+			<DarkMatter>20</DarkMatter>
 		</costList>
 		<costStuffCount>125</costStuffCount>
 		<stuffCategories>
