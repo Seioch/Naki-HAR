@@ -63,6 +63,7 @@
                 <hediffDef>DMDisintegration</hediffDef>
                 <psychic>False</psychic>
                 <goodwillImpact>-65</goodwillImpact>
+                <severity>0.1</severity>
                 <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
             <li Class="CompProperties_AbilityFleckOnTarget">
@@ -95,6 +96,7 @@
                 <hediffDef>DMAnnihilation</hediffDef>
                 <psychic>False</psychic>
                 <goodwillImpact>-65</goodwillImpact>
+                <severity>0.1</severity>
                 <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
         </comps>
@@ -268,6 +270,7 @@
                 <hediffDef>DMDisintegration</hediffDef>
                 <psychic>False</psychic>
                 <goodwillImpact>-35</goodwillImpact>
+                <severity>0.1</severity>
                 <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
         </comps>
@@ -402,6 +405,7 @@
                 <hediffDef>DMDecay</hediffDef>
                 <psychic>False</psychic>
                 <goodwillImpact>-15</goodwillImpact>
+                <severity>0.1</severity>
                 <applyGoodwillImpactToLodgers>False</applyGoodwillImpactToLodgers>
             </li>
         </comps>
