@@ -146,7 +146,7 @@
 		<bodyPartGroups>
 			<li>UpperHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Overhead/Casual_Hair_Pin/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Glasses/Texture</wornGraphicPath>
 	</apparel>
 	<equippedStatOffsets>
 		<GlobalLearningFactor>1.1</GlobalLearningFactor>
