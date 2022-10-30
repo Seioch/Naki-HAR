@@ -99,6 +99,7 @@
     </researchPrerequisites>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
+      <li>Naki_HAR.PlaceWorker_OnlyOne</li>
     </placeWorkers>
   </ThingDef>
 </Defs>

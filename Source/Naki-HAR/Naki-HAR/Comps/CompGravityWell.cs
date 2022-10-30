@@ -8,6 +8,9 @@ using Verse.Sound;
 using RimWorld;
 using UnityEngine;
 
+// Gravity Well code inspired by the Singularity psycast from Rim Effect
+// The CreateGravityFleck effects code was inspired by ARR's Aether Accumulator visual effects
+
 namespace Naki_HAR
 {
     [StaticConstructorOnStartup]
@@ -28,15 +31,6 @@ namespace Naki_HAR
 
         // Sound sustainer
         private Sustainer sustainer;
-
-        // Materials for effects taken from CompProjectileInterceptor
-        //private static readonly Material ForceFieldMat = MaterialPool.MatFrom("Other/ForceField", ShaderDatabase.MoteGlow);
-
-        //private static readonly Material ForceFieldConeMat = MaterialPool.MatFrom("Other/ForceFieldCone", ShaderDatabase.MoteGlow);
-
-        //private static readonly MaterialPropertyBlock MatPropertyBlock = new MaterialPropertyBlock();
-
-        //private const float TextureActualRingSizeFactor = 1.1601562f;
 
         public CompProperties_GravityWell Props
         {

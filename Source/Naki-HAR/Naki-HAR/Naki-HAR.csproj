@@ -92,6 +92,7 @@
     <Compile Include="Jobs\JobDriver_Attune.cs" />
     <Compile Include="Jobs\JobDriver_LinkNakiPsylinkable.cs" />
     <Compile Include="Jobs\JobGiver_PylonLinking.cs" />
+    <Compile Include="misc\PlaceWorker_OnlyOne.cs" />
     <Compile Include="NakiRace.cs" />
     <Compile Include="Needs\NeedNakiRaceDMNeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

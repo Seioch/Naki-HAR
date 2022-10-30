@@ -26,6 +26,8 @@ namespace Naki_HAR
         // Radius of effect
         private float radius = 9.9f;
 
+        // This effect inspired by the Electric Storm psycast from VPE
+        // However, it is modified to affect pawns differently (consciousness)
         public override void CompTick()
         {
             base.CompTick();
