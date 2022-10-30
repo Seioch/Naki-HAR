@@ -115,7 +115,7 @@
         <!-- 16 total damage applied over 4 hits -->
         <maxApplications>4</maxApplications>
         <tickMax>48</tickMax>
-        <damagePerTick>3</damagePerTick>
+        <damagePerTick>5</damagePerTick>
       </li>
     </comps>
   </HediffDef>
@@ -137,7 +137,7 @@
         <!-- 30 total damage applied over 6 hits -->
         <maxApplications>6</maxApplications>
         <tickMax>32</tickMax>
-        <damagePerTick>4</damagePerTick>
+        <damagePerTick>7</damagePerTick>
       </li>
     </comps>
   </HediffDef>
@@ -156,9 +156,9 @@
     <comps>
       <li Class="Naki_HAR.CompProperties_DMDisintegration">
         <!-- 48 total damage applied over 6 hits -->
-        <maxApplications>8</maxApplications>
+        <maxApplications>10</maxApplications>
         <tickMax>16</tickMax>
-        <damagePerTick>5</damagePerTick>
+        <damagePerTick>9</damagePerTick>
       </li>
     </comps>
   </HediffDef>
