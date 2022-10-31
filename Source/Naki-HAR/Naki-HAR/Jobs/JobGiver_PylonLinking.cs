@@ -28,7 +28,7 @@ namespace Naki_HAR
             CompNakiPsylinkable compNakiPsylinkable = (thing != null) ? thing.TryGetComp<CompNakiPsylinkable>() : null;
             if (compNakiPsylinkable == null || !compNakiPsylinkable.CanPsylink(pawn, null, true).Accepted)
             {
-                Log.Error($"[Naki HAR] Thing {thing.def.defName} was unable to get comp compNakiPsylinkable when trying to get a job for psylink upgrade ritual.");
+                Log.Warning($"[Naki HAR] Thing {thing.def.defName} was unable to get comp compNakiPsylinkable when trying to get a job for psylink upgrade ritual.");
                 return null;
             }
             // Creates a new job of def LinkNakiPsylinkable. This can be found in Jobs_Naki.xml

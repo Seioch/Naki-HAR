@@ -9,7 +9,7 @@ namespace Naki_HAR
 {
     public class PlaceWorker_OnlyOne : PlaceWorker
     {
-        // Citation: Smash Phil's DropSpot code. Thanks!
+        // Citation: Smash Phil's DropSpot code. Thank you Phil!
         public override AcceptanceReport AllowsPlacing(BuildableDef checkingDef, IntVec3 loc, Rot4 rot, Map map, Thing thingToIgnore = null, Thing thing = null)
         {
             // The idea is as long as the map is loaded, and attempting to place the building on the map triggers a search such that another NakiMeditationPylon exists, return an AcceptanceReport that says "no way"

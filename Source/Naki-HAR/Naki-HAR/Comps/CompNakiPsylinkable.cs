@@ -187,7 +187,8 @@ namespace Naki_HAR
                 // Pawn is at max level
                 return -1;
             }
-            return this.Props.requiredAttunementPerPsylinkLevel[currentLevel + 1];
+            // Log.Message($"Pawn Psylink Level: {currentLevel}");
+            return this.Props.requiredAttunementPerPsylinkLevel[currentLevel];
         }
 
 
