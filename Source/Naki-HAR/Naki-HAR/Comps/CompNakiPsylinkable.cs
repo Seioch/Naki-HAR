@@ -103,10 +103,11 @@ namespace Naki_HAR
         {
             int currentLinkLevel = p.GetPsylinkLevel();
             int maximumPsylinkLevel = this.Props.requiredAttunementPerPsylinkLevel.Count();
-            // If we are trying to get a psylink upgrade that goes over level 6 (aka index 5)
+            // If we are trying to get a psylink upgrade that goes over level 6 (aka index 5), return false immediately
             if (currentLinkLevel + 1 > maximumPsylinkLevel)
             {
-                Log.Warning("[Naki HAR] Attempt to create Naki psylink over level 6");
+                // Do not enable this warning unless you want logspam
+                // Log.Warning("[Naki HAR] Attempt to create Naki psylink over level 6");
                 return false;
             } else
             {
