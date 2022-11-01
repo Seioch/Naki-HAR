@@ -93,8 +93,25 @@ namespace Naki_HAR
             // p.GetPsylinkLevel() < 6 means that the pawn is still at level 5
             //where p.IsNaki() && p.GetPsylinkLevel() < 6 && this.Props.requiredFocus.CanPawnUse(p) && (currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[p.GetPsylinkLevel()])
             return from p in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists
-                   where p.IsNaki() && p.GetPsylinkLevel() != p.GetMaxPsylinkLevel() && this.Props.requiredFocus.CanPawnUse(p) && (currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[p.GetPsylinkLevel()])
+                   where p.IsNaki() && p.GetPsylinkLevel() != p.GetMaxPsylinkLevel() && this.Props.requiredFocus.CanPawnUse(p) && (canUpgradeAtPylon(p))
                    select p;
+        }
+
+        // Literally only reason this func exists is to prevent a deindexing of this.Props.requiredAttunementPerPsylinkLevel from going over 5
+        // This can happen if you're running mods like VPE
+        private bool canUpgradeAtPylon(Pawn p)
+        {
+            int currentLinkLevel = p.GetPsylinkLevel();
+            int maximumPsylinkLevel = this.Props.requiredAttunementPerPsylinkLevel.Count();
+            // If we are trying to get a psylink upgrade that goes over level 6 (aka index 5)
+            if (currentLinkLevel + 1 > maximumPsylinkLevel)
+            {
+                Log.Warning("[Naki HAR] Attempt to create Naki psylink over level 6");
+                return false;
+            } else
+            {
+                return currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[currentLinkLevel];
+            }
         }
 
         private void OnAttunementFill()
@@ -232,12 +249,6 @@ namespace Naki_HAR
                 return new AcceptanceReport((pawn2 == null) ? "Reserved".Translate() : "ReservedBy".Translate(pawn.LabelShort, pawn2));
             }
             // This pylon has enough attunement to begin a psylink ritual
-            //if (this.currentAttunement > requiredAttunement)
-            //{
-            //     Acceptance Report reports the required attunement for that Pawn, a bit of flavor text for it, and the current attunement on the Pylon itself
-            //     Log.Message($"[Naki HAR] Acceptance report for BeginNakiLinkingRitual accepted.");
-            //    return new AcceptanceReport("BeginNakiLinkingRitual".Translate(requiredAttunement.ToString(), this.Props.attunementFlavorText, this.currentAttunement.ToString()));
-            //}
             if (checkSpot)
             {
                 LocalTargetInfo localTargetInfo;
@@ -415,12 +426,17 @@ namespace Naki_HAR
         public override string CompInspectStringExtra()
         {
             double percentToDM = (((double)this.meditationTicksToday / (double)DarkMatterTicksRequired))*100;
-            if (!hasSpawnedDM)
+            if (!hasSpawnedDM && percentToDM < 1.0f)
             {
                 return "TotalMeditationToday".Translate((this.meditationTicksToday / 2500).ToString() + "LetterHour".Translate(), this.ProgressMultiplier.ToStringPercent()) + "\n"
                 + "Current Attunement: " + this.currentAttunement.ToString("#.#") + "\n"
+                + "Progress to dark matter creation: 0%";
+            } else if ((!hasSpawnedDM && percentToDM > 1.0f)) {
+                return "TotalMeditationToday".Translate((this.meditationTicksToday / 2500).ToString() + "LetterHour".Translate(), this.ProgressMultiplier.ToStringPercent()) + "\n"
+                + "Current Attunement: " + this.currentAttunement.ToString("#.#") + "\n"
                 + "Progress to dark matter creation: " + percentToDM.ToString("##.#") + "%";
-            } else
+            }
+            else
             {
                 return "TotalMeditationToday".Translate((this.meditationTicksToday / 2500).ToString() + "LetterHour".Translate(), this.ProgressMultiplier.ToStringPercent()) + "\n"
                 + "Current Attunement: " + this.currentAttunement.ToString("#.#") + "\n"
