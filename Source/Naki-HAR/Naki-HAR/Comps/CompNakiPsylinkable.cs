@@ -92,7 +92,7 @@ namespace Naki_HAR
             // MAX_ATTUNEMENT is 1000
             // p.GetPsylinkLevel() < 6 means that the pawn is still at level 5
             return from p in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists
-                   where (p.GetPsylinkLevel() < 6 && p.IsNaki() && this.Props.requiredFocus.CanPawnUse(p)) && (currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[p.GetPsylinkLevel() + 1])
+                   where p.IsNaki() && p.GetPsylinkLevel() < 6 && this.Props.requiredFocus.CanPawnUse(p) && (currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[p.GetPsylinkLevel()])
                    select p;
         }
 

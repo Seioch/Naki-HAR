@@ -15,7 +15,6 @@
 		<weaponTags>
 			<li>Naki_melee_weapons</li>
 		</weaponTags>
-		<costStuffCount>125</costStuffCount>
 		<statBases>
 			<WorkToMake>24000</WorkToMake>
 			<Mass>4</Mass>
@@ -69,7 +68,6 @@
 		<weaponTags>
 			<li>Naki_Marine</li>
 		</weaponTags>
-		<costStuffCount>225</costStuffCount>
 		<statBases>
 			<WorkToMake>24000</WorkToMake>
 			<Mass>3</Mass>

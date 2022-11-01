@@ -240,7 +240,7 @@
 		<bodyPartGroups>
 			<li>UpperHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Overhead/Gothic_Hair_Pin/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/DarkHat/Texture</wornGraphicPath>
 	</apparel>
 	<equippedStatOffsets>
 		<PsychicSensitivityOffset>0.3</PsychicSensitivityOffset>
