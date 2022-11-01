@@ -91,8 +91,9 @@ namespace Naki_HAR
             // Problem: I dunno how to get the attunement required for the next level of psycast by indexing by current psylink level.
             // MAX_ATTUNEMENT is 1000
             // p.GetPsylinkLevel() < 6 means that the pawn is still at level 5
+            //where p.IsNaki() && p.GetPsylinkLevel() < 6 && this.Props.requiredFocus.CanPawnUse(p) && (currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[p.GetPsylinkLevel()])
             return from p in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists
-                   where p.IsNaki() && p.GetPsylinkLevel() < 6 && this.Props.requiredFocus.CanPawnUse(p) && (currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[p.GetPsylinkLevel()])
+                   where p.IsNaki() && p.GetPsylinkLevel() != p.GetMaxPsylinkLevel() && this.Props.requiredFocus.CanPawnUse(p) && (currentAttunement >= this.Props.requiredAttunementPerPsylinkLevel[p.GetPsylinkLevel()])
                    select p;
         }
 

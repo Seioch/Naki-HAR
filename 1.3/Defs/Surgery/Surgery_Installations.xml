@@ -128,7 +128,7 @@
 
 	<!-- Surgery to add Naki Tail Blade -->
 	<RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
-		<defName>InstallTailBlade</defName>
+		<defName>InstallNakiTailBlade</defName>
 		<label>install a Naki tail blade</label>
 		<description>Install a Naki Tail Blade.</description>
 		<descriptionHyperlinks>

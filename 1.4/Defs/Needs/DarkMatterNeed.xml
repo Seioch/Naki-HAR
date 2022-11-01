@@ -5,6 +5,7 @@
     <label>dark matter</label>
     <addictionHediff>DarkMatterAddiction</addictionHediff>
     <canBinge>false</canBinge>
+    <generateAddictionGenes>false</generateAddictionGenes>
   </ChemicalDef>
 
   <NeedDef ParentName="DrugAddictionNeedBase">

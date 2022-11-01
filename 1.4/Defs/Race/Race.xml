@@ -800,8 +800,8 @@
         <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
         <buildingList>
           <!-- Add Pylon and Fabricator here once it is coded. -->
-          <li>NakiMeditationPylon</li>
-          <li>Naki_Fabricator</li>
+          <!-- <li>NakiMeditationPylon</li> -->
+          <!-- <li>Naki_Fabricator</li> -->
         </buildingList>
       </raceRestriction>
     </alienRace>

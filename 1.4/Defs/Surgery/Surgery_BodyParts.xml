@@ -52,7 +52,7 @@
     <defName>NakiTailBlade</defName>
     <label>Naki tail blade</label>
     <description>A soft fluffy Naki tail, but if the wearer wishes so, it opens at the end to reveal a razor-sharp dagger. Unsuspecting tail-grabbers have often found an early demise from a surprise tail blade.</description>
-    <descriptionHyperlinks><RecipeDef>InstallTailBlade</RecipeDef></descriptionHyperlinks>
+    <descriptionHyperlinks><RecipeDef>InstallNakiTailBlade</RecipeDef></descriptionHyperlinks>
     <thingSetMakerTags>
       <li>RewardStandardMidFreq</li>
     </thingSetMakerTags>
