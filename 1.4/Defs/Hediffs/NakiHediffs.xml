@@ -44,7 +44,7 @@
   </HediffDef>
 
   <!-- Pain and movement penalty for getting DM healed -->
-  <HediffDef>
+  <HediffDef ParentName = "PsycastHediffBase">
     <defName>DMHealingPenalty</defName>
     <label>dark matter healing burden</label>
     <description>Sudden transmutation of flesh has burdened the body with fatigue.</description>

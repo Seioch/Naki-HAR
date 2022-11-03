@@ -146,6 +146,7 @@
         <statBases>
             <Ability_EntropyGain>35</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.55</Ability_PsyfocusCost>
+            <Ability_Duration>120</Ability_Duration>
         </statBases>
         <verbProperties>
             <warmupTime>1.5</warmupTime>
