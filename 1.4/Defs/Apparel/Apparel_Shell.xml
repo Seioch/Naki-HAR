@@ -218,7 +218,8 @@
 	</equippedStatOffsets>
 </ThingDef>
 
-<ThingDef ParentName="Naki_ShellBaseTear3">
+<!-- Stretch goal apparel -->
+<!-- <ThingDef ParentName="Naki_ShellBaseTear3">
 	<defName>Naki_Shell_TrenchCoat</defName>
 	<label>naki trenchcoat</label>
 	<description>A coat worn by off-station security guards and officers. Provides a decent amount of protection without heavy weight.</description>
@@ -250,7 +251,7 @@
 		<StuffEffectMultiplierInsulation_Cold>0.40</StuffEffectMultiplierInsulation_Cold>
 		<StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
 	</statBases>
-</ThingDef>
+</ThingDef> -->
 
 <!--================================================== Endgame Armor ==================================================-->
 
