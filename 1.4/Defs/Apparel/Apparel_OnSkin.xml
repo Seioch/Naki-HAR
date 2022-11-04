@@ -100,27 +100,7 @@
 		</statBases>
 	</ThingDef>
 
-	<!--================================================== Tear 2 ==================================================-->
-
-	<ThingDef Name="Naki_OnSkinBaseTear2" ParentName="Naki_OnSkinBase" Abstract="True">
-		<recipeMaker>
-			<researchPrerequisite>Naki_ApparelT2</researchPrerequisite>
-		</recipeMaker>
-		<apparel>
-			<tags>
-				<li>Naki_Colonist</li>
-				<li>Naki_Citizen</li>
-				<li>Naki_Military</li>
-				<li>Royal</li>
-				<li>RoyalTier1</li>
-				<li>RoyalTier2</li>
-				<li>RoyalTier3</li>
-				<li>RoyalTier4</li>
-			</tags>
-		</apparel>
-	</ThingDef>
-
-	<ThingDef ParentName="Naki_OnSkinBaseTear2">
+	<ThingDef ParentName="Naki_OnSkinBaseTear1">
 		<defName>Naki_OnSkin_Short_Pants</defName>
 		<label>naki short pants</label>
 		<description>A short pair of pants for working in warm areas, or recreation.</description>
@@ -160,7 +140,7 @@
 		</statBases>
 	</ThingDef>
 
-	<ThingDef ParentName="Naki_OnSkinBaseTear2">
+	<ThingDef ParentName="Naki_OnSkinBaseTear1">
 		<defName>Naki_OnSkin_LongPants</defName>
 		<label>naki long pants</label>
 		<description>Comfortable long pants for desk jobs and colder parts of the starbase.</description>
@@ -192,6 +172,26 @@
 				<li>Legs</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Naki/Apparel/OnSkin/Long_Pants/Pants</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+
+	<!--================================================== Tear 2 ==================================================-->
+
+	<ThingDef Name="Naki_OnSkinBaseTear2" ParentName="Naki_OnSkinBase" Abstract="True">
+		<recipeMaker>
+			<researchPrerequisite>Naki_ApparelT2</researchPrerequisite>
+		</recipeMaker>
+		<apparel>
+			<tags>
+				<li>Naki_Colonist</li>
+				<li>Naki_Citizen</li>
+				<li>Naki_Military</li>
+				<li>Royal</li>
+				<li>RoyalTier1</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+			</tags>
 		</apparel>
 	</ThingDef>
 
