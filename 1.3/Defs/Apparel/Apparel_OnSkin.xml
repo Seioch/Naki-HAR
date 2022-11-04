@@ -416,15 +416,14 @@
 	<label>naki darkweave pants</label>
 	<description>Armored combat pants with a darkweave inner layer. Moderately strong, though bulky, and slightly enhances Naki psycast powers.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/OnSkin/Armored_Gothic_Dress/Texture</texPath>
+		<texPath>Naki/Apparel/OnSkin/Long_Pants/Texture</texPath>
 	</graphicData>
 	<apparel>
 		<bodyPartGroups>
-			<li>Torso</li>
 			<li>Legs</li>
 			<li>Feet</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/OnSkin/Armored_Gothic_Dress/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/OnSkin/Long_Pants/Texture</wornGraphicPath>
 	</apparel>
 	<costList>
 		<DarkMatter>10</DarkMatter>
