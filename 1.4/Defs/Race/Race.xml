@@ -87,10 +87,9 @@
 
           <!-- ======================================= Body Addons ======================================= -->
           <bodyAddons>
-            
             <li>
-              <!-- Dark Tail -->
-              <path>Naki/Tail/Single/AltTails/Texture</path>
+              <!-- Tail Variant 1 -->
+              <path>Naki/Tail/Single/NewTails/Texture</path>
               <bodyPartLabel>nakitail</bodyPartLabel>
               <inFrontOfBody>false</inFrontOfBody>
               <colorChannel>hair</colorChannel>
@@ -150,15 +149,93 @@
               
               <ageGraphics>
                 <HumanlikeAdult>
-                  <path>Naki/Tail/Single/AltTails/Texture</path>
+                  <path>Naki/Tail/Single/NewTails/Texture</path>
                   <drawSize>0.9</drawSize>
                 </HumanlikeAdult>
                 <HumanlikeBaby>
-                  <path>Naki/Tail/Single/AltTails/Texture</path>
+                  <path>Naki/Tail/Single/NewTails/Texture</path>
                   <drawSize>0.3</drawSize>
                 </HumanlikeBaby>
                 <HumanlikeChild>
-                  <path>Naki/Tail/Single/AltTails/Texture</path>
+                  <path>Naki/Tail/Single/NewTails/Texture</path>
+                  <drawSize>0.6</drawSize>
+                </HumanlikeChild>
+              </ageGraphics>
+            </li>
+
+            <li>
+              <!-- Tail Variant 2 -->
+              <path>Naki/Tail/Single/NewTails/Texture2</path>
+              <bodyPartLabel>nakitail</bodyPartLabel>
+              <!-- This is a sprite variant of the previous Tail -->
+              <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
+              <inFrontOfBody>false</inFrontOfBody>
+              <colorChannel>hair</colorChannel>
+              <drawSize>0.9</drawSize>
+              <defaultOffset>Tail</defaultOffset>
+              <drawnDesiccated>false</drawnDesiccated>
+              <drawnInBed>false</drawnInBed>
+              <!-- Should this bodyAddon scale with pawn draw size? -->
+              <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+              <offsets>
+                <south>
+                  <layerOffset>-0.19</layerOffset>
+                  <bodyTypes>
+                    <Female>(-0.3729904,0.2315113)</Female>
+                    <Male>(-0.3729904,0.2315113)</Male>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.3729904,0.2315113)</Baby>
+                    <Child MayRequire="ludeon.rimworld.biotech">(-0.354,0.084)</Child>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </south>
+                <north>
+                  <layerOffset>-0.19</layerOffset>
+                  <bodyTypes>
+                    <Female>(-0.032,0.34)</Female>
+                    <Male>(-0.032,0.34)</Male>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.032,0.34)</Baby>
+                    <Child MayRequire="ludeon.rimworld.biotech">(-0.012,0.353)</Child>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </north>
+                <east>
+                  <layerOffset>-0.19</layerOffset>
+                  <bodyTypes>
+                    <Female>(-0.4972991,0.2958201)</Female>
+                    <Male>(-0.4972991,0.2958201)</Male>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.276,0.142)</Baby>
+                    <Child MayRequire="ludeon.rimworld.biotech">(-0.296,0.09)</Child>
+                  </bodyTypes>
+                  <headTypes>
+                    <Female_AverageNormal>(0,0)</Female_AverageNormal>
+                    <Female_AveragePointy>(0,0)</Female_AveragePointy>
+                    <Male_AverageNormal>(0,0)</Male_AverageNormal>
+                    <Male_AveragePointy>(0,0)</Male_AveragePointy>
+                  </headTypes>
+                </east>
+              </offsets>
+              
+              <ageGraphics>
+                <HumanlikeAdult>
+                  <path>Naki/Tail/Single/NewTails/Texture2</path>
+                  <drawSize>0.9</drawSize>
+                </HumanlikeAdult>
+                <HumanlikeBaby>
+                  <path>Naki/Tail/Single/NewTails/Texture2</path>
+                  <drawSize>0.3</drawSize>
+                </HumanlikeBaby>
+                <HumanlikeChild>
+                  <path>Naki/Tail/Single/NewTails/Texture2</path>
                   <drawSize>0.6</drawSize>
                 </HumanlikeChild>
               </ageGraphics>
@@ -919,6 +996,10 @@
         <li>
           <def>HumanlikeChild</def>
           <minAge>4</minAge>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>HumanlikePreTeenager</def>
+          <minAge>9</minAge>
         </li>
         <li>
           <def>HumanlikeTeenager</def>

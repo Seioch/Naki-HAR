@@ -325,6 +325,46 @@
 		</equippedStatOffsets>
 	</ThingDef>
 
+	<ThingDef ParentName="Naki_OnSkinBaseTear2">
+		<defName>Naki_Security_Armor</defName>
+		<label>naki security armor</label>
+		<description>Security uniforms for Naki guards. Darkweave linings slightly enhance the wearer's psycasting abiltiies.</description>
+		<graphicData>
+			<texPath>Naki/Apparel/OnSkin/SecurityArmor/Texture</texPath>
+		</graphicData>
+		<costList>
+			<DarkMatter>12</DarkMatter>
+			<Plasteel>25</Plasteel>
+		</costList>
+		<costStuffCount>75</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToMake>16000</WorkToMake>
+			<StuffEffectMultiplierArmor>0.20</StuffEffectMultiplierArmor>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<li>Hands</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Naki/Apparel/OnSkin/SecurityArmor/Texture</wornGraphicPath>
+		</apparel>
+		<equippedStatOffsets>
+			<PsychicSensitivityOffset>0.10</PsychicSensitivityOffset>
+			<PsychicEntropyRecoveryRate>0.033</PsychicEntropyRecoveryRate>
+		</equippedStatOffsets>
+	</ThingDef>
+
 	<ThingDef ParentName="Naki_OnSkinBaseTear3">
 		<defName>Naki_OnSkin_Work_Jumpsuit</defName>
 		<label>naki starbase jumpsuit</label>
@@ -449,46 +489,6 @@
 			<PsychicSensitivityOffset>0.10</PsychicSensitivityOffset>
 			<PsychicEntropyRecoveryRate>0.033</PsychicEntropyRecoveryRate>
 			<MoveSpeed>-0.1</MoveSpeed>
-		</equippedStatOffsets>
-	</ThingDef>
-
-	<ThingDef ParentName="Naki_OnSkinBaseTear3">
-		<defName>Naki_Security_Armor</defName>
-		<label>naki security armor</label>
-		<description>Security uniforms for Naki guards. Darkweave linings slightly enhance the wearer's psycasting abiltiies.</description>
-		<graphicData>
-			<texPath>Naki/Apparel/OnSkin/SecurityArmor/Texture</texPath>
-		</graphicData>
-		<costList>
-			<DarkMatter>12</DarkMatter>
-			<Plasteel>25</Plasteel>
-		</costList>
-		<costStuffCount>75</costStuffCount>
-		<stuffCategories>
-			<li>Metallic</li>
-		</stuffCategories>
-		<statBases>
-			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToMake>16000</WorkToMake>
-			<StuffEffectMultiplierArmor>0.20</StuffEffectMultiplierArmor>
-			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
-			<Insulation_Cold>10</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
-		</statBases>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Arms</li>
-				<li>Shoulders</li>
-				<li>Neck</li>
-				<li>Hands</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Naki/Apparel/OnSkin/SecurityArmor/Texture</wornGraphicPath>
-		</apparel>
-		<equippedStatOffsets>
-			<PsychicSensitivityOffset>0.10</PsychicSensitivityOffset>
-			<PsychicEntropyRecoveryRate>0.033</PsychicEntropyRecoveryRate>
 		</equippedStatOffsets>
 	</ThingDef>
 
