@@ -6,9 +6,10 @@
 	<label>Naki fabricator</label>
 	<description>A workstation to transmute Dark Matter darkweave, a strong fabric used as a base material for all Naki apparel and weaponry.</description>
 	<thingClass>Building_WorkTable</thingClass>
+	<rotatable>false</rotatable>
 	<graphicData>
-		<texPath>Naki/Building/Electric_Tailoring_Bench/Texture</texPath>
-		<graphicClass>Graphic_Multi</graphicClass>
+		<texPath>Naki/Building/Fabricator</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
 		<drawSize>(3, 1.5)</drawSize>
 		<shaderType>CutoutComplex</shaderType>
 	</graphicData>

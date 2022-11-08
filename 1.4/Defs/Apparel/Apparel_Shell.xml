@@ -31,7 +31,8 @@
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Naki_ShellBaseTear1">
+<!-- Removed because it is superceded by Parka and Duster[ -->
+<!-- <ThingDef ParentName="Naki_ShellBaseTear1">
 	<defName>Naki_Shell_Cardigan</defName>
 	<label>Naki cardigan</label>
 	<description>A warm cardigan to protect against cold or heat.</description>
@@ -58,7 +59,7 @@
 		</bodyPartGroups>
 		<wornGraphicPath>Naki/Apparel/Shell/Cardigan/Texture</wornGraphicPath>
 	</apparel>
-</ThingDef>
+</ThingDef> -->
 
 <ThingDef ParentName="Naki_ShellBaseTear1">
 	<defName>Naki_Shell_Duster</defName>
@@ -218,7 +219,7 @@
 	</equippedStatOffsets>
 </ThingDef>
 
-<!-- Stretch goal apparel -->
+<!-- Open Beta Stretch goal apparel -->
 <!-- <ThingDef ParentName="Naki_ShellBaseTear3">
 	<defName>Naki_Shell_TrenchCoat</defName>
 	<label>naki trenchcoat</label>

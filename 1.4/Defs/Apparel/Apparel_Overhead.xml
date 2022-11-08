@@ -253,7 +253,7 @@
 	<label>naki military helmet</label>
 	<description>An armored helmet used by Naki security guards and marines. Slightly enhances psycasting ability while providing ample protection</description>
 	<graphicData>
-		<texPath>Naki/Apparel/Overhead/Military_Helmet_A/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Military_Helmet/Texture</texPath>
 	</graphicData>
 	<costList>
 		<DarkMatter>15</DarkMatter>
@@ -281,7 +281,7 @@
 		<bodyPartGroups>
 			<li>FullHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Overhead/Military_Helmet_A/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Military_Helmet/Texture</wornGraphicPath>
 	</apparel>
 </ThingDef>
 
