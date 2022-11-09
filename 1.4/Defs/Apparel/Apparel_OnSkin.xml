@@ -410,7 +410,7 @@
 	<ThingDef ParentName="Naki_OnSkinBaseTear3">
 		<defName>Naki_OnSkin_Doctor_Uniform</defName>
 		<label>naki doctor uniform</label>
-		<description>A uniform for the Naki medical corp.</description>
+		<description>A uniform for the Naki doctors and researchers. Improves learning and researching speeds.</description>
 		<graphicData>
 			<texPath>Naki/Apparel/OnSkin/Nun_Dress/Texture</texPath>
 		</graphicData>
@@ -443,6 +443,8 @@
 			<wornGraphicPath>Naki/Apparel/OnSkin/Nun_Dress/Texture</wornGraphicPath>
 		</apparel>
 		<equippedStatOffsets>
+			<GlobalLearningFactor>0.2</GlobalLearningFactor>
+			<ResearchSpeed>0.2</ResearchSpeed>
 			<MedicalTendSpeed>0.2</MedicalTendSpeed>
 			<MedicalTendQuality>0.1</MedicalTendQuality>
 		</equippedStatOffsets>
@@ -491,8 +493,8 @@
 		</equippedStatOffsets>
 	</ThingDef>
 
-
-	<ThingDef ParentName="Naki_OnSkinBaseTear3">
+	<!-- Disabled. Superceded by Marine Armor -->
+	<!-- <ThingDef ParentName="Naki_OnSkinBaseTear3">
 		<defName>Naki_OnSkin_Marine_Uniform</defName>
 		<label>naki military uniform</label>
 		<description>Military uniforms for Naki marines. Plated with armor and darkweave, these make Naki formidable in off-station combat.</description>
@@ -536,7 +538,7 @@
 			</bodyPartGroups>
 			<wornGraphicPath>Naki/Apparel/OnSkin/Marine/Texture</wornGraphicPath>
 		</apparel>
-	</ThingDef>
+	</ThingDef> -->
 
 
 </Defs>

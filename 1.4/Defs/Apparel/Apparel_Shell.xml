@@ -180,7 +180,7 @@
 	</equippedStatOffsets>
 </ThingDef>
 
-<ThingDef ParentName="Naki_ShellBaseTear3">
+<!-- <ThingDef ParentName="Naki_ShellBaseTear3">
 	<defName>Naki_Shell_ScientistCoat</defName>
 	<label>naki scientist coat</label>
 	<description>A coat worn by dark matter scientists. Darkweave lining enhances the wearer's psycasting power.</description>
@@ -217,7 +217,7 @@
 		<PsychicSensitivityOffset>0.3</PsychicSensitivityOffset>
         <PsychicEntropyRecoveryRate>0.09</PsychicEntropyRecoveryRate>
 	</equippedStatOffsets>
-</ThingDef>
+</ThingDef> -->
 
 <!-- Open Beta Stretch goal apparel -->
 <!-- <ThingDef ParentName="Naki_ShellBaseTear3">

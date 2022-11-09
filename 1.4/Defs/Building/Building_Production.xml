@@ -10,7 +10,7 @@
 	<graphicData>
 		<texPath>Naki/Building/Fabricator</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-		<drawSize>(3, 1.5)</drawSize>
+		<drawSize>(7, 6)</drawSize>
 		<shaderType>CutoutComplex</shaderType>
 	</graphicData>
 	<castEdgeShadows>true</castEdgeShadows>

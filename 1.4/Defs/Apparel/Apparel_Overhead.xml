@@ -121,6 +121,43 @@
 </ThingDef>
 
 <ThingDef ParentName="Naki_OverheadBaseTear2">
+	<defName>Naki_Overhead_Military_Helmet</defName>
+	<label>naki military helmet</label>
+	<description>An armored helmet used by Naki security guards and marines. Slightly enhances psycasting ability while providing ample protection</description>
+	<graphicData>
+		<texPath>Naki/Apparel/Overhead/Military_Helmet/Texture</texPath>
+	</graphicData>
+	<costList>
+		<DarkMatter>15</DarkMatter>
+	</costList>
+	<costStuffCount>50</costStuffCount>
+	<stuffCategories>
+		<li>Metallic</li>
+	</stuffCategories>
+	<statBases>
+		<MaxHitPoints>300</MaxHitPoints>
+		<WorkToMake>16000</WorkToMake>
+		<StuffEffectMultiplierArmor>0.45</StuffEffectMultiplierArmor>
+		<StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+		<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.20</ArmorRating_Heat>
+	</statBases>
+	<equippedStatOffsets>
+		<AimingDelayFactor>-0.1</AimingDelayFactor>
+		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
+		<PsychicEntropyRecoveryRate>0.03</PsychicEntropyRecoveryRate>
+	</equippedStatOffsets>
+	<apparel>
+		<bodyPartGroups>
+			<li>FullHead</li>
+		</bodyPartGroups>
+		<wornGraphicPath>Naki/Apparel/Overhead/Military_Helmet/Texture</wornGraphicPath>
+	</apparel>
+</ThingDef>
+
+<ThingDef ParentName="Naki_OverheadBaseTear2">
 	<defName>Naki_Overhead_Glasses</defName>
 	<label>naki researcher glasses</label>
 	<description>A pair of glasses for reading. Little info displays helps researchers read and work late into the night.</description>
@@ -246,43 +283,6 @@
 		<PsychicSensitivityOffset>0.3</PsychicSensitivityOffset>
 		<PsychicEntropyRecoveryRate>0.06</PsychicEntropyRecoveryRate>
 	</equippedStatOffsets>
-</ThingDef>
-
-<ThingDef ParentName="Naki_OverheadBaseTear3">
-	<defName>Naki_Overhead_Military_Helmet</defName>
-	<label>naki military helmet</label>
-	<description>An armored helmet used by Naki security guards and marines. Slightly enhances psycasting ability while providing ample protection</description>
-	<graphicData>
-		<texPath>Naki/Apparel/Overhead/Military_Helmet/Texture</texPath>
-	</graphicData>
-	<costList>
-		<DarkMatter>15</DarkMatter>
-	</costList>
-	<costStuffCount>50</costStuffCount>
-	<stuffCategories>
-		<li>Metallic</li>
-	</stuffCategories>
-	<statBases>
-		<MaxHitPoints>300</MaxHitPoints>
-		<WorkToMake>16000</WorkToMake>
-		<StuffEffectMultiplierArmor>0.45</StuffEffectMultiplierArmor>
-		<StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
-		<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
-		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-		<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
-		<ArmorRating_Heat>0.20</ArmorRating_Heat>
-	</statBases>
-	<equippedStatOffsets>
-		<AimingDelayFactor>-0.1</AimingDelayFactor>
-		<PsychicSensitivityOffset>0.1</PsychicSensitivityOffset>
-		<PsychicEntropyRecoveryRate>0.03</PsychicEntropyRecoveryRate>
-	</equippedStatOffsets>
-	<apparel>
-		<bodyPartGroups>
-			<li>FullHead</li>
-		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Overhead/Military_Helmet/Texture</wornGraphicPath>
-	</apparel>
 </ThingDef>
 
 <ThingDef ParentName="Naki_OverheadBaseTear3">

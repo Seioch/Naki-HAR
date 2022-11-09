@@ -776,7 +776,7 @@
           <li>Naki_OnSkin_Doctor_Uniform</li>
           <li>Naki_OnSkin_Armor_Pants</li>
           <li>Naki_Security_Armor</li>
-          <li>Naki_OnSkin_Marine_Uniform</li>
+          <!-- <li>Naki_OnSkin_Marine_Uniform</li> -->
           <li>Naki_Colored_Underwear</li>
           <li>Naki_Middle_Body_Armor</li>
           <li>Naki_Overhead_Winter_Hat</li>
@@ -791,7 +791,7 @@
           <li>Naki_Shell_Duster</li>
           <li>Naki_Shell_Parka</li>
           <li>Naki_Shell_NavyOfficerCoat</li>
-          <li>Naki_Shell_ScientistCoat</li>
+          <!-- <li>Naki_Shell_ScientistCoat</li> -->
           <!-- <li>Naki_Shell_TrenchCoat</li> -->
           <li>Naki_Shell_Marine_Armor</li>
         </apparelList>
