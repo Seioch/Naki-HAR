@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
 	<!-- <FactionDef> -->
 	<FactionDef ParentName="PlayerFactionBase">
 		<defName>Naki_PlayerFaction</defName>
 		<label>Naki player faction</label>
 		<description>A new base for the Naki race.</description>
-		<settlementTexturePath>Naki/Faction/Texture</settlementTexturePath>
+		<settlementTexturePath>Naki/Faction/TextureNew</settlementTexturePath>
 		<categoryTag>Naki_Citizen</categoryTag>
 		<colorSpectrum>
 			<li>(1, 1, 1)</li>
@@ -16,9 +15,6 @@
 		<pawnSingular>Naki colonist</pawnSingular>
 		<pawnsPlural>Naki colonists</pawnsPlural>
 		<techLevel>Spacer</techLevel>
-		<allowedCultures>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Aolarian</li>
-		</allowedCultures>
 		<backstoryFilters>
 			<li>
 				<categories>
