@@ -124,6 +124,56 @@
 
 <!--================================================== Tear 2 ==================================================-->
 
+<ThingDef Name="Naki_ShellBaseTear2" ParentName="Naki_ShellBase" Abstract="True">
+	<recipeMaker>
+		<researchPrerequisite>Naki_ApparelT2</researchPrerequisite>
+	</recipeMaker>
+	<apparel>
+		<tags>
+			<li>Royal</li>
+			<li>RoyalTier1</li>
+        	<li>RoyalTier2</li>
+			<li>RoyalTier3</li>
+			<li>RoyalTier4</li>
+			<li>RoyalTier5</li>
+			<li>RoyalTier6</li>
+			<li>RoyalTier7</li>
+		</tags>
+	</apparel>
+</ThingDef>
+
+<ThingDef ParentName="Naki_OnSkinBaseTear2">
+	<defName>Naki_OnSkin_Maid_Dress</defName>
+	<label>naki maid dress</label>
+	<description>A baroque dress worn by those who prepare and serve food on Naki starbases. The dress comes with pockets stuffed with cooking essentials.</description>
+	<graphicData>
+		<texPath>Naki/Apparel/OnSkin/Gothic_Dress/Texture</texPath>
+	</graphicData>
+	<costStuffCount>75</costStuffCount>
+	<stuffCategories>
+		<li>Fabric</li>
+		<li>Leathery</li>
+	</stuffCategories>
+	<statBases>
+		<MaxHitPoints>150</MaxHitPoints>
+		<WorkToMake>8000</WorkToMake>
+		<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+		<StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+		<StuffEffectMultiplierInsulation_Heat>0.20</StuffEffectMultiplierInsulation_Heat>
+	</statBases>
+	<apparel>
+		<bodyPartGroups>
+			<li>Torso</li>
+			<li>Shoulders</li>
+			<li>Legs</li>
+		</bodyPartGroups>
+		<wornGraphicPath>Naki/Apparel/OnSkin/Gothic_Dress/Texture</wornGraphicPath>
+	</apparel>
+	<equippedStatOffsets>
+		<CookSpeed>2.0</CookSpeed>
+	</equippedStatOffsets>
+</ThingDef>
+
 <!--================================================== Tear 3 ==================================================-->
 
 <ThingDef Name="Naki_ShellBaseTear3" ParentName="Naki_ShellBase" Abstract="True">
