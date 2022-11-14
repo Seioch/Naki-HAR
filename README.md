@@ -49,12 +49,13 @@ On a personal level, Naki are still people. They have individual personalities, 
 2. Naki HAR Edition
 ---
 # Mod Compatibility
-TBD
+Incompatible: Combat Extended. Custom verbs were used for Naki Guns. Please ask them for a patch if you want CE compatibility
+Partial Compatiblity: Rocketman/Performance Optimizer. Texture rendering may be problematic.
 ---
 # Credits
 Code: Seioch (aka HolofoilD)
 
-Key Art: [Nguyenanh2132](https://twitter.com/Anh2132)
+Key Art: [Nguyenanh2132](https://twitter.com/Anh2132) [No_Tables](https://twitter.com/No_Tables)
 
 Sprites: [Arxian](https://www.webtoons.com/en/challenge/no-steel/list?title_no=576813)
 
