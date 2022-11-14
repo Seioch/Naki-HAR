@@ -147,7 +147,7 @@
 	<label>naki maid dress</label>
 	<description>A baroque dress worn by those who prepare and serve food on Naki starbases. The dress comes with pockets stuffed with cooking essentials.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/OnSkin/Gothic_Dress/Texture</texPath>
+		<texPath>Naki/Apparel/Shell/MaidDress/Texture</texPath>
 	</graphicData>
 	<costStuffCount>75</costStuffCount>
 	<stuffCategories>
@@ -167,7 +167,7 @@
 			<li>Shoulders</li>
 			<li>Legs</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/OnSkin/Gothic_Dress/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Shell/MaidDress/Texture</wornGraphicPath>
 	</apparel>
 	<equippedStatOffsets>
 		<CookSpeed>2.0</CookSpeed>

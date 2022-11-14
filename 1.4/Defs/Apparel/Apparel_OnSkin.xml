@@ -197,8 +197,8 @@
 
 	<ThingDef ParentName="Naki_OnSkinBaseTear2">
 		<defName>Naki_OnSkin_OnePiece_GalaxyDress</defName>
-		<label>naki one piece dress</label>
-		<description>A one-piece dress with a galaxy motif. Often seen at parties and at important events.</description>
+		<label>naki galaxy dress</label>
+		<description>A one-piece dress with a galaxy motif. Often seen at parties and important events.</description>
 		<graphicData>
 			<texPath>Naki/Apparel/OnSkin/One_Piece_Dress/Texture</texPath>
 		</graphicData>
@@ -380,7 +380,7 @@
 		<label>naki doctor uniform</label>
 		<description>A uniform for the Naki doctors and researchers. Improves learning and researching speeds.</description>
 		<graphicData>
-			<texPath>Naki/Apparel/OnSkin/Nun_Dress/Texture</texPath>
+			<texPath>Naki/Apparel/OnSkin/DoctorUniform/Texture</texPath>
 		</graphicData>
 		<costList>
 			<DarkMatter>5</DarkMatter>
@@ -408,7 +408,7 @@
 				<li>IndustrialBasic</li>
 				<li>Naki_Trader</li>
 			</tags>
-			<wornGraphicPath>Naki/Apparel/OnSkin/Nun_Dress/Texture</wornGraphicPath>
+			<wornGraphicPath>Naki/Apparel/OnSkin/DoctorUniform/Texture</wornGraphicPath>
 		</apparel>
 		<equippedStatOffsets>
 			<GlobalLearningFactor>0.2</GlobalLearningFactor>
