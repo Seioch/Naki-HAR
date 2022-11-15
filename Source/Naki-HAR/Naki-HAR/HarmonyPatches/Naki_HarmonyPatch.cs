@@ -21,21 +21,21 @@ namespace Naki_HAR
 
         static Naki_HarmonyPatch()
         {
-            Log.Message("[Naki HAR] Trying to patch Naki");
+            // Log.Message("[Naki HAR] Trying to patch Naki");
             harm = new Harmony("Seioch.Naki.HAR");
-            Log.Message("[Naki HAR] Patching VerbTracker");
+            // Log.Message("[Naki HAR] Patching VerbTracker");
             harm.Patch(AccessTools.Method(typeof(VerbTracker), "GetVerbsCommands"),
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(VerbTrackerAmmo_Postfix)));
-            Log.Message("[Naki HAR] Patching Kill");
+            // Log.Message("[Naki HAR] Patching Kill");
             harm.Patch(AccessTools.Method(typeof(Pawn), "Kill"),
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(Kill_Postfix)));
-            Log.Message("[Naki HAR] Patching TryGiveAbilityOfLevel");
+            // Log.Message("[Naki HAR] Patching TryGiveAbilityOfLevel");
             harm.Patch(AccessTools.Method(typeof(Hediff_Psylink), "TryGiveAbilityOfLevel"),
                 prefix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(TryGiveAbilityOfLevel_Prefix)));
-            Log.Message("[Naki HAR] Patching MeditationUtility");
+            // Log.Message("[Naki HAR] Patching MeditationUtility");
             harm.Patch(AccessTools.Method(typeof(MeditationUtility), "GetMeditationJob"),
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(GetMeditationJob_Postfix)));
-            Log.Message("[Naki HAR] Patching GainAbility");
+            // Log.Message("[Naki HAR] Patching GainAbility");
             harm.Patch(AccessTools.Method(typeof(Pawn_AbilityTracker), "GainAbility"),
                 postfix: new HarmonyMethod(typeof(Naki_HarmonyPatch), nameof(GainAbility_Postfix)));
             Log.Message("[Naki HAR] Patching complete!");
@@ -90,7 +90,7 @@ namespace Naki_HAR
                     AbilityDef abilityDef = (from a in DefDatabase<AbilityDef>.AllDefs
                                              where a.level == abilityLevel && a.defName.ToLower().Contains("naki")
                                              select a).RandomElement<AbilityDef>();
-                    Log.Message($"[Naki HAR] EXISTING Naki psylink giving detected, giving {__instance.pawn.Name} Naki ability {abilityDef.defName} instead.");
+                    // Log.Message($"[Naki HAR] EXISTING Naki psylink giving detected, giving {__instance.pawn.Name} Naki ability {abilityDef.defName} instead.");
                     __instance.pawn.abilities.GainAbility(abilityDef);
                     str2 = Hediff_Psylink.MakeLetterTextNewPsylinkLevel(__instance.pawn, abilityLevel, Gen.YieldSingle<AbilityDef>(abilityDef));
                     return false;
@@ -102,7 +102,7 @@ namespace Naki_HAR
                     AbilityDef abilityDef = (from a in DefDatabase<AbilityDef>.AllDefs
                                              where a.level == abilityLevel && a.defName.ToLower().Contains("naki")
                                              select a).RandomElement<AbilityDef>();
-                    Log.Message($"[Naki HAR] NEW Naki psylink giving detected, giving {__instance.pawn.Name} Naki ability {abilityDef.defName} instead.");
+                    // Log.Message($"[Naki HAR] NEW Naki psylink giving detected, giving {__instance.pawn.Name} Naki ability {abilityDef.defName} instead.");
                     __instance.pawn.abilities.GainAbility(abilityDef);
                     str2 = Hediff_Psylink.MakeLetterTextNewPsylinkLevel(__instance.pawn, abilityLevel, null);
                     return false;

@@ -26,13 +26,13 @@ namespace Naki_HAR
             // If the pawn is a Naki, start them with the DM Addiction
             if (pawn.IsNaki())
             {
-                Log.Message($"[Naki HAR] Adding DarkMatterAddiction to {pawn.Name}");
+                // Log.Message($"[Naki HAR] Adding DarkMatterAddiction to {pawn.Name}");
                 HediffDef dmAddiction = HediffDef.Named("DarkMatterAddiction");
                 dmAddiction.initialSeverity = 1.0f;
                 pawn.health.AddHediff(dmAddiction);
 
                 // Also add their first level of Psylink
-                Log.Message($"[Naki HAR] Adding Naki Psylink to {pawn.Name}");
+                // Log.Message($"[Naki HAR] Adding Naki Psylink to {pawn.Name}");
                 // Tried this but it called give ability twice
                 // pawn.ChangePsylinkLevel(1, true); 
 

@@ -106,7 +106,7 @@ namespace Naki_HAR
             bool selfDestroy = this.currentTicks >= this.Props.maxticks;
             if (selfDestroy)
             {
-                Log.Message("[Naki HAR] Destroying Annihilation field");
+                // Log.Message("[Naki HAR] Destroying Annihilation field");
                 // this.sustainer.End();
                 this.sustainer.End();
                 this.parent.Destroy(0);
@@ -120,7 +120,7 @@ namespace Naki_HAR
                 if (this.currentTicks < this.Props.maxticks)
                 {
                     // FleckMaker.Static(this.parent.DrawPos, this.parent.Map, FleckDefOf.PsycastAreaEffect, 1.5f);
-                    Log.Message("[Naki HAR] Spawning flecks");
+                    // Log.Message("[Naki HAR] Spawning flecks");
                     for (int i = 0; i < 5; i++)
                     {
                         CreateGravityFleck(this.parent.Map, this.parent.DrawPos, this.Props.radius / 2, UnityEngine.Random.Range(0, 1));

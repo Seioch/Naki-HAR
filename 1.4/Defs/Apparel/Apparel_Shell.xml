@@ -333,7 +333,7 @@
 	<label>naki marine armor</label>
 	<description>Powered assault armor for Naki elite marines. It protect the user greatly while enhancing psycasting powers.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/OnSkin/Marine/Texture</texPath>
+		<texPath>Naki/Apparel/OnSkin/Marine/Armor</texPath>
 	</graphicData>
 	<tradeTags>
       <li>HiTechArmor</li>
@@ -371,7 +371,7 @@
 			<li>Feet</li>
 			<li>Hands</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/OnSkin/Marine/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/OnSkin/Marine/Armor</wornGraphicPath>
 	</apparel>
 </ThingDef> 
 

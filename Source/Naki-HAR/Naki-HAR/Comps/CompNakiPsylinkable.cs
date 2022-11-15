@@ -134,7 +134,7 @@ namespace Naki_HAR
                                                     select p.LabelShort;
                 // Find the pawns that can upgrade and get their levels
                 // IEnumerable < Pawn > psylinkablePawns = this.GetPawnsThatCanPsylink();
-                Log.Message($"[Naki HAR] Found {enumerable.Count()} pawns that can psylink here.");
+                // Log.Message($"[Naki HAR] Found {enumerable.Count()} pawns that can psylink here.");
 
                 // Iterate through all 6 possible Naki Psylink levels to generate text per pawn who can psylink
                 for (int i = 0; i < this.Props.requiredAttunementPerPsylinkLevel.Count; i++)
@@ -186,7 +186,7 @@ namespace Naki_HAR
             // Log.Message("GenLocalDate.DayTick(this.parent.Map)");
             if (GenLocalDate.DayTick(this.parent.Map) < 2000 && hasSpawnedDM)
             {
-                Log.Message("Resetting meditation ticks for DM spawning");
+                // Log.Message("Resetting meditation ticks for DM spawning");
                 this.meditationTicksToday = 0;
                 hasSpawnedDM = false;
             }
@@ -325,7 +325,7 @@ namespace Naki_HAR
                         break;
                     }
                 }
-                Log.Message($"[Naki HAR] Precept ritual created: {precept_Ritual.def.defName}");
+                // Log.Message($"[Naki HAR] Precept ritual created: {precept_Ritual.def.defName}");
                 // Log.Message($"[Naki HAR] this.parent: {this.parent.def.defName}");
                 if (precept_Ritual != null)
                 {
@@ -346,7 +346,7 @@ namespace Naki_HAR
         // attunement to 0. 
         public void FinishLinkingRitual(Pawn pawn)
         {
-            Log.Message($"[Naki HAR] Linking Ritual finished, upgrading psylink for {pawn.Name}");
+            // Log.Message($"[Naki HAR] Linking Ritual finished, upgrading psylink for {pawn.Name}");
             if (!ModLister.CheckRoyalty("Psylinkable"))
             {
                 return;

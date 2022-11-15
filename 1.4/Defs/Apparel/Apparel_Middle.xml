@@ -34,7 +34,7 @@
 	</apparel>
 </ThingDef>
 
-<ThingDef ParentName="Naki_MiddleBaseTear2">
+<!-- <ThingDef ParentName="Naki_MiddleBaseTear2">
 	<defName>Naki_Middle_Body_Armor</defName>
 	<label>Naki body armor</label>
 	<description>Naki body armor. Plates of steel are woven together with darkweave, making it incredibly durable.</description>
@@ -67,6 +67,6 @@
 		<StuffEffectMultiplierInsulation_Cold>0.00</StuffEffectMultiplierInsulation_Cold>
 		<StuffEffectMultiplierInsulation_Heat>0.00</StuffEffectMultiplierInsulation_Heat>
 	</statBases>
-</ThingDef>
+</ThingDef> -->
 
 </Defs>

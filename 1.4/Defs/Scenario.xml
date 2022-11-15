@@ -70,11 +70,6 @@ Set off on a quest to bring back the best gift for your race's savior, Omega Ede
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
-				<thingDef>Naki_Middle_Body_Armor</thingDef>
-				<stuff>Steel</stuff>
-			</li>
-			<li Class="ScenPart_StartingThing_Defined">
-				<def>StartingThing_Defined</def>
 				<thingDef>Naki_Gun_Pistol</thingDef>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">

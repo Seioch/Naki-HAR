@@ -346,7 +346,7 @@
 	<label>naki marine helmet</label>
 	<description>A combat helmet for Naki elite marines. It protects the head considerably while enhancing psycasting abilities.</description>
 	<graphicData>
-		<texPath>Naki/Apparel/Overhead/Marine_Helmet/Texture</texPath>
+		<texPath>Naki/Apparel/Overhead/Marine_Helmet/Helmet</texPath>
 	</graphicData>
 	<tradeTags>
       <li>HiTechArmor</li>
@@ -381,7 +381,7 @@
 		<bodyPartGroups>
 			<li>FullHead</li>
 		</bodyPartGroups>
-		<wornGraphicPath>Naki/Apparel/Overhead/Marine_Helmet/Texture</wornGraphicPath>
+		<wornGraphicPath>Naki/Apparel/Overhead/Marine_Helmet/Helmet</wornGraphicPath>
 	</apparel>
 </ThingDef> 
 

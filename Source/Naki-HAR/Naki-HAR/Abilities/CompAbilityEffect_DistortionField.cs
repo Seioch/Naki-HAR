@@ -25,10 +25,10 @@ namespace Naki_HAR
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            Log.Message("[Naki HAR] Apply");
+            // Log.Message("[Naki HAR] Apply");
             Map map = this.parent.pawn.Map;
 
-            Log.Message("[Naki HAR] Distortion Field Spawning");
+            // Log.Message("[Naki HAR] Distortion Field Spawning");
             GenSpawn.Spawn(this.Props.thingDef, target.Cell, map, WipeMode.Vanish);
             //building.SetFactionDirect(this.parent.pawn.Faction);
 
