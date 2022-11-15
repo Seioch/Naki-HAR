@@ -1,8 +1,8 @@
 # Naki: Dark Matter Raccoons for Rimworld 1.4
-Current release: Alpha
+Current release: Open Beta
 ---
 # Warning! This mod requires you to have the Royalty expansion!
-## Want to test and provide feedback? Join the development discord: https://discord.gg/hSaPVTczJZ
+## Want to provide direct feedback? Join the development discord: https://discord.gg/hSaPVTczJZ
 ---
 # Lore Primer
 
@@ -30,7 +30,6 @@ Nakis are still living beings made of flesh, but their bodies contain high amoun
 
 ![A selection of male Naki](Preview/make_faces_preview.png)
 
-On a personal level, Naki are still people. They have individual personalities, quirks, and life goals. However, they are all still bound to the will of Omega Eden. They have an urge to build one of the two Naki endgame structures and will eventually do so in secret or in public. 
 ---
 # Features
 1. A new race of Archotech-created, raccoon-themed people. They are quick learners, and have access to reality-bending psycasts that can disintegrate enemies from within. But, they need to consume dark matter to continue living.
@@ -40,16 +39,14 @@ On a personal level, Naki are still people. They have individual personalities, 
 5. A hidden faction, with 2 quests to gain Naki for your colony.
 6. Unique apparel and crafting station. 
 ---
-# Upcoming Features
-1. Expansion of the Dark Matter need feature
-2. Destroy the planet endgame event
----
 # Installation instructions
 1. Humanoid Alien Races
 2. Naki HAR Edition
 ---
 # Mod Compatibility
+
 Incompatible: Combat Extended. Custom verbs were used for Naki Guns. Please ask them for a patch if you want CE compatibility
+
 Partial Compatiblity: Rocketman/Performance Optimizer. Texture rendering may be problematic.
 ---
 # Credits
