@@ -128,7 +128,7 @@
 		<texPath>Naki/Apparel/Overhead/Military_Helmet/Texture</texPath>
 	</graphicData>
 	<costList>
-		<DarkMatter>15</DarkMatter>
+		<NakiDarkMatter>15</NakiDarkMatter>
 	</costList>
 	<costStuffCount>50</costStuffCount>
 	<stuffCategories>
@@ -259,7 +259,7 @@
 		<texPath>Naki/Apparel/Overhead/DarkHat/Texture</texPath>
 	</graphicData>
 	<costList>
-		<DarkMatter>8</DarkMatter>
+		<NakiDarkMatter>8</NakiDarkMatter>
 	</costList>
 	<costStuffCount>50</costStuffCount>
 	<stuffCategories>
@@ -293,7 +293,7 @@
 		<texPath>Naki/Apparel/Overhead/Traditional_Hair_Pin/Texture</texPath>
 	</graphicData>
 	  <costList>
-		<DarkMatter>6</DarkMatter>
+		<NakiDarkMatter>6</NakiDarkMatter>
 	</costList>
 	<costStuffCount>50</costStuffCount>
 	<stuffCategories>
@@ -355,7 +355,7 @@
       <ComponentSpacer>4</ComponentSpacer>
       <Plasteel>100</Plasteel>
       <Uranium>40</Uranium>
-	  <DarkMatter>20</DarkMatter>
+	  <NakiDarkMatter>20</NakiDarkMatter>
     </costList>
 	<statBases>
 		<MaxHitPoints>300</MaxHitPoints>

@@ -399,7 +399,7 @@ namespace Naki_HAR
         // Private helper function 
         private void TrySpawnDarkMatter()
         {
-            Thing thing = ThingMaker.MakeThing(Naki_Defof.DarkMatter, null);
+            Thing thing = ThingMaker.MakeThing(Naki_Defof.NakiDarkMatter, null);
             thing.stackCount = rnd.Next(minDMSpawn, maxDMSpawn);
             GenPlace.TryPlaceThing(thing, this.parent.InteractionCell, this.parent.Map, ThingPlaceMode.Near, null, (IntVec3 p) => p != this.parent.Position && p != this.parent.InteractionCell, default(Rot4));
             this.hasSpawnedDM = true;

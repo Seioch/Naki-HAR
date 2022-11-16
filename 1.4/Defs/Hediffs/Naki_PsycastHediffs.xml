@@ -76,7 +76,7 @@
     <!-- Much like vertigo, but without the vomiting MTTH -->
     <HediffDef ParentName = "PsycastHediffBase">
         <defName>DMConfusion</defName>
-        <label>gravatational disorientation</label>
+        <label>gravitational disorientation</label>
         <description>Gravity waves have destabilized the ear canal, causing disorientation.</description>
         <isBad>true</isBad>
         <stages>

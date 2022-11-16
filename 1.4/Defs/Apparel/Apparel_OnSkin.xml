@@ -230,7 +230,7 @@
 		</statBases>
 	</ThingDef>
 
-	<ThingDef ParentName="Naki_OnSkinBaseTear2">
+	<!-- <ThingDef ParentName="Naki_OnSkinBaseTear2">
 		<defName>Naki_OnSkin_Ruffled_Shirt</defName>
 		<label>Naki ruffled shirt</label>
 		<description>A fancy shirt for formal meeting and events</description>
@@ -263,7 +263,7 @@
 			</bodyPartGroups>
 			<wornGraphicPath>Naki/Apparel/OnSkin/Open_Shoulder_Knit/Texture</wornGraphicPath>
 		</apparel>
-	</ThingDef>
+	</ThingDef> -->
 
 	<!--================================================== Tear 3 ==================================================-->
 
@@ -301,7 +301,7 @@
 			<texPath>Naki/Apparel/OnSkin/SecurityArmor/Texture</texPath>
 		</graphicData>
 		<costList>
-			<DarkMatter>12</DarkMatter>
+			<NakiDarkMatter>12</NakiDarkMatter>
 			<Plasteel>25</Plasteel>
 		</costList>
 		<costStuffCount>75</costStuffCount>
@@ -341,7 +341,7 @@
 			<texPath>Naki/Apparel/OnSkin/Work_Jumpsuit/Texture</texPath>
 		</graphicData>
 		<costList>
-			<DarkMatter>5</DarkMatter>
+			<NakiDarkMatter>5</NakiDarkMatter>
 		</costList>
 		<costStuffCount>75</costStuffCount>
 		<stuffCategories>
@@ -383,7 +383,7 @@
 			<texPath>Naki/Apparel/OnSkin/DoctorUniform/Texture</texPath>
 		</graphicData>
 		<costList>
-			<DarkMatter>5</DarkMatter>
+			<NakiDarkMatter>5</NakiDarkMatter>
 		</costList>
 		<costStuffCount>75</costStuffCount>
 		<stuffCategories>
@@ -435,7 +435,7 @@
 			<wornGraphicPath>Naki/Apparel/OnSkin/Long_Pants/Pants</wornGraphicPath>
 		</apparel>
 		<costList>
-			<DarkMatter>10</DarkMatter>
+			<NakiDarkMatter>10</NakiDarkMatter>
 			<Plasteel>15</Plasteel>
 			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
@@ -472,7 +472,7 @@
 		<costList>
 			<Hyperweave>25</Hyperweave>
 			<Plasteel>15</Plasteel>
-			<DarkMatter>20</DarkMatter>
+			<NakiDarkMatter>20</NakiDarkMatter>
 		</costList>
 		<costStuffCount>125</costStuffCount>
 		<stuffCategories>

@@ -38,7 +38,7 @@
       <subOptionsChooseOne>
         <li>
           <choiceChance>25</choiceChance>
-          <thingDef>DarkMatter</thingDef>
+          <thingDef>NakiDarkMatter</thingDef>
           <countRange>
             <min>1</min>
             <max>5</max>
@@ -74,7 +74,7 @@
       <subOptionsChooseOne>
         <li>
           <choiceChance>25</choiceChance>
-          <thingDef>DarkMatter</thingDef>
+          <thingDef>NakiDarkMatter</thingDef>
           <countRange>
             <min>1</min>
             <max>5</max>
@@ -119,7 +119,7 @@
       <subOptionsChooseOne>
         <li>
           <choiceChance>25</choiceChance>
-          <thingDef>DarkMatter</thingDef>
+          <thingDef>NakiDarkMatter</thingDef>
           <countRange>
             <min>1</min>
             <max>5</max>
@@ -162,7 +162,7 @@
       <subOptionsChooseOne>
         <li>
           <choiceChance>25</choiceChance>
-          <thingDef>DarkMatter</thingDef>
+          <thingDef>NakiDarkMatter</thingDef>
           <countRange>
             <min>1</min>
             <max>5</max>

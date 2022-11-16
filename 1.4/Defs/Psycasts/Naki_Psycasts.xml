@@ -37,7 +37,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_MassDestruction</defName>
         <label>mass destruction</label>
-        <description>Implants a large shard of dark matter into all living things in an area, causing rapid disintegration in the affected victims. Disintegrated creatures leave behind Dark Matter.</description>
+        <description>Implants a shard of dark matter into all living things in an area, causing rapid disintegration in the affected victims. Disintegrated creatures leave behind Dark Matter.</description>
         <level>6</level>
         <iconPath>Naki/Psycasts/MassDestruction</iconPath>
         <writeCombatLog>True</writeCombatLog>
@@ -77,7 +77,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Disintegrate_Large</defName>
         <label>annihilation</label>
-        <description>Implants a shard of dark matter in the target, causing flesh to decay rapidly. Disintegrated creatures leave behind Dark Matter.</description>
+        <description>Implants a large shard of dark matter in the target, causing flesh to decay rapidly. Disintegrated creatures leave behind Dark Matter.</description>
         <level>5</level>
         <iconPath>Naki/Psycasts/Annihilation</iconPath>
         <verbProperties>
@@ -140,7 +140,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Regeneration</defName>
         <label>regeneration</label>
-        <description>Transmute dark matter into flesh on a target, closing grevious wounds. The sudden regeneration of flesh pains and fatigues the target greatly.</description>
+        <description>Transmute dark matter into flesh on a target, closing grevious wounds. The sudden regeneration of flesh pains and fatigues the target.</description>
         <level>4</level>
         <iconPath>Naki/Psycasts/Regeneration</iconPath>
         <statBases>
@@ -211,7 +211,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Darkness</defName>
         <label>darkness pulse</label>
-        <description>A cloud of Dark Matter spawned in the eyes of the target destroys light as it enters the eye, causing blindness.</description>
+        <description>A cloud of Dark Matter spawned in the eyes of the target destroys light as it enters the eye, causing blindness around everyone near a target point.</description>
         <level>4</level>
         <iconPath>Naki/Psycasts/DarknessPulse</iconPath>
         <writeCombatLog>True</writeCombatLog>
@@ -280,7 +280,7 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_MassFog</defName>
         <label>mass fog</label>
-        <description>Induce noise in the visual centers of the brain, obscuring vision of everyone near the target point.</description>
+        <description>Creates a tiny gravity well in the ear canal of the target, causing acute confusion and disorientation of everyone near the target point.</description>
         <level>3</level>
         <iconPath>Naki/Psycasts/MassFog</iconPath>
         <writeCombatLog>True</writeCombatLog>
@@ -349,12 +349,13 @@
     <AbilityDef ParentName="PsycastBase">
         <defName>Naki_Restore</defName>
         <label>restore</label>
-        <description>Transmute dark matter into flesh on a target, closing wounds. The sudden regeneration of flesh pains and fatigues the target greatly.</description>
+        <description>Transmute dark matter into flesh on a target, closing deep wounds. The sudden regeneration of flesh pains and fatigues the target greatly.</description>
         <level>2</level>
         <iconPath>Naki/Psycasts/Restore</iconPath>
         <statBases>
             <Ability_EntropyGain>20</Ability_EntropyGain>
             <Ability_PsyfocusCost>0.25</Ability_PsyfocusCost>
+            <Ability_Duration>60</Ability_Duration>
         </statBases>
         <verbProperties>
             <warmupTime>0.5</warmupTime>
@@ -437,7 +438,7 @@
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>Naki_Stall</hediffDef>
                 <onlyBrain>True</onlyBrain>
-                <psychic>True</psychic>
+                <psychic>False</psychic>
             </li>
             <li Class="CompProperties_AbilityFleckOnTarget">
                 <fleckDef>PsycastPsychicEffect</fleckDef>

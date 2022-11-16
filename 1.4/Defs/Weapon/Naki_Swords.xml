@@ -21,7 +21,7 @@
 		</statBases>
 		<costList>
 			<Steel>125</Steel>
-			<DarkMatter>16</DarkMatter>
+			<NakiDarkMatter>16</NakiDarkMatter>
 		</costList>
 		<tools>
 			<li>
@@ -74,7 +74,7 @@
 		</statBases>
 		<costList>
 			<Steel>75</Steel>
-			<DarkMatter>12</DarkMatter>
+			<NakiDarkMatter>12</NakiDarkMatter>
 		</costList>
 		<tools>
 			<li>

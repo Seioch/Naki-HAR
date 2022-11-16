@@ -26,7 +26,7 @@
 	<costList>
 		<Plasteel>75</Plasteel>
 		<ComponentSpacer>5</ComponentSpacer>
-		<DarkMatter>27</DarkMatter>
+		<NakiDarkMatter>27</NakiDarkMatter>
 	</costList>
 	<comps>
 		<!-- Special comp to decrement remaining ammo, destroy on empty, and display ammo remaining -->

@@ -63,7 +63,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>45</DarkMatter>
+            <NakiDarkMatter>45</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -97,7 +97,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>45</DarkMatter>
+            <NakiDarkMatter>45</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -132,7 +132,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>40</DarkMatter>
+            <NakiDarkMatter>40</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -166,7 +166,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>40</DarkMatter>
+            <NakiDarkMatter>40</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -202,7 +202,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>35</DarkMatter>
+            <NakiDarkMatter>35</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -236,7 +236,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>35</DarkMatter>
+            <NakiDarkMatter>35</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -270,7 +270,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>35</DarkMatter>
+            <NakiDarkMatter>35</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -306,7 +306,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>30</DarkMatter>
+            <NakiDarkMatter>30</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -340,7 +340,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>30</DarkMatter>
+            <NakiDarkMatter>30</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -375,7 +375,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>25</DarkMatter>
+            <NakiDarkMatter>25</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -408,7 +408,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>25</DarkMatter>
+            <NakiDarkMatter>25</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -443,7 +443,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>20</DarkMatter>
+            <NakiDarkMatter>20</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -476,7 +476,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>20</DarkMatter>
+            <NakiDarkMatter>20</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->
@@ -509,7 +509,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>5</ComponentSpacer>
-            <DarkMatter>20</DarkMatter>
+            <NakiDarkMatter>20</NakiDarkMatter>
         </costList>
         <comps>
             <!-- The comp that grants the ability -->

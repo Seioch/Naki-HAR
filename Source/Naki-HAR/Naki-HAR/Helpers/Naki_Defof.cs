@@ -16,7 +16,7 @@ namespace Naki_HAR
         public static HediffDef Naki_Distortion;
         public static DamageDef DMBurn;
         public static NeedDef NakiRaceDMNeed;
-        public static ThingDef DarkMatter;
+        public static ThingDef NakiDarkMatter;
         public static ThingDef Naki_DistortionFieldBuilding;
         public static ThingDef Naki_GravityWell;
         public static ThingDef Naki_Fabricator;

@@ -15,6 +15,7 @@
 		<pawnSingular>Naki colonist</pawnSingular>
 		<pawnsPlural>Naki colonists</pawnsPlural>
 		<techLevel>Spacer</techLevel>
+		<allowedCultures><li MayRequire="Ludeon.RimWorld.Ideology">Voidborne</li></allowedCultures>
 		<backstoryFilters>
 			<li>
 				<categories>
@@ -69,11 +70,9 @@
 		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
 		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
 		<techLevel>Industrial</techLevel>
+		<allowedCultures><li MayRequire="Ludeon.RimWorld.Ideology">Voidborne</li></allowedCultures>
 		<naturalEnemy>false</naturalEnemy>
 		<permanentEnemy>false</permanentEnemy>
-		<allowedCultures>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Aolarian</li>
-		</allowedCultures>
 		<requiredMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>

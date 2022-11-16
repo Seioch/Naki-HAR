@@ -66,7 +66,7 @@ namespace Naki_HAR
             {
                 float victimMass = __instance.def.BaseMass;
                 // Spawn dark matter?
-                Thing darkMatter = ThingMaker.MakeThing(Naki_Defof.DarkMatter, null);
+                Thing darkMatter = ThingMaker.MakeThing(Naki_Defof.NakiDarkMatter, null);
                 darkMatter.stackCount = 1; // Maybe later use GenMath to create a random amount of DM from 1-3
                 GenPlace.TryPlaceThing(darkMatter, __instance.Corpse.Position, __instance.Corpse.Map, ThingPlaceMode.Near, null, null, default(Rot4));
                 __instance.Corpse.Destroy(DestroyMode.Vanish); // Destroy the body

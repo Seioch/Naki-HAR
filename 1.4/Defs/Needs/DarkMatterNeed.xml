@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ChemicalDef>
-    <defName>DarkMatter</defName>
+    <defName>NakiDarkMatter</defName>
     <label>dark matter</label>
     <addictionHediff>DarkMatterAddiction</addictionHediff>
     <canBinge>false</canBinge>

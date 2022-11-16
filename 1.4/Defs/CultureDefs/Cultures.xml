@@ -2,9 +2,9 @@
 <Defs>
 
   <CultureDef>
-    <defName>Aolarian</defName>
-    <label>aolarian</label>
-    <description>A culture derived from Kurin exiled from the Glitterworld Aolara.</description>
+    <defName>Voidborne</defName>
+    <label>voidborne</label>
+    <description>A culture derived from the old spacer civilization of Naki.</description>
     <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoAstropolitan</ideoNameMaker>
     <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityAstropolitan</deityNameMaker>
     <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerAstropolitan</deityTypeMaker>
@@ -17,7 +17,7 @@
     <iconColor>(0.8, 0.8, 0.8)</iconColor>
     <styleItemTags>
       <li>
-        <tag>Kurin</tag>
+        <tag>Naki</tag>
         <baseWeight>1</baseWeight>
         <weightFactor>1</weightFactor>
       </li>
