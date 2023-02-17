@@ -2,7 +2,6 @@
 Current release: Open Beta
 ---
 # Warning! This mod requires you to have the Royalty expansion!
-## Want to provide direct feedback? Join the development discord: https://discord.gg/hSaPVTczJZ
 ---
 # Lore Primer
 
